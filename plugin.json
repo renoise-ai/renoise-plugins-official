@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "renoise",
-  "version": "1.10.0",
+  "version": "1.10.1",
   "description": "AI video production skills — creative direction, generation, editing, and e-commerce content",
   "author": {
     "name": "Renoise",
@@ -58,26 +58,26 @@
             {
               "description": "Text-to-video from a short brief, with the estimate shown before submission.",
               "prompt": "Make a 5-second video of a steaming cup of coffee on a wooden table at sunrise.",
-              "tools_triggered": "load_skill, list_models, estimate_cost, create_tasks, wait_tasks, show_result",
-              "expected_behavior": "Loads the director and model-routing skills, picks a video model, and states the plan with the estimate_cost total in one message. After the user approves create_tasks, a task card shows progress; wait_tasks polls until the video is done (usually a few minutes) and show_result plays it in the chat."
+              "tools_triggered": "load_skill, list_models, estimate_cost, create_tasks, wait_tasks",
+              "expected_behavior": "Loads the director and model-routing skills, picks a video model, and states the plan with the estimate_cost total in one message. After the user approves create_tasks, a task card shows progress; wait_tasks polls until the video is done (usually a few minutes) and the task card plays it in the chat."
             },
             {
               "description": "Product ad from an uploaded photo.",
               "prompt": "I want a product ad for my sneakers. Let me upload a photo first.",
-              "tools_triggered": "request_upload, estimate_cost, create_tasks, wait_tasks, show_result",
-              "expected_behavior": "Shows an upload box. After the user uploads an image (any product photo works), ChatGPT uses its material ID as the reference image, states the plan and estimate, and on approval generates the ad and plays it with show_result."
+              "tools_triggered": "request_upload, estimate_cost, create_tasks, wait_tasks",
+              "expected_behavior": "Shows an upload box. After the user uploads an image (any product photo works), ChatGPT uses its material ID as the reference image, states the plan and estimate, and on approval generates the ad; the task card plays it when wait_tasks reports it done."
             },
             {
               "description": "Browse templates and make one like a template with the user's own image. The test account has sample images in its library.",
               "prompt": "Show me Renoise templates I can start from.",
-              "tools_triggered": "open_studio, search_materials, create_from_template, wait_tasks",
+              "tools_triggered": "open_studio, search_media, create_from_template, wait_tasks",
               "expected_behavior": "Opens the studio with a template gallery. After the user picks a template and an image from their library, create_from_template submits it (credits are charged on approval) and a task card follows its progress."
             },
             {
               "description": "Analyze a video that is already in the library. The test account has a sample video named demo.mp4.",
               "prompt": "Analyze my video demo.mp4 and describe its scenes, camera moves and music.",
-              "tools_triggered": "search_materials, analyze_media",
-              "expected_behavior": "Finds demo.mp4 with search_materials and returns a structured analysis: a scene-by-scene timeline with visuals and camera, overall style and mood, and the music. Uses a small amount of credits; nothing else changes."
+              "tools_triggered": "search_media, analyze_media",
+              "expected_behavior": "Finds demo.mp4 with search_media and returns a structured analysis: a scene-by-scene timeline with visuals and camera, overall style and mood, and the music. Uses a small amount of credits; nothing else changes."
             }
           ],
           "negative": [

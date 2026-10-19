@@ -15,7 +15,7 @@ description: >
   of existing footage.
 metadata:
   author: renoise
-  version: 0.7.4
+  version: 0.7.5
   category: video-production
   tags: [director, creative, video, product, ecommerce, short-film, narrative, story, portable]
 ---
@@ -43,7 +43,7 @@ Before selecting a model or writing its prompt, read `../model-routing/SKILL.md`
 
 ## Runtime Boundary
 
-Use only Renoise capabilities exposed by the current host. Do not guess Renoise commands or emulate a missing Renoise capability. Execution always goes through the Renoise tools the host exposes; a command line is not an execution path in a conversation. Keep plans and prompts in the conversation unless the host exposes export. Approval and idempotency remain host-controlled.
+Use only Renoise capabilities exposed by the current host. Do not guess Renoise commands or emulate a missing Renoise capability. Execution always goes through the Renoise tools the host exposes; a command line is not an execution path in a conversation. Keep plans and prompts in the conversation unless the host exposes export. Approval and idempotency remain host-controlled. A video link the user gives (a reference to study, remake or vary) is usable when you have a shell: download it with yt-dlp and save it as a material with the host's upload tools, then analyze and reference it like an upload.
 
 **Your own code is part of the palette.** When you have a shell, media editing is available: the host's own (Claude Code, Codex, a desktop agent) or a cloud sandbox tool the host exposes (such as Renoise's `sandbox_exec`). Then combine Renoise generation with anything you can build in code (ffmpeg, Python, HTML or canvas rendered to frames, synthesized music and sound) for cutting, compositing, motion graphics, typography, grading, scoring and mixing. Generate what code cannot make; make in code what generation does poorly. Choose freely and creatively. You cannot watch or listen to the result, so check it through stills, contact sheets and audio measurements, and ask the user to review. With neither (hosted agents, chat-only connectors without a sandbox tool) there is no code execution.
 
