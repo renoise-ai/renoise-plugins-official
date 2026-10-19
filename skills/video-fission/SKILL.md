@@ -7,7 +7,7 @@ description: >
   source first, then resolve what should vary before proposing any generation.
 metadata:
   author: renoise
-  version: 0.2.2
+  version: 0.2.3
   category: video-production
   tags: [video, fission, variants, experimentation, portable]
 ---
@@ -18,7 +18,7 @@ Create a controlled batch of variants from one source video. This is an experime
 
 ## Runtime Boundary
 
-Use only capabilities exposed by the current host. The source must be one conversation attachment, material, task result, or other video that the host identifies as owner-authorized. Never invent a source, request a host filesystem path, or use more than one source video.
+Use only capabilities exposed by the current host. The source must be one conversation attachment, material, task result, or other video that the host identifies as owner-authorized. A video the user links to counts: with a shell, download it (yt-dlp), save it as a material with the host's upload tools, and use that material; ask for the file only when the download fails or you have no shell. Never invent a source, request a host filesystem path, or use more than one source video.
 
 Live model capabilities are authoritative for availability, roles, role combinations, limits, duration, ratio, resolution, and audio controls. Inspect them for every fission run; model names below are routing preferences, not permission to assume a capability.
 

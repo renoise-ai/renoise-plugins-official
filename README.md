@@ -125,6 +125,7 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 ### 1.10.1
 
 - Follows the Renoise MCP tool update: `search_materials` is now `search_media` (`query` instead of `search`), and `estimate_cost` takes the same `tasks` you will give `create_tasks` instead of flat parameters. The annotation board estimates an automatic-duration source-video edit by passing that exact task (`duration: -1` with the source video attached).
+- A video the user links to (X, YouTube, TikTok, Douyin and other video pages) can be the source of a remake, variants or analysis: with a shell (the host's own or the Renoise cloud sandbox), the skills download it with yt-dlp and save it as a material instead of asking for an upload.
 - The task card shows generation results; `show_result` is only for an edited cut or a final pick across several generations.
 - The Renoise cloud sandbox (`sandbox_exec`, `sandbox_agent`) is for subscribers. The first sandbox call after this server update starts a fresh sandbox, so files from earlier calls are gone.
 
