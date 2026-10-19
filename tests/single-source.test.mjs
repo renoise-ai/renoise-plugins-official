@@ -144,9 +144,9 @@ test('conversations use the Renoise MCP tools; renoise-cli is for terminals, scr
 test('annotation-board source-video edits keep the Seedance edit contract on the MCP tools', () => {
   const canvas = readFileSync('skills/canvas/SKILL.md', 'utf8');
   assert.match(canvas, /`duration: -1`, `ratio: "adaptive"`/);
-  assert.match(canvas, /`edit: true`/);
+  assert.match(canvas, /passing that exact task in `estimate_cost` `tasks`/);
+  assert.doesNotMatch(canvas, /`edit: true`|hasVideoReference/);
   assert.match(canvas, /\[Edit the video as instructed above\]/);
-  assert.match(canvas, /Never estimate an automatic-duration edit with `-1`/);
   assert.match(canvas, /source-video edit trigger paired with `duration: -1`/i);
   assert.match(canvas, /`scope: "mask"`/);
   assert.doesNotMatch(canvas, /renoise (?:task|upload)|--prompt-file|--materials/);

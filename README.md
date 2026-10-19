@@ -122,6 +122,12 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 
 ## Version & upgrading
 
+### 1.10.1
+
+- Follows the Renoise MCP tool update: `search_materials` is now `search_media` (`query` instead of `search`), and `estimate_cost` takes the same `tasks` you will give `create_tasks` instead of flat parameters. The annotation board estimates an automatic-duration source-video edit by passing that exact task (`duration: -1` with the source video attached).
+- The task card shows generation results; `show_result` is only for an edited cut or a final pick across several generations.
+- The Renoise cloud sandbox (`sandbox_exec`, `sandbox_agent`) is for subscribers. The first sandbox call after this server update starts a fresh sandbox, so files from earlier calls are gone.
+
 ### 1.10.0
 
 - Conversations now run Renoise through the remote Renoise MCP server on every host (`mcp.json`), the same tools and approval rule as the claude.ai and ChatGPT connectors. Sign in once with OAuth (`/mcp` in Claude Code); the CLI is no longer needed to generate.
