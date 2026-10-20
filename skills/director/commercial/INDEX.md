@@ -37,10 +37,9 @@ Subject + Selling-Point Action + Scene & Tone + Camera Language + Audio + Post-P
 ## Phase 1 — Brief and References
 
 1. Load the matched scenario.
-2. Ask only for missing essentials: product references, visible selling points, target audience/platform, duration, ratio, and presenter/spoken language when applicable.
-3. Analyze each host-authorized image or video through the host's media-analysis capability.
-4. Tag each reference as subject anchor, scene calibration, camera reference, or beat-sync control.
-5. Select and inspect live models using `model-routing`. Use only advertised parameters, roles, combinations, and limits.
+2. Analyze each host-authorized image or video through the host's media-analysis capability.
+3. Tag each reference as subject anchor, scene calibration, camera reference, or beat-sync control.
+4. Select and inspect live models using `model-routing`. Use only advertised parameters, roles, combinations, and limits.
 
 For recurring people or products, register once and reuse the same material through a supported role. Use canonical material tokens and state what each controls:
 

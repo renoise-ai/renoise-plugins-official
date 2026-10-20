@@ -17,7 +17,7 @@ description: >
   of existing footage.
 metadata:
   author: renoise
-  version: 0.8.0
+  version: 0.9.0
   category: video-production
   tags: [director, creative, video, product, ecommerce, short-film, narrative, story, portable]
 ---
@@ -42,13 +42,13 @@ Choose the first matching route before reading more files:
 
 Do not load every workflow "just in case." Reference-video remakes never use the generic narrative or commercial flow. Commercial and narrative work also reads `references/code-built-video.md` when you build its titles, captions, data or end card in code.
 
-Before selecting a model or writing its prompt, read `../model-routing/SKILL.md`: its Generate or Build section decides what you generate at all. Route by task fit, preserve a user-named model, and use the live default only when no available specialist clearly fits.
+Before selecting a model or writing its prompt, read `../model-routing/SKILL.md`. Route by task fit, preserve a user-named model, and use the live default only when no available specialist clearly fits.
 
 ## Runtime Boundary
 
 Use only Renoise capabilities exposed by the current host. Do not guess Renoise commands or emulate a missing Renoise capability. Execution always goes through the Renoise tools the host exposes; a command line is not an execution path in a conversation. Keep plans and prompts in the conversation unless the host exposes export. Approval and idempotency remain host-controlled. A video link the user gives (a reference to study, remake or vary) is usable when you have a shell: download it with yt-dlp and save it as a material with the host's upload tools, then analyze and reference it like an upload.
 
-**Generate or build.** A video model redraws everything as pixels, so text, numbers, logos, UI and diagrams come out approximate and change between generations; code renders them exactly, keeps them editable, and spends no generation credits. Generation draws what code cannot: characters and performances, places, products and worlds, and their motion, in any style from live action to anime, cartoon or stylized 3D. Decide per layer, not per video: most ads generate the footage and build the type, data and end card in code. Code runs in a shell: the host's own (Claude Code, Codex, a desktop agent) or a cloud sandbox tool the host exposes (such as Renoise's `sandbox_exec`). With neither there is no code execution: say what would be cleaner built in code, generate only what generation does well, and never ask a video model for exact text or numbers. You cannot watch or listen to the result, so check it through stills, contact sheets and audio measurements, and ask the user to review.
+**Generate or build.** Decide how to make each part for the best result: a generation model draws people, places, objects and their motion; code (with a shell: the host's own or a sandbox tool it exposes) sets exact text, numbers, charts, UI and diagrams, animates graphics, and cuts, composites and mixes. Most pieces combine both. Without a shell there is no code: generate only what generation does well and never ask a video model for exact text or numbers. You cannot watch or listen to the result, so check stills, contact sheets and measurements, and ask the user to review.
 
 ## Shared Hard Rules
 
