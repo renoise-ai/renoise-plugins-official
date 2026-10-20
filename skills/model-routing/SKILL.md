@@ -48,7 +48,7 @@ Do not call a model “best” without naming the task it is best for.
 
 ## Generate or Build
 
-Decide this before choosing a model, per layer of the video rather than for the video as a whole. A video model redraws everything as pixels: text, numbers, logos, UI and diagrams come out approximate and change between generations. Code renders them exactly, the same every time, editable, and without generation credits. Generation makes what code cannot.
+Decide this before choosing a model, per layer of the video rather than for the video as a whole. A video model redraws everything as pixels: text, numbers, logos, UI and diagrams come out approximate and change between generations. Code renders them exactly, the same every time, editable, and without generation credits. Generation draws what code cannot: characters, places, objects and their motion, in any style from live action to anime, cartoon, illustration or stylized 3D.
 
 | What the frames show | Make it with | Why |
 |---|---|---|
@@ -56,9 +56,9 @@ Decide this before choosing a model, per layer of the video rather than for the 
 | Charts, figures, maps and routes, timelines, diagrams, formulas, step-by-step explainers | Code | Values and labels must be correct, not plausible |
 | Product UI, app or website walkthroughs | Code over the user's screenshots or recordings | The real interface, not an imitation of one |
 | Slideshows, recaps and montages of the user's own photos and clips | Code (cuts, pans, transitions, music) | The user's media stays unchanged |
-| Logo reveals and flat 2D motion graphics | Code | Exact geometry and color |
-| Real people, performances, dialogue, presenters | Generation | Code cannot make convincing people |
-| Products or places in photoreal settings, lifestyle scenes, cinematic camera moves, physical effects | Generation | Code cannot make photoreal footage |
+| Logo reveals and geometric motion graphics (shapes, icons, lines, transitions) | Code | Exact geometry and color |
+| Characters and performances in any style: live-action people, presenters, dialogue, anime, cartoon or 3D-animated characters | Generation | Code cannot draw convincing characters or acting |
+| Places, products and worlds in any style (photoreal, illustrated, painterly, stylized 3D), lifestyle scenes, cinematic camera moves, physical effects | Generation | Code cannot draw rich scenes or organic motion |
 | Ads, brand films, product launches | Both | Generate the footage with clean space and no on-screen text; build the type, data and end card in code and composite |
 
 Code needs a shell: the host's own or a cloud sandbox tool it exposes. Without one, generate only what generation does well and say what would be cleaner built in code; never prompt a video model for exact text or numbers. When a code-built video needs a background or hero visual, generate that image or clip alone and build the rest in code.

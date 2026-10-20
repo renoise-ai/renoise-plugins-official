@@ -1,6 +1,6 @@
 # Code-Built Video
 
-Read this when the frames show text, numbers, UI, diagrams, logos or the user's own media, or when you build those layers over generated footage. It needs a shell: the host's own or a cloud sandbox tool the host exposes. It names no framework: use what the shell already has, and add one only when the user asks for it.
+Read this when the frames show text, numbers, UI, diagrams, logos, geometric motion graphics or the user's own media, or when you build those layers over generated footage. Characters, scenes and organic motion in any style (live action, anime, cartoon, stylized 3D) are generated, not built. It needs a shell: the host's own or a cloud sandbox tool the host exposes. It names no framework: use what the shell already has, and add one only when the user asks for it.
 
 ## Default Stack
 

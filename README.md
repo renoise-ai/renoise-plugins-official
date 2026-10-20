@@ -124,7 +124,7 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 
 ### 1.11.0
 
-- Generate or build: model-routing decides, per layer, what to generate and what to build in code before it picks a model. Text, numbers, charts, maps, UI, diagrams, logos and slideshows of the user's media are built in code (exact, editable, no generation credits); people, performances, photoreal footage and camera moves through space are generated; ads mix both. Without a shell, the skills generate only what generation does well and never ask a video model for exact text or numbers.
+- Generate or build: model-routing decides, per layer, what to generate and what to build in code before it picks a model. Text, numbers, charts, maps, UI, diagrams, logos and slideshows of the user's media are built in code (exact, editable, no generation credits); characters, performances, places, products and worlds in any style (live action, anime, cartoon, illustration, stylized 3D) are generated; ads mix both. Without a shell, the skills generate only what generation does well and never ask a video model for exact text or numbers.
 - The director routes motion graphics, kinetic typography, explainers, data, map and UI videos, logo reveals and slideshows to a new framework-free reference, `references/code-built-video.md`: a default stack (HTML/SVG/canvas rendered frame by frame with headless Chromium, Manim, ffmpeg), frame-driven timing, layout and motion rules, compositing over generated footage, and a bounded verify-before-delivery loop.
 
 ### 1.10.1
