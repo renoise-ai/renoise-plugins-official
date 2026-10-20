@@ -124,7 +124,7 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 
 ### 1.12.0
 
-- Fewer rules, less asking. model-routing goes back to choosing and prompting generation models: the Generate or Build table is gone, and the decision is a short principle in the director (generation draws people, places, objects and their motion; code sets exact text, numbers, charts, UI and diagrams, animates graphics, and edits; most pieces combine both). model-routing gains References and Edits (keep identity and product anchors, keep a source's aspect ratio, fix a source that breaks a live requirement with code).
+- Fewer rules, less asking. model-routing goes back to choosing and prompting generation models: the Generate or Build table is gone, and the decision is a short principle in the director (generation draws people, places, objects and their motion; code sets exact text, numbers, charts, UI and diagrams, animates graphics, and edits; keep the look the brand or source already uses). Commercial scenarios are for live-action work: ads and brand films for software, apps and services, or for brands whose own look is UI, type or illustration, go to `references/code-built-video.md`. model-routing gains References and Edits (keep identity and product anchors, keep a source's aspect ratio, convert or trim a source that breaks a live requirement with code).
 - The commercial intake no longer lists questions to ask, and the narrative intake no longer ships a questionnaire: decide what the brief leaves open from the brief and its references, state the choices in the plan, and ask only for what cannot be inferred and blocks the work.
 
 ### 1.11.0

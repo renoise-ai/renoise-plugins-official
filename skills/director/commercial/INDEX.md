@@ -1,6 +1,6 @@
 # Commercial Video — Router and Shared Prompt Rules
 
-Use this index for e-commerce, advertising, and brand work. Read only the matched scenario file.
+Use this index for live-action e-commerce, advertising, and brand work. Read only the matched scenario file. Software, apps, services, and brands whose own look is UI, type or illustration use `references/code-built-video.md` instead.
 
 ## Route
 
@@ -8,7 +8,7 @@ Ask in order and stop at the first match:
 
 1. Reference video to replicate → stop and use `video-remake`
 2. Presenter speaking on camera (`口播`, `带货`, `测评`, `主播出镜`) → **D**
-3. Brand film longer than 5s or explicitly multi-shot → **C**
+3. Live-action brand film longer than 5s or explicitly multi-shot → **C**
 4. Otherwise, single-shot product showcase up to 5s → **B**
 
 | Scenario | Read |

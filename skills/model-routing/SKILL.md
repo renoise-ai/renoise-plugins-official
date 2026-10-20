@@ -37,7 +37,7 @@ Live availability alone is not a routing recommendation. Omit older generations,
 
 - Keep the authoritative identity or product references across iterative edits: send them in every related task alongside the latest composition or edit source, state each reference's job, and never treat a transformed intermediate as the replacement. When a reference limit forces a choice, keep the original anchor.
 - For an edit or continuation, keep the source's aspect ratio when the model supports it; analyze the source when the ratio is unknown, and follow the model's live guidance for source-following ratios.
-- Before generating with references, check every requirement the live capabilities state (format, duration, size, count) against what analysis or metadata shows; fix a source that breaks one with code instead of paying for a generation that will fail.
+- Before generating with references, check every requirement the live capabilities state (format, duration, size, count) against what analysis or metadata shows. A source that breaks one would be rejected: convert or trim it with code first.
 
 ## Routing Questions
 

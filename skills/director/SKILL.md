@@ -35,8 +35,8 @@ Choose the first matching route before reading more files:
 | Multiple controlled variants from one supplied source / video fission | Stop and use `video-fission` |
 | Presenter / 口播 / 带货 / 测评 | Read `commercial/INDEX.md`, then Scenario D |
 | Reference-video remake / 复刻 / 剪同款 | Stop and use `video-remake` |
-| Product ad, brand film, TVC | Read `commercial/INDEX.md`, then only its matched scenario |
-| Text, numbers, charts, maps, UI or app demo, diagrams, logo reveal, slideshow of the user's media, explainer | Read `references/code-built-video.md`; generate only the footage or images it needs |
+| Live-action product ad, brand film, TVC | Read `commercial/INDEX.md`, then only its matched scenario |
+| Text, numbers, charts, maps, UI or app demo, diagrams, logo reveal, slideshow of the user's media, explainer; an ad or brand film for software, an app or a service, or for a brand whose own look is UI, type or illustration | Read `references/code-built-video.md`; generate only the footage or images it needs |
 | Narrative, drama, comedy, short film, montage, MV, adaptation | Read `workflows/narrative.md` |
 | Planning-only storyboard or shot list | Stop and use `storyboard-sheet`; return here only for generated media |
 
@@ -48,7 +48,7 @@ Before selecting a model or writing its prompt, read `../model-routing/SKILL.md`
 
 Use only Renoise capabilities exposed by the current host. Do not guess Renoise commands or emulate a missing Renoise capability. Execution always goes through the Renoise tools the host exposes; a command line is not an execution path in a conversation. Keep plans and prompts in the conversation unless the host exposes export. Approval and idempotency remain host-controlled. A video link the user gives (a reference to study, remake or vary) is usable when you have a shell: download it with yt-dlp and save it as a material with the host's upload tools, then analyze and reference it like an upload.
 
-**Generate or build.** Decide how to make each part for the best result: a generation model draws people, places, objects and their motion; code (with a shell: the host's own or a sandbox tool it exposes) sets exact text, numbers, charts, UI and diagrams, animates graphics, and cuts, composites and mixes. Most pieces combine both. Without a shell there is no code: generate only what generation does well and never ask a video model for exact text or numbers. You cannot watch or listen to the result, so check stills, contact sheets and measurements, and ask the user to review.
+**Generate or build.** Decide how to make each part for the best result: a generation model draws people, places, objects and their motion; code (with a shell: the host's own or a sandbox tool it exposes) sets exact text, numbers, charts, UI and diagrams, animates graphics, and cuts, composites and mixes. Keep the look the brand or source already uses; bring in live action only when the brief or that look calls for it. Without a shell there is no code: generate only what generation does well and never ask a video model for exact text or numbers. You cannot watch or listen to the result, so check stills, contact sheets and measurements, and ask the user to review.
 
 ## Shared Hard Rules
 
