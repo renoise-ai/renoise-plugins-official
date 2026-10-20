@@ -192,6 +192,9 @@ test('model routing keeps only useful specialists without replacing capabilities
   assert.match(routing, /source video needs `reference_video`; `first_frame` alone is not equivalent/);
   assert.match(routing, /H3 Max Turbo supports text and first\/last-frame modes, not generic references/);
   assert.match(routing, /Live model capabilities are authoritative/);
+  // Generate or build comes before any model choice: exact text, data and UI are built in code
+  assert.match(routing, /## Generate or Build[\s\S]*\| Code \|[\s\S]*\| Generation \|[\s\S]*\| Both \|/);
+  assert.match(routing, /never prompt a video model for exact text or numbers/);
 });
 
 test('prompt examples use canonical material ID tokens', () => {
@@ -325,6 +328,8 @@ test('director stays a thin router with host-controlled approval boundaries', ()
   assert.match(director, /commercial\/INDEX\.md/);
   assert.match(director, /video-remake/);
   assert.match(director, /workflows\/narrative\.md/);
+  assert.match(director, /references\/code-built-video\.md/);
+  assert.ok(files.includes('skills/director/references/code-built-video.md'));
   assert.match(director, /storyboard-sheet/);
   assert.match(director, /multiple controlled variants from one supplied source/i);
   assert.match(director, /planning stages, not implicit text-confirmation pauses/i);
