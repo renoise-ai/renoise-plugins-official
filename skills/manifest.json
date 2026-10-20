@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pluginVersion": "1.10.1",
+  "pluginVersion": "1.11.0",
   "skills": [
     {
       "id": "director",
@@ -14,7 +14,8 @@
         "skills/director/commercial/scenario-d-ugc.md",
         "skills/director/workflows/narrative.md",
         "skills/director/references/prompt-craft.md",
-        "skills/director/references/visual-dev.md"
+        "skills/director/references/visual-dev.md",
+        "skills/director/references/code-built-video.md"
       ],
       "requires": [
         "models.read",

@@ -1,9 +1,11 @@
 ---
 name: director
 description: >
-  User-facing creative director and production orchestrator for generated video.
-  Use for product ads, UGC, brand films, drama, comedy, short films, adaptations,
-  montages, MV concepts, and AI remakes such as "make a video", "generate video",
+  User-facing creative director and production orchestrator for video made by
+  generation, by code, or both. Use for product ads, UGC, brand films, drama,
+  comedy, short films, adaptations, montages, MV concepts, AI remakes, and for
+  motion graphics, kinetic typography, explainers, data, map or UI videos, logo
+  reveals and slideshows of the user's media, such as "make a video", "generate video",
   "TikTok product video", "做个视频", "短剧", "广告片", "带货视频", or
   "口播视频". Also use when a script or shot plan is requested as part of
   producing the actual video. For planning-only
@@ -15,7 +17,7 @@ description: >
   of existing footage.
 metadata:
   author: renoise
-  version: 0.7.5
+  version: 0.8.0
   category: video-production
   tags: [director, creative, video, product, ecommerce, short-film, narrative, story, portable]
 ---
@@ -34,18 +36,19 @@ Choose the first matching route before reading more files:
 | Presenter / 口播 / 带货 / 测评 | Read `commercial/INDEX.md`, then Scenario D |
 | Reference-video remake / 复刻 / 剪同款 | Stop and use `video-remake` |
 | Product ad, brand film, TVC | Read `commercial/INDEX.md`, then only its matched scenario |
+| Text, numbers, charts, maps, UI or app demo, diagrams, logo reveal, slideshow of the user's media, explainer | Read `references/code-built-video.md`; generate only the footage or images it needs |
 | Narrative, drama, comedy, short film, montage, MV, adaptation | Read `workflows/narrative.md` |
 | Planning-only storyboard or shot list | Stop and use `storyboard-sheet`; return here only for generated media |
 
-Do not load every workflow "just in case." Reference-video remakes never use the generic narrative or commercial flow.
+Do not load every workflow "just in case." Reference-video remakes never use the generic narrative or commercial flow. Commercial and narrative work also reads `references/code-built-video.md` when you build its titles, captions, data or end card in code.
 
-Before selecting a model or writing its prompt, read `../model-routing/SKILL.md`. Route by task fit, preserve a user-named model, and use the live default only when no available specialist clearly fits.
+Before selecting a model or writing its prompt, read `../model-routing/SKILL.md`: its Generate or Build section decides what you generate at all. Route by task fit, preserve a user-named model, and use the live default only when no available specialist clearly fits.
 
 ## Runtime Boundary
 
 Use only Renoise capabilities exposed by the current host. Do not guess Renoise commands or emulate a missing Renoise capability. Execution always goes through the Renoise tools the host exposes; a command line is not an execution path in a conversation. Keep plans and prompts in the conversation unless the host exposes export. Approval and idempotency remain host-controlled. A video link the user gives (a reference to study, remake or vary) is usable when you have a shell: download it with yt-dlp and save it as a material with the host's upload tools, then analyze and reference it like an upload.
 
-**Your own code is part of the palette.** When you have a shell, media editing is available: the host's own (Claude Code, Codex, a desktop agent) or a cloud sandbox tool the host exposes (such as Renoise's `sandbox_exec`). Then combine Renoise generation with anything you can build in code (ffmpeg, Python, HTML or canvas rendered to frames, synthesized music and sound) for cutting, compositing, motion graphics, typography, grading, scoring and mixing. Generate what code cannot make; make in code what generation does poorly. Choose freely and creatively. You cannot watch or listen to the result, so check it through stills, contact sheets and audio measurements, and ask the user to review. With neither (hosted agents, chat-only connectors without a sandbox tool) there is no code execution.
+**Generate or build.** A video model redraws everything as pixels, so text, numbers, logos, UI and diagrams come out approximate and change between generations; code renders them exactly, keeps them editable, and spends no generation credits. Generation draws what code cannot: characters and performances, places, products and worlds, and their motion, in any style from live action to anime, cartoon or stylized 3D. Decide per layer, not per video: most ads generate the footage and build the type, data and end card in code. Code runs in a shell: the host's own (Claude Code, Codex, a desktop agent) or a cloud sandbox tool the host exposes (such as Renoise's `sandbox_exec`). With neither there is no code execution: say what would be cleaner built in code, generate only what generation does well, and never ask a video model for exact text or numbers. You cannot watch or listen to the result, so check it through stills, contact sheets and audio measurements, and ask the user to review.
 
 ## Shared Hard Rules
 
