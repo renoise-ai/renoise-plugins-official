@@ -1,6 +1,6 @@
 # Commercial Video — Router and Shared Prompt Rules
 
-Use this index for e-commerce, advertising, and brand work. Read only the matched scenario file.
+Use this index for live-action e-commerce, advertising, and brand work. Read only the matched scenario file. Software, apps, services, and brands whose own look is UI, type or illustration use `references/code-built-video.md` instead.
 
 ## Route
 
@@ -8,7 +8,7 @@ Ask in order and stop at the first match:
 
 1. Reference video to replicate → stop and use `video-remake`
 2. Presenter speaking on camera (`口播`, `带货`, `测评`, `主播出镜`) → **D**
-3. Brand film longer than 5s or explicitly multi-shot → **C**
+3. Live-action brand film longer than 5s or explicitly multi-shot → **C**
 4. Otherwise, single-shot product showcase up to 5s → **B**
 
 | Scenario | Read |
@@ -37,10 +37,9 @@ Subject + Selling-Point Action + Scene & Tone + Camera Language + Audio + Post-P
 ## Phase 1 — Brief and References
 
 1. Load the matched scenario.
-2. Ask only for missing essentials: product references, visible selling points, target audience/platform, duration, ratio, and presenter/spoken language when applicable.
-3. Analyze each host-authorized image or video through the host's media-analysis capability.
-4. Tag each reference as subject anchor, scene calibration, camera reference, or beat-sync control.
-5. Select and inspect live models using `model-routing`. Use only advertised parameters, roles, combinations, and limits.
+2. Analyze each host-authorized image or video through the host's media-analysis capability.
+3. Tag each reference as subject anchor, scene calibration, camera reference, or beat-sync control.
+4. Select and inspect live models using `model-routing`. Use only advertised parameters, roles, combinations, and limits.
 
 For recurring people or products, register once and reuse the same material through a supported role. Use canonical material tokens and state what each controls:
 

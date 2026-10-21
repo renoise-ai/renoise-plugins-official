@@ -122,6 +122,12 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 
 ## Version & upgrading
 
+### 1.12.0
+
+- The director plans before it makes anything: what would make the piece good, each part with what it shows and whether it is generated or built, told to the user in a few lines; the host decides whether to wait for an OK. code-built-video adds three habits: one timeline that both picture and sound read (sound effects made from its event times), change shown as a process rather than a state swap, and one transition system for the whole piece. A host's sandbox tool may hand builds to its engineer, who reads code-built-video; the director writes that engineer's brief.
+- Fewer rules, less asking. model-routing goes back to choosing and prompting generation models: the Generate or Build table is gone, and the decision is a short principle in the director (generation draws people, places, objects and their motion; code sets exact text, numbers, charts, UI and diagrams, animates graphics, and edits; keep the look the brand or source already uses). Commercial scenarios are for live-action work: ads and brand films for software, apps and services, or for brands whose own look is UI, type or illustration, go to `references/code-built-video.md`. model-routing gains References and Edits (keep identity and product anchors, keep a source's aspect ratio, convert or trim a source that breaks a live requirement with code).
+- The commercial intake no longer lists questions to ask, and the narrative intake no longer ships a questionnaire: decide what the brief leaves open from the brief and its references, state the choices in the plan, and ask only for what cannot be inferred and blocks the work.
+
 ### 1.11.0
 
 - Generate or build: model-routing decides, per layer, what to generate and what to build in code before it picks a model. Text, numbers, charts, maps, UI, diagrams, logos and slideshows of the user's media are built in code (exact, editable, no generation credits); characters, performances, places, products and worlds in any style (live action, anime, cartoon, illustration, stylized 3D) are generated; ads mix both. Without a shell, the skills generate only what generation does well and never ask a video model for exact text or numbers.

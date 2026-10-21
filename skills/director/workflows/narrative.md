@@ -4,17 +4,7 @@ Use for drama, comedy, short film, montage, MV, and story adaptation. Read `refe
 
 ## Intake
 
-If the brief already specifies characters, visible action, mood, setting, duration, and references, start drafting. Otherwise ask only for missing decisions:
-
-| Missing decision | Ask |
-|---|---|
-| Characters | How many, what do they look like, and what is their relationship? |
-| Story/action | What physically happens? Is there a conflict, reveal, or transformation? |
-| Mood/style | What should the viewer feel? Any visual references? |
-| Setting | Where and when does it happen? |
-| Duration | How long should the finished video be? |
-| Speech | Does anyone speak, and in what language? Apply the Director spoken-language gate. |
-| References | Are there authorized character, prop, product, or location references? |
+Decide what the brief leaves open (characters, action, mood, setting, duration, speech, references) from the brief and its references, and state your choices in the plan. Ask only for what cannot be inferred and blocks the work; spoken language follows the Director spoken-language gate.
 
 Select and inspect the video model before deciding whether this is one clip or multiple segments.
 

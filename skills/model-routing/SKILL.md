@@ -9,7 +9,7 @@ description: >
 user-invocable: false
 metadata:
   author: renoise
-  version: 0.4.0
+  version: 0.5.0
   category: media-generation
   tags: [model-routing, prompting, image, video, audio, portable]
 ---
@@ -22,8 +22,7 @@ Select by task, not by habit. Then prompt for the selected model instead of send
 
 Live model capabilities are authoritative for availability, defaults, input roles, combinations, limits, duration, ratio, resolution, and audio controls. This Skill contains only researched routing preferences and prompting styles.
 
-0. Decide what to generate at all (Generate or Build below); the model tables apply only to what you generate.
-1. Preserve a model explicitly named by the user.
+1. Preserve a model explicitly named by the user, or one you presented as selected in the plan or estimate. If it cannot do the job, explain why and the replacement you propose, and switch only after the user agrees.
 2. Filter candidates by the live capabilities required by the task.
 3. Route only to the newest live generation of a model family; older generations remain available only when the user explicitly names one.
 4. Choose the best specialist below.
@@ -33,6 +32,12 @@ Live model capabilities are authoritative for availability, defaults, input role
 8. Never pass a role or parameter merely because this guide mentions a public model capability; the Renoise deployment may expose a narrower contract.
 
 Live availability alone is not a routing recommendation. Omit older generations, fully dominated models, and models without a clear task advantage; an explicitly named model still follows rule 1.
+
+## References and Edits
+
+- Keep the authoritative identity or product references across iterative edits: send them in every related task alongside the latest composition or edit source, state each reference's job, and never treat a transformed intermediate as the replacement. When a reference limit forces a choice, keep the original anchor.
+- For an edit or continuation, keep the source's aspect ratio when the model supports it; analyze the source when the ratio is unknown, and follow the model's live guidance for source-following ratios.
+- Before generating with references, check every requirement the live capabilities state (format, duration, size, count) against what analysis or metadata shows. A source that breaks one would be rejected: convert or trim it with code first.
 
 ## Routing Questions
 
@@ -45,23 +50,6 @@ Classify the request before selecting:
 - **References:** none, one source image, several identity/style references, source video, endpoint frames, or voice/audio references.
 
 Do not call a model “best” without naming the task it is best for.
-
-## Generate or Build
-
-Decide this before choosing a model, per layer of the video rather than for the video as a whole. A video model redraws everything as pixels: text, numbers, logos, UI and diagrams come out approximate and change between generations. Code renders them exactly, the same every time, editable, and without generation credits. Generation draws what code cannot: characters, places, objects and their motion, in any style from live action to anime, cartoon, illustration or stylized 3D.
-
-| What the frames show | Make it with | Why |
-|---|---|---|
-| Titles, kinetic typography, quotes or lyrics, captions, lower thirds, prices, CTAs, end cards | Code | Exact copy and brand fonts that stay legible |
-| Charts, figures, maps and routes, timelines, diagrams, formulas, step-by-step explainers | Code | Values and labels must be correct, not plausible |
-| Product UI, app or website walkthroughs | Code over the user's screenshots or recordings | The real interface, not an imitation of one |
-| Slideshows, recaps and montages of the user's own photos and clips | Code (cuts, pans, transitions, music) | The user's media stays unchanged |
-| Logo reveals and geometric motion graphics (shapes, icons, lines, transitions) | Code | Exact geometry and color |
-| Characters and performances in any style: live-action people, presenters, dialogue, anime, cartoon or 3D-animated characters | Generation | Code cannot draw convincing characters or acting |
-| Places, products and worlds in any style (photoreal, illustrated, painterly, stylized 3D), lifestyle scenes, cinematic camera moves, physical effects | Generation | Code cannot draw rich scenes or organic motion |
-| Ads, brand films, product launches | Both | Generate the footage with clean space and no on-screen text; build the type, data and end card in code and composite |
-
-Code needs a shell: the host's own or a cloud sandbox tool it exposes. Without one, generate only what generation does well and say what would be cleaner built in code; never prompt a video model for exact text or numbers. When a code-built video needs a background or hero visual, generate that image or clip alone and build the rest in code.
 
 # Image Routing
 

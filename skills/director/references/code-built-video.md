@@ -1,6 +1,6 @@
 # Code-Built Video
 
-Read this when the frames show text, numbers, UI, diagrams, logos, geometric motion graphics or the user's own media, or when you build those layers over generated footage. Characters, scenes and organic motion in any style (live action, anime, cartoon, stylized 3D) are generated, not built. It needs a shell: the host's own or a cloud sandbox tool the host exposes. It names no framework: use what the shell already has, and add one only when the user asks for it.
+Read this when the frames show text, numbers, UI, diagrams, logos, geometric motion graphics or the user's own media, or when you build those layers over generated footage. Characters, scenes and organic motion in any style (live action, anime, cartoon, stylized 3D) are generated, not built. It needs a shell: the host's own or a cloud sandbox tool the host exposes. When that tool hands builds to an engineer, the engineer reads this file: write its brief with the timeline, look and checks this file asks for. It names no framework: use what the shell already has, and add one only when the user asks for it.
 
 ## Default Stack
 
@@ -12,6 +12,7 @@ Read this when the frames show text, numbers, UI, diagrams, logos, geometric mot
 
 ## Frame-Driven Timing
 
+- Build one timeline first: every scene's start and duration and every event in it (a word typed, a check drawn, a value reached, a cut) in one table that both the picture and the sound read. Export the event times and make the sound effects from them, so nothing drifts when a scene is retimed.
 - Derive every position, opacity and value from the frame index and fps. CSS transitions and animations, timers and wall-clock time do not render the same frame by frame.
 - Wait until fonts, images and data have loaded before capturing the first frame.
 - Keep scenes as separate functions or files with an explicit start and duration, so one scene can change without retiming the rest.
@@ -29,6 +30,8 @@ Read this when the frames show text, numbers, UI, diagrams, logos, geometric mot
 - Hold each line long enough to read it twice: about 0.4 s per word, and never under 1.5 s.
 - Ease every move; vary duration and easing by an element's size and role. Identical springs on every element, or perfectly even stagger delays, read as a template.
 - Bring elements in in reading order, and move only what the viewer should look at.
+- Show change as a process: draw strokes, reveal with clips or masks, count numbers up, morph shapes. Never swap one state for another between two frames.
+- Use one transition system for the whole piece, so every cut moves the same way.
 - Carry motion across a cut: the next scene enters along the axis and direction the last one left, at about the same speed. Do not reverse direction between consecutive scenes without a visible cause.
 - No idle wobble: when nothing should change, hold still. A beat of stillness before the key reveal makes it land.
 
