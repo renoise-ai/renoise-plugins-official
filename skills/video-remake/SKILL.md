@@ -18,7 +18,7 @@ This workflow resolves replacement slots before final generation. The current ho
 
 ## Runtime Boundary
 
-Use only capabilities and references exposed by the current host. Do not emulate missing analysis/material/task operations. When you have a shell (the host's own or a cloud sandbox tool such as `sandbox_exec`), your own code (editing, compositing, motion graphics, music) is available alongside generation, as in director's Runtime Boundary; use it wherever it brings the remake closer to the reference. Before selecting a model or writing prompts, read `../model-routing/SKILL.md` and inspect live capabilities.
+Use only capabilities and references exposed by the current host. Do not emulate missing analysis/material/task operations. When you have a shell (the host's own or a cloud sandbox tool such as `sandbox`), your own code (editing, compositing, motion graphics, music) is available alongside generation, as in director's Runtime Boundary; use it wherever it brings the remake closer to the reference. Before selecting a model or writing prompts, read `../model-routing/SKILL.md` and inspect live capabilities.
 
 **A linked source.** When the user gives the source video as a link (X, YouTube, TikTok, Douyin, Instagram, Bilibili, and other video pages) and you have a shell, download it yourself with yt-dlp (on a local shell, the `video-download` skill), save it as a material with the host's upload tools, and use that material as the source from then on. Ask the user to upload the file only when the download is blocked or fails, or when you have no shell.
 
