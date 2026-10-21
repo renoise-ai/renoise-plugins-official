@@ -8,7 +8,7 @@ description: >
 allowed-tools: Bash
 metadata:
   author: renoise
-  version: 0.3.0
+  version: 0.3.1
   category: utility
   tags: [download, youtube, tiktok, douyin, yt-dlp, greenvideo]
 ---
@@ -48,7 +48,7 @@ bash ${CLAUDE_SKILL_DIR}/scripts/download-video.sh '<URL>'
 ```
 
 The script handles everything automatically:
-- Extracts a platform-prefixed video ID (`yt-dQw4w9WgXcQ`, `tk-7571284267028729101`, `vid-aHR0cHM6Ly93d3`)
+- Extracts a platform-prefixed video ID (`yt-dQw4w9WgXcQ`, `tk-7571284267028729101`, `bili-BV1bx4k6zE6D`, `vid-aHR0cHM6Ly93d3`)
 - Saves to `resources/references/<video_id>.mp4`
 - Skips download if file already exists (dedup)
 - Retries TikTok downloads with `--cookies-from-browser chrome` on failure
@@ -131,6 +131,7 @@ If the fallback script is unavailable, follow these steps:
 |----------|---------|------------|
 | YouTube | `watch?v=`, `shorts/`, `embed/`, `youtu.be/` → 11-char ID | `yt-dQw4w9WgXcQ` |
 | TikTok | 15+ digit numeric ID in URL | `tk-7571284267028729101` |
+| Bilibili | `BV` id (`av` converted to `BV`); `ep`/`ss` id for bangumi/cheese | `bili-BV1bx4k6zE6D` |
 | Other | Base64url of URL, first 16 chars | `vid-aHR0cHM6Ly93d3` |
 
 ## Troubleshooting

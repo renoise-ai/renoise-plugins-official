@@ -5,7 +5,8 @@
 #   download-video.sh <URL> [output_dir]
 #
 # Features:
-#   - Extracts platform-prefixed video ID (yt-xxx, tk-xxx, vid-xxx)
+#   - Extracts a platform-prefixed video ID
+#     (yt-xxx, tk-xxx, bili-xxx, vid-xxx)
 #   - Skips download if file already exists (dedup)
 #   - Auto-retries TikTok with --cookies-from-browser chrome on 403
 #   - Outputs final file path on success
@@ -16,6 +17,10 @@ URL="${1:?Usage: download-video.sh <URL> [output_dir]}"
 OUTPUT_DIR="${2:-resources/references}"
 
 # --- Video ID extraction ---
+
+# Bilibili helpers (av→BV canonicalization, part numbers, ep/ss ids) live in
+# a sibling file so this script stays readable.
+source "$(dirname "${BASH_SOURCE[0]}")/bilibili-id.sh"
 
 extract_video_id() {
   local url="$1"
@@ -36,6 +41,11 @@ extract_video_id() {
       echo "tk-${tk_id}"
       return
     fi
+  fi
+
+  # Bilibili (see bilibili-id.sh); the ID is echoed straight through.
+  if bilibili_video_id "$url"; then
+    return
   fi
 
   # Fallback: base64url-encoded URL, first 16 chars
