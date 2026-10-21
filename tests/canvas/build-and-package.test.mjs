@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
+import { tmpdir } from "node:os";
 import test from "node:test";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
@@ -59,6 +60,28 @@ test("Codex can start the packaged whiteboard MCP from the plugin root", async (
     await client.connect(transport);
     const { tools } = await client.listTools();
     assert.ok(tools.length >= 19);
+    assert.ok(tools.some(({ name }) => name === "render_renoise_whiteboard_widget"));
+  } finally {
+    await client.close();
+  }
+});
+
+test("Claude Code can start the packaged whiteboard MCP from any project directory", async () => {
+  const manifest = JSON.parse(readFileSync(".claude-plugin/plugin.json", "utf8"));
+  const whiteboard = manifest.mcpServers.find((entry) => typeof entry === "object")["renoise-whiteboard"];
+  assert.equal(whiteboard.cwd, undefined);
+
+  // Claude Code expands ${CLAUDE_PLUGIN_ROOT} in args and spawns the server in the user's project.
+  const transport = new StdioClientTransport({
+    command: whiteboard.command,
+    args: whiteboard.args.map((arg) => arg.replaceAll("${CLAUDE_PLUGIN_ROOT}", process.cwd())),
+    cwd: tmpdir(),
+    stderr: "pipe",
+  });
+  const client = new Client({ name: "renoise-package-test", version: "1.0.0" });
+  try {
+    await client.connect(transport);
+    const { tools } = await client.listTools();
     assert.ok(tools.some(({ name }) => name === "render_renoise_whiteboard_widget"));
   } finally {
     await client.close();
