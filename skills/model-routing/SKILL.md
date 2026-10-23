@@ -157,12 +157,15 @@ Use a concise visual description, not a requirements document:
 | H3-family 2K delivery, high-fidelity endpoint control, or focused multimodal references | `hailuo-h3` | Full-quality tier with image/video/audio references; choose it when Max's live contract cannot meet the task. |
 | Fast H3-family text-to-video, first/last-frame, or reference-to-video with image/video/audio sources | `hailuo-h3-max` | Faster multimodal tier when its live quality and resolution fit; suitable for source-video variants without discarding the source. |
 | Fastest, lowest-cost H3-family text-to-video or first/last-frame generation without generic references | `h3-max-turbo` | Turbo supports text and endpoint frames, not reference image/video/audio inputs; use H3 Max or H3 for references. |
+| A single shot delivered at 2K or 4K from text or first(/last) frames, with native sound and no other references | `flux-3-video` | The only live model with 4K output (2K/4K upscaled from the same generation), 5–20 seconds, and cheaper per second than Seedance 2.5 at 1080p; it takes no reference images, video, or audio. |
 | xAI one-image animation with native sound | `grok-video-1.5` | Newest Grok video generation; the current Renoise contract requires exactly one input image. |
+| Digital human: one person image talking or singing to a given voice track (talking head, presenter monologue, dubbed avatar, lip-synced song) | `omnihuman-2.0` | Lip-syncs one portrait to one driving audio and runs as long as the audio (up to 300 seconds), so the exact voice and long monologues are controllable; it does not stage product handling or camera action the way generative video does. |
 | Upscale an existing video without changing its content | `upscale-video-topaz-starlight-2.5` | Dedicated restoration/upscaling model; use a generation or editing model when objects, motion, timing, or style should change. |
 
 ### Tier and version notes
 
 - Within the H3 family, use full H3 when its higher-quality output or 2K matters; choose H3 Max when speed/cost matters and its live image/video/audio reference roles, combinations, and output quality fit. Turbo is the text/first/last-frame budget tier, not a generic reference mode. A source video needs `reference_video`; `first_frame` alone is not equivalent.
+- Within FLUX 3, use FLUX 3 Video for 2K/4K or 9:21; choose `flux-3-max` when the shot stays at 720p/1080p and the user asks for FLUX's higher-quality tier, at a higher per-second cost. Independent rankings of FLUX 3 disagree, so do not prefer it over Seedance 2.5 on quality alone.
 - Grok's public upstream capabilities may move faster than Renoise's contract. Route from live roles and limits rather than assuming an upstream feature is connected.
 - Model preference leaderboards are task-, resolution-, and audio-filter-specific; use them as volatile evidence, not a single aggregate ranking.
 
@@ -252,6 +255,15 @@ Sound: specific dialogue/SFX/ambience; no music if unwanted.
 - Give the attached image a clear visual or motion job.
 - Request dialogue, effects, ambience, or music explicitly when native audio matters.
 
+### OmniHuman 2.0 — the audio drives the performance
+
+The voice track is the script: write and generate the audio first (usually `seed-audio-1.0` from the exact lines, or the user's authorized recording), check it is speech or vocals of 4–300 seconds, then pass it with one portrait.
+
+- Use a single, front-facing or three-quarter portrait with the face and mouth unobstructed; the framing of the image is the framing of the video.
+- The prompt is optional; when used, describe expression, gestures, and subtle camera behavior, never new dialogue.
+- Do not pass duration, ratio, or resolution: length follows the audio and output is 720p.
+- Pure instrumental audio is rejected; for a song, pass the vocal track.
+
 ### Topaz Starlight — no creative prompt
 
 Upscaling is not regeneration. Supply only the source video and settings required by the live capability; do not add a creative prompt or unrelated media inputs. If the user wants content changed, route to a video editing model instead.
@@ -261,9 +273,11 @@ Upscaling is not regeneration. Supply only the source video and settings require
 | Task | Prefer | Why |
 |---|---|---|
 | Song, instrumental, score cue, jingle, or music bed — anything where music is the deliverable | `lyria-pro` | Composes a complete structured song (verses, chorus, bridge, optional vocals and lyrics) up to about 3 minutes; replaces Lyria 3 Clip. |
-| Dialogue, expressive narration, podcast, dubbing/re-voicing, SFX/ambience, or a complete sound scene | `seed-audio-1.0` | Unified speech, dialogue, effects, and ambience generation; live default audio model. |
+| A vocal song sung from exact lyrics (the user's, or ones you write from their theme), optionally with a female or male lead | `mureka-song-9` | Dedicated sung-lyrics model: lyrics go in their own field with section tags and the style stays in the prompt; one complete song of about 2.5–3 minutes. |
+| Dialogue, expressive narration, podcast, dubbing/re-voicing, or a complete sound scene | `seed-audio-1.0` | Unified speech, dialogue, effects, and ambience generation; live default audio model. |
+| One standalone sound effect: foley, impact, whoosh, UI sound, ambience loop, or stinger | `eleven-sfx-v2` | Exact length from 1 to 30 seconds and billed per second; use Seed Audio when the effects belong to a scene with speech. |
 
-Neither broadly replaces the other: Lyria composes music; Seed Audio handles speech-led and complete sound scenes.
+Lyria composes music and stays the choice for instrumentals, cues, and beds; Mureka sings given lyrics; Seed Audio handles speech-led and complete sound scenes; ElevenLabs SFX makes single effects to length.
 
 ## Lyria 3 Pro — composer brief
 
@@ -287,6 +301,21 @@ Production: mix character, era, space, dynamics
 - Describe genre, era, instrumentation, and production traits instead of requesting a named artist imitation.
 - Use an optional guide image only when the live material roles expose it.
 
+## Mureka Song 9 — lyrics plus a style line
+
+```text
+lyrics:
+[Verse]
+...
+[Chorus]
+...
+prompt: genre, mood, tempo, instruments, vocal character
+```
+
+- Put the full lyrics in the lyrics field with section tags; never put lyrics in the prompt.
+- Size the lyrics to a 2.5–3 minute song; the length is not adjustable.
+- Choose the lead's gender only when it matters; otherwise let the model pick.
+
 ## Seed Audio 1.0 — sound-scene script
 
 ```text
@@ -304,6 +333,10 @@ Music cue and ending: ...
 - Use concrete Foley and ambience; onomatopoeia can clarify transient sounds.
 - Use precise timing for dialogue; describe SFX, ambience, and music timing approximately unless live guidance says otherwise.
 
+## ElevenLabs Sound Effects — one sound, described physically
+
+Describe the source, action, material and texture, and the space (for example "heavy oak door slams shut in a stone hallway, short echo"). Set the duration to the effect's real length, and ask for one effect per task; layer several effects in the edit.
+
 # Research Basis
 
 Reviewed 2026-10-13 against live Renoise model contracts. Rankings are directional and decay quickly; live capabilities and task-specific tests override them.
@@ -319,7 +352,10 @@ Primary guidance:
 - BytePlus Seedance 2.5 and 2.0 prompt guides: https://docs.byteplus.com/en/docs/ModelArk/2607689 and https://docs.byteplus.com/en/docs/ModelArk/2222480
 - MiniMax H3 family: https://www.minimax.io/blog/minimax-h3, https://platform.minimax.io/docs/guides/video-generation, https://huggingface.co/MiniMaxAI/MiniMax-H3/tree/main/docs, and https://blog.fal.ai/introducing-h3-max-by-fal/
 - Topaz Starlight Precise 2.5: https://developer.topazlabs.com/video-models/starlight/starlight-precise-2.5
+- FLUX 3 Video / Max: https://docs.bfl.ml/flux_3/flux3_overview and live Renoise model guidance and per-second credit pricing (2026-10-23)
+- OmniHuman 2.0: live Renoise model guidance and the BytePlus OmniHuman 2.0 contract behind it (2026-10-23).
 - Gemini Omni: https://ai.google.dev/gemini-api/docs/omni
 - Lyria: https://ai.google.dev/gemini-api/docs/music-generation, https://deepmind.google/models/lyria/prompt-guide/, and https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-lyria-3-pro
 - Seed Audio: https://seed.bytedance.com/en/blog/from-speech-to-audio-creation-introducing-the-seed-audio-1-0-audio-creation-model and https://docs.byteplus.com/en/docs/byteplusvoice/seedaudio-01
+- Mureka Song 9 and ElevenLabs Sound Effects: live Renoise model guidance (2026-10-23), https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html, and https://elevenlabs.io/docs/capabilities/sound-effects
 - Independent preference evidence: https://artificialanalysis.ai/image/leaderboard/text-to-image, https://artificialanalysis.ai/image/leaderboard/editing, https://artificialanalysis.ai/video/leaderboard/text-to-video, https://artificialanalysis.ai/video/leaderboard/image-to-video, and https://artificialanalysis.ai/video/leaderboard/video-editing

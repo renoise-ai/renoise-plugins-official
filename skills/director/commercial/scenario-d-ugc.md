@@ -4,6 +4,8 @@
 
 **Difference from Scenario C**: Scenario C is cinematic and music-driven (no talking). Scenario D is driven by a live presenter speaking to camera with dialogue and choreographed demo actions — and it must feel like a genuine user sharing their experience, not an actor reading a script.
 
+**Talking-head segments**: when a segment is mostly the presenter talking to camera, needs one exact or cloned voice, or runs longer than a single clip allows, make the voice track first and animate the presenter's portrait with the digital-human model (see model-routing, `omnihuman-2.0`). Keep generative video for the segments where hands, products, and camera move.
+
 ---
 
 ## Phase 1.5: Asset Registration (Scenario D Only)

@@ -180,7 +180,8 @@ test('model routing keeps only useful specialists without replacing capabilities
     'mj-v8.2', 'gpt-image-2.5-sunburst', 'gpt-image-2.5-flare', 'seedream-5-0-lite',
     'lyria-pro', 'seed-audio-1.0', 'grok-image', 'grok-image-quality',
     'grok-video-1.5', 'gemini-omni-flash', 'hailuo-h3', 'hailuo-h3-max', 'h3-max-turbo',
-    'upscale-video-topaz-starlight-2.5',
+    'upscale-video-topaz-starlight-2.5', 'omnihuman-2.0', 'mureka-song-9', 'eleven-sfx-v2',
+    'flux-3-video', 'flux-3-max',
   ]) assert.ok(routing.includes(`\`${model}\``), `${model} routing missing`);
   for (const obsolete of [
     'seedance-2.0-byteplus', 'seedance-2.0-fast-byteplus', 'seedance-2.0-mini-byteplus',
@@ -188,6 +189,8 @@ test('model routing keeps only useful specialists without replacing capabilities
     'nano-banana-2-lite', 'nano-banana-pro',
   ]) assert.ok(!routing.includes(`\`${obsolete}\``), `${obsolete} should not be routed`);
   assert.match(routing, /Route only to the newest live generation/);
+  assert.match(routing, /OmniHuman 2\.0 — the audio drives the performance/);
+  assert.match(readFileSync('skills/director/commercial/scenario-d-ugc.md', 'utf8'), /`omnihuman-2\.0`/);
   assert.match(routing, /generic GPT Image 2\.5 request to Sunburst/);
   assert.match(routing, /use Flare when explicitly requested/i);
   assert.match(routing, /H3 Max[\s\S]*live image\/video\/audio reference roles/);
