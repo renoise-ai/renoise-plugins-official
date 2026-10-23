@@ -180,7 +180,7 @@ test('model routing keeps only useful specialists without replacing capabilities
     'mj-v8.2', 'gpt-image-2.5-sunburst', 'gpt-image-2.5-flare', 'seedream-5-0-lite',
     'lyria-pro', 'seed-audio-1.0', 'grok-image', 'grok-image-quality',
     'grok-video-1.5', 'gemini-omni-flash', 'hailuo-h3', 'hailuo-h3-max', 'h3-max-turbo',
-    'upscale-video-topaz-starlight-2.5', 'omnihuman-2.0',
+    'upscale-video-topaz-starlight-2.5', 'omnihuman-2.0', 'mureka-song-9', 'eleven-sfx-v2',
   ]) assert.ok(routing.includes(`\`${model}\``), `${model} routing missing`);
   for (const obsolete of [
     'seedance-2.0-byteplus', 'seedance-2.0-fast-byteplus', 'seedance-2.0-mini-byteplus',

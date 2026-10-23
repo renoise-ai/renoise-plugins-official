@@ -271,9 +271,11 @@ Upscaling is not regeneration. Supply only the source video and settings require
 | Task | Prefer | Why |
 |---|---|---|
 | Song, instrumental, score cue, jingle, or music bed — anything where music is the deliverable | `lyria-pro` | Composes a complete structured song (verses, chorus, bridge, optional vocals and lyrics) up to about 3 minutes; replaces Lyria 3 Clip. |
-| Dialogue, expressive narration, podcast, dubbing/re-voicing, SFX/ambience, or a complete sound scene | `seed-audio-1.0` | Unified speech, dialogue, effects, and ambience generation; live default audio model. |
+| A vocal song sung from exact lyrics (the user's, or ones you write from their theme), optionally with a female or male lead | `mureka-song-9` | Dedicated sung-lyrics model: lyrics go in their own field with section tags and the style stays in the prompt; one complete song of about 2.5–3 minutes. |
+| Dialogue, expressive narration, podcast, dubbing/re-voicing, or a complete sound scene | `seed-audio-1.0` | Unified speech, dialogue, effects, and ambience generation; live default audio model. |
+| One standalone sound effect: foley, impact, whoosh, UI sound, ambience loop, or stinger | `eleven-sfx-v2` | Exact length from 1 to 30 seconds and billed per second; use Seed Audio when the effects belong to a scene with speech. |
 
-Neither broadly replaces the other: Lyria composes music; Seed Audio handles speech-led and complete sound scenes.
+Lyria composes music and stays the choice for instrumentals, cues, and beds; Mureka sings given lyrics; Seed Audio handles speech-led and complete sound scenes; ElevenLabs SFX makes single effects to length.
 
 ## Lyria 3 Pro — composer brief
 
@@ -297,6 +299,21 @@ Production: mix character, era, space, dynamics
 - Describe genre, era, instrumentation, and production traits instead of requesting a named artist imitation.
 - Use an optional guide image only when the live material roles expose it.
 
+## Mureka Song 9 — lyrics plus a style line
+
+```text
+lyrics:
+[Verse]
+...
+[Chorus]
+...
+prompt: genre, mood, tempo, instruments, vocal character
+```
+
+- Put the full lyrics in the lyrics field with section tags; never put lyrics in the prompt.
+- Size the lyrics to a 2.5–3 minute song; the length is not adjustable.
+- Choose the lead's gender only when it matters; otherwise let the model pick.
+
 ## Seed Audio 1.0 — sound-scene script
 
 ```text
@@ -313,6 +330,10 @@ Music cue and ending: ...
 - Use clean authorized voice references, or an authorized character image for inferred voice, according to the mutually exclusive live reference modes.
 - Use concrete Foley and ambience; onomatopoeia can clarify transient sounds.
 - Use precise timing for dialogue; describe SFX, ambience, and music timing approximately unless live guidance says otherwise.
+
+## ElevenLabs Sound Effects — one sound, described physically
+
+Describe the source, action, material and texture, and the space (for example "heavy oak door slams shut in a stone hallway, short echo"). Set the duration to the effect's real length, and ask for one effect per task; layer several effects in the edit.
 
 # Research Basis
 
@@ -333,4 +354,5 @@ Primary guidance:
 - Gemini Omni: https://ai.google.dev/gemini-api/docs/omni
 - Lyria: https://ai.google.dev/gemini-api/docs/music-generation, https://deepmind.google/models/lyria/prompt-guide/, and https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-lyria-3-pro
 - Seed Audio: https://seed.bytedance.com/en/blog/from-speech-to-audio-creation-introducing-the-seed-audio-1-0-audio-creation-model and https://docs.byteplus.com/en/docs/byteplusvoice/seedaudio-01
+- Mureka Song 9 and ElevenLabs Sound Effects: live Renoise model guidance (2026-10-23), https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html, and https://elevenlabs.io/docs/capabilities/sound-effects
 - Independent preference evidence: https://artificialanalysis.ai/image/leaderboard/text-to-image, https://artificialanalysis.ai/image/leaderboard/editing, https://artificialanalysis.ai/video/leaderboard/text-to-video, https://artificialanalysis.ai/video/leaderboard/image-to-video, and https://artificialanalysis.ai/video/leaderboard/video-editing
