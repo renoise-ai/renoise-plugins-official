@@ -122,6 +122,10 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 
 ## Version & upgrading
 
+### 1.13.0
+
+- model-routing routes digital-human work (talking head, presenter monologue, dubbed avatar, lip-synced song) to OmniHuman 2.0 (`omnihuman-2.0`): one portrait plus one driving voice audio, as long as the audio. Its prompting notes say to make the voice track first (usually with Seed Audio) and not to pass duration, ratio or resolution. The director's UGC scenario uses it for segments that are mostly talking to camera, need one exact or cloned voice, or run longer than a clip.
+
 ### 1.12.0
 
 - The director plans before it makes anything: what would make the piece good, each part with what it shows and whether it is generated or built, told to the user in a few lines; the host decides whether to wait for an OK. code-built-video adds three habits: one timeline that both picture and sound read (sound effects made from its event times), change shown as a process rather than a state swap, and one transition system for the whole piece. A host's sandbox tool may hand builds to its engineer, who reads code-built-video; the director writes that engineer's brief.

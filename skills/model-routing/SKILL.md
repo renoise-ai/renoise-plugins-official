@@ -158,6 +158,7 @@ Use a concise visual description, not a requirements document:
 | Fast H3-family text-to-video, first/last-frame, or reference-to-video with image/video/audio sources | `hailuo-h3-max` | Faster multimodal tier when its live quality and resolution fit; suitable for source-video variants without discarding the source. |
 | Fastest, lowest-cost H3-family text-to-video or first/last-frame generation without generic references | `h3-max-turbo` | Turbo supports text and endpoint frames, not reference image/video/audio inputs; use H3 Max or H3 for references. |
 | xAI one-image animation with native sound | `grok-video-1.5` | Newest Grok video generation; the current Renoise contract requires exactly one input image. |
+| Digital human: one person image talking or singing to a given voice track (talking head, presenter monologue, dubbed avatar, lip-synced song) | `omnihuman-2.0` | Lip-syncs one portrait to one driving audio and runs as long as the audio (up to 300 seconds), so the exact voice and long monologues are controllable; it does not stage product handling or camera action the way generative video does. |
 | Upscale an existing video without changing its content | `upscale-video-topaz-starlight-2.5` | Dedicated restoration/upscaling model; use a generation or editing model when objects, motion, timing, or style should change. |
 
 ### Tier and version notes
@@ -252,6 +253,15 @@ Sound: specific dialogue/SFX/ambience; no music if unwanted.
 - Give the attached image a clear visual or motion job.
 - Request dialogue, effects, ambience, or music explicitly when native audio matters.
 
+### OmniHuman 2.0 — the audio drives the performance
+
+The voice track is the script: write and generate the audio first (usually `seed-audio-1.0` from the exact lines, or the user's authorized recording), check it is speech or vocals of 4–300 seconds, then pass it with one portrait.
+
+- Use a single, front-facing or three-quarter portrait with the face and mouth unobstructed; the framing of the image is the framing of the video.
+- The prompt is optional; when used, describe expression, gestures, and subtle camera behavior, never new dialogue.
+- Do not pass duration, ratio, or resolution: length follows the audio and output is 720p.
+- Pure instrumental audio is rejected; for a song, pass the vocal track.
+
 ### Topaz Starlight — no creative prompt
 
 Upscaling is not regeneration. Supply only the source video and settings required by the live capability; do not add a creative prompt or unrelated media inputs. If the user wants content changed, route to a video editing model instead.
@@ -319,6 +329,7 @@ Primary guidance:
 - BytePlus Seedance 2.5 and 2.0 prompt guides: https://docs.byteplus.com/en/docs/ModelArk/2607689 and https://docs.byteplus.com/en/docs/ModelArk/2222480
 - MiniMax H3 family: https://www.minimax.io/blog/minimax-h3, https://platform.minimax.io/docs/guides/video-generation, https://huggingface.co/MiniMaxAI/MiniMax-H3/tree/main/docs, and https://blog.fal.ai/introducing-h3-max-by-fal/
 - Topaz Starlight Precise 2.5: https://developer.topazlabs.com/video-models/starlight/starlight-precise-2.5
+- OmniHuman 2.0: live Renoise model guidance and the BytePlus OmniHuman 2.0 contract behind it (2026-10-23).
 - Gemini Omni: https://ai.google.dev/gemini-api/docs/omni
 - Lyria: https://ai.google.dev/gemini-api/docs/music-generation, https://deepmind.google/models/lyria/prompt-guide/, and https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-lyria-3-pro
 - Seed Audio: https://seed.bytedance.com/en/blog/from-speech-to-audio-creation-introducing-the-seed-audio-1-0-audio-creation-model and https://docs.byteplus.com/en/docs/byteplusvoice/seedaudio-01
