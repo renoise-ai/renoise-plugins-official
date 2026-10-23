@@ -181,6 +181,7 @@ test('model routing keeps only useful specialists without replacing capabilities
     'lyria-pro', 'seed-audio-1.0', 'grok-image', 'grok-image-quality',
     'grok-video-1.5', 'gemini-omni-flash', 'hailuo-h3', 'hailuo-h3-max', 'h3-max-turbo',
     'upscale-video-topaz-starlight-2.5', 'omnihuman-2.0', 'mureka-song-9', 'eleven-sfx-v2',
+    'flux-3-video', 'flux-3-max',
   ]) assert.ok(routing.includes(`\`${model}\``), `${model} routing missing`);
   for (const obsolete of [
     'seedance-2.0-byteplus', 'seedance-2.0-fast-byteplus', 'seedance-2.0-mini-byteplus',

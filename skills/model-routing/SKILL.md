@@ -157,6 +157,7 @@ Use a concise visual description, not a requirements document:
 | H3-family 2K delivery, high-fidelity endpoint control, or focused multimodal references | `hailuo-h3` | Full-quality tier with image/video/audio references; choose it when Max's live contract cannot meet the task. |
 | Fast H3-family text-to-video, first/last-frame, or reference-to-video with image/video/audio sources | `hailuo-h3-max` | Faster multimodal tier when its live quality and resolution fit; suitable for source-video variants without discarding the source. |
 | Fastest, lowest-cost H3-family text-to-video or first/last-frame generation without generic references | `h3-max-turbo` | Turbo supports text and endpoint frames, not reference image/video/audio inputs; use H3 Max or H3 for references. |
+| A single shot delivered at 2K or 4K from text or first(/last) frames, with native sound and no other references | `flux-3-video` | The only live model with 4K output (2K/4K upscaled from the same generation), 5–20 seconds, and cheaper per second than Seedance 2.5 at 1080p; it takes no reference images, video, or audio. |
 | xAI one-image animation with native sound | `grok-video-1.5` | Newest Grok video generation; the current Renoise contract requires exactly one input image. |
 | Digital human: one person image talking or singing to a given voice track (talking head, presenter monologue, dubbed avatar, lip-synced song) | `omnihuman-2.0` | Lip-syncs one portrait to one driving audio and runs as long as the audio (up to 300 seconds), so the exact voice and long monologues are controllable; it does not stage product handling or camera action the way generative video does. |
 | Upscale an existing video without changing its content | `upscale-video-topaz-starlight-2.5` | Dedicated restoration/upscaling model; use a generation or editing model when objects, motion, timing, or style should change. |
@@ -164,6 +165,7 @@ Use a concise visual description, not a requirements document:
 ### Tier and version notes
 
 - Within the H3 family, use full H3 when its higher-quality output or 2K matters; choose H3 Max when speed/cost matters and its live image/video/audio reference roles, combinations, and output quality fit. Turbo is the text/first/last-frame budget tier, not a generic reference mode. A source video needs `reference_video`; `first_frame` alone is not equivalent.
+- Within FLUX 3, use FLUX 3 Video for 2K/4K or 9:21; choose `flux-3-max` when the shot stays at 720p/1080p and the user asks for FLUX's higher-quality tier, at a higher per-second cost. Independent rankings of FLUX 3 disagree, so do not prefer it over Seedance 2.5 on quality alone.
 - Grok's public upstream capabilities may move faster than Renoise's contract. Route from live roles and limits rather than assuming an upstream feature is connected.
 - Model preference leaderboards are task-, resolution-, and audio-filter-specific; use them as volatile evidence, not a single aggregate ranking.
 
@@ -350,6 +352,7 @@ Primary guidance:
 - BytePlus Seedance 2.5 and 2.0 prompt guides: https://docs.byteplus.com/en/docs/ModelArk/2607689 and https://docs.byteplus.com/en/docs/ModelArk/2222480
 - MiniMax H3 family: https://www.minimax.io/blog/minimax-h3, https://platform.minimax.io/docs/guides/video-generation, https://huggingface.co/MiniMaxAI/MiniMax-H3/tree/main/docs, and https://blog.fal.ai/introducing-h3-max-by-fal/
 - Topaz Starlight Precise 2.5: https://developer.topazlabs.com/video-models/starlight/starlight-precise-2.5
+- FLUX 3 Video / Max: https://docs.bfl.ml/flux_3/flux3_overview and live Renoise model guidance and per-second credit pricing (2026-10-23)
 - OmniHuman 2.0: live Renoise model guidance and the BytePlus OmniHuman 2.0 contract behind it (2026-10-23).
 - Gemini Omni: https://ai.google.dev/gemini-api/docs/omni
 - Lyria: https://ai.google.dev/gemini-api/docs/music-generation, https://deepmind.google/models/lyria/prompt-guide/, and https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-lyria-3-pro
