@@ -11,8 +11,10 @@
   },
   "files": [
     "canvas/",
+    "digital-human-koubo/",
     "director/",
     "model-routing/",
+    "promo-video/",
     "renoise-cli/",
     "renoise-setup/",
     "storyboard-sheet/",

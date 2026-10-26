@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pluginVersion": "1.13.0",
+  "pluginVersion": "1.14.0",
   "skills": [
     {
       "id": "director",
@@ -88,6 +88,39 @@
         "models.read",
         "tasks.estimate",
         "tasks.create"
+      ]
+    },
+    {
+      "id": "digital-human-koubo",
+      "runtime": "portable",
+      "entry": "skills/digital-human-koubo/SKILL.md",
+      "files": [
+        "skills/digital-human-koubo/SKILL.md"
+      ],
+      "requires": [
+        "models.read",
+        "account.read",
+        "tasks.estimate",
+        "tasks.create"
+      ],
+      "optional": [
+        "materials.read",
+        "media.edit"
+      ]
+    },
+    {
+      "id": "promo-video",
+      "runtime": "portable",
+      "entry": "skills/promo-video/SKILL.md",
+      "files": [
+        "skills/promo-video/SKILL.md"
+      ],
+      "requires": [],
+      "optional": [
+        "models.read",
+        "tasks.estimate",
+        "tasks.create",
+        "media.edit"
       ]
     },
     {

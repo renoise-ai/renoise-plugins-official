@@ -36,8 +36,10 @@ test('skill manifest separates portable creative methods from local execution', 
   const byId = new Map(manifest.skills.map((skill) => [skill.id, skill]));
   assert.deepEqual([...byId.keys()].sort(), [
     'canvas',
+    'digital-human-koubo',
     'director',
     'model-routing',
+    'promo-video',
     'renoise-cli',
     'renoise-setup',
     'storyboard-sheet',
