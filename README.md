@@ -11,6 +11,8 @@ AI video production skills by Renoise — creative direction, generation, analys
 | **Build Storyboard** (`storyboard-sheet`) | Portable script/novel adaptation into review sheets, shot lists, first frames, and video prompts |
 | `video-fission` | Portable controlled-variant experiments from one owner-authorized source video |
 | `video-remake` | Portable reference-video recreation with controlled character, product, brand, prop, or scene replacement |
+| `digital-human-koubo` | Talking-head videos with a digital presenter (the user's photo or an AI host), packaged and edited with Remotion; fetched from [renoise-skills](https://github.com/renoise-ai/renoise-skills) at a pinned commit, runs in the Renoise sandbox or a local shell |
+| `promo-video` | Promo, launch and brand films rendered with Remotion; fetched from [renoise-skills](https://github.com/renoise-ai/renoise-skills) at a pinned commit, runs in the Renoise sandbox or a local shell |
 | `renoise-cli` | Native CLI for your own terminal, scripts, and CI, plus local production helpers (not a generation path in conversations) |
 | **Setup / Account** (`renoise-setup`) | Connect the Renoise tools (browser sign-in), optional CLI install/update, and readiness checks |
 | **Renoise Annotation Board** (`canvas`) | Local image/frame annotation board for snapshots and structured revision handoff |
@@ -121,6 +123,10 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 | `RENOISE_WHITEBOARD_MAX_VIDEO_BYTES` | Optional whiteboard limit | Maximum imported MP4/WebM byte size. Defaults to 262144000 (250 MB); accepted range is 1 MB–2 GB. |
 
 ## Version & upgrading
+
+### 1.14.0
+
+- Two skills from [renoise-skills](https://github.com/renoise-ai/renoise-skills): `digital-human-koubo` (talking-head videos with a digital presenter: the user's photo or an AI host, 15-second takes generated on Renoise, listen-back, word alignment and Remotion packaging) and `promo-video` (promo, launch and brand films rendered with Remotion). Their scripts, templates and assets are too large to ship in every install, so each skill here is a short pointer: on first use the agent downloads renoise-skills at a pinned commit into `~/.cache/renoise-skills/<commit>/` and follows the full skill from there, in the Renoise sandbox or the user's own shell. Without a shell, digital-human-koubo stops after the script and generation, and promo-video hands over to the director.
 
 ### 1.13.0
 
