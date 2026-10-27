@@ -15,10 +15,11 @@ metadata:
 
 # promo-video
 
-This skill lives in [renoise-ai/renoise-skills](https://github.com/renoise-ai/renoise-skills/tree/8ac1ca146caf802d895b7a3722be93d02fc8837c/skills/promo-video) with its scripts, templates and assets, pinned to commit `8ac1ca146caf802d895b7a3722be93d02fc8837c`. It runs in a shell: the Renoise sandbox (the `sandbox` tool) or the user's own machine.
+This skill lives in [renoise-ai/renoise-skills](https://github.com/renoise-ai/renoise-skills/tree/stable/skills/promo-video) with its scripts, templates and assets. Use its `stable` branch, which only moves to commits that passed CI. It runs in a shell: the Renoise sandbox (the `sandbox` tool) or the user's own machine.
 
-1. Get the files once per commit. Skip this step when `~/.cache/renoise-skills/8ac1ca146caf802d895b7a3722be93d02fc8837c/skills/promo-video/SKILL.md` already exists. Otherwise download the archive `https://codeload.github.com/renoise-ai/renoise-skills/tar.gz/8ac1ca146caf802d895b7a3722be93d02fc8837c` and unpack it into `~/.cache/renoise-skills/8ac1ca146caf802d895b7a3722be93d02fc8837c/` without its top folder (for example `mkdir -p ~/.cache/renoise-skills/8ac1ca146caf802d895b7a3722be93d02fc8837c && curl -fsSL <archive> | tar -xz -C ~/.cache/renoise-skills/8ac1ca146caf802d895b7a3722be93d02fc8837c --strip-components=1`).
-2. Read `~/.cache/renoise-skills/8ac1ca146caf802d895b7a3722be93d02fc8837c/skills/promo-video/SKILL.md` and follow it; its `<skill>` is that folder's absolute path. Read its references from there as it asks.
-3. Renoise rules still apply: load model-routing before choosing a model, and before create_tasks show the estimate_cost total and the balance and wait for the user's explicit OK in the chat.
+1. Find the commit `stable` is on: `curl -fsSL -H 'Accept: application/vnd.github.sha' https://api.github.com/repos/renoise-ai/renoise-skills/commits/stable` prints it. If that fails (offline or rate-limited), use the newest folder in `~/.cache/renoise-skills/` that has `skills/promo-video/SKILL.md` and go to step 3; if there is none, use `stable` as the commit.
+2. Get the files once per commit. Skip this step when `~/.cache/renoise-skills/<commit>/skills/promo-video/SKILL.md` already exists. Otherwise download the archive `https://codeload.github.com/renoise-ai/renoise-skills/tar.gz/<commit>` and unpack it into `~/.cache/renoise-skills/<commit>/` without its top folder (for example `mkdir -p ~/.cache/renoise-skills/<commit> && curl -fsSL <archive> | tar -xz -C ~/.cache/renoise-skills/<commit> --strip-components=1`), then delete the other folders in `~/.cache/renoise-skills/`.
+3. Read `~/.cache/renoise-skills/<commit>/skills/promo-video/SKILL.md` and follow it; its `<skill>` is that folder's absolute path. Read its references from there as it asks.
+4. Renoise rules still apply: load model-routing before choosing a model, and before create_tasks show the estimate_cost total and the balance and wait for the user's explicit OK in the chat.
 
 Without a shell this skill cannot render: say so and use the director skill instead.

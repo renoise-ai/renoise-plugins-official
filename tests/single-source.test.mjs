@@ -121,6 +121,18 @@ test('portable skill files contain no local execution instructions', () => {
   }
 });
 
+test('skills fetched from renoise-skills follow its stable branch', () => {
+  const manifest = readJSON('skills/manifest.json');
+  const remote = manifest.skills.filter(({ entry }) => readFileSync(entry, 'utf8').includes('renoise-ai/renoise-skills'));
+  assert.ok(remote.length > 0);
+  for (const { entry } of remote) {
+    const skill = readFileSync(entry, 'utf8');
+    assert.match(skill, /api\.github\.com\/repos\/renoise-ai\/renoise-skills\/commits\/stable/, entry);
+    assert.match(skill, /~\/\.cache\/renoise-skills\/<commit>\//, entry);
+    assert.doesNotMatch(skill, /\b[0-9a-f]{40}\b/, `${entry} must not pin a commit`);
+  }
+});
+
 test('conversations use the Renoise MCP tools; renoise-cli is for terminals, scripts, and local helpers', () => {
   for (const path of removed) assert.equal(existsSync(path), false, `${path} must not return`);
   const cli = readFileSync('skills/renoise-cli/SKILL.md', 'utf8');
