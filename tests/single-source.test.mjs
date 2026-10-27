@@ -238,7 +238,18 @@ test('package metadata is the manifest source of truth', () => {
   assert.match(readFileSync(listing.logo, 'utf8'), /<rect[^>]+fill="#2B2B2B"/);
 
   // One MCP config for every host: Claude Code reads it through its manifest, Codex and ChatGPT natively.
-  assert.equal(manifests[0].mcpServers, './mcp.json');
+  // Claude Code launches stdio servers from the project directory and ignores a plugin-relative `cwd`,
+  // so its manifest overrides only the whiteboard entry with a ${CLAUDE_PLUGIN_ROOT} path.
+  assert.deepEqual(manifests[0].mcpServers, [
+    './mcp.json',
+    {
+      'renoise-whiteboard': {
+        type: 'stdio',
+        command: 'node',
+        args: ['${CLAUDE_PLUGIN_ROOT}/features/canvas/dist/server.mjs'],
+      },
+    },
+  ]);
   const servers = readJSON('mcp.json').mcpServers;
   assert.deepEqual(servers.renoise, { type: 'streamable-http', url: 'https://renoise.ai/api/public/mcp' });
 
