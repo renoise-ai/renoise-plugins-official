@@ -11,8 +11,9 @@ AI video production skills by Renoise — creative direction, generation, analys
 | **Build Storyboard** (`storyboard-sheet`) | Portable script/novel adaptation into review sheets, shot lists, first frames, and video prompts |
 | `video-fission` | Portable controlled-variant experiments from one owner-authorized source video |
 | `video-remake` | Portable reference-video recreation with controlled character, product, brand, prop, or scene replacement |
-| `digital-human-koubo` | Talking-head videos with a digital presenter (the user's photo or an AI host), packaged and edited with Remotion; fetched from [renoise-skills](https://github.com/renoise-ai/renoise-skills) at a pinned commit, runs in the Renoise sandbox or a local shell |
-| `promo-video` | Promo, launch and brand films rendered with Remotion; fetched from [renoise-skills](https://github.com/renoise-ai/renoise-skills) at a pinned commit, runs in the Renoise sandbox or a local shell |
+| `digital-human-koubo` | Talking-head videos with a digital presenter (the user's photo or an AI host), packaged and edited with Remotion; fetched from the `stable` branch of [renoise-skills](https://github.com/renoise-ai/renoise-skills), runs in the Renoise sandbox or a local shell |
+| `promo-video` | Promo, launch and brand films rendered with Remotion; fetched from the `stable` branch of [renoise-skills](https://github.com/renoise-ai/renoise-skills), runs in the Renoise sandbox or a local shell |
+| `pixel-breakdown` | 16:9 pixel-art breakdown episodes of an authorized viral clip and its AI remake, drawn by code and rendered with Playwright; fetched from the `stable` branch of [renoise-skills](https://github.com/renoise-ai/renoise-skills), runs in the Renoise sandbox or a local shell |
 | `renoise-cli` | Native CLI for your own terminal, scripts, and CI, plus local production helpers (not a generation path in conversations) |
 | **Setup / Account** (`renoise-setup`) | Connect the Renoise tools (browser sign-in), optional CLI install/update, and readiness checks |
 | **Renoise Annotation Board** (`canvas`) | Local image/frame annotation board for snapshots and structured revision handoff |
@@ -123,6 +124,11 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 | `RENOISE_WHITEBOARD_MAX_VIDEO_BYTES` | Optional whiteboard limit | Maximum imported MP4/WebM byte size. Defaults to 262144000 (250 MB); accepted range is 1 MB–2 GB. |
 
 ## Version & upgrading
+
+### 1.15.0
+
+- `digital-human-koubo` and `promo-video` follow the `stable` branch of renoise-skills instead of a pinned commit. renoise-skills moves `stable` to each main commit whose CI passed, so a fix to those skills reaches every agent without a release here. The agent looks up the commit `stable` is on and keeps one copy per commit in `~/.cache/renoise-skills/<commit>/`; offline or rate-limited, it uses the copy it has. A new skill or a changed description still needs a release here.
+- New `pixel-breakdown` from renoise-skills: 16:9 pixel-art breakdown episodes (60–90 s plus a 3:4 cover) of a viral clip the user is authorized to use and its AI remake. It needs a shell; without one it stops before any paid step.
 
 ### 1.14.0
 

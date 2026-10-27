@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pluginVersion": "1.14.0",
+  "pluginVersion": "1.15.0",
   "skills": [
     {
       "id": "director",
@@ -121,6 +121,24 @@
         "tasks.estimate",
         "tasks.create",
         "media.edit"
+      ]
+    },
+    {
+      "id": "pixel-breakdown",
+      "runtime": "portable",
+      "entry": "skills/pixel-breakdown/SKILL.md",
+      "files": [
+        "skills/pixel-breakdown/SKILL.md"
+      ],
+      "requires": [
+        "models.read",
+        "account.read",
+        "media.analyze",
+        "tasks.estimate",
+        "tasks.create"
+      ],
+      "optional": [
+        "materials.read"
       ]
     },
     {
