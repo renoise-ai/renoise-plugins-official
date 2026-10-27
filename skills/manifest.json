@@ -124,6 +124,24 @@
       ]
     },
     {
+      "id": "pixel-breakdown",
+      "runtime": "portable",
+      "entry": "skills/pixel-breakdown/SKILL.md",
+      "files": [
+        "skills/pixel-breakdown/SKILL.md"
+      ],
+      "requires": [
+        "models.read",
+        "account.read",
+        "media.analyze",
+        "tasks.estimate",
+        "tasks.create"
+      ],
+      "optional": [
+        "materials.read"
+      ]
+    },
+    {
       "id": "renoise-cli",
       "runtime": "local-cli",
       "entry": "skills/renoise-cli/SKILL.md",
