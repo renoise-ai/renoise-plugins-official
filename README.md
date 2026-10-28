@@ -125,6 +125,10 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 
 ## Version & upgrading
 
+### 1.15.1
+
+- `renoise-setup` no longer starts the Renoise sign-in from the agent's own shell. In ChatGPT / Codex Desktop it used to run `codex mcp login renoise`: the browser returned to that command's one-time localhost callback, the command had ended, and Renoise stayed "Not logged in" although the user approved. Setup now asks the user to connect from the host's settings (Plugins in ChatGPT / Codex Desktop, Settings → Connectors in Claude Desktop and Cowork) or, for Codex CLI and OpenClaw, to run the login in their own terminal. It also names the Renoise marketplace plugin as the one to install in ChatGPT / Codex Desktop; the directory listing points to the review entry without the sandbox tools.
+
 ### 1.15.0
 
 - `digital-human-koubo` and `promo-video` follow the `stable` branch of renoise-skills instead of a pinned commit. renoise-skills moves `stable` to each main commit whose CI passed, so a fix to those skills reaches every agent without a release here. The agent looks up the commit `stable` is on and keeps one copy per commit in `~/.cache/renoise-skills/<commit>/`; offline or rate-limited, it uses the copy it has. A new skill or a changed description still needs a release here.
