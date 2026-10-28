@@ -192,7 +192,7 @@ test('model routing keeps only useful specialists without replacing capabilities
   for (const model of [
     'seedance-2.5-byteplus',
     'nano-banana-2', 'wan3.0-video', 'wan3.0-video-prime',
-    'mj-v8.2', 'gpt-image-2.5-sunburst', 'gpt-image-2.5-flare', 'seedream-5-0-lite',
+    'mj-v8.2', 'gpt-image-2.5-sunburst', 'gpt-image-2.5-flare',
     'lyria-pro', 'seed-audio-1.0', 'grok-image', 'grok-image-quality',
     'grok-video-1.5', 'gemini-omni-flash', 'hailuo-h3', 'hailuo-h3-max', 'h3-max-turbo',
     'upscale-video-topaz-starlight-2.5', 'omnihuman-2.0', 'mureka-song-9', 'eleven-sfx-v2',
@@ -201,7 +201,7 @@ test('model routing keeps only useful specialists without replacing capabilities
   for (const obsolete of [
     'seedance-2.0-byteplus', 'seedance-2.0-fast-byteplus', 'seedance-2.0-mini-byteplus',
     'gpt-image-2', 'grok-video', 'midjourney-v7', 'mj-v8.1', 'happyhorse-1.0', 'kling-3.0-omni', 'lyria-clip',
-    'nano-banana-2-lite', 'nano-banana-pro',
+    'nano-banana-2-lite', 'nano-banana-pro', 'seedream-5-0-lite',
   ]) assert.ok(!routing.includes(`\`${obsolete}\``), `${obsolete} should not be routed`);
   assert.match(routing, /Route only to the newest live generation/);
   assert.match(routing, /OmniHuman 2\.0 — the audio drives the performance/);
@@ -212,6 +212,7 @@ test('model routing keeps only useful specialists without replacing capabilities
   assert.match(routing, /source video needs `reference_video`; `first_frame` alone is not equivalent/);
   assert.match(routing, /H3 Max Turbo supports text and first\/last-frame modes, not generic references/);
   assert.match(routing, /Live model capabilities are authoritative/);
+  assert.match(routing, /call each model only by its live display name/);
   // model-routing only picks and prompts generation models; the generate-or-build decision lives in the director
   assert.doesNotMatch(routing, /Generate or Build/);
   assert.match(routing, /## References and Edits/);

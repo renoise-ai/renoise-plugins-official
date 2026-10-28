@@ -125,6 +125,12 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 
 ## Version & upgrading
 
+### 1.15.1
+
+- model-routing no longer routes to Seedream 5.0 Lite (`seedream-5-0-lite`), which Renoise has delisted; Seedream work goes to the live default.
+- model-routing tells the agent that a Renoise site may list a model under its own id and display name: submit the live id and, with the user, use only the live display name, never a maker or model name from the guide. renoise.tv lists models this way.
+- The director names renoise.tv as the platform URL for users in mainland China and suggests top-ups on the site the user works on instead of always renoise.ai.
+
 ### 1.15.0
 
 - `digital-human-koubo` and `promo-video` follow the `stable` branch of renoise-skills instead of a pinned commit. renoise-skills moves `stable` to each main commit whose CI passed, so a fix to those skills reaches every agent without a release here. The agent looks up the commit `stable` is on and keeps one copy per commit in `~/.cache/renoise-skills/<commit>/`; offline or rate-limited, it uses the copy it has. A new skill or a changed description still needs a release here.

@@ -9,7 +9,7 @@ description: >
 user-invocable: false
 metadata:
   author: renoise
-  version: 0.5.0
+  version: 0.5.1
   category: media-generation
   tags: [model-routing, prompting, image, video, audio, portable]
 ---
@@ -30,6 +30,7 @@ Live model capabilities are authoritative for availability, defaults, input role
 6. Inspect the selected model's live guidance before writing the final prompt.
 7. Let the selected model's profile override generic prompt-craft advice when prompt structure, density, or reference wording conflicts.
 8. Never pass a role or parameter merely because this guide mentions a public model capability; the Renoise deployment may expose a narrower contract.
+9. The live list may name a model differently from this guide (a Renoise site can list it under its own id and display name). Submit the id the live list gives, and with the user call each model only by its live display name, never by a maker or model name used in this guide.
 
 Live availability alone is not a routing recommendation. Omit older generations, fully dominated models, and models without a clear task advantage; an explicitly named model still follows rule 1.
 
@@ -62,7 +63,6 @@ Do not call a model “best” without naming the task it is best for.
 | Fast, inexpensive drafts and simple variants | `grok-image` | Lowest-cost live image tier for quick iteration; move the chosen direction to a specialist for the final. |
 | Extreme aspect ratios (1:4 to 8:1), Google-family work, several references, multilingual localization, or conversational iteration | `nano-banana-2` | The Google-family model in the live lineup, balancing quality, latency, text, reference reasoning, and broad formats. |
 | Aesthetic exploration, stylized art direction, editorial mood, or concept art | `mj-v8.2` | Current Midjourney generation and strong aesthetic prior. |
-| Seedream output resolution or image-reference count beyond what the live Pro contract accepts | `seedream-5-0-lite` | Choose Lite when its advertised limits fit and Pro's do not; otherwise use the live default for general Seedream work. |
 | xAI image request | `grok-image` for lower-cost iteration; `grok-image-quality` when higher quality justifies the added cost | Both support direct natural-language generation and editing through the live Renoise contract. |
 
 ## Image Prompting Styles
@@ -119,7 +119,6 @@ Keep exactly: ...
 ```
 
 - Pro: specify dense layout, multilingual copy, materials, local edit regions, and everything the edit preserves.
-- Lite: natural language works well; make causal/spatial relationships explicit for complex transformations.
 - Assign each reference a clear role and avoid vague pronouns in multi-reference edits.
 
 ### Midjourney — aesthetic visual phrase
@@ -346,7 +345,7 @@ Primary guidance:
 - OpenAI GPT Image: https://openai.com/index/introducing-chatgpt-images-2-5/, https://developers.openai.com/api/docs/models/gpt-image-2.5-flare, https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst, https://developers.openai.com/api/docs/guides/image-generation, and https://developers.openai.com/cookbook/examples/multimodal/image-gen-models-prompting-guide
 - Google Gemini image: https://ai.google.dev/gemini-api/docs/image-generation and https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-nano-banana
 - Midjourney prompting/version docs: https://docs.midjourney.com/hc/en-us/articles/32023408776205-Prompt-Basics, https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version, and https://updates.midjourney.com/version-8-2/
-- ByteDance Seedream: https://seed.bytedance.com/en/blog/deeper-thinking-more-accurate-generation-introducing-seedream-5-0-lite and https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro
+- ByteDance Seedream: https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro
 - xAI Imagine image/video: https://docs.x.ai/developers/model-capabilities/imagine and https://docs.x.ai/developers/model-capabilities/video/generation
 - Wan 3.0 / Wan 3.0 Prime: live Renoise model guidance and per-second credit pricing (2026-10-13).
 - BytePlus Seedance 2.5 and 2.0 prompt guides: https://docs.byteplus.com/en/docs/ModelArk/2607689 and https://docs.byteplus.com/en/docs/ModelArk/2222480

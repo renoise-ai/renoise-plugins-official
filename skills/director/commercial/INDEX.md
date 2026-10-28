@@ -112,4 +112,4 @@ Scenario C uses its storyboard preview.
 - Return result links, task IDs, cover images when available, generation time, and warnings.
 - On revision, preserve approved references/results and adjust only the rejected dimension or segment.
 
-For insufficient balance, report the live value and suggest top-up at https://www.renoise.ai. For moderation, follow Director's explicit host-error rule.
+For insufficient balance, report the live value and suggest a top-up on the Renoise site the user works on. For moderation, follow Director's explicit host-error rule.
