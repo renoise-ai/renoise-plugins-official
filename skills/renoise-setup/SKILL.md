@@ -40,7 +40,8 @@ Every Renoise operation in a conversation (models, estimates, generation, upload
 | Host | How it connects |
 |---|---|
 | Claude Code | The plugin declares the `renoise` server. If it shows "Needs authentication", ask the user to run `/mcp`, choose `plugin:renoise:renoise`, and authenticate in the browser. |
-| Codex | The plugin declares the `renoise` server; authorize it when Codex asks, or run `codex mcp login renoise`. |
+| Codex / ChatGPT Desktop | The plugin installed from the **Renoise** marketplace under **Plugins** declares the `renoise` server at the URL above. The Renoise listing in the ChatGPT / Codex directory points to `/api/public/mcp/chatgpt` instead, the review entry without the sandbox; if that is what is installed, ask the user to install the marketplace plugin. If the server is not connected, ask the user to connect Renoise from the host's plugin settings, or approve when the host prompts, and keep the app open until the browser confirms; then start a new conversation so the tools load. Never run `codex mcp login` from your own shell: the browser returns to a one-time localhost callback that dies with your command, and the host never receives the credential. |
+| Codex CLI | The same marketplace plugin declares the server; authorize it when Codex asks, or have the user run `codex mcp login renoise` in their own terminal. |
 | Claude Desktop / claude.ai | Add the Renoise connector (Settings → Connectors, URL above). |
 | OpenClaw | Add an MCP server named `renoise` with that URL, `transport: "streamable-http"` and `auth: "oauth"` (ask before editing host configuration), then run `openclaw mcp login renoise`. |
 
