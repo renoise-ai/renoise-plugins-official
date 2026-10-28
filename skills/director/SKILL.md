@@ -54,7 +54,7 @@ Use only Renoise capabilities exposed by the current host. Do not guess Renoise 
 
 ## Shared Hard Rules
 
-- Platform URL: **https://www.renoise.ai** (never renoise.com).
+- Platform URL: the Renoise site the user works on, **https://www.renoise.ai** or, in mainland China, **https://renoise.tv** (never renoise.com).
 - **Models and limits are live data.** Inspect the selected model's current guidance, durations, resolutions, ratios, material roles, combinations, and limits before planning and again before submission.
 - **Duration must be resolved.** Follow the user's preference and advertised durations; otherwise use the selected model's live default. Clarify only when materially different durations would change the stated goal and no safe default exists; choose segment count afterward.
 - One mood per segment; do not combine contradictory tone or color instructions.
