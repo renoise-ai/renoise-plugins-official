@@ -14,6 +14,7 @@ AI video production skills by Renoise — creative direction, generation, analys
 | `digital-human-koubo` | Talking-head videos with a digital presenter (the user's photo or an AI host), packaged and edited with Remotion; fetched from the `stable` branch of [renoise-skills](https://github.com/renoise-ai/renoise-skills), runs in the Renoise sandbox or a local shell |
 | `promo-video` | Promo, launch and brand films rendered with Remotion; fetched from the `stable` branch of [renoise-skills](https://github.com/renoise-ai/renoise-skills), runs in the Renoise sandbox or a local shell |
 | `pixel-breakdown` | 16:9 pixel-art breakdown episodes of an authorized viral clip and its AI remake, drawn by code and rendered with Playwright; fetched from the `stable` branch of [renoise-skills](https://github.com/renoise-ai/renoise-skills), runs in the Renoise sandbox or a local shell |
+| `vibe-knowledge` | Narrated knowledge shorts (45 s – 5 min, 16:9) where every on-screen claim has a source: six explainer script templates, a Renoise voiceover aligned word by word and 44 code-drawn styles; fetched from the `stable` branch of [renoise-skills](https://github.com/renoise-ai/renoise-skills), runs in the Renoise sandbox or a local shell |
 | `renoise-cli` | Native CLI for your own terminal, scripts, and CI, plus local production helpers (not a generation path in conversations) |
 | **Setup / Account** (`renoise-setup`) | Connect the Renoise tools (browser sign-in), optional CLI install/update, and readiness checks |
 | **Renoise Annotation Board** (`canvas`) | Local image/frame annotation board for snapshots and structured revision handoff |
@@ -124,6 +125,10 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 | `RENOISE_WHITEBOARD_MAX_VIDEO_BYTES` | Optional whiteboard limit | Maximum imported MP4/WebM byte size. Defaults to 262144000 (250 MB); accepted range is 1 MB–2 GB. |
 
 ## Version & upgrading
+
+### 1.16.0
+
+- New `vibe-knowledge` from renoise-skills: narrated knowledge shorts (45 s – 5 min, 16:9 1080p60) from one knowledge point, with a sourced fact sheet, a Renoise voiceover aligned word by word, 44 code-drawn visual styles and an optional tier of Renoise stills, shots and sound effects. It follows the `stable` branch like the other renoise-skills skills and needs a shell; without one it stops before any paid step.
 
 ### 1.15.1
 
