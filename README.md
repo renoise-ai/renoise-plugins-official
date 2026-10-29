@@ -15,6 +15,7 @@ AI video production skills by Renoise — creative direction, generation, analys
 | `promo-video` | Promo, launch and brand films rendered with Remotion; fetched from the `stable` branch of [renoise-skills](https://github.com/renoise-ai/renoise-skills), runs in the Renoise sandbox or a local shell |
 | `pixel-breakdown` | 16:9 pixel-art breakdown episodes of an authorized viral clip and its AI remake, drawn by code and rendered with Playwright; fetched from the `stable` branch of [renoise-skills](https://github.com/renoise-ai/renoise-skills), runs in the Renoise sandbox or a local shell |
 | `vibe-knowledge` | Narrated knowledge shorts (45 s – 5 min, 16:9) where every on-screen claim has a source: six explainer script templates, a Renoise voiceover aligned word by word and 44 code-drawn styles; fetched from the `stable` branch of [renoise-skills](https://github.com/renoise-ai/renoise-skills), runs in the Renoise sandbox or a local shell |
+| `talking-head-editor` | Edits talking-head footage the user filmed into a finished vertical or landscape video or a JianYing (剪映) draft: cuts pauses and fillers, plans each sentence, adds B-roll, captions, word art, sound and music; fetched from the `stable` branch of [renoise-skills](https://github.com/renoise-ai/renoise-skills), runs in the Renoise sandbox or a local shell |
 | `renoise-cli` | Native CLI for your own terminal, scripts, and CI, plus local production helpers (not a generation path in conversations) |
 | **Setup / Account** (`renoise-setup`) | Connect the Renoise tools (browser sign-in), optional CLI install/update, and readiness checks |
 | **Renoise Annotation Board** (`canvas`) | Local image/frame annotation board for snapshots and structured revision handoff |
@@ -125,6 +126,10 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 | `RENOISE_WHITEBOARD_MAX_VIDEO_BYTES` | Optional whiteboard limit | Maximum imported MP4/WebM byte size. Defaults to 262144000 (250 MB); accepted range is 1 MB–2 GB. |
 
 ## Version & upgrading
+
+### 1.17.0
+
+- New `talking-head-editor` from renoise-skills: edits talking-head footage the user filmed into a finished MP4 or a JianYing (剪映) draft, from transcription and pause removal to B-roll, captions, word art, sound effects and music, in a refined or variety-show style. Renoise generation is optional (B-roll, a digital presenter) and asks before spending credits. It follows the `stable` branch like the other renoise-skills skills and needs a shell.
 
 ### 1.16.0
 

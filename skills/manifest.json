@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pluginVersion": "1.16.0",
+  "pluginVersion": "1.17.0",
   "skills": [
     {
       "id": "director",
@@ -156,6 +156,22 @@
         "tasks.create"
       ],
       "optional": [
+        "materials.read"
+      ]
+    },
+    {
+      "id": "talking-head-editor",
+      "runtime": "portable",
+      "entry": "skills/talking-head-editor/SKILL.md",
+      "files": [
+        "skills/talking-head-editor/SKILL.md"
+      ],
+      "requires": [],
+      "optional": [
+        "models.read",
+        "account.read",
+        "tasks.estimate",
+        "tasks.create",
         "materials.read"
       ]
     },
