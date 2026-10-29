@@ -257,7 +257,7 @@ Sound: specific dialogue/SFX/ambience; no music if unwanted.
 
 ### OmniHuman 2.0 — the audio drives the performance
 
-The voice track is the script: write and generate the audio first (usually `seed-audio-1.0` from the exact lines, or the user's authorized recording), check it is speech or vocals of 4–300 seconds, then pass it with one portrait.
+The voice track is the script: write and generate the audio first (usually `gemini-3.8-flash-tts` from the exact lines, `seed-audio-1.0` when the voice must be cloned from an authorized reference, or the user's authorized recording itself), check it is speech or vocals of 4–300 seconds, then pass it with one portrait.
 
 - Use a single, front-facing or three-quarter portrait with the face and mouth unobstructed; the framing of the image is the framing of the video.
 - The prompt is optional; when used, describe expression, gestures, and subtle camera behavior, never new dialogue.
@@ -274,10 +274,11 @@ Upscaling is not regeneration. Supply only the source video and settings require
 |---|---|---|
 | Song, instrumental, score cue, jingle, or music bed — anything where music is the deliverable | `lyria-pro` | Composes a complete structured song (verses, chorus, bridge, optional vocals and lyrics) up to about 3 minutes; replaces Lyria 3 Clip. |
 | A vocal song sung from exact lyrics (the user's, or ones you write from their theme), optionally with a female or male lead | `mureka-song-9` | Dedicated sung-lyrics model: lyrics go in their own field with section tags and the style stays in the prompt; one complete song of about 2.5–3 minutes. |
-| Dialogue, expressive narration, podcast, dubbing/re-voicing, or a complete sound scene | `seed-audio-1.0` | Unified speech, dialogue, effects, and ambience generation; live default audio model. |
+| Voice-over, narration, a read script, or a two-person dialogue — speech only, from exact lines | `gemini-3.8-flash-tts` | Reads the text exactly in one of 30 preset voices, or as two speakers with a voice each; length and price follow the text. |
+| A complete sound scene (speech with effects, ambience, or music), a cloned voice from an authorized reference, or more than two speakers | `seed-audio-1.0` | Unified speech, dialogue, effects, and ambience generation with voice references; live default audio model. |
 | One standalone sound effect: foley, impact, whoosh, UI sound, ambience loop, or stinger | `eleven-sfx-v2` | Exact length from 1 to 30 seconds and billed per second; use Seed Audio when the effects belong to a scene with speech. |
 
-Lyria composes music and stays the choice for instrumentals, cues, and beds; Mureka sings given lyrics; Seed Audio handles speech-led and complete sound scenes; ElevenLabs SFX makes single effects to length.
+Lyria composes music and stays the choice for instrumentals, cues, and beds; Mureka sings given lyrics; Gemini TTS reads exact lines as clean speech; Seed Audio handles complete sound scenes and cloned voices; ElevenLabs SFX makes single effects to length.
 
 ## Lyria 3 Pro — composer brief
 
@@ -315,6 +316,23 @@ prompt: genre, mood, tempo, instruments, vocal character
 - Put the full lyrics in the lyrics field with section tags; never put lyrics in the prompt.
 - Size the lyrics to a 2.5–3 minute song; the length is not adjustable.
 - Choose the lead's gender only when it matters; otherwise let the model pick.
+
+## Gemini 3.8 Flash TTS — the exact lines, read
+
+```text
+prompt: Say warmly, at an easy pace: Welcome back. Today we...
+voice: Sulafat
+
+prompt: Read as a quick exchange; Joe is excited, Jane is dry:
+        Joe: We made it!
+        Jane: Barely.
+speakers: [{name: Joe, voice: Puck}, {name: Jane, voice: Kore}]
+```
+
+- The prompt is the script: the exact lines, led by one short delivery direction in plain language (tone, emotion, pace). Do not put other notes in it; they may be read aloud.
+- One speaker: pick a `voice` that fits the character from the live guidance (gender and style per voice). Two speakers: omit `voice`, give `speakers` exactly two different names, and write one line per turn as `Name: line` with those names.
+- It speaks only: no music, effects, or ambience. Layer those in the edit, or use Seed Audio for a mixed scene.
+- Write the lines in the spoken language; keep one task under the live prompt limit and split long scripts into several tasks.
 
 ## Seed Audio 1.0 — sound-scene script
 
