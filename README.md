@@ -127,6 +127,10 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 
 ## Version & upgrading
 
+### 1.18.0
+
+- `model-routing` routes voice-overs, narration and two-person dialogue read from exact lines to `gemini-3.8-flash-tts` (30 preset voices, or two speakers with a voice each; priced by text length), including the voice track for OmniHuman 2.0. Seed Audio keeps complete sound scenes, cloned voices from an authorized reference, and more than two speakers.
+
 ### 1.17.0
 
 - New `talking-head-editor` from renoise-skills: edits talking-head footage the user filmed into a finished MP4 or a JianYing (剪映) draft, from transcription and pause removal to B-roll, captions, word art, sound effects and music, in a refined or variety-show style. Renoise generation is optional (B-roll, a digital presenter) and asks before spending credits. It follows the `stable` branch like the other renoise-skills skills and needs a shell.
