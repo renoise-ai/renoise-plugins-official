@@ -320,16 +320,16 @@ prompt: genre, mood, tempo, instruments, vocal character
 ## Gemini 3.8 Flash TTS — the exact lines, read
 
 ```text
-prompt: Say warmly, at an easy pace: Welcome back. Today we...
+prompt: Welcome back. Today we...
 voice: Sulafat
 
-prompt: Read as a quick exchange; Joe is excited, Jane is dry:
-        Joe: We made it!
+prompt: Joe: We made it!
         Jane: Barely.
 speakers: [{name: Joe, voice: Puck}, {name: Jane, voice: Kore}]
 ```
 
-- The prompt is the script: the exact lines, led by one short delivery direction in plain language (tone, emotion, pace). Do not put other notes in it; they may be read aloud.
+- The prompt is only the words to be spoken. Write no delivery direction, stage note, or parenthetical in it, in any language: the model reads them aloud with the lines ("Say warmly: Hello" is spoken as "Say warmly, hello").
+- Set the tone with the voice, not the prompt: each voice in the live guidance has a style (warm, upbeat, firm, soft...). Shape pace and pauses with punctuation and line breaks.
 - One speaker: pick a `voice` that fits the character from the live guidance (gender and style per voice). Two speakers: omit `voice`, give `speakers` exactly two different names, and write one line per turn as `Name: line` with those names.
 - It speaks only: no music, effects, or ambience. Layer those in the edit, or use Seed Audio for a mixed scene.
 - Write the lines in the spoken language; keep one task under the live prompt limit and split long scripts into several tasks.
