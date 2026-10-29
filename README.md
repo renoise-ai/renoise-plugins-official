@@ -127,6 +127,10 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 
 ## Version & upgrading
 
+### 1.18.1
+
+- `model-routing`: Gemini TTS prompts carry only the words to be spoken. A delivery direction in front of the lines ("Say warmly: ...") is read aloud with them, so the tone now comes from the chosen voice and pacing from punctuation.
+
 ### 1.18.0
 
 - `model-routing` routes voice-overs, narration and two-person dialogue read from exact lines to `gemini-3.8-flash-tts` (30 preset voices, or two speakers with a voice each; priced by text length), including the voice track for OmniHuman 2.0. Seed Audio keeps complete sound scenes, cloned voices from an authorized reference, and more than two speakers.
