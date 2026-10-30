@@ -1,14 +1,18 @@
 ---
 name: talking-head-editor
 description: >
-  Edit talking-head footage the user filmed (口播剪辑) into a finished vertical or landscape video
-  (MP4) or a JianYing (剪映) draft: media check, transcription, filler and pause removal, a
-  sentence-by-sentence edit plan, B-roll from the user, code-drawn graphics, free stock or Renoise,
-  captions and word art, picture-in-picture, keyframes, sound effects and music, and blurring of
-  sensitive information, in a refined (高级感) or variety-show (综艺感) style. Use for 剪口播,
-  口播视频剪辑, 知识博主视频, 真人出镜剪辑, 加字幕花字, 剪映草稿, B-roll, 去气口, 粗剪精剪, or
-  when the user hands over a clip of themselves talking to camera and asks to cut it into a short.
-  Not for generating a digital presenter from a script (digital-human-koubo).
+  Edit talking-head footage (口播剪辑) into a finished vertical or landscape video (MP4) or a
+  JianYing (剪映) draft. The footage can be filmed by the user or a digital-human take generated
+  on Renoise, including takes from digital-human-koubo. Covers media check, transcription,
+  filler and pause removal, a sentence-by-sentence edit plan, B-roll from the user, code-drawn
+  graphics, free stock or Renoise, captions and word art, picture-in-picture, keyframes, sound
+  effects and music, and blurring of sensitive information, in a refined (高级感) or variety-show
+  (综艺感) style tuned for Chinese talking-head videos on Douyin, Xiaohongshu, Bilibili and WeChat
+  Channels. Use for 剪口播, 口播视频剪辑, 知识博主视频, 真人出镜剪辑, 数字人口播剪辑, 加字幕花字, 剪映草稿,
+  B-roll, 去气口, 粗剪精剪, when the user hands over a clip of someone talking to camera (themselves
+  or a digital human) and asks to cut it into a short, and after a digital-human take is generated
+  and needs editing or a JianYing draft. Not for generating the digital presenter itself from a
+  script (digital-human-koubo, then back here to edit).
 metadata:
   author: renoise
   version: 0.1.0
