@@ -11,11 +11,6 @@ AI video production skills by Renoise — creative direction, generation, analys
 | **Build Storyboard** (`storyboard-sheet`) | Portable script/novel adaptation into review sheets, shot lists, first frames, and video prompts |
 | `video-fission` | Portable controlled-variant experiments from one owner-authorized source video |
 | `video-remake` | Portable reference-video recreation with controlled character, product, brand, prop, or scene replacement |
-| `digital-human-koubo` | Talking-head videos with a digital presenter (the user's photo or an AI host), packaged and edited with Remotion; fetched from the `stable` branch of [renoise-skills](https://github.com/renoise-ai/renoise-skills), runs in the Renoise sandbox or a local shell |
-| `promo-video` | Promo, launch and brand films rendered with Remotion; fetched from the `stable` branch of [renoise-skills](https://github.com/renoise-ai/renoise-skills), runs in the Renoise sandbox or a local shell |
-| `pixel-breakdown` | 16:9 pixel-art breakdown episodes of an authorized viral clip and its AI remake, drawn by code and rendered with Playwright; fetched from the `stable` branch of [renoise-skills](https://github.com/renoise-ai/renoise-skills), runs in the Renoise sandbox or a local shell |
-| `vibe-knowledge` | Narrated knowledge shorts (45 s – 5 min, 16:9) where every on-screen claim has a source: six explainer script templates, a Renoise voiceover aligned word by word and 44 code-drawn styles; fetched from the `stable` branch of [renoise-skills](https://github.com/renoise-ai/renoise-skills), runs in the Renoise sandbox or a local shell |
-| `talking-head-editor` | Edits talking-head footage the user filmed into a finished vertical or landscape video or a JianYing (剪映) draft: cuts pauses and fillers, plans each sentence, adds B-roll, captions, word art, sound and music; fetched from the `stable` branch of [renoise-skills](https://github.com/renoise-ai/renoise-skills), runs in the Renoise sandbox or a local shell |
 | `renoise-cli` | Native CLI for your own terminal, scripts, and CI, plus local production helpers (not a generation path in conversations) |
 | **Setup / Account** (`renoise-setup`) | Connect the Renoise tools (browser sign-in), optional CLI install/update, and readiness checks |
 | **Renoise Annotation Board** (`canvas`) | Local image/frame annotation board for snapshots and structured revision handoff |
@@ -126,6 +121,10 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 | `RENOISE_WHITEBOARD_MAX_VIDEO_BYTES` | Optional whiteboard limit | Maximum imported MP4/WebM byte size. Defaults to 262144000 (250 MB); accepted range is 1 MB–2 GB. |
 
 ## Version & upgrading
+
+### 1.19.0
+
+- `digital-human-koubo`, `promo-video`, `pixel-breakdown`, `vibe-knowledge` and `talking-head-editor` leave this plugin. They need a shell and their scripts, so Renoise now serves them itself: in a conversation with the Renoise tools, `search_skills` finds them and `load_skill` puts each one into the user's Renoise sandbox (Director Mode, for subscribers). renoise-skills, where they were fetched from, is archived.
 
 ### 1.18.1
 

@@ -11,13 +11,8 @@
   },
   "files": [
     "canvas/",
-    "digital-human-koubo/",
     "director/",
     "model-routing/",
-    "pixel-breakdown/",
-    "vibe-knowledge/",
-    "talking-head-editor/",
-    "promo-video/",
     "renoise-cli/",
     "renoise-setup/",
     "storyboard-sheet/",

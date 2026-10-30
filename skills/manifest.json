@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pluginVersion": "1.18.1",
+  "pluginVersion": "1.19.0",
   "skills": [
     {
       "id": "director",
@@ -88,91 +88,6 @@
         "models.read",
         "tasks.estimate",
         "tasks.create"
-      ]
-    },
-    {
-      "id": "digital-human-koubo",
-      "runtime": "portable",
-      "entry": "skills/digital-human-koubo/SKILL.md",
-      "files": [
-        "skills/digital-human-koubo/SKILL.md"
-      ],
-      "requires": [
-        "models.read",
-        "account.read",
-        "tasks.estimate",
-        "tasks.create"
-      ],
-      "optional": [
-        "materials.read",
-        "media.edit"
-      ]
-    },
-    {
-      "id": "promo-video",
-      "runtime": "portable",
-      "entry": "skills/promo-video/SKILL.md",
-      "files": [
-        "skills/promo-video/SKILL.md"
-      ],
-      "requires": [],
-      "optional": [
-        "models.read",
-        "tasks.estimate",
-        "tasks.create",
-        "media.edit"
-      ]
-    },
-    {
-      "id": "pixel-breakdown",
-      "runtime": "portable",
-      "entry": "skills/pixel-breakdown/SKILL.md",
-      "files": [
-        "skills/pixel-breakdown/SKILL.md"
-      ],
-      "requires": [
-        "models.read",
-        "account.read",
-        "media.analyze",
-        "tasks.estimate",
-        "tasks.create"
-      ],
-      "optional": [
-        "materials.read"
-      ]
-    },
-    {
-      "id": "vibe-knowledge",
-      "runtime": "portable",
-      "entry": "skills/vibe-knowledge/SKILL.md",
-      "files": [
-        "skills/vibe-knowledge/SKILL.md"
-      ],
-      "requires": [
-        "models.read",
-        "account.read",
-        "media.analyze",
-        "tasks.estimate",
-        "tasks.create"
-      ],
-      "optional": [
-        "materials.read"
-      ]
-    },
-    {
-      "id": "talking-head-editor",
-      "runtime": "portable",
-      "entry": "skills/talking-head-editor/SKILL.md",
-      "files": [
-        "skills/talking-head-editor/SKILL.md"
-      ],
-      "requires": [],
-      "optional": [
-        "models.read",
-        "account.read",
-        "tasks.estimate",
-        "tasks.create",
-        "materials.read"
       ]
     },
     {

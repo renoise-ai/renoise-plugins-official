@@ -36,16 +36,11 @@ test('skill manifest separates portable creative methods from local execution', 
   const byId = new Map(manifest.skills.map((skill) => [skill.id, skill]));
   assert.deepEqual([...byId.keys()].sort(), [
     'canvas',
-    'digital-human-koubo',
     'director',
     'model-routing',
-    'pixel-breakdown',
-    'promo-video',
     'renoise-cli',
     'renoise-setup',
     'storyboard-sheet',
-    'talking-head-editor',
-    'vibe-knowledge',
     'video-download',
     'video-fission',
     'video-remake',
@@ -121,18 +116,6 @@ test('portable skill files contain no local execution instructions', () => {
         assert.doesNotMatch(instructions, pattern, `${path} must stay runtime-neutral`);
       }
     }
-  }
-});
-
-test('skills fetched from renoise-skills follow its stable branch', () => {
-  const manifest = readJSON('skills/manifest.json');
-  const remote = manifest.skills.filter(({ entry }) => readFileSync(entry, 'utf8').includes('renoise-ai/renoise-skills'));
-  assert.ok(remote.length > 0);
-  for (const { entry } of remote) {
-    const skill = readFileSync(entry, 'utf8');
-    assert.match(skill, /api\.github\.com\/repos\/renoise-ai\/renoise-skills\/commits\/stable/, entry);
-    assert.match(skill, /~\/\.cache\/renoise-skills\/<commit>\//, entry);
-    assert.doesNotMatch(skill, /\b[0-9a-f]{40}\b/, `${entry} must not pin a commit`);
   }
 });
 
