@@ -10,7 +10,7 @@ metadata:
   author: renoise
   version: 0.3.1
   category: utility
-  tags: [download, youtube, tiktok, douyin, yt-dlp, greenvideo]
+  tags: download, youtube, tiktok, douyin, yt-dlp, greenvideo
 ---
 
 # Video Download
