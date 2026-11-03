@@ -1,5 +1,7 @@
 # Prompt Craft - Writing High-Density Video Prompts
 
+Material tokens such as `@material:<reference_1_id>` in these examples are placeholders. Replace each with the actual ID returned by the host for the authorized reference; never submit a placeholder or assume an example names an existing shared upload.
+
 This is the main creative reference in the director Skill. Model capabilities and guidance come from the current host's live capability source; this document only covers model-independent prompt craft. The selected `model-routing` profile overrides this document when a model needs a different structure, density, or reference style.
 
 ---
@@ -38,7 +40,7 @@ Not a checklist - a **visual world declaration**. The model should feel the text
 Each character gets: **identity lock + appearance + wardrobe + narrative function + behavioral pattern**.
 
 ```
-@material:101 — Prop Sourcer. Female, identity lock.
+@material:<reference_1_id> — Prop Sourcer. Female, identity lock.
 Utility vest, all pockets stuffed with visibly wrong items, clipboard permanently in hand.
 She was responsible for bringing the props. She brought everything except the correct one.
 She has an explanation for this. She always has an explanation for this.
@@ -149,8 +151,8 @@ with realistic wind physics and material cascade, final assemblage has plausible
 structural integrity for its two-second hold.
 Clipboard tug-of-war: realistic paper tension, neither character releases it.
 Walkie-talkie crackle: accurate radio audio texture.
-@material:101 — female, zero identity drift. Vest pockets depleting continuously.
-@material:102 — male, zero identity drift. Gaffer tape roll visibly smaller across takes.
+@material:<reference_1_id> — female, zero identity drift. Vest pockets depleting continuously.
+@material:<reference_2_id> — male, zero identity drift. Gaffer tape roll visibly smaller across takes.
 No music. No voiceover. No subtitles. No text. Diegetic audio only.
 16:9 enforced. No glitches, no floating objects, no duplicated limbs.
 ```
@@ -195,7 +197,7 @@ Linking techniques: **match-cut composition** (same framing/shape), **motion mat
 
 **Good-transition reference — S3→S4**: when S3 ended on a warm-gold, centered, symmetric hero composition and S4 opened on the *same* gold grade and the *same* centered symmetric hero framing, the join was seamless. Match the out-frame's grade **and** composition to the next in-frame; that combination (tonal carry + match-cut) is the strongest continuous-narrative join.
 
-The Transition Table is also what backs the default continuity chain: when the next segment opens on the previous tail frame carried as `ref_image:0` + a "Use @material:101 as the first frame." prompt declaration (see "Serial continuity routing" below), that declaration is a soft lock — the out-frame/in-frame match recorded here is what makes it hold.
+The Transition Table is also what backs the default continuity chain: when the next segment opens on the previous tail frame carried as `ref_image:0` + a "Use @material:<reference_1_id> as the first frame." prompt declaration (see "Serial continuity routing" below), that declaration is a soft lock — the out-frame/in-frame match recorded here is what makes it hold.
 
 ### Ending strategy (holds steady is last-segment only)
 
@@ -331,20 +333,20 @@ When the host attaches reference images, videos, or audio as materials, referenc
 
 1. Register or select each user-authorized reference through the host's material capability.
 2. Record the returned material ID.
-3. Write `@material:` followed by that ID (`101` → `@material:101`) and attach the same ID through an advertised material role.
+3. Write `@material:` followed by that ID (replace `<reference_1_id>` with the returned ID) and attach the same ID through an advertised material role.
 
 ```
 [CHARACTERS]
-@material:101 - Prop Sourcer. Female, identity lock. Utility vest, clipboard in hand.
+@material:<reference_1_id> - Prop Sourcer. Female, identity lock. Utility vest, clipboard in hand.
 She was responsible for bringing the props. She brought everything except the correct one.
 
-@material:102 - Prop Executor. Male, identity lock. Matching utility vest, tool belt,
+@material:<reference_2_id> - Prop Executor. Male, identity lock. Matching utility vest, tool belt,
 walkie-talkie on shoulder.
 
 [TIMELINE]
-0-2s: @material:101 reaches into the case. Pulls out a thermos.
-She hands it to @material:102 with the energy of someone presenting a solution.
-@material:102 receives it. Holds it at arm's length.
+0-2s: @material:<reference_1_id> reaches into the case. Pulls out a thermos.
+She hands it to @material:<reference_2_id> with the energy of someone presenting a solution.
+@material:<reference_2_id> receives it. Holds it at arm's length.
 ```
 
 Attach the registered materials through roles advertised by the selected model. The server converts ID tokens to each provider's positional syntax using the submitted material order.

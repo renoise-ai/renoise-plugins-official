@@ -1,5 +1,7 @@
 # Scenario C — TVC / Brand Concept Film
 
+Material tokens such as `@material:<reference_1_id>` in these examples are placeholders. Replace each with the actual ID returned by the host for the authorized reference; never submit a placeholder or assume an example names an existing shared upload.
+
 **Trigger**: Live-action brand film >5s, or any video that needs multiple shots — lifestyle, outdoor, fashion, sports, aspirational campaigns, or product films with narrative structure. Scenario C naturally contains Scenario B-style product close-ups as segments within a larger piece.
 
 **Not Scenario C if**: the user wants a presenter speaking to camera → use Scenario D. The user has a reference video to replicate → use the standalone `video-remake` skill.
@@ -43,9 +45,9 @@ Generate as **one single task**. Write all visual stages into one prompt plus a 
 
 **Example prompt** (hiking boot TVC; timing shown for one example duration):
 
-> Ultra-wide panoramic of mountain ranges and open ridge, referencing the environment from @material:101. Golden morning mist drifts across the slopes, camera slowly and steadily pushes forward through the landscape. **[Shot 1 | 5s | Establishing]**
+> Ultra-wide panoramic of mountain ranges and open ridge, referencing the environment from @material:<reference_1_id>. Golden morning mist drifts across the slopes, camera slowly and steadily pushes forward through the landscape. **[Shot 1 | 5s | Establishing]**
 >
-> A man wearing the hiking boots from @material:102 strides along a mountain trail with purpose, follow-cam tracking alongside him at ground level. Wind moves his clothing and the surrounding tall grass, natural and unposed. **[Shot 2 | 5s | Character in Motion]**
+> A man wearing the hiking boots from @material:<reference_2_id> strides along a mountain trail with purpose, follow-cam tracking alongside him at ground level. Wind moves his clothing and the surrounding tall grass, natural and unposed. **[Shot 2 | 5s | Character in Motion]**
 >
 > Macro slow-motion close-up of the hiking boots stepping into wet grass — grass blades bending under the sole, morning dew splashing in soft arcs. Camera orbits slowly to reveal the boot from multiple angles. Frame holds, then fades to black. **[Shot 3 | 5s | Product Detail]**
 >
@@ -82,7 +84,7 @@ Present all shots together so the user sees the complete video in one view:
 [Full prompt for shot N]
 
 --- Asset Mapping ---
-@material:101 → [filename] → <advertised image role> (all shots)
+@material:<reference_1_id> → [filename] → <advertised image role> (all shots)
 
 --- Generation Parameters ---
 Model: [live-capability selection] | Ratio: [advertised value] | Total estimated cost: request a live estimate per segment and sum
@@ -97,7 +99,7 @@ Note: Each shot is a separate segment; assembly requires media editing.
 **Brief**: Push an ultra-thin diaper. First 3 seconds must hook moms on the pain point (baby with diaper rash crying), then cut to the product and demonstrate breathability. Fast pace.
 
 **Assets**:
-- `@material:101` (product flat-lay photo) → subject anchor
+- `@material:<reference_1_id>` (product flat-lay photo) → subject anchor
 - Viral reference video (host media analysis only — not registered as a generation material)
 
 **Media analysis**:
@@ -110,7 +112,7 @@ Note: Each shot is a separate segment; assembly requires media editing.
 
 > Close-up of a young mother with furrowed brows, holding a crying baby, expressing extreme anxiety — handheld camera, slightly shaky, tight on face. **[Visual Hook (Opening)]**
 >
-> At the 3-second mark, camera whip-pans horizontally to the baby diaper product from @material:101. **[Subject]**
+> At the 3-second mark, camera whip-pans horizontally to the baby diaper product from @material:<reference_1_id>. **[Subject]**
 >
 > Product lies flat on a table surface as a burst of steam instantly penetrates from the bottom through the top layer, viscerally demonstrating breathability. **[Selling-Point Action]**
 >

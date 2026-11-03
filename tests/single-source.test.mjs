@@ -202,7 +202,7 @@ test('model routing keeps only useful specialists without replacing capabilities
   assert.match(routing, /## References and Edits/);
 });
 
-test('prompt examples use canonical material ID tokens', () => {
+test('prompt examples use material placeholders without claiming shared uploads', () => {
   const promptCraft = readFileSync('skills/director/references/prompt-craft.md', 'utf8');
   const directorFiles = [
     promptCraft,
@@ -210,7 +210,8 @@ test('prompt examples use canonical material ID tokens', () => {
     ...['INDEX.md', 'scenario-b-brand.md', 'scenario-c-tvc.md', 'scenario-d-ugc.md']
       .map((file) => readFileSync(`skills/director/commercial/${file}`, 'utf8')),
   ].join('\n');
-  assert.match(promptCraft, /@material:101/);
+  assert.match(promptCraft, /@material:<reference_1_id>/);
+  assert.doesNotMatch(directorFiles, /(?<![\w-])material:\d+/, 'example IDs would be treated as real shared template materials');
   assert.doesNotMatch(directorFiles, /@(?:Image|Video)\s*\d/i);
   assert.doesNotMatch(directorFiles, /@[\w-]+\.(?:png|jpe?g|webp|mp4|mov)\b/i);
 });

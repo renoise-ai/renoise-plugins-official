@@ -1,5 +1,7 @@
 # Scenario B — Product Brand Film
 
+Material tokens such as `@material:<reference_1_id>` in these examples are placeholders. Replace each with the actual ID returned by the host for the authorized reference; never submit a placeholder or assume an example names an existing shared upload.
+
 **Trigger**: Single-shot product showcase, ≤5s. The product is the sole subject — one API call, no narrative structure, no live presenter. If the user wants >5s or multiple shots, use Scenario C instead.
 
 ---
@@ -33,16 +35,16 @@
 **Brief**: 10-second brand film for a men's serum. Premium feel, highlight the moisturizing effect. Minimalist modern background with cinematic lighting. End with the brand logo.
 
 **Assets**:
-- `@material:101` (product hi-res photo) → subject anchor
-- `@material:102` (high-contrast modern space photo) → scene calibration
+- `@material:<reference_1_id>` (product hi-res photo) → subject anchor
+- `@material:<reference_2_id>` (high-contrast modern space photo) → scene calibration
 
 **Prompt**:
 
-> Display the men's serum glass bottle from @material:101 at the center of the frame, with translucent texture and proportions strictly matching the original. **[Subject]**
+> Display the men's serum glass bottle from @material:<reference_1_id> at the center of the frame, with translucent texture and proportions strictly matching the original. **[Subject]**
 >
 > Crystalline water droplets condense on the serum surface, slowly sliding down the bottle body, showcasing an intense sense of hydrating moisture. **[Selling-Point Action]**
 >
-> Reference @material:102's minimalist modern space with high-contrast cool blue tones; sidelight creates a sharp, sculpted rim light. **[Scene & Tone]**
+> Reference @material:<reference_2_id>'s minimalist modern space with high-contrast cool blue tones; sidelight creates a sharp, sculpted rim light. **[Scene & Tone]**
 >
 > Camera begins with a macro close-up, slowly and steadily orbiting the bottle while pushing in. **[Camera Language]**
 >

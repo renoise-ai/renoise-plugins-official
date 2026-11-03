@@ -1,5 +1,7 @@
 # Commercial Video — Router and Shared Prompt Rules
 
+Material tokens such as `@material:<reference_1_id>` in these examples are placeholders. Replace each with the actual ID returned by the host for the authorized reference; never submit a placeholder or assume an example names an existing shared upload.
+
 Use this index for live-action e-commerce, advertising, and brand work. Read only the matched scenario file. Software, apps, services, and brands whose own look is UI, type or illustration use `references/code-built-video.md` instead.
 
 ## Route
@@ -44,8 +46,8 @@ Subject + Selling-Point Action + Scene & Tone + Camera Language + Audio + Post-P
 For recurring people or products, register once and reuse the same material through a supported role. Use canonical material tokens and state what each controls:
 
 ```text
-the serum glass bottle from @material:101
-use @material:202 only for camera movement, not identity or product
+the serum glass bottle from @material:<reference_1_id>
+use @material:<camera_reference_id> only for camera movement, not identity or product
 ```
 
 Scenario D performs its documented reference registration before prompt writing.
@@ -89,8 +91,8 @@ Hand the complete arguments below to the active host execution workflow. Do not 
 [Full prompt, with each dimension labelled in the user's language]
 
 --- Reference Mapping ---
-@material:101 → description → advertised role
-@material:202 → description → advertised role
+@material:<reference_1_id> → description → advertised role
+@material:<camera_reference_id> → description → advertised role
 
 --- Generation Parameters ---
 Model: live selection

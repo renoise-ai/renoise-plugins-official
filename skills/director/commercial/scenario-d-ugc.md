@@ -1,5 +1,7 @@
 # Scenario D — UGC / Live-Presenter Product Showcase
 
+Material tokens such as `@material:<reference_1_id>` in these examples are placeholders. Replace each with the actual ID returned by the host for the authorized reference; never submit a placeholder or assume an example names an existing shared upload.
+
 **Trigger**: The user needs a video with a real person presenting products on camera — review, testing, talking-head endorsement, 带货口播. The goal is authentic UGC (User-Generated Content) feel, not a polished commercial.
 
 **Difference from Scenario C**: Scenario C is cinematic and music-driven (no talking). Scenario D is driven by a live presenter speaking to camera with dialogue and choreographed demo actions — and it must feel like a genuine user sharing their experience, not an actor reading a script.
@@ -134,11 +136,11 @@ Organize along a **second-by-second timeline** — six dimensions interwoven int
 
 **Brief**: 14-second live-presenter unboxing video. One person showcases three products with spoken dialogue.
 
-**Assets**: `@material:101` (person), `@material:102` (black bag + silver box), `@material:103` (T-shirt)
+**Assets**: `@material:<reference_1_id>` (person), `@material:<reference_2_id>` (black bag + silver box), `@material:<reference_3_id>` (T-shirt)
 
 **Prompt**:
 
-> The person from @material:101 wears a fixed outfit unchanged throughout. Products: black packaging bag, silver box @material:102, T-shirt @material:103 — visual details stay sharp throughout. **[Subject]**
+> The person from @material:<reference_1_id> wears a fixed outfit unchanged throughout. Products: black packaging bag, silver box @material:<reference_2_id>, T-shirt @material:<reference_3_id> — visual details stay sharp throughout. **[Subject]**
 >
 > 0~1s: Person holds multiple products and places them on a metal table, looking at camera. Person speaks to camera: "Let's unbox these new items I just received." **[Action + Audio]**
 >
@@ -156,7 +158,7 @@ Organize along a **second-by-second timeline** — six dimensions interwoven int
 >
 > Fixed camera with medium shot, close-up, and extreme close-up switching. 9~12s pulls from medium to extreme close-up. **[Camera Language]**
 >
-> Facial features stable throughout; outfit unchanged; product appearance strictly matches @material:102 and @material:103; packaging text readable; lip movements sync with dialogue. **[Post-Production Constraints]**
+> Facial features stable throughout; outfit unchanged; product appearance strictly matches @material:<reference_2_id> and @material:<reference_3_id>; packaging text readable; lip movements sync with dialogue. **[Post-Production Constraints]**
 
 ---
 
@@ -164,11 +166,11 @@ Organize along a **second-by-second timeline** — six dimensions interwoven int
 
 **Brief**: 博主测评粉底液持妆12小时的带货短视频，10秒，UGC风格，素颜开场，要有真实感
 
-**Assets**: `@material:101` (natural selfie, visible skin texture), `@material:102` (foundation bottle)
+**Assets**: `@material:<reference_1_id>` (natural selfie, visible skin texture), `@material:<reference_2_id>` (foundation bottle)
 
 **Prompt** (stays in Chinese — Scenario D with dialogue):
 
-> @material:101 的女生主播，深棕色卷发、自然肤质（可见雀斑和轻微痘印），无美颜滤镜感，佩戴随意日常首饰，着简单居家上衣。产品为 @material:102 的粉底液，金色细长瓶身，瓶身文字清晰可见，全程产品外观保持真实不失真。【主体】
+> @material:<reference_1_id> 的女生主播，深棕色卷发、自然肤质（可见雀斑和轻微痘印），无美颜滤镜感，佩戴随意日常首饰，着简单居家上衣。产品为 @material:<reference_2_id> 的粉底液，金色细长瓶身，瓶身文字清晰可见，全程产品外观保持真实不失真。【主体】
 >
 > 0~3s：人物素颜出镜，手持粉底液瓶举到脸旁，直视镜头，表情带着一点怀疑。人物对着镜头说："它说能持妆一整天？我来试试。"手持手机自拍近景，轻微晃动，环形灯打亮面部。【Hook + 镜头】
 >
@@ -182,6 +184,6 @@ Organize along a **second-by-second timeline** — six dimensions interwoven int
 >
 > 全程由人物本人口播发声，不使用旁白或背景配音。语气口语化、快节奏，保留真实反应语气词（"哇""比我想的""诶"）。人物嘴唇动作必须与台词完全同步。【音频约束】
 >
-> 全程人物面部特征稳定不变形；保留自然肤质（不过度磨皮，保留雀斑和皮肤纹理）；产品外观严格与 @material:102 一致，瓶身文字清晰可读；嘴型与台词完全同步；画面无闪烁无抖动。【后期约束】
+> 全程人物面部特征稳定不变形；保留自然肤质（不过度磨皮，保留雀斑和皮肤纹理）；产品外观严格与 @material:<reference_2_id> 一致，瓶身文字清晰可读；嘴型与台词完全同步；画面无闪烁无抖动。【后期约束】
 
 **Why it works**: UGC Hook opens with skepticism. Physical Continuity Rule applied — product appears already open, no cap-removal teleport. Action Granularity Rule applied — foundation application broken into 3 sub-steps. Honest flaw ("有一点点氧化") embedded in dialogue. Watch face close-up as third-party timestamp proof. Natural skin constraints explicitly prevent beauty-filter smoothing.
