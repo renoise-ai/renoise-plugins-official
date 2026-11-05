@@ -11,6 +11,7 @@
   },
   "files": [
     "canvas/",
+    "creative-direction/",
     "director/",
     "model-routing/",
     "renoise-cli/",

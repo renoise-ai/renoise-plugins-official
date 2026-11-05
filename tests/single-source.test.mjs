@@ -36,6 +36,7 @@ test('skill manifest separates portable creative methods from local execution', 
   const byId = new Map(manifest.skills.map((skill) => [skill.id, skill]));
   assert.deepEqual([...byId.keys()].sort(), [
     'canvas',
+    'creative-direction',
     'director',
     'model-routing',
     'renoise-cli',
@@ -46,6 +47,8 @@ test('skill manifest separates portable creative methods from local execution', 
     'video-remake',
   ]);
   assert.equal(byId.get('director').runtime, 'portable');
+  assert.equal(byId.get('creative-direction').runtime, 'portable');
+  assert.deepEqual(byId.get('creative-direction').requires, []);
   assert.equal(byId.get('model-routing').runtime, 'portable');
   assert.equal(byId.get('storyboard-sheet').runtime, 'portable');
   assert.equal(byId.get('video-fission').runtime, 'portable');
