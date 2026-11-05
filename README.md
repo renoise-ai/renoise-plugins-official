@@ -8,6 +8,7 @@ AI video production skills by Renoise — creative direction, generation, analys
 |-------|-------------|
 | **Create with Renoise** (`director`) | Portable creative direction for product ads, short films, e-commerce, drama, and comedy |
 | `model-routing` | Internal task-to-model router and model-specific prompting guide |
+| `creative-direction` | Internal guide the director reads before planning an original piece: find the idea in the subject, avoid the default AI-video version, check the plan before spending |
 | **Build Storyboard** (`storyboard-sheet`) | Portable script/novel adaptation into review sheets, shot lists, first frames, and video prompts |
 | `video-fission` | Portable controlled-variant experiments from one owner-authorized source video |
 | `video-remake` | Portable reference-video recreation with controlled character, product, brand, prop, or scene replacement |
@@ -121,6 +122,15 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 | `RENOISE_WHITEBOARD_MAX_VIDEO_BYTES` | Optional whiteboard limit | Maximum imported MP4/WebM byte size. Defaults to 262144000 (250 MB); accepted range is 1 MB–2 GB. |
 
 ## Version & upgrading
+
+### 1.20.0
+
+- New internal skill `creative-direction`, read by the director before it plans an original piece: ads, brand films, UGC, short films, MV, explainers, motion graphics.
+  - It asks for one idea taken from the subject's own world, said in one sentence.
+  - It lists the defaults AI video falls into: aerial openings, teal-and-orange, slow motion everywhere, the narrator stating the benefit, the logo-and-tagline ending.
+  - The plan is checked against those defaults before any credits are spent.
+  - Boldness goes in one place, and prompts name the specifics so the idea survives generation.
+- Whatever the user, a reference, a template or the brand fixes always wins. Remakes, templates and variants do not use it.
 
 ### 1.19.0
 
