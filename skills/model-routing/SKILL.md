@@ -57,7 +57,8 @@ Do not call a model “best” without naming the task it is best for.
 
 | Task | Prefer | Why |
 |---|---|---|
-| Exact text, UI, diagrams, ads, packaging, compositing, identity-sensitive image-to-image work, or peak final quality | `gpt-image-2.5-sunburst` | Route a generic GPT Image 2.5 request here; use `gpt-image-2.5-flare` when explicitly requested. Image references guide transformations, but neither variant exposes mask inpainting. |
+| Exact text, UI, diagrams, ads, packaging, compositing, identity-sensitive image-to-image work, or peak final quality | `gpt-image-2.6-sunburst` | The default GPT Image model: route any GPT Image request that names no version here; use `gpt-image-2.6-flare` when explicitly requested. Image references guide transformations, but neither variant exposes mask inpainting. |
+| Animated GIF (loops, stickers, reaction images, simple motion) | `gpt-image-2.6-sunburst` with `outputFormat: "gif"` | The only live model that outputs a GIF. Pick a frame size (`gifSize`), a frame count within that size's range (`frameCount`) and a frame duration (`frameDurationMs`) from the live contract; a GIF takes no resolution or ratio and can take up to 16 reference images, but no mask. |
 | General high-quality photorealistic or commercial image | live image default | Start with the deployment's current default when no specialist better fits; do not infer local-edit or typography guarantees from the model family. |
 | Fast, inexpensive drafts and simple variants | `grok-image` | Lowest-cost live image tier for quick iteration; move the chosen direction to a specialist for the final. |
 | Extreme aspect ratios (1:4 to 8:1), Google-family work, several references, multilingual localization, or conversational iteration | `nano-banana-2` | The Google-family model in the live lineup, balancing quality, latency, text, reference reasoning, and broad formats. |
@@ -67,7 +68,7 @@ Do not call a model “best” without naming the task it is best for.
 
 ## Image Prompting Styles
 
-### GPT Image 2.5 — production brief
+### GPT Image 2.6 — production brief
 
 For complex production briefs, use labeled, ordered instructions:
 
@@ -83,7 +84,8 @@ CHANGE ONLY: ...
 AVOID: ...
 ```
 
-- Route a generic GPT Image 2.5 request to Sunburst; use Flare when explicitly requested. Neither live contract supports mask inpainting.
+- Route a generic GPT Image request to GPT Image 2.6 Sunburst; use Flare when explicitly requested. Neither live contract supports mask inpainting.
+- For a GIF, describe the motion across the loop (what moves, from where to where, and how it returns to the first frame); keep the subject and background stable so the frames read as one shot.
 - Put literal in-image text in quotes and specify hierarchy and placement.
 - For image-to-image transformations, say **change only X; preserve everything else**.
 - Identify every reference by its job: source, identity, product, layout, or style.

@@ -123,6 +123,10 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 
 ## Version & upgrading
 
+### 1.21.0
+
+- GPT Image 2.6 replaces 2.5 in model routing. A GPT Image request that names no version goes to GPT Image 2.6 Sunburst, and Flare only when asked. Animated GIFs (loops, stickers, reaction images) route to 2.6 Sunburst with GIF output. 2.5 is no longer routed.
+
 ### 1.20.0
 
 - New internal skill `creative-direction`, read by the director before it plans an original piece: ads, brand films, UGC, short films, MV, explainers, motion graphics.
