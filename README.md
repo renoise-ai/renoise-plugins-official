@@ -123,6 +123,11 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 
 ## Version & upgrading
 
+### 1.22.0
+
+- `video-remake` has two routes, chosen by the source. A short, single-scene source with no text to rebuild keeps the single-generation route (faster, cheaper); a long, multi-scene or text-heavy one, or several subjects that must hold across shots, takes the measured route when a shell with rn is available (the Renoise sandbox, or a local shell where its `doctor.py` passes), following `references/measured.md`: the source measured shot by shot, an approved keyframe for every generated shot, generation in units that each carry their own source clip, checked against the source and put back on its timeline with rn. Without a shell it keeps the single-generation route. Rounds are batched (all units at once, every failing unit regenerated together), background scripts are waited for without fixed sleeps, and the cut keeps the generated footage's resolution unless the user asks for more.
+- The manifest gains `sandboxFiles`: a portable skill's scripts, installed only where a shell runs them; its text stays runtime-neutral.
+
 ### 1.21.0
 
 - GPT Image 2.6 replaces 2.5 in model routing. A GPT Image request that names no version goes to GPT Image 2.6 Sunburst, and Flare only when asked. Animated GIFs (loops, stickers, reaction images) route to 2.6 Sunburst with GIF output. 2.5 is no longer routed.

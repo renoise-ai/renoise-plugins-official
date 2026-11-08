@@ -88,13 +88,30 @@ test('standalone skills package is dependency-free and reproducible', () => {
   const packedFiles = new Set(first.files.map(({ path }) => path));
   assert.ok(packedFiles.has('manifest.json'));
   for (const skill of manifest.skills) {
-    for (const file of new Set([skill.entry, ...(skill.files ?? [])])) {
+    for (const file of new Set([skill.entry, ...(skill.files ?? []), ...(skill.sandboxFiles ?? [])])) {
       assert.match(file, /^skills\//);
       const packageFile = file.slice('skills/'.length);
       assert.ok(packedFiles.has(packageFile), `${packageFile} missing from @renoise/skills`);
     }
   }
   assert.ok([...packedFiles].every(file => !/^(?:features|src)\//.test(file)));
+});
+
+test('sandbox files of a portable skill are its own scripts, installed only where a shell runs them', () => {
+  // A portable skill stays runtime-neutral in its text (files); scripts it can use where a shell with rn exists
+  // (the Renoise sandbox, a local shell) are sandboxFiles, which hosts without a shell never load.
+  const manifest = readJSON('skills/manifest.json');
+  for (const skill of manifest.skills.filter((entry) => entry.sandboxFiles)) {
+    assert.equal(skill.runtime, 'portable', `${skill.id}: sandboxFiles belong to portable skills`);
+    for (const path of skill.sandboxFiles) {
+      assert.ok(path.startsWith(`skills/${skill.id}/scripts/`), `${path} must be under skills/${skill.id}/scripts/`);
+      assert.ok(existsSync(path), `${path} must exist`);
+      assert.ok(!skill.files.includes(path), `${path} is a sandbox file, not a text file`);
+    }
+  }
+  const remake = manifest.skills.find((entry) => entry.id === 'video-remake');
+  assert.ok(remake.files.includes('skills/video-remake/references/measured.md'));
+  assert.match(readFileSync('skills/video-remake/SKILL.md', 'utf8'), /## Choose the Route/);
 });
 
 test('portable skill files contain no local execution instructions', () => {

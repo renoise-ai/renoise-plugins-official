@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pluginVersion": "1.21.0",
+  "pluginVersion": "1.22.0",
   "skills": [
     {
       "id": "director",
@@ -43,7 +43,8 @@
       "runtime": "portable",
       "entry": "skills/video-remake/SKILL.md",
       "files": [
-        "skills/video-remake/SKILL.md"
+        "skills/video-remake/SKILL.md",
+        "skills/video-remake/references/measured.md"
       ],
       "requires": [
         "models.read",
@@ -53,7 +54,16 @@
       ],
       "optional": [
         "account.read",
-        "materials.read"
+        "materials.read",
+        "media.edit"
+      ],
+      "sandboxFiles": [
+        "skills/video-remake/scripts/analyze.py",
+        "skills/video-remake/scripts/build_edit.py",
+        "skills/video-remake/scripts/check_units.py",
+        "skills/video-remake/scripts/doctor.py",
+        "skills/video-remake/scripts/keyframes.py",
+        "skills/video-remake/scripts/plan_units.py"
       ]
     },
     {
