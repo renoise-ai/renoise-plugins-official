@@ -123,6 +123,11 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 
 ## Version & upgrading
 
+### 1.23.0
+
+- `model-routing` routes only the newest generation of each family: Google-family image work goes to `nano-banana-2.1` (Nano Banana 2 is left for when the user names it), and the expired Seedream 5.0 Lite row is gone. Video adds Kling 4.0 / 4.0 Omni (3–30 seconds, up to 4K, reference images and videos, about Seedance 2.5's per-second price) and Vidu Q4 (image-driven, 2K/4K); FLUX 3 Video is the cheapest 2K/4K single shot, no longer described as the only 4K model. When several rows fit, the most specific one wins.
+- `director` makes clear that choosing a video model under the host's remake routing rule is not a moderation pre-screen.
+
 ### 1.22.0
 
 - `video-remake` has two routes, chosen by the source. A short, single-scene source with no text to rebuild keeps the single-generation route (faster, cheaper); a long, multi-scene or text-heavy one, or several subjects that must hold across shots, takes the measured route when a shell with rn is available (the Renoise sandbox, or a local shell where its `doctor.py` passes), following `references/measured.md`: the source measured shot by shot, an approved keyframe for every generated shot, generation in units that each carry their own source clip, checked against the source and put back on its timeline with rn. Without a shell it keeps the single-generation route. Rounds are batched (all units at once, every failing unit regenerated together), background scripts are waited for without fixed sleeps, and the cut keeps the generated footage's resolution unless the user asks for more.
