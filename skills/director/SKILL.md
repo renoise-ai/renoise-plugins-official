@@ -90,7 +90,7 @@ For multi-shot work:
 
 ## Moderation
 
-Do not pre-screen prompts or media. Never infer a moderation decision from politics, religion, copyright, public figures, analysis warnings, or uncertainty. Continue normally unless the host returns an explicit content-review error (`INPUT_*` / `OUTPUT_*`). Then report the actual error and stop; do not retry the paid operation or suggest bypasses.
+Do not pre-screen prompts or media. Never infer a moderation decision from politics, religion, copyright, public figures, analysis warnings, or uncertainty. Continue normally unless the host returns an explicit content-review error (`INPUT_*` / `OUTPUT_*`). Then report the actual error and stop; do not retry the paid operation or suggest bypasses. This is about refusing or rewriting content; choosing a video model under the host's remake routing rule is not a pre-screen.
 
 ## Delivery
 

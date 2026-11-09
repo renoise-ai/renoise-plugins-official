@@ -9,7 +9,7 @@ description: >
 user-invocable: false
 metadata:
   author: renoise
-  version: 0.5.0
+  version: 0.6.0
   category: media-generation
   tags: [model-routing, prompting, image, video, audio, portable]
 ---
@@ -55,15 +55,16 @@ Do not call a model “best” without naming the task it is best for.
 
 ## Decision Order
 
+Use the most specific row that fits; a general row is the fallback when no specialist row does.
+
 | Task | Prefer | Why |
 |---|---|---|
 | Exact text, UI, diagrams, ads, packaging, compositing, identity-sensitive image-to-image work, or peak final quality | `gpt-image-2.6-sunburst` | The default GPT Image model: route any GPT Image request that names no version here; use `gpt-image-2.6-flare` when explicitly requested. Image references guide transformations, but neither variant exposes mask inpainting. |
 | Animated GIF (loops, stickers, reaction images, simple motion) | `gpt-image-2.6-sunburst` with `outputFormat: "gif"` | The only live model that outputs a GIF. Pick a frame size (`gifSize`), a frame count within that size's range (`frameCount`) and a frame duration (`frameDurationMs`) from the live contract; a GIF takes no resolution or ratio and can take up to 16 reference images, but no mask. |
 | General high-quality photorealistic or commercial image | live image default | Start with the deployment's current default when no specialist better fits; do not infer local-edit or typography guarantees from the model family. |
 | Fast, inexpensive drafts and simple variants | `grok-image` | Lowest-cost live image tier for quick iteration; move the chosen direction to a specialist for the final. |
-| Extreme aspect ratios (1:4 to 8:1), Google-family work, several references, multilingual localization, or conversational iteration | `nano-banana-2` | The Google-family model in the live lineup, balancing quality, latency, text, reference reasoning, and broad formats. |
+| Extreme aspect ratios (1:4 to 8:1), Google-family work, several references, multilingual localization, or conversational iteration | `nano-banana-2.1` | The current Google-family model, balancing quality, latency, text, reference reasoning, and broad formats. |
 | Aesthetic exploration, stylized art direction, editorial mood, or concept art | `mj-v8.2` | Current Midjourney generation and strong aesthetic prior. |
-| Seedream output resolution or image-reference count beyond what the live Pro contract accepts | `seedream-5-0-lite` | Choose Lite when its advertised limits fit and Pro's do not; otherwise use the live default for general Seedream work. |
 | xAI image request | `grok-image` for lower-cost iteration; `grok-image-quality` when higher quality justifies the added cost | Both support direct natural-language generation and editing through the live Renoise contract. |
 
 ## Image Prompting Styles
@@ -91,7 +92,7 @@ AVOID: ...
 - Identify every reference by its job: source, identity, product, layout, or style.
 - Prefer one-change iterations over rewriting the whole brief; do not promise mask inpainting.
 
-### Nano Banana 2 — conversational creative direction
+### Nano Banana 2.1 — conversational creative direction
 
 ```text
 [Subject] + [action] + [location] + [composition] + [style]
@@ -120,8 +121,7 @@ Exact visible copy: "..."
 Keep exactly: ...
 ```
 
-- Pro: specify dense layout, multilingual copy, materials, local edit regions, and everything the edit preserves.
-- Lite: natural language works well; make causal/spatial relationships explicit for complex transformations.
+- Specify dense layout, multilingual copy, materials, local edit regions, and everything the edit preserves.
 - Assign each reference a clear role and avoid vague pronouns in multi-reference edits.
 
 ### Midjourney — aesthetic visual phrase
@@ -150,6 +150,8 @@ Use a concise visual description, not a requirements document:
 
 ## Decision Order
 
+Use the most specific row that fits; a general row is the fallback when no specialist row does.
+
 | Task | Prefer | Why |
 |---|---|---|
 | General multimodal video, continuous 16–30 second sequences, rich mixed references, source-video edits, or forward/backward extension | `seedance-2.5-byteplus` | Newest Seedance generation and the long-form, reference-heavy specialist with precise edit/extension workflows. |
@@ -159,7 +161,9 @@ Use a concise visual description, not a requirements document:
 | H3-family 2K delivery, high-fidelity endpoint control, or focused multimodal references | `hailuo-h3` | Full-quality tier with image/video/audio references; choose it when Max's live contract cannot meet the task. |
 | Fast H3-family text-to-video, first/last-frame, or reference-to-video with image/video/audio sources | `hailuo-h3-max` | Faster multimodal tier when its live quality and resolution fit; suitable for source-video variants without discarding the source. |
 | Fastest, lowest-cost H3-family text-to-video or first/last-frame generation without generic references | `h3-max-turbo` | Turbo supports text and endpoint frames, not reference image/video/audio inputs; use H3 Max or H3 for references. |
-| A single shot delivered at 2K or 4K from text or first(/last) frames, with native sound and no other references | `flux-3-video` | The only live model with 4K output (2K/4K upscaled from the same generation), 5–20 seconds, and cheaper per second than Seedance 2.5 at 1080p; it takes no reference images, video, or audio. |
+| A single shot delivered at 2K or 4K from text or first(/last) frames, with native sound and no other references | `flux-3-video` | The cheapest 2K/4K single shot (upscaled from the same generation), 5–20 seconds, and cheaper per second than Seedance 2.5 at 1080p; it takes no reference images, video, or audio. |
+| Kling-family work, 3–30 second shots at up to 4K with up to 10 reference images and 5 reference videos | `kling-4.0-omni` for any reference; `kling-4.0` for text-to-video or first(/last) frames only | The current Kling generation, at about Seedance 2.5's per-second price; native audio is always on, and frames and references do not mix. |
+| Image-driven video at 2K/4K, or 1–15 reference images with optional reference audio | `vidu-q4` | Needs a first frame or reference images (no text-to-video), up to 16 seconds; slow, especially at 2K/4K. |
 | xAI one-image animation with native sound | `grok-video-1.5` | Newest Grok video generation; the current Renoise contract requires exactly one input image. |
 | Digital human: one person image talking or singing to a given voice track (talking head, presenter monologue, dubbed avatar, lip-synced song) | `omnihuman-2.0` | Lip-syncs one portrait to one driving audio and runs as long as the audio (up to 300 seconds), so the exact voice and long monologues are controllable; it does not stage product handling or camera action the way generative video does. |
 | Upscale an existing video without changing its content | `upscale-video-topaz-starlight-2.5` | Dedicated restoration/upscaling model; use a generation or editing model when objects, motion, timing, or style should change. |
