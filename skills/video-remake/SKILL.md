@@ -7,14 +7,39 @@ description: >
   video with controlled replacements. The source video must remain attached.
 metadata:
   author: renoise
-  version: 0.1.4
+  version: 0.2.0
   category: video-production
-  tags: [video, remake, replication, replacement, portable]
+  tags: [video, remake, replication, replacement, portable, measured]
 ---
 
 # Reference Video Remake / 复刻视频 / 剪同款
 
 This workflow resolves replacement slots before final generation. The current host owns authorized media analysis, materials, live capabilities, costs, spending approvals, and tasks. This skill owns slot matching, creative decisions, and resumable plan state kept in the conversation.
+
+## Choose the Route
+
+Choose by the source, once the media analysis (Phase 1) has its length, timeline and on-screen text. The route is about
+the task; a shell only makes the measured route possible.
+
+- **Single-generation route** (the phases below: one generation with the whole source as reference) when all of these
+  hold: the whole source fits one generation of a model that takes it as reference video; it is one continuous scene or
+  a few cuts the model makes in one call; no titles, captions, UI or graphics have to be set again; and one or two
+  subjects are replaced. It is faster and cheaper, so it is the default whenever it fits.
+- **Measured route** (`references/measured.md`) when any of these holds and you have a shell with `rn` (renoise-kit),
+  that is the cloud sandbox (the `sandbox` tool, Director Mode) or a local shell where this skill's `scripts/doctor.py`
+  passes:
+  - the source is longer than one generation;
+  - it has many cuts or several scenes;
+  - text, UI or graphics over the picture have to be set again;
+  - several replaced subjects must stay the same person or product across shots;
+  - the user asks for the source's exact timing (cuts on the beat, frame-exact).
+
+  It measures the source shot by shot, opens every generated shot on an approved keyframe, generates in units that each
+  carry their own source clip, and puts the pieces back on the source's timeline with rn, checked against the source. It
+  takes longer and costs more, so use it only for what the single generation would visibly get wrong.
+- Without such a shell, take the single-generation route for every source. When the measured route would have suited
+  it, say in one line that the sandbox (Director Mode) remakes such sources shot by shot.
+- When it is borderline, take the single-generation route, and switch only if its result misses what the list names.
 
 ## Runtime Boundary
 
