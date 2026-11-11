@@ -108,7 +108,7 @@ Keep unchanged: ...
 - Quote exact visible copy and specify its hierarchy, placement, visual character, and localization target.
 - Relate multiple references explicitly and iterate conversationally.
 
-### Seedream 5 — design brief
+### Seedream 5.5 / 5.0 Pro — design brief
 
 Put the deliverable format first, then subject, layout, light, exact text, and invariants:
 
@@ -122,6 +122,9 @@ Keep exactly: ...
 ```
 
 - Specify dense layout, multilingual copy, materials, local edit regions, and everything the edit preserves.
+- Seedream 5.5 holds unedited areas steady across many rounds of local edits and renders small, dense text more accurately than 5.0 Pro: for a series of edits, change one thing per round on the previous output and name what stays.
+- Describe realistic light, materials and skin plainly; avoid beauty-filter words that push toward a glossy, overexposed look.
+- Treat outputs as opaque: Renoise does not expose Seedream's transparent-background output, so plan a cut-out step instead of promising a transparent PNG.
 - Assign each reference a clear role and avoid vague pronouns in multi-reference edits.
 
 ### Midjourney — aesthetic visual phrase
@@ -370,7 +373,7 @@ Primary guidance:
 - OpenAI GPT Image: https://openai.com/index/introducing-chatgpt-images-2-5/, https://developers.openai.com/api/docs/models/gpt-image-2.5-flare, https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst, https://developers.openai.com/api/docs/guides/image-generation, and https://developers.openai.com/cookbook/examples/multimodal/image-gen-models-prompting-guide
 - Google Gemini image: https://ai.google.dev/gemini-api/docs/image-generation and https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-nano-banana
 - Midjourney prompting/version docs: https://docs.midjourney.com/hc/en-us/articles/32023408776205-Prompt-Basics, https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version, and https://updates.midjourney.com/version-8-2/
-- ByteDance Seedream: https://seed.bytedance.com/en/blog/deeper-thinking-more-accurate-generation-introducing-seedream-5-0-lite and https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro
+- ByteDance Seedream: https://seed.bytedance.com/en/blog/deeper-thinking-more-accurate-generation-introducing-seedream-5-0-lite and https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro and https://seed.bytedance.com/en/blog/more-realistic-images-more-stable-editing-across-100-rounds-introducing-seedream-5-5
 - xAI Imagine image/video: https://docs.x.ai/developers/model-capabilities/imagine and https://docs.x.ai/developers/model-capabilities/video/generation
 - Wan 3.0 / Wan 3.0 Prime: live Renoise model guidance and per-second credit pricing (2026-10-13).
 - BytePlus Seedance 2.5 and 2.0 prompt guides: https://docs.byteplus.com/en/docs/ModelArk/2607689 and https://docs.byteplus.com/en/docs/ModelArk/2222480
