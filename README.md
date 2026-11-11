@@ -123,6 +123,10 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 
 ## Version & upgrading
 
+### 1.24.0
+
+- `model-routing` adds Seedream 5.5 to the Seedream prompting brief: one change per round for multi-round local edits, plain realistic lighting and skin, and no transparent-PNG promise (Renoise returns opaque images). General photorealistic and commercial images still go to the live image default, which Renoise now sets to Seedream 5.5.
+
 ### 1.23.0
 
 - `model-routing` routes only the newest generation of each family: Google-family image work goes to `nano-banana-2.1` (Nano Banana 2 is left for when the user names it), and the expired Seedream 5.0 Lite row is gone. Video adds Kling 4.0 / 4.0 Omni (3–30 seconds, up to 4K, reference images and videos, about Seedance 2.5's per-second price) and Vidu Q4 (image-driven, 2K/4K); FLUX 3 Video is the cheapest 2K/4K single shot, no longer described as the only 4K model. When several rows fit, the most specific one wins.
