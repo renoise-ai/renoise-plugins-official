@@ -23,3 +23,18 @@ The Renoise annotation whiteboard bundles the following runtime libraries in its
 | zod-to-json-schema | 3.25.2 | ISC | https://github.com/StefanTerdell/zod-to-json-schema |
 
 Build-only dependencies are declared in `package.json`. The annotation board includes Konva and React Konva for its focused frame-annotation overlay; it does not include tldraw, `@tldraw/*`, Excalidraw, or React Flow.
+
+## vox-collage
+
+`skills/vox-collage/scripts/engine/public/sfx/` bundles sound effects that are all CC0 (no attribution required); the
+per-file list is in `skills/vox-collage/scripts/engine/SFX_SOURCES.md`.
+
+| Assets | License | Project |
+|---|---|---|
+| Kenney UI Audio, Interface Sounds, Impact Sounds, RPG Audio (selected files) | CC0 1.0 | https://kenney.nl/assets |
+| "Keyboard Sounds" by unicaegames | CC0 1.0 | https://opengameart.org/content/keyboard-sounds |
+
+The film engine is installed with npm when a project is created and is not bundled here: Remotion 4.0.408
+(https://www.remotion.dev, Remotion License: free for individuals and companies of up to three people, a company
+license otherwise), React 19.0.0 (MIT) and TypeScript 5.8.2 (Apache-2.0). The scripts call ffmpeg and, depending on the
+host, whisper.cpp (MIT) or faster-whisper (MIT) and rembg (MIT); none of them is bundled.

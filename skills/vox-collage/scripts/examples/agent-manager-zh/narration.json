@@ -1,0 +1,202 @@
+{
+ "_note": "Chinese narration, adapted from Addy Osmani, \"Your coding agents made you a manager\" (X article, 2026-11-08). fact ids refer to facts.md. Written before the narrative rules existed: run lint_script.py on it and read README.md.",
+ "archetype": "essay",
+ "target_seconds": 300,
+ "motif": "a tin-toy robot clerk (the agent); the empty executive chair opens and closes the film",
+ "voice": {
+  "engine": "seed",
+  "preset": "zh_male",
+  "style": "科技博主讲职场和 AI：语速偏快、节奏紧凑，一句接一句不拖音，句间停顿很短，段与段之间稍停半拍；关键数字和关键词加重落下；讲到反转处语气一沉；自然口语，像跟同事聊天，不要播音腔。"
+ },
+ "lexicon": {},
+ "beats": [
+  {
+   "id": "B01",
+   "chapter": "hook",
+   "role": "hook",
+   "fact": "A1",
+   "narration": "[[desk]]你没有升职，没有加薪，也没有人通知你。但从你[[agent]]整天和编程 Agent 一起干活的那天起，你已经[[boss]]是个经理了。"
+  },
+  {
+   "id": "B02",
+   "role": "number",
+   "fact": "A1",
+   "narration": "[[pick]]挑任务，[[write]]写说明，[[send]]派活，[[follow]]跟进，[[check]]验收，[[ship]]决定什么能上线。这些事，每一件都叫[[manage]]管理。"
+  },
+  {
+   "id": "B03",
+   "role": "twist",
+   "fact": "A2",
+   "narration": "更反直觉的是，[[best]]把 Agent 用得最好的那批工程师，不一定最会写提示词。[[learn]]他们只是学会了怎么当经理，不管是不是有意的。"
+  },
+  {
+   "id": "B04",
+   "fact": "S1 S2",
+   "narration": "说这话的人叫[[addy]]艾迪·奥斯马尼，他就在 Anthropic 做 Claude Code。[[post]]十一月八号，他发了一篇长文，[[views]]两天，阅读超过五十万。"
+  },
+  {
+   "id": "B05",
+   "fact": "A3",
+   "narration": "文里有一句话很扎心：[[gripe]]你对烂老板的每一句吐槽，[[bug]]都是一份怎么用 Agent 的缺陷报告。"
+  },
+  {
+   "id": "B06",
+   "chapter": "check its work",
+   "fact": "A4 P1",
+   "narration": "他按影响力，排了十个习惯。[[n1]]排在第一的是：给它一个能自己检查的办法。"
+  },
+  {
+   "id": "B07",
+   "fact": "P1 D1",
+   "narration": "[[looks]]Agent 觉得「看起来做完了」，就会停下。[[suite]]如果没有任何检查，你就成了它的测试，每个错，都等着你碰巧看见。"
+  },
+  {
+   "id": "B08",
+   "fact": "P1",
+   "narration": "人也一样。[[newmgr]]新手经理不建护栏，事事亲自验收，[[quarter]]不出一个季度，自己就成了整个团队的瓶颈。"
+  },
+  {
+   "id": "B09",
+   "fact": "P1",
+   "narration": "所以，给它一个[[pass]]只有「通过」和「不通过」的检查：测试、构建、截图，都行。[[proof]]然后让它把结果拿给你看，当作证据。"
+  },
+  {
+   "id": "B10",
+   "chapter": "tell it what it cannot see",
+   "fact": "P2",
+   "narration": "[[n2]]第二，把它看不见的，告诉它。[[intent]]军队管这个叫「指挥官意图」，[[netflix]]网飞叫「给背景，不给控制」。"
+  },
+  {
+   "id": "B11",
+   "fact": "P2",
+   "narration": "[[repo]]代码里读得到的，不用你说，它读得比你讲得快。[[meeting]]该说的，是仓库里没有的：会上的决定，这件事为什么重要，怎样才算做完。"
+  },
+  {
+   "id": "B12",
+   "fact": "P2",
+   "narration": "比如[[vague]]「让仪表盘快一点」，要改成：[[target]]两秒以内打开；[[why]]因为这是企业客户投诉最多的问题；[[limits]]不许动数据库结构；[[run]]最后跑一遍脚本，给我看前后的数字。"
+  },
+  {
+   "id": "B13",
+   "fact": "P2",
+   "narration": "要是你自己也没想清楚，[[interview]]就让它反过来采访你，问到它能写出一份需求为止，[[spec]]存成文件，再开一个新会话，照着做。"
+  },
+  {
+   "id": "B14",
+   "chapter": "compound corrections, hard limits",
+   "fact": "P3",
+   "narration": "[[n3]]第三，让每一次纠正都有复利。[[twice]]同一个错，纠正了两次，[[md]]就写进项目的说明文件。[[outlast]]写下来的东西，比换组的同事、比换代的模型，都活得久。"
+  },
+  {
+   "id": "B15",
+   "fact": "P4 E1",
+   "narration": "[[n4]]第四，默认让它自己拿主意。[[grove]]英特尔的安迪·格鲁夫讲过：管多紧，要看一个人在这件具体的事上表现如何，而不是他整体有多能干。"
+  },
+  {
+   "id": "B16",
+   "fact": "P4 D2",
+   "narration": "所以[[request]]提示词和说明文件，只是请求；[[hook]]真正不能破的底线，才交给强制规则。[[caps]]至于全大写的命令、「别偷懒」，新模型已经不需要了。[[micro]]过度流程，就是新的微观管理。"
+  },
+  {
+   "id": "B17",
+   "chapter": "plan first, steer early",
+   "fact": "P5",
+   "narration": "[[n5]]第五，先谈计划，再让它动手。[[five]]五个 Agent 同时做重叠的任务，换不来五倍产出，[[conflict]]只会换来一个有五位作者的合并冲突。"
+  },
+  {
+   "id": "B18",
+   "fact": "P6",
+   "narration": "[[n6]]第六，早点纠偏，果断重来。[[esc]]看见它跑偏，马上打断。[[two]]纠正两次还不对，就清空会话，[[fresh]]带着学到的东西，重写一份提示词。[[third]]第三次纠正，只是让它多背一段失败记录。"
+  },
+  {
+   "id": "B19",
+   "fact": "P6",
+   "narration": "而且现在[[rewind]]回滚很便宜，代码和对话，都能退回之前的某一步。[[bold]]所以不妨先试那个更大胆的方案。"
+  },
+  {
+   "id": "B20",
+   "chapter": "never delegate the judgment",
+   "role": "scene",
+   "fact": "P7",
+   "narration": "[[n7]]第七条最容易中招：活可以交出去，判断不行。[[diff]]六百行改动，[[names]]命名看着合理，[[green]]测试全是绿的，[[approve]]于是你点了批准。"
+  },
+  {
+   "id": "B21",
+   "fact": "P7",
+   "narration": "[[ratify]]艾迪说，这不叫代码审查，这叫代码追认。[[trap]]他自己就差点把一批只给用户添麻烦的改动推上线。[[paged]]所以每一份改动，都要当成「半夜出事会来找你」那样去审。"
+  },
+  {
+   "id": "B22",
+   "fact": "P8",
+   "narration": "[[n8]]第八，设计一个不用你盯着的流程。[[night]]睡前让它跑一整夜之前，先问五件事：[[q1]]它知道什么叫做完吗？[[q2]]能自己检查吗？[[q3]]边界在哪？[[q4]]上限是多少？[[q5]]最后谁来批准？"
+  },
+  {
+   "id": "B23",
+   "fact": "P8",
+   "narration": "新流程还要有[[pilot]]试用期：先拿三个文件试跑，改好提示词，[[rest]]再放开跑剩下的。"
+  },
+  {
+   "id": "B24",
+   "fact": "P9",
+   "narration": "[[n9]]第九，要扩大的是验证，不是注意力。[[tax]]他管这个叫「编排税」：每多开一个 Agent，分走的注意力都比上一个多。[[four]]他自己一天通常跑四五个后台 Agent，有些日子，这都嫌多。"
+  },
+  {
+   "id": "B25",
+   "fact": "P9",
+   "narration": "[[metric]]该量的，也不是 AI 写了多少代码，[[revert]]而是合并得快不快，返工多不多。"
+  },
+  {
+   "id": "B26",
+   "fact": "P10",
+   "narration": "[[n10]]第十，决定不做什么。[[free]]现在开工几乎免费，[[lunch]]任何一个说得通的想法，午饭前就能变成一份等人审的改动。[[scarce]]可审查和验证，才是现在最稀缺的东西。[[no]]经理最重要的那个字，往往是「不」。"
+  },
+  {
+   "id": "B27",
+   "chapter": "where the analogy breaks",
+   "fact": "X1",
+   "narration": "不过，[[break]]这个比喻也有不成立的地方。[[junior]]Agent 不是初级工程师。"
+  },
+  {
+   "id": "B28",
+   "fact": "X2",
+   "narration": "[[pushback]]让一个好工程师去做错的事，他会反驳你。[[obey]]Agent 多半照做，[[sure]]而且语气很有把握。"
+  },
+  {
+   "id": "B29",
+   "fact": "E2 E3",
+   "narration": "[[wharton]]沃顿商学院做过三组实验，[[n1372]]一千三百七十二名参与者。艾迪引过其中一个数字：AI 答错的时候，[[p73]]七成多的情况下，人们照单全收，[[conf]]而且变得更自信了。"
+  },
+  {
+   "id": "B30",
+   "fact": "E2 X2",
+   "narration": "研究者把这叫做[[surrender]]「认知投降」。[[argue]]艾迪的对策是：让 Agent 反过来，驳一驳它自己的答案。"
+  },
+  {
+   "id": "B31",
+   "fact": "X3 X4",
+   "narration": "还有，[[notebook]]Agent 没有经验，只有一本笔记。[[people]]管得好五个 Agent，也不代表你管得好五个人：[[none]]激励、冲突、成长、信任，这些功课，在 Agent 身上一样都练不到。"
+  },
+  {
+   "id": "B32",
+   "chapter": "you do not need the title",
+   "fact": "Z1",
+   "narration": "所以，[[title2]]你不需要那个头衔。[[staff]]好的资深工程师一直在做这些事：写清背景，定义完成，认真审查。"
+  },
+  {
+   "id": "B33",
+   "fact": "Z1",
+   "narration": "[[minutes]]区别是，过去这种反馈要等几个季度，现在只要几分钟，[[undo]]而且做错了，可以撤回。"
+  },
+  {
+   "id": "B34",
+   "fact": "Z2",
+   "narration": "[[reason]]这份工作，正在从「写代码」，变成「让好代码被写出来的那个原因」。"
+  },
+  {
+   "id": "B35",
+   "role": "callback",
+   "fact": "Z3",
+   "narration": "[[born]]没有人天生就是好经理。[[cheap]]但有了 Agent，练习，变得很便宜。"
+  }
+ ]
+}

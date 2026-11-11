@@ -1,0 +1,3190 @@
+{
+ "pauses": {
+  "B05": 3.0
+ },
+ "tail": 3.0,
+ "score": [
+  {
+   "src": "music/hook.mp3",
+   "at": "0",
+   "to": "B05",
+   "start": 0.0
+  },
+  {
+   "src": "music/ch1.mp3",
+   "at": "B05",
+   "to": "B10",
+   "start": 0.0
+  },
+  {
+   "src": "music/ch2.mp3",
+   "at": "B10",
+   "to": "B18",
+   "start": 0.0
+  },
+  {
+   "src": "music/ch3.mp3",
+   "at": "B18",
+   "to": "B26",
+   "start": 0.0
+  },
+  {
+   "src": "music/ch4.mp3",
+   "at": "B26",
+   "to": "B29",
+   "start": 0.0
+  },
+  {
+   "src": "music/ch5.mp3",
+   "at": "B29",
+   "to": null,
+   "start": 3.0
+  }
+ ],
+ "musicHi": 0.26,
+ "musicLo": 0.11,
+ "teaserVol": 0.45,
+ "cover": "cover.jpg",
+ "coverFrames": 15,
+ "teaser": [
+  {
+   "at": "B19+0.6",
+   "len": 1.5
+  },
+  {
+   "at": "B13:fake+0.15",
+   "len": 1.2
+  },
+  {
+   "at": "B21:blast+1.6",
+   "len": 1.5
+  },
+  {
+   "at": "B32:muskquote+1.2",
+   "len": 1.3
+  },
+  {
+   "at": "B30:raised+0.7",
+   "len": 1.2
+  }
+ ],
+ "teaserMusic": "music/ch2.mp3",
+ "teaserStart": 1680,
+ "shots": [
+  {
+   "id": "S01",
+   "at": "B01",
+   "bg": "img/bg_ny.png",
+   "trans": "cut",
+   "push": [
+    1.0,
+    1.06
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/door3327.png",
+     "x": 700,
+     "y": 560,
+     "w": 420,
+     "at": "+0.1",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/door3327.png700"
+    },
+    {
+     "t": "label",
+     "text": "3327",
+     "x": 700,
+     "y": 300,
+     "at": "+1.6",
+     "size": 54,
+     "rot": 1,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "1943.01 · NEW YORK",
+     "x": 1360,
+     "y": 300,
+     "at": "+0.5",
+     "size": 44,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "DO NOT DISTURB",
+     "x": 905,
+     "y": 640,
+     "at": "B01:dnd",
+     "size": 27,
+     "rot": 12,
+     "cn": false
+    },
+    {
+     "t": "stamp",
+     "text": "3 DAYS",
+     "x": 1380,
+     "y": 640,
+     "at": "B01:dnd+1.2",
+     "size": 96,
+     "rot": -10
+    }
+   ]
+  },
+  {
+   "id": "S02",
+   "at": "B02",
+   "bg": "img/bg_dark.png",
+   "trans": "cut",
+   "push": [
+    1.04,
+    1.0
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "num",
+     "value": 86,
+     "x": 760,
+     "y": 470,
+     "at": "+1.1",
+     "unit": "yrs old",
+     "prefix": "",
+     "size": 230,
+     "rot": -3
+    },
+    {
+     "t": "label",
+     "text": "DIED ALONE",
+     "x": 760,
+     "y": 720,
+     "at": "+2.6",
+     "size": 45,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "stamp",
+     "text": "UNPAID RENT",
+     "x": 1460,
+     "y": 700,
+     "at": "+4.4",
+     "size": 88,
+     "rot": 8,
+     "blend": "normal",
+     "color": "#E4574B"
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "at": "B02:pigeon",
+   "bg": "img/bg_dark.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "loop",
+     "dir": "gif/pigeon",
+     "n": 12,
+     "fps": 10,
+     "x": 960,
+     "y": 560,
+     "w": 760,
+     "at": "+0.05",
+     "card": false,
+     "rot": 0
+    },
+    {
+     "t": "label",
+     "text": "PIGEONS ON THE SILL",
+     "x": 960,
+     "y": 930,
+     "at": "+0.5",
+     "size": 40,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "at": "B03",
+   "bg": "img/bg_modern.png",
+   "trans": "cut",
+   "push": [
+    1.0,
+    1.05
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/socket.png",
+     "x": 460,
+     "y": 560,
+     "w": 400,
+     "at": "B03:grid",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/socket.png460"
+    },
+    {
+     "t": "label",
+     "text": "AC POWER",
+     "x": 460,
+     "y": 880,
+     "at": "B03:grid+0.3",
+     "size": 42,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "loop",
+     "dir": "gif/motor",
+     "n": 12,
+     "fps": 10,
+     "x": 980,
+     "y": 500,
+     "w": 520,
+     "at": "B03:motor",
+     "card": false,
+     "rot": 0
+    },
+    {
+     "t": "label",
+     "text": "INDUCTION MOTOR",
+     "x": 980,
+     "y": 800,
+     "at": "B03:motor+0.3",
+     "size": 42,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "piece",
+     "src": "img/ev.png",
+     "x": 1450,
+     "y": 820,
+     "w": 760,
+     "at": "B03:car",
+     "rot": 0,
+     "mode": "slide",
+     "seed": "img/ev.png1450",
+     "from": [
+      1100,
+      0
+     ]
+    },
+    {
+     "t": "label",
+     "text": "TESLA, INC.",
+     "x": 1450,
+     "y": 1000,
+     "at": "B03:car+0.5",
+     "size": 40,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "at": "B04:name",
+   "bg": "img/bg_atlantic.png",
+   "trans": "cut",
+   "push": [
+    1.0,
+    1.06
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "photo/tesla_sarony.png",
+     "x": 900,
+     "y": 500,
+     "w": 520,
+     "at": "+0.0",
+     "rot": -2,
+     "mode": "slap",
+     "seed": "photo/tesla_sarony.png900"
+    },
+    {
+     "t": "tape",
+     "x": 720,
+     "y": 170,
+     "at": "+0.3",
+     "rot": -32,
+     "w": 150
+    },
+    {
+     "t": "tape",
+     "x": 1100,
+     "y": 170,
+     "at": "+0.35",
+     "rot": 30,
+     "w": 150
+    },
+    {
+     "t": "label",
+     "text": "NIKOLA TESLA",
+     "x": 900,
+     "y": 930,
+     "at": "+0.4",
+     "size": 60,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "note",
+     "text": "Why did he die broke?",
+     "x": 1480,
+     "y": 720,
+     "at": "B04:name+2.3",
+     "size": 72,
+     "rot": -6
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "at": "B04:musk",
+   "bg": "img/bg_money.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/ev.png",
+     "x": 600,
+     "y": 420,
+     "w": 760,
+     "at": "+0.05",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/ev.png600"
+    },
+    {
+     "t": "label",
+     "text": "THE CAR BOSS SAYS:",
+     "x": 600,
+     "y": 650,
+     "at": "+0.4",
+     "size": 42,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "piece",
+     "src": "photo/edison.png",
+     "x": 1340,
+     "y": 520,
+     "w": 430,
+     "at": "B04:edison",
+     "rot": 4,
+     "mode": "slap",
+     "seed": "photo/edison.png1340"
+    },
+    {
+     "t": "circle",
+     "x": 1340,
+     "y": 470,
+     "rx": 260,
+     "ry": 330,
+     "at": "B04:edison+0.6"
+    },
+    {
+     "t": "label",
+     "text": "\"A BIGGER FAN OF EDISON\"",
+     "x": 1340,
+     "y": 960,
+     "at": "B04:edison+0.3",
+     "size": 40,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "at": "B05-3.0",
+   "bg": "img/bg_patent.png",
+   "trans": "cut",
+   "push": [
+    1.06,
+    1.0
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "title",
+     "text": "NIKOLA TESLA",
+     "sub": "DIED BROKE · LIT UP TODAY",
+     "at": "+0.15",
+     "x": 960,
+     "y": 540,
+     "size": 130
+    }
+   ]
+  },
+  {
+   "id": "S08",
+   "at": "B05",
+   "bg": "img/bg_atlantic.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "1856 · SMILJAN",
+     "x": 1450,
+     "y": 300,
+     "at": "+0.3",
+     "size": 48,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "pin",
+     "x": 1480,
+     "y": 470,
+     "at": "+0.6"
+    },
+    {
+     "t": "label",
+     "text": "SMILJAN · TODAY'S CROATIA",
+     "x": 1450,
+     "y": 580,
+     "at": "+1.4",
+     "size": 34,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "SON OF A SERBIAN PRIEST",
+     "x": 1450,
+     "y": 700,
+     "at": "+3.0",
+     "size": 34,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "piece",
+     "src": "photo/tesla_sarony.png",
+     "x": 560,
+     "y": 560,
+     "w": 380,
+     "at": "+0.1",
+     "rot": -4,
+     "mode": "slap",
+     "seed": "photo/tesla_sarony.png560"
+    }
+   ]
+  },
+  {
+   "id": "S09",
+   "at": "B05:idea",
+   "bg": "img/bg_patent.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "loop",
+     "dir": "gif/motor",
+     "n": 12,
+     "fps": 10,
+     "x": 760,
+     "y": 540,
+     "w": 640,
+     "at": "+0.05",
+     "card": false,
+     "rot": 0
+    },
+    {
+     "t": "circle",
+     "x": 760,
+     "y": 560,
+     "rx": 250,
+     "ry": 210,
+     "at": "+1.4"
+    },
+    {
+     "t": "label",
+     "text": "A NEW KIND OF MOTOR",
+     "x": 1400,
+     "y": 420,
+     "at": "+1.0",
+     "size": 46,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "ROTATING MAGNETIC FIELD",
+     "x": 1400,
+     "y": 580,
+     "at": "+2.4",
+     "size": 46,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "underline",
+     "x": 1400,
+     "y": 640,
+     "w": 300,
+     "at": "+3.0"
+    }
+   ]
+  },
+  {
+   "id": "S10",
+   "at": "B06",
+   "bg": "img/bg_atlantic.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/ship.png",
+     "x": 1050,
+     "y": 420,
+     "w": 900,
+     "at": "+0.05",
+     "rot": 0,
+     "mode": "slide",
+     "seed": "img/ship.png1050",
+     "from": [
+      900,
+      0
+     ]
+    },
+    {
+     "t": "label",
+     "text": "1884.06 · NEW YORK",
+     "x": 560,
+     "y": 250,
+     "at": "+0.3",
+     "size": 46,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "loop",
+     "dir": "gif/walk",
+     "n": 12,
+     "fps": 10,
+     "x": 260,
+     "y": 760,
+     "w": 420,
+     "at": "+0.6",
+     "card": false,
+     "rot": 0,
+     "path": [
+      900,
+      0
+     ],
+     "dur": 120
+    }
+   ]
+  },
+  {
+   "id": "S11",
+   "at": "B06:edison",
+   "bg": "img/bg_ny.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/nyc1884.png",
+     "x": 700,
+     "y": 520,
+     "w": 920,
+     "at": "+0.0",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/nyc1884.png700"
+    },
+    {
+     "t": "piece",
+     "src": "photo/edison.png",
+     "x": 1450,
+     "y": 560,
+     "w": 400,
+     "at": "+0.3",
+     "rot": 4,
+     "mode": "slap",
+     "seed": "photo/edison.png1450"
+    },
+    {
+     "t": "label",
+     "text": "EDISON MACHINE WORKS",
+     "x": 1450,
+     "y": 930,
+     "at": "+0.6",
+     "size": 37,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S12",
+   "at": "B07",
+   "bg": "img/bg_patent.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/dynamo.png",
+     "x": 680,
+     "y": 520,
+     "w": 720,
+     "at": "+0.05",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/dynamo.png680"
+    },
+    {
+     "t": "label",
+     "text": "LOW-VOLTAGE DC",
+     "x": 1380,
+     "y": 300,
+     "at": "+0.4",
+     "size": 44,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "DIRECT CURRENT",
+     "x": 1380,
+     "y": 410,
+     "at": "+1.0",
+     "size": 42,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "piece",
+     "src": "img/copper.png",
+     "x": 1350,
+     "y": 700,
+     "w": 560,
+     "at": "B07:copper",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/copper.png1350"
+    },
+    {
+     "t": "note",
+     "text": "farther = pricier",
+     "x": 1420,
+     "y": 990,
+     "at": "B07:copper+2.2",
+     "size": 56,
+     "rot": -4
+    },
+    {
+     "t": "arrow",
+     "a": [
+      1100,
+      900
+     ],
+     "b": [
+      1260,
+      980
+     ],
+     "at": "B07:copper+2.0"
+    }
+   ]
+  },
+  {
+   "id": "S13",
+   "at": "B08",
+   "bg": "img/bg_money.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/cheque.png",
+     "x": 900,
+     "y": 430,
+     "w": 1100,
+     "at": "+0.05",
+     "rot": -2,
+     "mode": "slap",
+     "seed": "img/cheque.png900"
+    },
+    {
+     "t": "num",
+     "value": 50000,
+     "x": 900,
+     "y": 470,
+     "at": "+1.5",
+     "unit": "",
+     "prefix": "$",
+     "size": 150,
+     "rot": -3,
+     "bg": false
+    },
+    {
+     "t": "piece",
+     "src": "photo/edison.png",
+     "x": 300,
+     "y": 760,
+     "w": 300,
+     "at": "+0.8",
+     "rot": -6,
+     "mode": "slap",
+     "seed": "photo/edison.png300"
+    },
+    {
+     "t": "label",
+     "text": "\"YOU DON'T UNDERSTAND OUR AMERICAN HUMOR\"",
+     "x": 1200,
+     "y": 880,
+     "at": "+4.6",
+     "size": 38,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S14",
+   "at": "B08:book",
+   "bg": "img/bg_patent.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/book.png",
+     "x": 600,
+     "y": 540,
+     "w": 560,
+     "at": "+0.05",
+     "rot": -5,
+     "mode": "slap",
+     "seed": "img/book.png600"
+    },
+    {
+     "t": "label",
+     "text": "MY INVENTIONS · 1919",
+     "x": 600,
+     "y": 880,
+     "at": "+0.4",
+     "size": 40,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "TESLA'S MEMOIR",
+     "x": 600,
+     "y": 200,
+     "at": "+0.4",
+     "size": 42,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "piece",
+     "src": "photo/edison.png",
+     "x": 1350,
+     "y": 500,
+     "w": 380,
+     "at": "+0.6",
+     "rot": 3,
+     "mode": "slap",
+     "seed": "photo/edison.png1350"
+    },
+    {
+     "t": "label",
+     "text": "PROMISED BY: A MANAGER",
+     "x": 1350,
+     "y": 900,
+     "at": "+1.1",
+     "size": 35,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "stamp",
+     "text": "NOT HIM",
+     "x": 1380,
+     "y": 560,
+     "at": "B08:notedison",
+     "size": 110,
+     "rot": -12
+    }
+   ]
+  },
+  {
+   "id": "S15",
+   "at": "B09",
+   "bg": "img/bg_ny.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "loop",
+     "dir": "gif/walk",
+     "n": 12,
+     "fps": 10,
+     "x": 380,
+     "y": 700,
+     "w": 440,
+     "at": "+0.05",
+     "card": false,
+     "rot": 0,
+     "path": [
+      1500,
+      0
+     ],
+     "dur": 102.0
+    },
+    {
+     "t": "label",
+     "text": "NO MONEY",
+     "x": 1200,
+     "y": 300,
+     "at": "+1.2",
+     "size": 48,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "stamp",
+     "text": "HE QUIT",
+     "x": 1250,
+     "y": 460,
+     "at": "+2.2",
+     "size": 84,
+     "rot": -8
+    }
+   ]
+  },
+  {
+   "id": "S16",
+   "at": "B10",
+   "bg": "img/bg_patent.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/patentdwg.png",
+     "x": 620,
+     "y": 540,
+     "w": 560,
+     "at": "+0.05",
+     "rot": -3,
+     "mode": "slap",
+     "seed": "img/patentdwg.png620"
+    },
+    {
+     "t": "tape",
+     "x": 480,
+     "y": 230,
+     "at": "+0.3",
+     "rot": -32,
+     "w": 150
+    },
+    {
+     "t": "label",
+     "text": "1888.05.01",
+     "x": 1350,
+     "y": 280,
+     "at": "+0.4",
+     "size": 56,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "AC MOTOR PATENTS",
+     "x": 1350,
+     "y": 400,
+     "at": "+1.0",
+     "size": 43,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "LIVE DEMO · AIEE",
+     "x": 1300,
+     "y": 640,
+     "at": "B10:aiee",
+     "size": 34,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S17",
+   "at": "B10:west",
+   "bg": "img/bg_patent.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "photo/westinghouse.png",
+     "x": 700,
+     "y": 520,
+     "w": 460,
+     "at": "+0.05",
+     "rot": -3,
+     "mode": "slap",
+     "seed": "photo/westinghouse.png700"
+    },
+    {
+     "t": "label",
+     "text": "GEORGE WESTINGHOUSE",
+     "x": 700,
+     "y": 930,
+     "at": "+0.6",
+     "size": 45,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "note",
+     "text": "saw what it was worth",
+     "x": 1350,
+     "y": 500,
+     "at": "+1.2",
+     "size": 62,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "id": "S18",
+   "at": "B11",
+   "bg": "img/bg_money.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/coins.png",
+     "x": 560,
+     "y": 640,
+     "w": 560,
+     "at": "+0.05",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/coins.png560"
+    },
+    {
+     "t": "num",
+     "value": 60000,
+     "x": 1250,
+     "y": 380,
+     "at": "B11:cash+0.3",
+     "unit": "",
+     "prefix": "$",
+     "size": 160,
+     "rot": -3
+    },
+    {
+     "t": "label",
+     "text": "CASH + STOCK",
+     "x": 1250,
+     "y": 560,
+     "at": "B11:cash+1.4",
+     "size": 37,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "piece",
+     "src": "img/horse.png",
+     "x": 1150,
+     "y": 800,
+     "w": 460,
+     "at": "B11:hp",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/horse.png1150"
+    },
+    {
+     "t": "label",
+     "text": "$2.5 / HP",
+     "x": 1560,
+     "y": 800,
+     "at": "B11:hp+0.4",
+     "size": 54,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "ROYALTY PER HORSEPOWER",
+     "x": 1560,
+     "y": 920,
+     "at": "B11:hp+0.9",
+     "size": 32,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S19",
+   "at": "B12",
+   "bg": "img/bg_patent.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/transformer.png",
+     "x": 520,
+     "y": 560,
+     "w": 380,
+     "at": "+0.05",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/transformer.png520"
+    },
+    {
+     "t": "arrow",
+     "a": [
+      720,
+      500
+     ],
+     "b": [
+      1340,
+      500
+     ],
+     "at": "+0.9"
+    },
+    {
+     "t": "piece",
+     "src": "img/tower_wire.png",
+     "x": 1520,
+     "y": 560,
+     "w": 380,
+     "at": "+1.5",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/tower_wire.png1520"
+    },
+    {
+     "t": "label",
+     "text": "STEP UP · SEND IT FAR",
+     "x": 960,
+     "y": 260,
+     "at": "+0.6",
+     "size": 43,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S20",
+   "at": "B12:shake",
+   "bg": "img/bg_dark.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "photo/edison.png",
+     "x": 620,
+     "y": 520,
+     "w": 430,
+     "at": "+0.0",
+     "rot": -4,
+     "mode": "slap",
+     "seed": "photo/edison.png620"
+    },
+    {
+     "t": "piece",
+     "src": "photo/westinghouse.png",
+     "x": 1300,
+     "y": 520,
+     "w": 430,
+     "at": "+0.15",
+     "rot": 4,
+     "mode": "slap",
+     "seed": "photo/westinghouse.png1300"
+    },
+    {
+     "t": "label",
+     "text": "DC",
+     "x": 620,
+     "y": 920,
+     "at": "+0.4",
+     "size": 60,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "AC",
+     "x": 1300,
+     "y": 920,
+     "at": "+0.5",
+     "size": 60,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "title",
+     "text": "WAR OF THE CURRENTS",
+     "sub": null,
+     "at": "B12:war",
+     "x": 960,
+     "y": 540,
+     "size": 120
+    }
+   ]
+  },
+  {
+   "id": "S21",
+   "at": "B13",
+   "bg": "img/bg_ny.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/elephant.png",
+     "x": 900,
+     "y": 580,
+     "w": 880,
+     "at": "+0.05",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/elephant.png900"
+    },
+    {
+     "t": "label",
+     "text": "LEGEND: EDISON KILLED AN ELEPHANT",
+     "x": 900,
+     "y": 170,
+     "at": "+0.5",
+     "size": 40,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "stamp",
+     "text": "MYTH",
+     "x": 1000,
+     "y": 560,
+     "at": "B13:fake",
+     "size": 150,
+     "rot": -10
+    },
+    {
+     "t": "label",
+     "text": "THE ELEPHANT DIED IN 1903 · WAR LONG OVER",
+     "x": 900,
+     "y": 980,
+     "at": "B13:y1903",
+     "size": 34,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S22",
+   "at": "B14",
+   "bg": "img/bg_patent.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "1888 · TRUE STORY",
+     "x": 560,
+     "y": 220,
+     "at": "+0.2",
+     "size": 46,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "ENGINEER HAROLD BROWN",
+     "x": 560,
+     "y": 360,
+     "at": "B14:brown",
+     "size": 42,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "piece",
+     "src": "photo/edison.png",
+     "x": 560,
+     "y": 660,
+     "w": 300,
+     "at": "B14:brown+0.8",
+     "rot": -4,
+     "mode": "slap",
+     "seed": "photo/edison.png560"
+    },
+    {
+     "t": "note",
+     "text": "used Edison's lab",
+     "x": 560,
+     "y": 950,
+     "at": "B14:brown+1.4",
+     "size": 44,
+     "rot": -4
+    },
+    {
+     "t": "piece",
+     "src": "img/dog.png",
+     "x": 1350,
+     "y": 560,
+     "w": 380,
+     "at": "B14:dogs",
+     "rot": 0,
+     "mode": "drop",
+     "seed": "img/dog.png1350"
+    },
+    {
+     "t": "label",
+     "text": "TO MAKE AC LOOK DEADLY",
+     "x": 1350,
+     "y": 960,
+     "at": "B14:dogs+1.5",
+     "size": 35,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S23",
+   "at": "B15",
+   "bg": "img/bg_dark.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "loop",
+     "dir": "gif/bulbs",
+     "n": 12,
+     "fps": 10,
+     "x": 960,
+     "y": 470,
+     "w": 1300,
+     "at": "+0.05",
+     "card": true,
+     "rot": 0,
+     "mode": "slap"
+    },
+    {
+     "t": "label",
+     "text": "CHICAGO · 1893",
+     "x": 560,
+     "y": 960,
+     "at": "+0.6",
+     "size": 50,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "TENS OF THOUSANDS OF BULBS",
+     "x": 1360,
+     "y": 960,
+     "at": "B15:lamps",
+     "size": 42,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "piece",
+     "src": "img/bulb.png",
+     "x": 1650,
+     "y": 160,
+     "w": 150,
+     "at": "B15:lamps+0.4",
+     "rot": 0,
+     "mode": "pop",
+     "seed": "img/bulb.png1650"
+    }
+   ]
+  },
+  {
+   "id": "S24",
+   "at": "B16",
+   "bg": "img/bg_niagara.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "loop",
+     "dir": "gif/falls",
+     "n": 12,
+     "fps": 10,
+     "x": 820,
+     "y": 470,
+     "w": 1100,
+     "at": "+0.05",
+     "card": true,
+     "rot": 0,
+     "mode": "slap"
+    },
+    {
+     "t": "label",
+     "text": "1896.11.16 · MIDNIGHT",
+     "x": 1420,
+     "y": 900,
+     "at": "+0.5",
+     "size": 44,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "string",
+     "a": [
+      820,
+      470
+     ],
+     "b": [
+      1600,
+      300
+     ],
+     "at": "B16:buffalo",
+     "sag": -80,
+     "dur": 14,
+     "dash": true
+    },
+    {
+     "t": "label",
+     "text": "BUFFALO",
+     "x": 1640,
+     "y": 250,
+     "at": "B16:buffalo+0.5",
+     "size": 45,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "stamp",
+     "text": "AC WINS",
+     "x": 1250,
+     "y": 700,
+     "at": "B16:won",
+     "size": 90,
+     "rot": -6
+    }
+   ]
+  },
+  {
+   "id": "S25",
+   "at": "B17",
+   "bg": "img/bg_money.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/contract.png",
+     "x": 880,
+     "y": 520,
+     "w": 820,
+     "at": "+0.05",
+     "rot": 2,
+     "mode": "slap",
+     "seed": "img/contract.png880"
+    },
+    {
+     "t": "label",
+     "text": "LEGEND: HE TORE UP THE CONTRACT",
+     "x": 880,
+     "y": 150,
+     "at": "+0.4",
+     "size": 40,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "stamp",
+     "text": "UNVERIFIED",
+     "x": 1350,
+     "y": 330,
+     "at": "+2.6",
+     "size": 70,
+     "rot": 10
+    },
+    {
+     "t": "note",
+     "text": "fact: he waived the royalty",
+     "x": 900,
+     "y": 950,
+     "at": "B17:waive+0.5",
+     "size": 52,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "id": "S26",
+   "at": "B18",
+   "bg": "img/bg_ny.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "loop",
+     "dir": "gif/boat",
+     "n": 12,
+     "fps": 10,
+     "x": 820,
+     "y": 560,
+     "w": 640,
+     "at": "+0.1",
+     "card": false,
+     "rot": 0
+    },
+    {
+     "t": "label",
+     "text": "1898 · MADISON SQUARE GARDEN",
+     "x": 1300,
+     "y": 220,
+     "at": "+1.4",
+     "size": 40,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "RADIO CONTROL",
+     "x": 1400,
+     "y": 420,
+     "at": "+3.0",
+     "size": 43,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "ONE OF THE FIRST RC VEHICLES",
+     "x": 1250,
+     "y": 950,
+     "at": "B18:first",
+     "size": 37,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S27",
+   "at": "B19",
+   "bg": "img/bg_dark.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "clip",
+     "src": "vid/w2.mp4",
+     "at": "+0",
+     "full": true,
+     "startFrom": 0
+    },
+    {
+     "t": "label",
+     "text": "TESLA COIL",
+     "x": 1520,
+     "y": 980,
+     "at": "+0.6",
+     "size": 43,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S28",
+   "at": "B19:dream",
+   "bg": "img/bg_atlantic.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "loop",
+     "dir": "gif/coil",
+     "n": 12,
+     "fps": 10,
+     "x": 560,
+     "y": 520,
+     "w": 760,
+     "at": "+0.05",
+     "card": true,
+     "rot": -3,
+     "mode": "slap"
+    },
+    {
+     "t": "string",
+     "a": [
+      900,
+      520
+     ],
+     "b": [
+      1650,
+      360
+     ],
+     "at": "+0.8",
+     "sag": -60,
+     "dur": 14,
+     "dash": true
+    },
+    {
+     "t": "label",
+     "text": "NO WIRES",
+     "x": 1400,
+     "y": 220,
+     "at": "+0.5",
+     "size": 43,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "POWER + INFORMATION, WORLDWIDE",
+     "x": 1360,
+     "y": 820,
+     "at": "+1.6",
+     "size": 40,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S29",
+   "at": "B20",
+   "bg": "img/bg_money.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "photo/morgan.png",
+     "x": 680,
+     "y": 520,
+     "w": 450,
+     "at": "+0.05",
+     "rot": -3,
+     "mode": "slap",
+     "seed": "photo/morgan.png680"
+    },
+    {
+     "t": "label",
+     "text": "J. P. MORGAN",
+     "x": 680,
+     "y": 930,
+     "at": "+0.4",
+     "size": 46,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "num",
+     "value": 150000,
+     "x": 1320,
+     "y": 480,
+     "at": "+1.2",
+     "unit": "",
+     "prefix": "$",
+     "size": 150,
+     "rot": -3
+    }
+   ]
+  },
+  {
+   "id": "S30",
+   "at": "B20:tower",
+   "bg": "img/bg_island.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "photo/wardenclyffe.png",
+     "x": 860,
+     "y": 560,
+     "w": 1000,
+     "at": "+0.0",
+     "rot": -1.5,
+     "mode": "slap",
+     "seed": "photo/wardenclyffe.png860"
+    },
+    {
+     "t": "label",
+     "text": "WARDENCLYFFE TOWER · LONG ISLAND",
+     "x": 760,
+     "y": 970,
+     "at": "+0.5",
+     "size": 37,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "piece",
+     "src": "photo/marconi.png",
+     "x": 1560,
+     "y": 420,
+     "w": 360,
+     "at": "B20:marconi",
+     "rot": 5,
+     "mode": "slap",
+     "seed": "photo/marconi.png1560"
+    },
+    {
+     "t": "circle",
+     "x": 1560,
+     "y": 400,
+     "rx": 220,
+     "ry": 270,
+     "at": "B20:marconi+0.8"
+    },
+    {
+     "t": "label",
+     "text": "MARCONI WINS THE ATLANTIC",
+     "x": 1500,
+     "y": 820,
+     "at": "B20:marconi+0.5",
+     "size": 35,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S31",
+   "at": "B21",
+   "bg": "img/bg_island.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "photo/wardenclyffe.png",
+     "x": 960,
+     "y": 560,
+     "w": 1000,
+     "at": "+0.0",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "photo/wardenclyffe.png960"
+    },
+    {
+     "t": "stamp",
+     "text": "STALLED",
+     "x": 1250,
+     "y": 380,
+     "at": "+0.3",
+     "size": 110,
+     "rot": -8
+    },
+    {
+     "t": "piece",
+     "src": "img/dynamite.png",
+     "x": 420,
+     "y": 760,
+     "w": 240,
+     "at": "+1.4",
+     "rot": 0,
+     "mode": "pop",
+     "seed": "img/dynamite.png420"
+    }
+   ]
+  },
+  {
+   "id": "S32",
+   "at": "B21:blast",
+   "bg": "img/bg_island.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "clip",
+     "src": "vid/w1.mp4",
+     "at": "+0",
+     "full": true,
+     "startFrom": 0
+    },
+    {
+     "t": "label",
+     "text": "1917.07.04",
+     "x": 360,
+     "y": 120,
+     "at": "+0.2",
+     "size": 50,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "SOLD FOR SCRAP",
+     "x": 1450,
+     "y": 980,
+     "at": "B21:scrap",
+     "size": 40,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S33",
+   "at": "B22",
+   "bg": "img/bg_ny.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "1926",
+     "x": 360,
+     "y": 200,
+     "at": "+0.1",
+     "size": 70,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "quote",
+     "text": "A man will be able to carry one in his vest pocket.",
+     "who": "Nikola Tesla · 1926 interview",
+     "x": 820,
+     "y": 520,
+     "w": 1180,
+     "at": "B22:pocket",
+     "size": 58
+    },
+    {
+     "t": "piece",
+     "src": "img/vestphone.png",
+     "x": 1550,
+     "y": 640,
+     "w": 420,
+     "at": "B22:phone",
+     "rot": 6,
+     "mode": "slap",
+     "seed": "img/vestphone.png1550"
+    },
+    {
+     "t": "note",
+     "text": "sound familiar?",
+     "x": 1500,
+     "y": 980,
+     "at": "B22:phone+0.6",
+     "size": 56,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "id": "S34",
+   "at": "B23",
+   "bg": "img/bg_dark.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/door3327.png",
+     "x": 560,
+     "y": 540,
+     "w": 360,
+     "at": "+0.05",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/door3327.png560"
+    },
+    {
+     "t": "label",
+     "text": "BEHIND ON RENT",
+     "x": 560,
+     "y": 990,
+     "at": "+1.2",
+     "size": 38,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "loop",
+     "dir": "gif/pigeon",
+     "n": 12,
+     "fps": 10,
+     "x": 1280,
+     "y": 620,
+     "w": 560,
+     "at": "+2.4",
+     "card": false,
+     "rot": 0
+    },
+    {
+     "t": "num",
+     "value": 2000,
+     "x": 1300,
+     "y": 250,
+     "at": "B23:dove+0.4",
+     "unit": "+ for one injured pigeon",
+     "prefix": "$",
+     "size": 120,
+     "rot": -3
+    }
+   ]
+  },
+  {
+   "id": "S35",
+   "at": "B24",
+   "bg": "img/bg_dark.png",
+   "trans": "cut",
+   "push": [
+    1.0,
+    1.05
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "1943.01.07",
+     "x": 960,
+     "y": 220,
+     "at": "+0.2",
+     "size": 64,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "piece",
+     "src": "photo/tesla_sarony.png",
+     "x": 960,
+     "y": 600,
+     "w": 400,
+     "at": "+0.5",
+     "rot": 0,
+     "mode": "fade",
+     "seed": "photo/tesla_sarony.png960"
+    },
+    {
+     "t": "label",
+     "text": "AGED 86",
+     "x": 960,
+     "y": 1000,
+     "at": "+1.5",
+     "size": 37,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S36",
+   "at": "B24:court",
+   "bg": "img/bg_patent.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/court.png",
+     "x": 760,
+     "y": 470,
+     "w": 900,
+     "at": "+0.05",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/court.png760"
+    },
+    {
+     "t": "label",
+     "text": "1943.06.21 · SUPREME COURT",
+     "x": 760,
+     "y": 840,
+     "at": "+0.4",
+     "size": 40,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "piece",
+     "src": "photo/marconi.png",
+     "x": 1530,
+     "y": 330,
+     "w": 290,
+     "at": "+1.4",
+     "rot": 4,
+     "mode": "slap",
+     "seed": "photo/marconi.png1530"
+    },
+    {
+     "t": "stamp",
+     "text": "PARTLY VOID",
+     "x": 1560,
+     "y": 470,
+     "at": "+2.2",
+     "size": 60,
+     "rot": -8
+    },
+    {
+     "t": "piece",
+     "src": "photo/tesla_sarony.png",
+     "x": 1560,
+     "y": 770,
+     "w": 270,
+     "at": "+3.4",
+     "rot": -4,
+     "mode": "slap",
+     "seed": "photo/tesla_sarony.png1560"
+    },
+    {
+     "t": "label",
+     "text": "GOT THERE FIRST",
+     "x": 1560,
+     "y": 990,
+     "at": "+3.8",
+     "size": 34,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S37",
+   "at": "B25",
+   "bg": "img/bg_modern.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "note",
+     "text": "≠ \"Tesla invented radio\"",
+     "x": 960,
+     "y": 170,
+     "at": "+0.2",
+     "size": 64,
+     "rot": -4
+    },
+    {
+     "t": "piece",
+     "src": "photo/marconi.png",
+     "x": 560,
+     "y": 540,
+     "w": 300,
+     "at": "+0.3",
+     "rot": -4,
+     "mode": "slap",
+     "seed": "photo/marconi.png560"
+    },
+    {
+     "t": "piece",
+     "src": "photo/tesla_sarony.png",
+     "x": 1360,
+     "y": 540,
+     "w": 300,
+     "at": "+0.4",
+     "rot": 4,
+     "mode": "slap",
+     "seed": "photo/tesla_sarony.png1360"
+    },
+    {
+     "t": "label",
+     "text": "LODGE",
+     "x": 960,
+     "y": 420,
+     "at": "B25:many",
+     "size": 40,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "STONE",
+     "x": 960,
+     "y": 560,
+     "at": "B25:many+0.3",
+     "size": 40,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "…",
+     "x": 960,
+     "y": 700,
+     "at": "B25:many+0.6",
+     "size": 40,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "string",
+     "a": [
+      700,
+      540
+     ],
+     "b": [
+      1220,
+      540
+     ],
+     "at": "B25:many+0.2",
+     "sag": 90,
+     "dur": 14
+    },
+    {
+     "t": "label",
+     "text": "A RELAY OF INVENTORS",
+     "x": 960,
+     "y": 960,
+     "at": "B25:many+0.9",
+     "size": 45,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S38",
+   "at": "B26",
+   "bg": "img/bg_modern.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "title",
+     "text": "WHAT DID HE LEAVE US?",
+     "sub": null,
+     "at": "+0.05",
+     "x": 960,
+     "y": 540,
+     "size": 110
+    }
+   ]
+  },
+  {
+   "id": "S39",
+   "at": "B26:socket",
+   "bg": "img/bg_modern.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/socket.png",
+     "x": 620,
+     "y": 560,
+     "w": 460,
+     "at": "+0.05",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/socket.png620"
+    },
+    {
+     "t": "piece",
+     "src": "img/tower_wire.png",
+     "x": 1480,
+     "y": 600,
+     "w": 380,
+     "at": "+0.5",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/tower_wire.png1480"
+    },
+    {
+     "t": "label",
+     "text": "GRIDS STILL RUN MOSTLY ON AC",
+     "x": 1100,
+     "y": 200,
+     "at": "+1.0",
+     "size": 38,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S40",
+   "at": "B27",
+   "bg": "img/bg_patent.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "loop",
+     "dir": "gif/motor",
+     "n": 12,
+     "fps": 10,
+     "x": 640,
+     "y": 540,
+     "w": 640,
+     "at": "+0.05",
+     "card": false,
+     "rot": 0
+    },
+    {
+     "t": "num",
+     "value": 40,
+     "x": 1300,
+     "y": 360,
+     "at": "+1.6",
+     "unit": "%+ of world power",
+     "prefix": "",
+     "size": 170,
+     "rot": -3
+    },
+    {
+     "t": "label",
+     "text": "IEA ESTIMATE · ALL MOTORS",
+     "x": 1300,
+     "y": 540,
+     "at": "+2.2",
+     "size": 36,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "MOST COMMON: AC INDUCTION MOTOR",
+     "x": 1280,
+     "y": 800,
+     "at": "B27:induction",
+     "size": 38,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S41",
+   "at": "B27:ferraris",
+   "bg": "img/bg_patent.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "photo/ferraris.png",
+     "x": 680,
+     "y": 520,
+     "w": 400,
+     "at": "+0.05",
+     "rot": -3,
+     "mode": "slap",
+     "seed": "photo/ferraris.png680"
+    },
+    {
+     "t": "piece",
+     "src": "photo/tesla_sarony.png",
+     "x": 1260,
+     "y": 520,
+     "w": 400,
+     "at": "+0.2",
+     "rot": 3,
+     "mode": "slap",
+     "seed": "photo/tesla_sarony.png1260"
+    },
+    {
+     "t": "string",
+     "a": [
+      680,
+      260
+     ],
+     "b": [
+      1260,
+      260
+     ],
+     "at": "+0.6",
+     "sag": 40,
+     "dur": 14
+    },
+    {
+     "t": "label",
+     "text": "GALILEO FERRARIS",
+     "x": 680,
+     "y": 930,
+     "at": "+0.4",
+     "size": 37,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "note",
+     "text": "invented independently",
+     "x": 970,
+     "y": 120,
+     "at": "+1.2",
+     "size": 56,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "id": "S42",
+   "at": "B28",
+   "bg": "img/bg_modern.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "1 T = 1 TESLA",
+     "x": 960,
+     "y": 330,
+     "at": "+0.3",
+     "size": 90,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "1960 · SI UNIT OF MAGNETIC FIELD",
+     "x": 960,
+     "y": 520,
+     "at": "+1.0",
+     "size": 37,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "piece",
+     "src": "img/mri.png",
+     "x": 1300,
+     "y": 790,
+     "w": 600,
+     "at": "B28:mri",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/mri.png1300"
+    },
+    {
+     "t": "stamp",
+     "text": "3 T",
+     "x": 600,
+     "y": 790,
+     "at": "B28:mri+0.8",
+     "size": 130,
+     "rot": -8
+    }
+   ]
+  },
+  {
+   "id": "S43",
+   "at": "B28:patents",
+   "bg": "img/bg_money.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/patentdwg.png",
+     "x": 400,
+     "y": 560,
+     "w": 440,
+     "at": "+0.05",
+     "rot": -6,
+     "mode": "slap",
+     "seed": "img/patentdwg.png400"
+    },
+    {
+     "t": "num",
+     "value": 278,
+     "x": 1150,
+     "y": 440,
+     "at": "+0.4",
+     "unit": "patents",
+     "prefix": "",
+     "size": 200,
+     "rot": -3
+    },
+    {
+     "t": "label",
+     "text": "IN 26 COUNTRIES",
+     "x": 1150,
+     "y": 720,
+     "at": "+1.2",
+     "size": 45,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S44",
+   "at": "B29",
+   "bg": "img/bg_modern.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "2003",
+     "x": 420,
+     "y": 220,
+     "at": "+0.1",
+     "size": 70,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "TWO ENGINEERS START A CAR COMPANY",
+     "x": 960,
+     "y": 220,
+     "at": "+0.6",
+     "size": 35,
+     "rot": 0,
+     "cn": false
+    },
+    {
+     "t": "piece",
+     "src": "img/ev.png",
+     "x": 900,
+     "y": 640,
+     "w": 1100,
+     "at": "+0.8",
+     "rot": 0,
+     "mode": "slide",
+     "seed": "img/ev.png900",
+     "from": [
+      -1400,
+      0
+     ]
+    },
+    {
+     "t": "loop",
+     "dir": "gif/motor",
+     "n": 12,
+     "fps": 10,
+     "x": 1620,
+     "y": 330,
+     "w": 340,
+     "at": "B29:acmotor",
+     "card": false,
+     "rot": 0
+    },
+    {
+     "t": "label",
+     "text": "AC INDUCTION MOTOR",
+     "x": 1620,
+     "y": 560,
+     "at": "B29:acmotor+0.4",
+     "size": 32,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "TESLA",
+     "x": 900,
+     "y": 950,
+     "at": "B29:acmotor+1.4",
+     "size": 90,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "2004 · MUSK INVESTS",
+     "x": 1450,
+     "y": 1010,
+     "at": "B29:y2004",
+     "size": 32,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S45",
+   "at": "B30",
+   "bg": "img/bg_island.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "photo/wardenclyffe.png",
+     "x": 640,
+     "y": 500,
+     "w": 760,
+     "at": "+0.05",
+     "rot": -2,
+     "mode": "slap",
+     "seed": "photo/wardenclyffe.png640"
+    },
+    {
+     "t": "label",
+     "text": "2012 · THE OATMEAL",
+     "x": 1350,
+     "y": 220,
+     "at": "+0.6",
+     "size": 46,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "CROWDFUNDED: HIS LAST LAB",
+     "x": 640,
+     "y": 900,
+     "at": "+1.6",
+     "size": 35,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "num",
+     "value": 33254,
+     "x": 1350,
+     "y": 460,
+     "at": "B30:backers",
+     "unit": "backers",
+     "prefix": "",
+     "size": 140,
+     "rot": -3
+    },
+    {
+     "t": "num",
+     "value": 1370511,
+     "x": 1350,
+     "y": 720,
+     "at": "B30:raised",
+     "unit": "",
+     "prefix": "$",
+     "size": 130,
+     "rot": -3
+    }
+   ]
+  },
+  {
+   "id": "S46",
+   "at": "B31",
+   "bg": "img/bg_money.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/coins.png",
+     "x": 600,
+     "y": 620,
+     "w": 560,
+     "at": "+0.05",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/coins.png600"
+    },
+    {
+     "t": "num",
+     "value": 1000000,
+     "x": 1250,
+     "y": 450,
+     "at": "+0.6",
+     "unit": "",
+     "prefix": "$",
+     "size": 150,
+     "rot": -3
+    },
+    {
+     "t": "label",
+     "text": "2014 · MUSK · TESLA SCIENCE CENTER",
+     "x": 1200,
+     "y": 720,
+     "at": "+1.4",
+     "size": 34,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S47",
+   "at": "B31:page",
+   "bg": "img/bg_ny.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/boyreading.png",
+     "x": 760,
+     "y": 580,
+     "w": 560,
+     "at": "+0.05",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/boyreading.png760"
+    },
+    {
+     "t": "label",
+     "text": "LARRY PAGE · GOOGLE CO-FOUNDER",
+     "x": 1400,
+     "y": 280,
+     "at": "+0.4",
+     "size": 37,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "~12 YEARS OLD",
+     "x": 1400,
+     "y": 420,
+     "at": "+1.2",
+     "size": 40,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "note",
+     "text": "...and cried",
+     "x": 1380,
+     "y": 700,
+     "at": "B31:cry",
+     "size": 58,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "id": "S48",
+   "at": "B32",
+   "bg": "img/bg_dark.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "note",
+     "text": "His two biggest fans say the same thing",
+     "x": 960,
+     "y": 120,
+     "at": "+0.3",
+     "size": 52,
+     "rot": -4,
+     "color": "#E9C46A"
+    },
+    {
+     "t": "quote",
+     "text": "You don't want to be Tesla. You'd want to be more like Edison.",
+     "who": "Larry Page · 2008 interview",
+     "x": 880,
+     "y": 400,
+     "w": 1280,
+     "at": "B32:pagequote",
+     "size": 52
+    },
+    {
+     "t": "quote",
+     "text": "On balance, I'm a bigger fan of Edison than Tesla.",
+     "who": "Elon Musk · 2008, The Henry Ford interview",
+     "x": 940,
+     "y": 760,
+     "w": 1200,
+     "at": "B32:muskquote",
+     "size": 52
+    },
+    {
+     "t": "piece",
+     "src": "photo/edison.png",
+     "x": 1700,
+     "y": 560,
+     "w": 260,
+     "at": "B32:muskquote+1.2",
+     "rot": 6,
+     "mode": "slap",
+     "seed": "photo/edison.png1700"
+    }
+   ]
+  },
+  {
+   "id": "S49",
+   "at": "B33",
+   "bg": "img/bg_patent.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "photo/tesla_sarony.png",
+     "x": 600,
+     "y": 520,
+     "w": 440,
+     "at": "+0.05",
+     "rot": -3,
+     "mode": "slap",
+     "seed": "photo/tesla_sarony.png600"
+    },
+    {
+     "t": "label",
+     "text": "IMAGINATION",
+     "x": 600,
+     "y": 920,
+     "at": "+0.6",
+     "size": 40,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "piece",
+     "src": "photo/edison.png",
+     "x": 1340,
+     "y": 520,
+     "w": 420,
+     "at": "+1.6",
+     "rot": 3,
+     "mode": "slap",
+     "seed": "photo/edison.png1340"
+    },
+    {
+     "t": "label",
+     "text": "BUILD IT · SELL IT",
+     "x": 1340,
+     "y": 920,
+     "at": "B33:product",
+     "size": 38,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "stamp",
+     "text": "SURVIVE",
+     "x": 960,
+     "y": 180,
+     "at": "B33:survive",
+     "size": 110,
+     "rot": -6
+    }
+   ]
+  },
+  {
+   "id": "S50",
+   "at": "B34",
+   "bg": "img/bg_money.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/banknote.png",
+     "x": 620,
+     "y": 330,
+     "w": 760,
+     "at": "+0.05",
+     "rot": -3,
+     "mode": "slap",
+     "seed": "img/banknote.png620"
+    },
+    {
+     "t": "label",
+     "text": "SERBIA · 100 DINARS",
+     "x": 620,
+     "y": 560,
+     "at": "+0.6",
+     "size": 32,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "piece",
+     "src": "img/coin.png",
+     "x": 1450,
+     "y": 320,
+     "w": 330,
+     "at": "B34:coin",
+     "rot": 0,
+     "mode": "pop",
+     "seed": "img/coin.png1450"
+    },
+    {
+     "t": "label",
+     "text": "CROATIA · EURO COINS",
+     "x": 1450,
+     "y": 540,
+     "at": "B34:coin+0.3",
+     "size": 32,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "piece",
+     "src": "img/airplane.png",
+     "x": 640,
+     "y": 800,
+     "w": 760,
+     "at": "B34:airport",
+     "rot": 0,
+     "mode": "slide",
+     "seed": "img/airplane.png640",
+     "from": [
+      -1200,
+      0
+     ]
+    },
+    {
+     "t": "label",
+     "text": "BELGRADE NIKOLA TESLA AIRPORT",
+     "x": 640,
+     "y": 990,
+     "at": "B34:airport+0.4",
+     "size": 29,
+     "rot": -2,
+     "cn": false
+    },
+    {
+     "t": "piece",
+     "src": "img/gpu.png",
+     "x": 1450,
+     "y": 790,
+     "w": 480,
+     "at": "B34:gpu",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/gpu.png1450"
+    },
+    {
+     "t": "label",
+     "text": "NVIDIA TESLA",
+     "x": 1450,
+     "y": 990,
+     "at": "B34:gpu+0.3",
+     "size": 38,
+     "rot": -2,
+     "cn": false
+    }
+   ]
+  },
+  {
+   "id": "S51",
+   "at": "B35",
+   "bg": "img/bg_dark.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "photo/tesla_sarony.png",
+     "x": 520,
+     "y": 540,
+     "w": 480,
+     "at": "+0.05",
+     "rot": -2,
+     "mode": "fade",
+     "seed": "photo/tesla_sarony.png520"
+    },
+    {
+     "t": "quote",
+     "text": "The present is theirs; the future, for which I really worked, is mine.",
+     "who": "Nikola Tesla · 1927",
+     "x": 1240,
+     "y": 500,
+     "w": 960,
+     "at": "+0.6",
+     "size": 56
+    }
+   ]
+  },
+  {
+   "id": "S52",
+   "at": "B35:future",
+   "bg": "img/bg_modern.png",
+   "trans": "cut",
+   "push": [
+    1.0,
+    1.06
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/socket.png",
+     "x": 300,
+     "y": 300,
+     "w": 260,
+     "at": "+0.05",
+     "rot": -6,
+     "mode": "slap",
+     "seed": "img/socket.png300"
+    },
+    {
+     "t": "loop",
+     "dir": "gif/motor",
+     "n": 12,
+     "fps": 10,
+     "x": 1640,
+     "y": 280,
+     "w": 320,
+     "at": "+0.2",
+     "card": false,
+     "rot": 0
+    },
+    {
+     "t": "piece",
+     "src": "img/ev.png",
+     "x": 420,
+     "y": 840,
+     "w": 620,
+     "at": "+0.35",
+     "rot": 3,
+     "mode": "slap",
+     "seed": "img/ev.png420"
+    },
+    {
+     "t": "piece",
+     "src": "img/vestphone.png",
+     "x": 1600,
+     "y": 820,
+     "w": 300,
+     "at": "+0.5",
+     "rot": 6,
+     "mode": "slap",
+     "seed": "img/vestphone.png1600"
+    },
+    {
+     "t": "piece",
+     "src": "img/mri.png",
+     "x": 960,
+     "y": 900,
+     "w": 420,
+     "at": "+0.65",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/mri.png960"
+    },
+    {
+     "t": "label",
+     "text": "WE'RE LIVING IN HIS FUTURE",
+     "x": 960,
+     "y": 470,
+     "at": "+0.9",
+     "size": 59,
+     "rot": 0,
+     "cn": false
+    },
+    {
+     "t": "label",
+     "text": "NIKOLA TESLA 1856–1943",
+     "x": 960,
+     "y": 620,
+     "at": "+2.4",
+     "size": 44,
+     "rot": 0,
+     "cn": false
+    }
+   ]
+  }
+ ],
+ "cover_shot": {
+  "bg": "img/bg_dark.png",
+  "els": [
+   {
+    "t": "piece",
+    "src": "photo/tesla_lab.png",
+    "x": 1340,
+    "y": 470,
+    "w": 1000,
+    "rot": 3
+   },
+   {
+    "t": "piece",
+    "src": "photo/tesla_sarony.png",
+    "x": 520,
+    "y": 600,
+    "w": 620,
+    "rot": -4,
+    "z": 8
+   },
+   {
+    "t": "tape",
+    "x": 600,
+    "y": 250,
+    "rot": -30,
+    "w": 190
+   },
+   {
+    "t": "tape",
+    "x": 1720,
+    "y": 110,
+    "rot": 28,
+    "w": 170
+   },
+   {
+    "t": "title",
+    "text": "NIKOLA TESLA",
+    "x": 1300,
+    "y": 870,
+    "size": 112
+   },
+   {
+    "t": "label",
+    "text": "HE DIED BROKE. WE LIVE IN HIS FUTURE.",
+    "x": 1300,
+    "y": 1010,
+    "size": 44,
+    "rot": 1
+   },
+   {
+    "t": "stamp",
+    "text": "IN 5 MINUTES",
+    "x": 330,
+    "y": 140,
+    "size": 58,
+    "rot": -8,
+    "blend": "normal",
+    "color": "#E4574B"
+   }
+  ]
+ }
+}

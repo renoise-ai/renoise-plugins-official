@@ -45,6 +45,7 @@ test('skill manifest separates portable creative methods from local execution', 
     'video-download',
     'video-fission',
     'video-remake',
+    'vox-collage',
   ]);
   assert.equal(byId.get('director').runtime, 'portable');
   assert.equal(byId.get('creative-direction').runtime, 'portable');
@@ -53,6 +54,9 @@ test('skill manifest separates portable creative methods from local execution', 
   assert.equal(byId.get('storyboard-sheet').runtime, 'portable');
   assert.equal(byId.get('video-fission').runtime, 'portable');
   assert.equal(byId.get('video-remake').runtime, 'portable');
+  assert.equal(byId.get('vox-collage').runtime, 'portable');
+  assert.ok(byId.get('vox-collage').requires.includes('tasks.create'));
+  assert.ok(byId.get('vox-collage').sandboxFiles.includes('skills/vox-collage/scripts/doctor.py'));
   for (const id of ['renoise-cli', 'renoise-setup', 'video-download']) {
     assert.equal(byId.get(id).runtime, 'local-cli');
   }

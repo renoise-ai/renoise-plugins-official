@@ -1,0 +1,280 @@
+{
+ "style": {
+  "bg": "Vox-style editorial paper collage background plate, top-down flat lay on an aged cream-beige paper desk (#E8DCC4), subtle paper fibers, faint creases, risograph grain, muted palette of beige paper, ink black, a touch of signal red #C8312B, teal #2F6F6A and mustard #D9A441.",
+  "bg_tail": "Keep the CENTER and most of the frame calm, empty paper for later overlays; decorative elements only near the edges and corners. No readable text, no letters, no numbers, no people. 16:9 landscape. Save it as a PNG.",
+  "cut": "A single black-and-white halftone newspaper-print style cutout (photocopy contrast, visible halftone dots, slight risograph grain), cut out with a 8px uneven off-white paper border like a scissor-cut sticker,",
+  "cut_tail": "on a PURE FLAT SOLID GREEN #00FF00 background, no shadow on the background, centered with generous green margin, nothing else in the image, no readable text, no letters, no watermark. Save it as a PNG."
+ },
+ "jobs": [
+  {
+   "name": "bg_office",
+   "kind": "bg",
+   "prompt": "a 1950s office desk blotter seen from above: corner of a green leather desk pad at the bottom left, a few paper clips, a torn corner of an organisation chart with empty boxes and lines at the top right, a strip of masking tape"
+  },
+  {
+   "name": "bg_memo",
+   "kind": "bg",
+   "prompt": "overlapping blank typewritten-memo sheets and carbon-copy paper fanned at the left and bottom edges, ruled ledger lines faintly visible, a red pencil at the far right edge"
+  },
+  {
+   "name": "bg_blueprint",
+   "kind": "bg",
+   "prompt": "pale engineering graph paper with a faint grey flowchart of empty boxes and arrows near the edges, a blueprint-blue tinted corner, pencil guide marks"
+  },
+  {
+   "name": "bg_map",
+   "kind": "bg",
+   "prompt": "a faded military topographic field map with contour lines along the left and top edges, a corner of a compass rose, grease-pencil arrows near the border"
+  },
+  {
+   "name": "bg_printout",
+   "kind": "bg",
+   "prompt": "vintage continuous-form computer printout paper with pale green bars and perforated tractor-feed holes along both side edges, a few punched cards at the top corner"
+  },
+  {
+   "name": "bg_calendar",
+   "kind": "bg",
+   "prompt": "a torn page of an old wall calendar grid at the top left corner (empty squares), a time-card punch slip at the bottom right, coffee ring"
+  },
+  {
+   "name": "bg_dark",
+   "kind": "bg",
+   "prompt": "a dark charcoal grey cardboard desk surface (#2A2622) instead of beige paper, with a torn piece of old ledger paper at one corner and faint scratches; moody, mostly empty dark board"
+  },
+  {
+   "name": "bg_lab",
+   "kind": "bg",
+   "prompt": "aged psychology-lab questionnaire sheets with empty tick boxes and faint bar-chart outlines along the right and bottom edges, a paper ruler strip"
+  },
+  {
+   "name": "robot",
+   "kind": "cut",
+   "prompt": "a friendly retro 1950s tin-toy robot standing upright, front view, boxy body with dials, antenna, clamp hands, full body,"
+  },
+  {
+   "name": "robot_type",
+   "kind": "cut",
+   "prompt": "a retro 1950s tin-toy robot sitting at a small desk typing on a mechanical typewriter, side view, full body,"
+  },
+  {
+   "name": "robot_paper",
+   "kind": "cut",
+   "prompt": "a retro 1950s tin-toy robot standing and proudly holding up a blank sheet of paper with one clamp hand, front view, full body,"
+  },
+  {
+   "name": "robot_run",
+   "kind": "cut",
+   "prompt": "a retro 1950s tin-toy robot walking fast to the right carrying a stack of blank papers, side view, full body,"
+  },
+  {
+   "name": "robot_note",
+   "kind": "cut",
+   "prompt": "a retro 1950s tin-toy robot holding an open small notebook and reading it, three-quarter view, full body,"
+  },
+  {
+   "name": "nameplate",
+   "kind": "cut",
+   "prompt": "a blank brass desk nameplate on a wooden base, front view (the plate is empty),"
+  },
+  {
+   "name": "necktie",
+   "kind": "cut",
+   "prompt": "a classic 1950s striped necktie, laid flat,"
+  },
+  {
+   "name": "chair",
+   "kind": "cut",
+   "prompt": "a large tufted leather executive office swivel chair, three-quarter view,"
+  },
+  {
+   "name": "clipboard",
+   "kind": "cut",
+   "prompt": "a wooden clipboard with a blank ruled checklist sheet and a pencil on a string,"
+  },
+  {
+   "name": "inbox",
+   "kind": "cut",
+   "prompt": "a wooden office in-tray stacked high with blank papers and folders,"
+  },
+  {
+   "name": "typewriter",
+   "kind": "cut",
+   "prompt": "a 1940s mechanical typewriter with a blank sheet in it, three-quarter view,"
+  },
+  {
+   "name": "stamp_tool",
+   "kind": "cut",
+   "prompt": "a wooden-handled rubber stamp standing next to an open ink pad,"
+  },
+  {
+   "name": "bottle",
+   "kind": "cut",
+   "prompt": "an empty glass bottle with a long narrow neck, upright,"
+  },
+  {
+   "name": "guardrail",
+   "kind": "cut",
+   "prompt": "a section of steel highway guardrail with two posts, three-quarter view,"
+  },
+  {
+   "name": "gauge",
+   "kind": "cut",
+   "prompt": "a round analog dial gauge with a needle, like a car dashboard speedometer, blank dial face with tick marks only,"
+  },
+  {
+   "name": "stopwatch",
+   "kind": "cut",
+   "prompt": "a vintage hand-held stopwatch with blank dial tick marks,"
+  },
+  {
+   "name": "officer_map",
+   "kind": "cut",
+   "prompt": "a rolled-out field map held open by two hands with a pointer stick laid across it, top view,"
+  },
+  {
+   "name": "folder",
+   "kind": "cut",
+   "prompt": "a thick manila office folder tied with string, stuffed with papers,"
+  },
+  {
+   "name": "meeting",
+   "kind": "cut",
+   "prompt": "a 1950s office meeting: five people in suits seated around a conference table seen from above, faces small and indistinct,"
+  },
+  {
+   "name": "notebook",
+   "kind": "cut",
+   "prompt": "an open spiral-bound notebook with blank ruled pages and a pencil,"
+  },
+  {
+   "name": "book",
+   "kind": "cut",
+   "prompt": "a thick hardcover business book standing upright, plain cloth cover with no title,"
+  },
+  {
+   "name": "padlock",
+   "kind": "cut",
+   "prompt": "a heavy steel padlock, closed,"
+  },
+  {
+   "name": "megaphone",
+   "kind": "cut",
+   "prompt": "a vintage metal megaphone, side view,"
+  },
+  {
+   "name": "plans",
+   "kind": "cut",
+   "prompt": "a rolled-up set of architectural plans with one sheet partly unrolled showing blank grid lines,"
+  },
+  {
+   "name": "knot",
+   "kind": "cut",
+   "prompt": "a big tangled knot of five ropes ending in five loose ends,"
+  },
+  {
+   "name": "wheel",
+   "kind": "cut",
+   "prompt": "a vintage car steering wheel, front view,"
+  },
+  {
+   "name": "wastebasket",
+   "kind": "cut",
+   "prompt": "a wire office wastebasket overflowing with crumpled paper balls,"
+  },
+  {
+   "name": "tape_reel",
+   "kind": "cut",
+   "prompt": "a vintage reel-to-reel tape recorder with two reels, front view,"
+  },
+  {
+   "name": "printout",
+   "kind": "cut",
+   "prompt": "a very long strip of continuous computer printout paper folded in zig-zag, covered in tiny illegible dashes, trailing upward,"
+  },
+  {
+   "name": "phone",
+   "kind": "cut",
+   "prompt": "a black 1950s rotary telephone with the receiver bouncing off the hook as if ringing,"
+  },
+  {
+   "name": "alarm",
+   "kind": "cut",
+   "prompt": "a vintage twin-bell alarm clock, blank dial with hands only,"
+  },
+  {
+   "name": "bed",
+   "kind": "cut",
+   "prompt": "a simple metal-frame single bed with a sleeping figure fully under a blanket, side view,"
+  },
+  {
+   "name": "magnifier",
+   "kind": "cut",
+   "prompt": "a magnifying glass with a wooden handle,"
+  },
+  {
+   "name": "coins",
+   "kind": "cut",
+   "prompt": "three stacks of blank coins of increasing height,"
+  },
+  {
+   "name": "drawer",
+   "kind": "cut",
+   "prompt": "an open wooden desk drawer overflowing with junk: tangled cables, keys, tape, scissors, loose screws, top view,"
+  },
+  {
+   "name": "lunchbox",
+   "kind": "cut",
+   "prompt": "a 1950s metal lunchbox with a thermos bottle beside it,"
+  },
+  {
+   "name": "hand_stop",
+   "kind": "cut",
+   "prompt": "a hand held up flat in a firm stop gesture, palm forward, with a shirt cuff,"
+  },
+  {
+   "name": "badge",
+   "kind": "cut",
+   "prompt": "a blank clip-on employee ID badge with an empty photo square,"
+  },
+  {
+   "name": "flag",
+   "kind": "cut",
+   "prompt": "a small white surrender flag on a wooden stick, waving,"
+  },
+  {
+   "name": "brain",
+   "kind": "cut",
+   "prompt": "an anatomical engraving of a human brain, side view,"
+  },
+  {
+   "name": "team",
+   "kind": "cut",
+   "prompt": "a 1950s office team of six people standing together in a group pose, full body, faces small and indistinct,"
+  },
+  {
+   "name": "hourglass",
+   "kind": "cut",
+   "prompt": "an hourglass with sand running,"
+  },
+  {
+   "name": "pencil",
+   "kind": "cut",
+   "prompt": "a single sharpened wooden pencil with eraser, diagonal,"
+  },
+  {
+   "name": "light_bulbs",
+   "kind": "cut",
+   "prompt": "a horizontal row of five glowing round indicator light bulbs on a metal panel, all lit,"
+  },
+  {
+   "name": "hand_check",
+   "kind": "cut",
+   "prompt": "a hand holding a pen ticking a blank checklist, with a shirt cuff, top view,"
+  },
+  {
+   "name": "scale",
+   "kind": "cut",
+   "prompt": "a brass balance scale with two pans, front view,"
+  }
+ ]
+}

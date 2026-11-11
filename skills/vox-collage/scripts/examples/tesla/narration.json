@@ -1,0 +1,205 @@
+{
+ "_note": "English narration · Renoise gemini-3.8-flash-tts · Charon",
+ "archetype": "life",
+ "target_seconds": 310,
+ "motif": "the white pigeon (hook and last years); the AC motor in the middle chapters",
+ "voice": {
+  "engine": "gemini-tts",
+  "voice": "Charon"
+ },
+ "beats": [
+  {
+   "id": "B01",
+   "chapter": "hook",
+   "role": "hook scene",
+   "fact": "A17",
+   "narration": "[[room]]January 1943. Room 3327, a New York hotel. On the door, a [[dnd]]\"Do Not Disturb\" sign, three days old."
+  },
+  {
+   "id": "B02",
+   "role": "number",
+   "fact": "A17 A16",
+   "narration": "[[maid]]Inside, the maid found an 86-year-old man who had died alone. He couldn't pay his hotel bills, and [[pigeon]]his closest friends were the pigeons on his windowsill."
+  },
+  {
+   "id": "B03",
+   "role": "twist",
+   "fact": "B1 B2 C1",
+   "narration": "Yet today, [[grid]]the socket in your wall, [[motor]]the motors in every factory, [[car]]and one of the world's most famous car companies all trace back to his ideas, or his name."
+  },
+  {
+   "id": "B04",
+   "role": "question",
+   "fact": "C4",
+   "narration": "[[name]]He was Nikola Tesla. So how did a man who shaped modern life die so poor? [[musk]]And why does the boss of the car company named after him say [[edison]]he's a bigger fan of Edison?"
+  },
+  {
+   "id": "B05",
+   "chapter": "Smiljan to New York",
+   "role": "scene",
+   "fact": "A1 B6",
+   "narration": "[[born]]Tesla was born in 1856 in Smiljan, in today's Croatia, the son of a Serbian priest. [[idea]]Young Tesla was already chasing a new kind of motor, turned by a rotating magnetic field."
+  },
+  {
+   "id": "B06",
+   "fact": "A2",
+   "narration": "[[ny]]In 1884 he landed in New York, and almost at once [[edison]]went to work for Edison."
+  },
+  {
+   "id": "B07",
+   "fact": "W1",
+   "narration": "[[dc]]Edison sold low-voltage direct current. Its weakness: [[copper]]sending power far took very thick copper wire, and distance got expensive."
+  },
+  {
+   "id": "B08",
+   "fact": "A3 D4",
+   "narration": "[[myth]]Legend says Edison promised Tesla fifty thousand dollars, then joked, \"You don't understand our American humor.\" [[book]]But in Tesla's own memoir, the promise came from a manager, [[notedison]]not Edison."
+  },
+  {
+   "id": "B09",
+   "role": "rehook",
+   "fact": "A3",
+   "narration": "[[left]]Either way: no money. Tesla quit."
+  },
+  {
+   "id": "B10",
+   "chapter": "The war of the currents",
+   "role": "scene",
+   "fact": "A4 A5",
+   "narration": "[[patent]]In 1888 he patented his AC motor, [[aiee]]and demonstrated it to America's electrical engineers. [[west]]One businessman saw its value: George Westinghouse."
+  },
+  {
+   "id": "B11",
+   "fact": "A6",
+   "narration": "[[cash]]He paid sixty thousand dollars in cash and stock, [[hp]]plus two fifty for every horsepower sold."
+  },
+  {
+   "id": "B12",
+   "fact": "A7",
+   "narration": "[[transformer]]With transformers, alternating current could travel long distances. [[shake]]Edison's business was under threat, [[war]]and the War of the Currents began."
+  },
+  {
+   "id": "B13",
+   "fact": "D2",
+   "narration": "[[elephant]]You may have heard Edison electrocuted an elephant to smear AC. [[fake]]That's a myth. [[y1903]]The elephant died in 1903, long after the war was over."
+  },
+  {
+   "id": "B14",
+   "fact": "A7",
+   "narration": "[[real]]But this is true: in 1888, [[brown]]engineer Harold Brown, using space and staff from Edison's lab, [[dogs]]publicly electrocuted stray dogs to make AC look deadly."
+  },
+  {
+   "id": "B15",
+   "fact": "A8",
+   "narration": "[[fair]]It didn't work. At the 1893 Chicago World's Fair, Tesla's AC system [[lamps]]lit tens of thousands of bulbs."
+  },
+  {
+   "id": "B16",
+   "fact": "A9",
+   "narration": "[[niagara]]At midnight, November 16th, 1896, power from Niagara Falls [[buffalo]]reached Buffalo. [[won]]AC had won."
+  },
+  {
+   "id": "B17",
+   "fact": "D3",
+   "narration": "[[tear]]And the story that he tore up his contract? [[waive]]In fact, when Westinghouse was short of cash, Tesla agreed to drop his per-horsepower royalty."
+  },
+  {
+   "id": "B18",
+   "chapter": "The bigger dream",
+   "role": "scene",
+   "fact": "A11 B5",
+   "narration": "[[boat]]Then he dreamed bigger. In 1898, at Madison Square Garden, he steered a boat by radio, [[first]]one of the first wireless remote-controlled vehicles."
+  },
+  {
+   "id": "B19",
+   "fact": "A10 A13",
+   "narration": "[[coil]]His Tesla coil threw crackling bolts of lightning. [[dream]]His real dream: send power and information around the world, with no wires."
+  },
+  {
+   "id": "B20",
+   "fact": "A13",
+   "narration": "[[morgan]]In 1901, J.P. Morgan put up a hundred and fifty thousand dollars, [[tower]]and Tesla built Wardenclyffe Tower. [[marconi]]That December, Marconi beat him across the Atlantic by radio."
+  },
+  {
+   "id": "B21",
+   "role": "midtwist",
+   "fact": "A13 D5",
+   "narration": "[[stop]]Morgan stopped paying. The project stalled. [[blast]]On July 4th, 1917, the tower was dynamited, [[scrap]]and sold for scrap to cover his debts."
+  },
+  {
+   "id": "B22",
+   "fact": "E1",
+   "narration": "[[y1926]]In 1926, he predicted [[pocket]]a man would carry a wireless device in his vest pocket, to see and hear people far away. [[phone]]Sound familiar?"
+  },
+  {
+   "id": "B23",
+   "fact": "A16",
+   "narration": "[[hotel]]In his last years he drifted between hotels, behind on rent, feeding pigeons. [[dove]]To nurse one injured white pigeon, he spent over two thousand dollars."
+  },
+  {
+   "id": "B24",
+   "fact": "A17 A14 D1",
+   "narration": "[[death]]On January 7th, 1943, he died in room 3327. [[court]]Five months later, the U.S. Supreme Court struck down part of a Marconi patent, partly because Tesla got there first."
+  },
+  {
+   "id": "B25",
+   "fact": "D1",
+   "narration": "[[relay]]But that doesn't mean Tesla invented radio. [[many]]Radio was a relay race of many inventors."
+  },
+  {
+   "id": "B26",
+   "chapter": "What he left us",
+   "role": "scene",
+   "fact": "B1",
+   "narration": "[[legacy]]So what did he leave us? [[socket]]Your wall outlet, for a start. Power grids still run mostly on AC."
+  },
+  {
+   "id": "B27",
+   "fact": "B2 B6",
+   "narration": "[[motors]]Then, motors. The IEA estimates electric motors use over forty percent of the world's electricity, [[induction]]and the most common is the AC induction motor, Tesla's kind. [[ferraris]]To be fair, Italy's Galileo Ferraris invented it independently."
+  },
+  {
+   "id": "B28",
+   "fact": "B3 A15",
+   "narration": "[[unit]]In 1960, the unit of magnetic field strength was named the tesla. [[mri]]A \"3T MRI\"? That's three tesla. [[patents]]In all, he earned 278 patents in 26 countries."
+  },
+  {
+   "id": "B29",
+   "chapter": "The fans",
+   "role": "scene",
+   "fact": "C1 C2 C3",
+   "narration": "[[y2003]]In 2003, two engineers started an electric car company. [[acmotor]]Their cars ran on an AC induction motor, so they called it Tesla. [[y2004]]A year later, Elon Musk invested."
+  },
+  {
+   "id": "B30",
+   "fact": "C6",
+   "narration": "[[oatmeal]]In 2012, the cartoonist behind The Oatmeal crowdfunded to buy Tesla's last lab. [[backers]]Over thirty-three thousand people [[raised]]chipped in 1.37 million dollars."
+  },
+  {
+   "id": "B31",
+   "fact": "C7 C8",
+   "narration": "[[donate]]In 2014, Musk gave a million dollars to the Tesla Science Center. [[page]]Google's Larry Page said he finished a Tesla biography at about twelve, [[cry]]and cried."
+  },
+  {
+   "id": "B32",
+   "role": "twist",
+   "fact": "C8 C4",
+   "narration": "[[twist]]Here's the twist. Tesla's two most famous fans say the same thing. [[pagequote]]Page: \"You don't want to be Tesla. You'd want to be more like Edison.\" [[muskquote]]Musk: \"On balance, I'm a bigger fan of Edison than Tesla.\""
+  },
+  {
+   "id": "B33",
+   "fact": "C8",
+   "narration": "[[lesson]]They love his imagination, but learned from his ending. [[product]]Inventing isn't enough. You have to build it, sell it, [[survive]]and keep it alive."
+  },
+  {
+   "id": "B34",
+   "fact": "C10 C11 C9 C13",
+   "narration": "[[note]]From Serbia's banknote, [[coin]]to Croatia's euro coins, [[airport]]to Belgrade's airport, [[gpu]]to NVIDIA's chips, [[everywhere]]his name is written all over today."
+  },
+  {
+   "id": "B35",
+   "fact": "E3",
+   "narration": "[[quote]]Tesla said: \"The present is theirs; the future, for which I really worked, is mine.\" [[future]]We're living in it."
+  }
+ ]
+}

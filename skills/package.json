@@ -20,6 +20,7 @@
     "video-download/",
     "video-fission/",
     "video-remake/",
+    "vox-collage/",
     "manifest.json"
   ],
   "exports": {

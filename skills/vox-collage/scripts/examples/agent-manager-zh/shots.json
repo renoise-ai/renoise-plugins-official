@@ -1,0 +1,3407 @@
+{
+ "shots": [
+  {
+   "id": "S01",
+   "at": "B01",
+   "bg": "img/bg_office.png",
+   "trans": "cut",
+   "push": [
+    1.0,
+    1.06
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/chair.png",
+     "x": 600,
+     "y": 580,
+     "w": 430,
+     "at": "+0.0",
+     "rot": -2,
+     "mode": "slap",
+     "seed": "img/chair.png600"
+    },
+    {
+     "t": "label",
+     "text": "没有升职",
+     "x": 1350,
+     "y": 320,
+     "at": "+0.5",
+     "size": 60,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "没有加薪",
+     "x": 1380,
+     "y": 480,
+     "at": "+1.5",
+     "size": 60,
+     "rot": 2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "也没人通知你",
+     "x": 1350,
+     "y": 640,
+     "at": "+2.4",
+     "size": 60,
+     "rot": -2,
+     "cn": true
+    }
+   ]
+  },
+  {
+   "id": "S02",
+   "at": "B01:agent",
+   "bg": "img/bg_printout.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/robot_type.png",
+     "x": 640,
+     "y": 510,
+     "w": 580,
+     "at": "+0.05",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/robot_type.png640"
+    },
+    {
+     "t": "label",
+     "text": "CODING AGENT",
+     "x": 640,
+     "y": 905,
+     "at": "+0.5",
+     "size": 42,
+     "rot": -2
+    },
+    {
+     "t": "piece",
+     "src": "img/nameplate.png",
+     "x": 1400,
+     "y": 520,
+     "w": 560,
+     "at": "B01:boss",
+     "rot": 0,
+     "mode": "drop",
+     "seed": "img/nameplate.png1400"
+    },
+    {
+     "t": "label",
+     "text": "经 理",
+     "x": 1400,
+     "y": 500,
+     "at": "B01:boss+0.35",
+     "size": 62,
+     "rot": 0,
+     "cn": true
+    },
+    {
+     "t": "stamp",
+     "text": "已上任",
+     "x": 1430,
+     "y": 770,
+     "at": "B01:boss+0.7",
+     "size": 96,
+     "rot": -8
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "at": "B02",
+   "bg": "img/bg_memo.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/clipboard.png",
+     "x": 400,
+     "y": 330,
+     "w": 170,
+     "at": "B02:pick",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/clipboard.png400"
+    },
+    {
+     "t": "label",
+     "text": "挑任务",
+     "x": 400,
+     "y": 500,
+     "at": "B02:pick+0.2",
+     "size": 40,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/typewriter.png",
+     "x": 960,
+     "y": 280,
+     "w": 250,
+     "at": "B02:write",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/typewriter.png960"
+    },
+    {
+     "t": "label",
+     "text": "写说明",
+     "x": 960,
+     "y": 440,
+     "at": "B02:write+0.2",
+     "size": 40,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/robot_run.png",
+     "x": 1520,
+     "y": 320,
+     "w": 210,
+     "at": "B02:send",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/robot_run.png1520"
+    },
+    {
+     "t": "label",
+     "text": "派活",
+     "x": 1520,
+     "y": 500,
+     "at": "B02:send+0.2",
+     "size": 40,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/phone.png",
+     "x": 400,
+     "y": 745,
+     "w": 210,
+     "at": "B02:follow",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/phone.png400"
+    },
+    {
+     "t": "label",
+     "text": "跟进",
+     "x": 400,
+     "y": 915,
+     "at": "B02:follow+0.2",
+     "size": 40,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/magnifier.png",
+     "x": 960,
+     "y": 770,
+     "w": 105,
+     "at": "B02:check",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/magnifier.png960"
+    },
+    {
+     "t": "label",
+     "text": "验收",
+     "x": 960,
+     "y": 915,
+     "at": "B02:check+0.2",
+     "size": 40,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/stamp_tool.png",
+     "x": 1520,
+     "y": 755,
+     "w": 250,
+     "at": "B02:ship",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/stamp_tool.png1520"
+    },
+    {
+     "t": "label",
+     "text": "决定上线",
+     "x": 1520,
+     "y": 915,
+     "at": "B02:ship+0.2",
+     "size": 40,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "stamp",
+     "text": "管理",
+     "x": 960,
+     "y": 600,
+     "at": "B02:manage",
+     "size": 150,
+     "rot": -8
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "at": "B03",
+   "bg": "img/bg_blueprint.png",
+   "trans": "cut",
+   "push": [
+    1.0,
+    1.05
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/typewriter.png",
+     "x": 500,
+     "y": 560,
+     "w": 460,
+     "at": "B03:best",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/typewriter.png500"
+    },
+    {
+     "t": "label",
+     "text": "最会写提示词？",
+     "x": 500,
+     "y": 900,
+     "at": "B03:best+0.4",
+     "size": 50,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "stamp",
+     "text": "不一定",
+     "x": 540,
+     "y": 540,
+     "at": "B03:best+2.6",
+     "size": 110,
+     "rot": -8
+    },
+    {
+     "t": "piece",
+     "src": "img/necktie.png",
+     "x": 1250,
+     "y": 520,
+     "w": 150,
+     "at": "B03:learn",
+     "rot": 6,
+     "mode": "slap",
+     "seed": "img/necktie.png1250"
+    },
+    {
+     "t": "piece",
+     "src": "img/nameplate.png",
+     "x": 1500,
+     "y": 640,
+     "w": 400,
+     "at": "B03:learn+0.4",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/nameplate.png1500"
+    },
+    {
+     "t": "label",
+     "text": "学会了当经理",
+     "x": 1420,
+     "y": 900,
+     "at": "B03:learn+0.8",
+     "size": 56,
+     "rot": -2,
+     "cn": true
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "at": "B04:addy",
+   "bg": "img/bg_office.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "photo/article_cover.png",
+     "x": 800,
+     "y": 390,
+     "w": 980,
+     "at": "+0.0",
+     "rot": -2,
+     "mode": "slap",
+     "seed": "photo/article_cover.png800"
+    },
+    {
+     "t": "tape",
+     "x": 330,
+     "y": 230,
+     "at": "+0.3",
+     "rot": -32,
+     "w": 150
+    },
+    {
+     "t": "tape",
+     "x": 1290,
+     "y": 200,
+     "at": "+0.35",
+     "rot": 30,
+     "w": 150
+    },
+    {
+     "t": "label",
+     "text": "ADDY OSMANI",
+     "x": 470,
+     "y": 690,
+     "at": "+0.3",
+     "size": 50,
+     "rot": -2
+    },
+    {
+     "t": "label",
+     "text": "CLAUDE CODE @ ANTHROPIC",
+     "x": 1150,
+     "y": 700,
+     "at": "+1.6",
+     "size": 36,
+     "rot": 1
+    },
+    {
+     "t": "label",
+     "text": "2026.11.08 · X",
+     "x": 1600,
+     "y": 180,
+     "at": "B04:post",
+     "size": 38,
+     "rot": 3
+    },
+    {
+     "t": "label",
+     "text": "两天",
+     "x": 980,
+     "y": 870,
+     "at": "B04:views",
+     "size": 56,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "num",
+     "value": 50,
+     "x": 1440,
+     "y": 860,
+     "at": "B04:views+0.5",
+     "unit": "万+ 阅读",
+     "prefix": "",
+     "size": 130,
+     "rot": -3
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "at": "B05",
+   "bg": "img/bg_dark.png",
+   "trans": "cut",
+   "push": [
+    1.04,
+    1.0
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "quote",
+     "text": "你对烂老板的每一句吐槽，都是一份怎么用 Agent 的缺陷报告。",
+     "who": "Addy Osmani · 2026.11",
+     "x": 960,
+     "y": 470,
+     "w": 1350,
+     "at": "B05:gripe",
+     "size": 52
+    },
+    {
+     "t": "stamp",
+     "text": "BUG REPORT",
+     "x": 1380,
+     "y": 860,
+     "at": "B05:bug+0.9",
+     "size": 84,
+     "rot": -8,
+     "blend": "normal",
+     "color": "#E4574B"
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "at": "B06-3.0",
+   "bg": "img/bg_office.png",
+   "trans": "cut",
+   "push": [
+    1.06,
+    1.0
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "title",
+     "text": "你的 Agent，把你变成了经理",
+     "sub": "十个管理习惯 · 改编自 Addy Osmani 长文",
+     "at": "+0.15",
+     "x": 960,
+     "y": 540,
+     "size": 96
+    }
+   ]
+  },
+  {
+   "id": "S08",
+   "at": "B06",
+   "bg": "img/bg_calendar.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "num",
+     "value": 10,
+     "x": 560,
+     "y": 470,
+     "at": "+0.5",
+     "unit": "个习惯",
+     "prefix": "",
+     "size": 200,
+     "rot": -3
+    },
+    {
+     "t": "label",
+     "text": "按影响力排序",
+     "x": 560,
+     "y": 740,
+     "at": "+1.4",
+     "size": 48,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "NO.1",
+     "x": 1400,
+     "y": 330,
+     "at": "B06:n1",
+     "size": 70,
+     "rot": -4
+    },
+    {
+     "t": "label",
+     "text": "给它一个能自查的办法",
+     "x": 1380,
+     "y": 500,
+     "at": "B06:n1+0.5",
+     "size": 52,
+     "rot": 1,
+     "cn": true
+    },
+    {
+     "t": "underline",
+     "x": 1380,
+     "y": 570,
+     "w": 520,
+     "at": "B06:n1+1.6"
+    }
+   ]
+  },
+  {
+   "id": "S09",
+   "at": "B07",
+   "bg": "img/bg_printout.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/robot_paper.png",
+     "x": 600,
+     "y": 520,
+     "w": 520,
+     "at": "B07:looks",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/robot_paper.png600"
+    },
+    {
+     "t": "label",
+     "text": "「看起来做完了」",
+     "x": 600,
+     "y": 920,
+     "at": "B07:looks+0.4",
+     "size": 50,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/magnifier.png",
+     "x": 1400,
+     "y": 430,
+     "w": 260,
+     "at": "B07:suite",
+     "rot": -12,
+     "mode": "slap",
+     "seed": "img/magnifier.png1400"
+    },
+    {
+     "t": "label",
+     "text": "你 = 它的测试",
+     "x": 1400,
+     "y": 740,
+     "at": "B07:suite+0.5",
+     "size": 56,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "note",
+     "text": "错了，等你碰巧看见",
+     "x": 1400,
+     "y": 900,
+     "at": "B07:suite+2.2",
+     "size": 52,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "id": "S10",
+   "at": "B08",
+   "bg": "img/bg_office.png",
+   "trans": "cut",
+   "push": [
+    1.0,
+    1.05
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "photo/foreman.png",
+     "x": 600,
+     "y": 520,
+     "w": 620,
+     "at": "B08:newmgr",
+     "rot": -2,
+     "mode": "slap",
+     "seed": "photo/foreman.png600"
+    },
+    {
+     "t": "label",
+     "text": "新手经理：事事亲自验收",
+     "x": 600,
+     "y": 915,
+     "at": "B08:newmgr+0.5",
+     "size": 42,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/bottle.png",
+     "x": 1420,
+     "y": 540,
+     "w": 170,
+     "at": "B08:quarter",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/bottle.png1420"
+    },
+    {
+     "t": "label",
+     "text": "1 QUARTER LATER",
+     "x": 1420,
+     "y": 180,
+     "at": "B08:quarter+0.3",
+     "size": 36,
+     "rot": 2
+    },
+    {
+     "t": "stamp",
+     "text": "瓶颈",
+     "x": 1460,
+     "y": 520,
+     "at": "B08:quarter+1.4",
+     "size": 130,
+     "rot": -8
+    }
+   ]
+  },
+  {
+   "id": "S11",
+   "at": "B09",
+   "bg": "img/bg_blueprint.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "stamp",
+     "text": "通过",
+     "x": 640,
+     "y": 360,
+     "at": "B09:pass",
+     "size": 150,
+     "rot": -8
+    },
+    {
+     "t": "stamp",
+     "text": "不通过",
+     "x": 1300,
+     "y": 380,
+     "at": "B09:pass+0.9",
+     "size": 130,
+     "rot": 6
+    },
+    {
+     "t": "label",
+     "text": "测试",
+     "x": 520,
+     "y": 720,
+     "at": "B09:pass+2.7",
+     "size": 56,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "构建",
+     "x": 960,
+     "y": 740,
+     "at": "B09:pass+3.3",
+     "size": 56,
+     "rot": 2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "截图",
+     "x": 1400,
+     "y": 720,
+     "at": "B09:pass+3.9",
+     "size": 56,
+     "rot": -2,
+     "cn": true
+    }
+   ]
+  },
+  {
+   "id": "S12",
+   "at": "B09:proof",
+   "bg": "img/bg_memo.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/robot_paper.png",
+     "x": 620,
+     "y": 570,
+     "w": 560,
+     "at": "+0.0",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/robot_paper.png620"
+    },
+    {
+     "t": "label",
+     "text": "让它把结果拿给你看",
+     "x": 1370,
+     "y": 400,
+     "at": "+0.4",
+     "size": 48,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "stamp",
+     "text": "证据",
+     "x": 1400,
+     "y": 660,
+     "at": "+1.4",
+     "size": 140,
+     "rot": -8
+    }
+   ]
+  },
+  {
+   "id": "S13",
+   "at": "B10",
+   "bg": "img/bg_map.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "NO.2",
+     "x": 250,
+     "y": 170,
+     "at": "+0.15",
+     "size": 58,
+     "rot": -4
+    },
+    {
+     "t": "label",
+     "text": "把它看不见的，告诉它",
+     "x": 710,
+     "y": 175,
+     "at": "+0.5",
+     "size": 56,
+     "rot": 1,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "photo/briefing.png",
+     "x": 600,
+     "y": 590,
+     "w": 720,
+     "at": "B10:intent",
+     "rot": -2,
+     "mode": "slap",
+     "seed": "photo/briefing.png600"
+    },
+    {
+     "t": "label",
+     "text": "指挥官意图",
+     "x": 600,
+     "y": 925,
+     "at": "B10:intent+0.5",
+     "size": 46,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "给背景，不给控制",
+     "x": 1450,
+     "y": 540,
+     "at": "B10:netflix",
+     "size": 50,
+     "rot": 2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "NETFLIX: CONTEXT, NOT CONTROL",
+     "x": 1450,
+     "y": 680,
+     "at": "B10:netflix+0.8",
+     "size": 28,
+     "rot": -2
+    }
+   ]
+  },
+  {
+   "id": "S14",
+   "at": "B11",
+   "bg": "img/bg_printout.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/printout.png",
+     "x": 300,
+     "y": 520,
+     "w": 230,
+     "at": "B11:repo",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/printout.png300"
+    },
+    {
+     "t": "piece",
+     "src": "img/robot_note.png",
+     "x": 640,
+     "y": 530,
+     "w": 260,
+     "at": "B11:repo+0.3",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/robot_note.png640"
+    },
+    {
+     "t": "label",
+     "text": "代码里有的：不用说",
+     "x": 500,
+     "y": 930,
+     "at": "B11:repo+0.8",
+     "size": 42,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/meeting.png",
+     "x": 1420,
+     "y": 380,
+     "w": 460,
+     "at": "B11:meeting",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/meeting.png1420"
+    },
+    {
+     "t": "label",
+     "text": "会上的决定",
+     "x": 1420,
+     "y": 680,
+     "at": "B11:meeting+1.3",
+     "size": 46,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "为什么重要",
+     "x": 1420,
+     "y": 810,
+     "at": "B11:meeting+2.7",
+     "size": 46,
+     "rot": 2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "怎样才算做完",
+     "x": 1420,
+     "y": 925,
+     "at": "B11:meeting+4.0",
+     "size": 46,
+     "rot": -2,
+     "cn": true
+    }
+   ]
+  },
+  {
+   "id": "S15",
+   "at": "B12",
+   "bg": "img/bg_memo.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "「让仪表盘快一点」",
+     "x": 500,
+     "y": 200,
+     "at": "B12:vague",
+     "size": 48,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/gauge.png",
+     "x": 500,
+     "y": 580,
+     "w": 440,
+     "at": "B12:vague+0.2",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/gauge.png500"
+    },
+    {
+     "t": "stamp",
+     "text": "太模糊",
+     "x": 540,
+     "y": 620,
+     "at": "B12:vague+1.3",
+     "size": 110,
+     "rot": -8
+    },
+    {
+     "t": "label",
+     "text": "目标：2 秒内打开",
+     "x": 1380,
+     "y": 300,
+     "at": "B12:target",
+     "size": 44,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "原因：客户投诉最多",
+     "x": 1380,
+     "y": 450,
+     "at": "B12:why",
+     "size": 44,
+     "rot": 1,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "限制：不动数据库结构",
+     "x": 1380,
+     "y": 600,
+     "at": "B12:limits",
+     "size": 44,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "验收：跑脚本，看前后数字",
+     "x": 1380,
+     "y": 750,
+     "at": "B12:run",
+     "size": 40,
+     "rot": 1,
+     "cn": true
+    },
+    {
+     "t": "note",
+     "text": "（数字只是举例）",
+     "x": 1380,
+     "y": 900,
+     "at": "B12:run+1.6",
+     "size": 40,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "id": "S16",
+   "at": "B13",
+   "bg": "img/bg_blueprint.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/robot.png",
+     "x": 420,
+     "y": 600,
+     "w": 380,
+     "at": "+0.1",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/robot.png420"
+    },
+    {
+     "t": "note",
+     "text": "你想要什么？",
+     "x": 880,
+     "y": 320,
+     "at": "B13:interview",
+     "size": 56,
+     "rot": -4
+    },
+    {
+     "t": "note",
+     "text": "给谁用？",
+     "x": 900,
+     "y": 480,
+     "at": "B13:interview+1.0",
+     "size": 56,
+     "rot": 3
+    },
+    {
+     "t": "note",
+     "text": "怎样算完？",
+     "x": 880,
+     "y": 640,
+     "at": "B13:interview+2.0",
+     "size": 56,
+     "rot": -4
+    },
+    {
+     "t": "piece",
+     "src": "img/folder.png",
+     "x": 1480,
+     "y": 560,
+     "w": 400,
+     "at": "B13:spec",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/folder.png1480"
+    },
+    {
+     "t": "label",
+     "text": "SPEC.MD",
+     "x": 1480,
+     "y": 880,
+     "at": "B13:spec+0.4",
+     "size": 46,
+     "rot": -2
+    },
+    {
+     "t": "label",
+     "text": "开新会话，照着做",
+     "x": 1480,
+     "y": 220,
+     "at": "B13:spec+1.5",
+     "size": 44,
+     "rot": 2,
+     "cn": true
+    }
+   ]
+  },
+  {
+   "id": "S17",
+   "at": "B14",
+   "bg": "img/bg_memo.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "NO.3",
+     "x": 250,
+     "y": 170,
+     "at": "+0.15",
+     "size": 58,
+     "rot": -4
+    },
+    {
+     "t": "label",
+     "text": "让每次纠正都有复利",
+     "x": 679,
+     "y": 175,
+     "at": "+0.5",
+     "size": 56,
+     "rot": 1,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "同一个错",
+     "x": 480,
+     "y": 420,
+     "at": "B14:twice",
+     "size": 52,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "num",
+     "value": 2,
+     "x": 480,
+     "y": 660,
+     "at": "B14:twice+0.6",
+     "unit": "次",
+     "prefix": "",
+     "size": 200,
+     "rot": -3
+    },
+    {
+     "t": "piece",
+     "src": "img/notebook.png",
+     "x": 1340,
+     "y": 500,
+     "w": 600,
+     "at": "B14:md",
+     "rot": 3,
+     "mode": "slap",
+     "seed": "img/notebook.png1340"
+    },
+    {
+     "t": "label",
+     "text": "CLAUDE.MD",
+     "x": 1340,
+     "y": 790,
+     "at": "B14:md+0.4",
+     "size": 50,
+     "rot": -2
+    },
+    {
+     "t": "note",
+     "text": "比换组的同事、换代的模型都活得久",
+     "x": 1100,
+     "y": 890,
+     "at": "B14:outlast",
+     "size": 46,
+     "rot": -4
+    },
+    {
+     "t": "underline",
+     "x": 1100,
+     "y": 935,
+     "w": 700,
+     "at": "B14:outlast+2.2"
+    }
+   ]
+  },
+  {
+   "id": "S18",
+   "at": "B15",
+   "bg": "img/bg_office.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "NO.4",
+     "x": 250,
+     "y": 170,
+     "at": "+0.15",
+     "size": 58,
+     "rot": -4
+    },
+    {
+     "t": "label",
+     "text": "默认让它自己拿主意",
+     "x": 679,
+     "y": 175,
+     "at": "+0.5",
+     "size": 56,
+     "rot": 1,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "photo/grove.png",
+     "x": 420,
+     "y": 560,
+     "w": 270,
+     "at": "B15:grove",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "photo/grove.png420"
+    },
+    {
+     "t": "label",
+     "text": "ANDY GROVE · INTEL",
+     "x": 420,
+     "y": 885,
+     "at": "B15:grove+0.5",
+     "size": 30,
+     "rot": -2
+    },
+    {
+     "t": "label",
+     "text": "PHOTO: INTEL FREE PRESS / CC BY 2.0",
+     "x": 420,
+     "y": 945,
+     "at": "B15:grove+0.6",
+     "size": 18,
+     "rot": 0,
+     "type": false
+    },
+    {
+     "t": "piece",
+     "src": "img/book.png",
+     "x": 860,
+     "y": 570,
+     "w": 250,
+     "at": "B15:grove+1.2",
+     "rot": 4,
+     "mode": "slap",
+     "seed": "img/book.png860"
+    },
+    {
+     "t": "label",
+     "text": "HIGH OUTPUT MANAGEMENT",
+     "x": 890,
+     "y": 885,
+     "at": "B15:grove+1.6",
+     "size": 26,
+     "rot": 1
+    },
+    {
+     "t": "label",
+     "text": "管多紧？",
+     "x": 1480,
+     "y": 400,
+     "at": "B15:grove+2.6",
+     "size": 60,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "看这件事上的表现",
+     "x": 1480,
+     "y": 560,
+     "at": "B15:grove+4.4",
+     "size": 44,
+     "rot": 2,
+     "cn": true
+    },
+    {
+     "t": "note",
+     "text": "不看整体多能干",
+     "x": 1480,
+     "y": 720,
+     "at": "B15:grove+6.6",
+     "size": 54,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "id": "S19",
+   "at": "B16",
+   "bg": "img/bg_blueprint.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/typewriter.png",
+     "x": 480,
+     "y": 430,
+     "w": 330,
+     "at": "B16:request",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/typewriter.png480"
+    },
+    {
+     "t": "label",
+     "text": "提示词 · 说明文件 = 请求",
+     "x": 500,
+     "y": 740,
+     "at": "B16:request+0.5",
+     "size": 40,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/padlock.png",
+     "x": 1400,
+     "y": 420,
+     "w": 250,
+     "at": "B16:hook",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/padlock.png1400"
+    },
+    {
+     "t": "label",
+     "text": "底线 = 强制规则",
+     "x": 1400,
+     "y": 740,
+     "at": "B16:hook+0.5",
+     "size": 48,
+     "rot": 2,
+     "cn": true
+    }
+   ]
+  },
+  {
+   "id": "S20",
+   "at": "B16:caps",
+   "bg": "img/bg_dark.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/megaphone.png",
+     "x": 520,
+     "y": 500,
+     "w": 500,
+     "at": "+0.0",
+     "rot": -4,
+     "mode": "slap",
+     "seed": "img/megaphone.png520"
+    },
+    {
+     "t": "label",
+     "text": "NEVER EVER DO THIS!!!",
+     "x": 1320,
+     "y": 300,
+     "at": "+0.3",
+     "size": 40,
+     "rot": -2
+    },
+    {
+     "t": "label",
+     "text": "「别偷懒」",
+     "x": 1320,
+     "y": 450,
+     "at": "+1.6",
+     "size": 56,
+     "rot": 2,
+     "cn": true
+    },
+    {
+     "t": "stamp",
+     "text": "可以停了",
+     "x": 1340,
+     "y": 640,
+     "at": "+3.0",
+     "size": 100,
+     "rot": -8,
+     "blend": "normal",
+     "color": "#E4574B"
+    },
+    {
+     "t": "label",
+     "text": "过度流程 = 新的微观管理",
+     "x": 960,
+     "y": 880,
+     "at": "B16:micro",
+     "size": 52,
+     "rot": -1,
+     "cn": true
+    }
+   ]
+  },
+  {
+   "id": "S21",
+   "at": "B17",
+   "bg": "img/bg_blueprint.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "NO.5",
+     "x": 250,
+     "y": 170,
+     "at": "+0.15",
+     "size": 58,
+     "rot": -4
+    },
+    {
+     "t": "label",
+     "text": "先谈计划，再让它动手",
+     "x": 710,
+     "y": 175,
+     "at": "+0.5",
+     "size": 56,
+     "rot": 1,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/plans.png",
+     "x": 480,
+     "y": 620,
+     "w": 520,
+     "at": "+0.9",
+     "rot": -3,
+     "mode": "slap",
+     "seed": "img/plans.png480"
+    },
+    {
+     "t": "piece",
+     "src": "img/robot.png",
+     "x": 1000,
+     "y": 540,
+     "w": 150,
+     "at": "B17:five+0.10",
+     "rot": -4,
+     "mode": "slap",
+     "seed": "img/robot.png1000"
+    },
+    {
+     "t": "piece",
+     "src": "img/robot.png",
+     "x": 1160,
+     "y": 540,
+     "w": 150,
+     "at": "B17:five+0.26",
+     "rot": 3,
+     "mode": "slap",
+     "seed": "img/robot.png1160"
+    },
+    {
+     "t": "piece",
+     "src": "img/robot.png",
+     "x": 1320,
+     "y": 540,
+     "w": 150,
+     "at": "B17:five+0.42",
+     "rot": -2,
+     "mode": "slap",
+     "seed": "img/robot.png1320"
+    },
+    {
+     "t": "piece",
+     "src": "img/robot.png",
+     "x": 1480,
+     "y": 540,
+     "w": 150,
+     "at": "B17:five+0.58",
+     "rot": 5,
+     "mode": "slap",
+     "seed": "img/robot.png1480"
+    },
+    {
+     "t": "piece",
+     "src": "img/robot.png",
+     "x": 1640,
+     "y": 540,
+     "w": 150,
+     "at": "B17:five+0.74",
+     "rot": -3,
+     "mode": "slap",
+     "seed": "img/robot.png1640"
+    },
+    {
+     "t": "label",
+     "text": "5 个 Agent · 任务重叠",
+     "x": 1320,
+     "y": 780,
+     "at": "B17:five+1.2",
+     "size": 42,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "note",
+     "text": "≠ 5 倍产出",
+     "x": 1320,
+     "y": 900,
+     "at": "B17:five+2.6",
+     "size": 60,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "id": "S22",
+   "at": "B17:conflict",
+   "bg": "img/bg_dark.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/knot.png",
+     "x": 700,
+     "y": 540,
+     "w": 620,
+     "at": "+0.0",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/knot.png700"
+    },
+    {
+     "t": "stamp",
+     "text": "合并冲突",
+     "x": 1400,
+     "y": 430,
+     "at": "+0.5",
+     "size": 110,
+     "rot": -8,
+     "blend": "normal",
+     "color": "#E4574B"
+    },
+    {
+     "t": "label",
+     "text": "作者：5 位",
+     "x": 1400,
+     "y": 680,
+     "at": "+1.2",
+     "size": 56,
+     "rot": 2,
+     "cn": true
+    }
+   ]
+  },
+  {
+   "id": "S23",
+   "at": "B18",
+   "bg": "img/bg_map.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "NO.6",
+     "x": 250,
+     "y": 170,
+     "at": "+0.15",
+     "size": 58,
+     "rot": -4
+    },
+    {
+     "t": "label",
+     "text": "早点纠偏，果断重来",
+     "x": 679,
+     "y": 175,
+     "at": "+0.5",
+     "size": 56,
+     "rot": 1,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/wheel.png",
+     "x": 480,
+     "y": 590,
+     "w": 380,
+     "at": "B18:esc",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/wheel.png480"
+    },
+    {
+     "t": "label",
+     "text": "ESC",
+     "x": 480,
+     "y": 890,
+     "at": "B18:esc+0.3",
+     "size": 64,
+     "rot": -2
+    },
+    {
+     "t": "num",
+     "value": 2,
+     "x": 1120,
+     "y": 470,
+     "at": "B18:two",
+     "unit": "次没纠正过来",
+     "prefix": "",
+     "size": 130,
+     "rot": -3
+    },
+    {
+     "t": "piece",
+     "src": "img/wastebasket.png",
+     "x": 1140,
+     "y": 800,
+     "w": 200,
+     "at": "B18:two+1.6",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/wastebasket.png1140"
+    },
+    {
+     "t": "label",
+     "text": "清空会话 · 重写提示词",
+     "x": 1540,
+     "y": 800,
+     "at": "B18:fresh",
+     "size": 38,
+     "rot": 2,
+     "cn": true
+    }
+   ]
+  },
+  {
+   "id": "S24",
+   "at": "B18:third",
+   "bg": "img/bg_printout.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/printout.png",
+     "x": 520,
+     "y": 560,
+     "w": 300,
+     "at": "+0.0",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/printout.png520"
+    },
+    {
+     "t": "label",
+     "text": "第 3 次纠正",
+     "x": 1300,
+     "y": 380,
+     "at": "+0.2",
+     "size": 64,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "note",
+     "text": "只是让它多背一段失败记录",
+     "x": 1300,
+     "y": 600,
+     "at": "+1.2",
+     "size": 52,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "id": "S25",
+   "at": "B19",
+   "bg": "img/bg_calendar.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/tape_reel.png",
+     "x": 600,
+     "y": 540,
+     "w": 600,
+     "at": "B19:rewind",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/tape_reel.png600"
+    },
+    {
+     "t": "label",
+     "text": "/REWIND",
+     "x": 600,
+     "y": 900,
+     "at": "B19:rewind+0.3",
+     "size": 54,
+     "rot": -2
+    },
+    {
+     "t": "label",
+     "text": "代码 + 对话，都能退回去",
+     "x": 1400,
+     "y": 330,
+     "at": "B19:rewind+1.6",
+     "size": 40,
+     "rot": 2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "先试更大胆的方案",
+     "x": 1400,
+     "y": 600,
+     "at": "B19:bold",
+     "size": 52,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "underline",
+     "x": 1400,
+     "y": 670,
+     "w": 460,
+     "at": "B19:bold+1.0"
+    }
+   ]
+  },
+  {
+   "id": "S26",
+   "at": "B20",
+   "bg": "img/bg_dark.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "NO.7",
+     "x": 250,
+     "y": 170,
+     "at": "+0.15",
+     "size": 58,
+     "rot": -4
+    },
+    {
+     "t": "label",
+     "text": "活可以交出去，判断不行",
+     "x": 741,
+     "y": 175,
+     "at": "+0.5",
+     "size": 56,
+     "rot": 1,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/printout.png",
+     "x": 420,
+     "y": 640,
+     "w": 270,
+     "at": "B20:diff",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/printout.png420"
+    },
+    {
+     "t": "num",
+     "value": 600,
+     "x": 960,
+     "y": 470,
+     "at": "B20:diff+0.2",
+     "unit": "行改动",
+     "prefix": "",
+     "size": 140,
+     "rot": -3
+    },
+    {
+     "t": "label",
+     "text": "命名合理 ✓",
+     "x": 1540,
+     "y": 380,
+     "at": "B20:names",
+     "size": 42,
+     "rot": 2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "测试全绿 ✓",
+     "x": 1540,
+     "y": 540,
+     "at": "B20:green",
+     "size": 42,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "stamp",
+     "text": "批准",
+     "x": 1340,
+     "y": 760,
+     "at": "B20:approve+0.3",
+     "size": 150,
+     "rot": -8,
+     "blend": "normal",
+     "color": "#E4574B"
+    }
+   ]
+  },
+  {
+   "id": "S27",
+   "at": "B21",
+   "bg": "img/bg_memo.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/stamp_tool.png",
+     "x": 520,
+     "y": 760,
+     "w": 330,
+     "at": "+0.1",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/stamp_tool.png520"
+    },
+    {
+     "t": "label",
+     "text": "代码审查？",
+     "x": 520,
+     "y": 330,
+     "at": "B21:ratify",
+     "size": 64,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "stamp",
+     "text": "代码追认",
+     "x": 560,
+     "y": 480,
+     "at": "B21:ratify+2.2",
+     "size": 110,
+     "rot": -8
+    },
+    {
+     "t": "piece",
+     "src": "img/robot_run.png",
+     "x": 1400,
+     "y": 480,
+     "w": 330,
+     "at": "B21:trap",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/robot_run.png1400"
+    },
+    {
+     "t": "note",
+     "text": "差点就推上线了",
+     "x": 1400,
+     "y": 800,
+     "at": "B21:trap+1.6",
+     "size": 56,
+     "rot": -4
+    },
+    {
+     "t": "label",
+     "text": "—— 艾迪自己",
+     "x": 1500,
+     "y": 930,
+     "at": "B21:trap+2.6",
+     "size": 36,
+     "rot": 1,
+     "cn": true
+    }
+   ]
+  },
+  {
+   "id": "S28",
+   "at": "B21:paged",
+   "bg": "img/bg_dark.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/phone.png",
+     "x": 560,
+     "y": 560,
+     "w": 480,
+     "at": "+0.0",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/phone.png560"
+    },
+    {
+     "t": "piece",
+     "src": "img/alarm.png",
+     "x": 1250,
+     "y": 400,
+     "w": 240,
+     "at": "+0.5",
+     "rot": 8,
+     "mode": "slap",
+     "seed": "img/alarm.png1250"
+    },
+    {
+     "t": "label",
+     "text": "半夜出事，找的是你",
+     "x": 1280,
+     "y": 760,
+     "at": "+1.3",
+     "size": 52,
+     "rot": -2,
+     "cn": true
+    }
+   ]
+  },
+  {
+   "id": "S29",
+   "at": "B22",
+   "bg": "img/bg_calendar.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "NO.8",
+     "x": 250,
+     "y": 170,
+     "at": "+0.15",
+     "size": 58,
+     "rot": -4
+    },
+    {
+     "t": "label",
+     "text": "设计不用你盯的流程",
+     "x": 679,
+     "y": 175,
+     "at": "+0.5",
+     "size": 56,
+     "rot": 1,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/bed.png",
+     "x": 700,
+     "y": 640,
+     "w": 760,
+     "at": "B22:night",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/bed.png700"
+    },
+    {
+     "t": "piece",
+     "src": "img/robot_type.png",
+     "x": 1500,
+     "y": 620,
+     "w": 330,
+     "at": "B22:night+0.6",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/robot_type.png1500"
+    },
+    {
+     "t": "label",
+     "text": "让它跑一整夜之前",
+     "x": 1100,
+     "y": 920,
+     "at": "B22:night+1.0",
+     "size": 44,
+     "rot": -2,
+     "cn": true
+    }
+   ]
+  },
+  {
+   "id": "S30",
+   "at": "B22:q1",
+   "bg": "img/bg_blueprint.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/clipboard.png",
+     "x": 400,
+     "y": 560,
+     "w": 380,
+     "at": "+0.0",
+     "rot": -3,
+     "mode": "slap",
+     "seed": "img/clipboard.png400"
+    },
+    {
+     "t": "label",
+     "text": "① 它知道什么叫做完吗",
+     "x": 1150,
+     "y": 200,
+     "at": "+0.1",
+     "size": 46,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "② 能自己检查吗",
+     "x": 1080,
+     "y": 370,
+     "at": "B22:q2",
+     "size": 46,
+     "rot": 1,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "③ 边界在哪",
+     "x": 1040,
+     "y": 540,
+     "at": "B22:q3",
+     "size": 46,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "④ 上限是多少",
+     "x": 1060,
+     "y": 710,
+     "at": "B22:q4",
+     "size": 46,
+     "rot": 1,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "⑤ 最后谁来批准",
+     "x": 1090,
+     "y": 880,
+     "at": "B22:q5",
+     "size": 46,
+     "rot": -2,
+     "cn": true
+    }
+   ]
+  },
+  {
+   "id": "S31",
+   "at": "B23",
+   "bg": "img/bg_office.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/folder.png",
+     "x": 480,
+     "y": 580,
+     "w": 420,
+     "at": "B23:pilot",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/folder.png480"
+    },
+    {
+     "t": "num",
+     "value": 3,
+     "x": 1220,
+     "y": 400,
+     "at": "B23:pilot+0.6",
+     "unit": "个文件先试",
+     "prefix": "",
+     "size": 140,
+     "rot": -3
+    },
+    {
+     "t": "label",
+     "text": "试用期",
+     "x": 1220,
+     "y": 640,
+     "at": "B23:pilot+0.2",
+     "size": 60,
+     "rot": 2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/robot_run.png",
+     "x": 1480,
+     "y": 860,
+     "w": 220,
+     "at": "B23:rest",
+     "rot": 0,
+     "mode": "slide",
+     "seed": "img/robot_run.png1480",
+     "from": [
+      -700,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "S32",
+   "at": "B24",
+   "bg": "img/bg_office.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "NO.9",
+     "x": 250,
+     "y": 170,
+     "at": "+0.15",
+     "size": 58,
+     "rot": -4
+    },
+    {
+     "t": "label",
+     "text": "扩大验证，不是注意力",
+     "x": 710,
+     "y": 175,
+     "at": "+0.5",
+     "size": 56,
+     "rot": 1,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/coins.png",
+     "x": 500,
+     "y": 620,
+     "w": 480,
+     "at": "B24:tax",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/coins.png500"
+    },
+    {
+     "t": "label",
+     "text": "编排税",
+     "x": 500,
+     "y": 900,
+     "at": "B24:tax+0.4",
+     "size": 60,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/robot.png",
+     "x": 1040,
+     "y": 500,
+     "w": 140,
+     "at": "B24:four+0.10",
+     "rot": -4,
+     "mode": "slap",
+     "seed": "img/robot.png1040"
+    },
+    {
+     "t": "piece",
+     "src": "img/robot.png",
+     "x": 1200,
+     "y": 500,
+     "w": 140,
+     "at": "B24:four+0.26",
+     "rot": 3,
+     "mode": "slap",
+     "seed": "img/robot.png1200"
+    },
+    {
+     "t": "piece",
+     "src": "img/robot.png",
+     "x": 1360,
+     "y": 500,
+     "w": 140,
+     "at": "B24:four+0.42",
+     "rot": -2,
+     "mode": "slap",
+     "seed": "img/robot.png1360"
+    },
+    {
+     "t": "piece",
+     "src": "img/robot.png",
+     "x": 1520,
+     "y": 500,
+     "w": 140,
+     "at": "B24:four+0.58",
+     "rot": 5,
+     "mode": "slap",
+     "seed": "img/robot.png1520"
+    },
+    {
+     "t": "piece",
+     "src": "img/robot.png",
+     "x": 1680,
+     "y": 500,
+     "w": 140,
+     "at": "B24:four+0.74",
+     "rot": -3,
+     "mode": "slap",
+     "seed": "img/robot.png1680"
+    },
+    {
+     "t": "circle",
+     "x": 500,
+     "y": 640,
+     "rx": 300,
+     "ry": 240,
+     "at": "B24:tax+2.2"
+    },
+    {
+     "t": "note",
+     "text": "每多一个，更贵",
+     "x": 500,
+     "y": 380,
+     "at": "B24:tax+3.6",
+     "size": 50,
+     "rot": -4
+    },
+    {
+     "t": "label",
+     "text": "一天四五个后台 Agent",
+     "x": 1360,
+     "y": 730,
+     "at": "B24:four+1.4",
+     "size": 40,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "note",
+     "text": "有些日子，这都嫌多",
+     "x": 1360,
+     "y": 890,
+     "at": "B24:four+3.2",
+     "size": 54,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "id": "S33",
+   "at": "B25",
+   "bg": "img/bg_blueprint.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "AI 写了多少代码",
+     "x": 500,
+     "y": 430,
+     "at": "B25:metric",
+     "size": 48,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "stamp",
+     "text": "别量这个",
+     "x": 540,
+     "y": 600,
+     "at": "B25:metric+1.0",
+     "size": 100,
+     "rot": -8
+    },
+    {
+     "t": "piece",
+     "src": "img/stopwatch.png",
+     "x": 1150,
+     "y": 470,
+     "w": 230,
+     "at": "B25:revert",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/stopwatch.png1150"
+    },
+    {
+     "t": "label",
+     "text": "合并速度",
+     "x": 1150,
+     "y": 760,
+     "at": "B25:revert+0.2",
+     "size": 44,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/wastebasket.png",
+     "x": 1580,
+     "y": 480,
+     "w": 220,
+     "at": "B25:revert+0.8",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/wastebasket.png1580"
+    },
+    {
+     "t": "label",
+     "text": "返工次数",
+     "x": 1580,
+     "y": 760,
+     "at": "B25:revert+1.0",
+     "size": 44,
+     "rot": 2,
+     "cn": true
+    }
+   ]
+  },
+  {
+   "id": "S34",
+   "at": "B26",
+   "bg": "img/bg_memo.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "NO.10",
+     "x": 250,
+     "y": 170,
+     "at": "+0.15",
+     "size": 58,
+     "rot": -4
+    },
+    {
+     "t": "label",
+     "text": "决定不做什么",
+     "x": 586,
+     "y": 175,
+     "at": "+0.5",
+     "size": 56,
+     "rot": 1,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "开工几乎免费",
+     "x": 480,
+     "y": 400,
+     "at": "B26:free",
+     "size": 50,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/lunchbox.png",
+     "x": 480,
+     "y": 660,
+     "w": 360,
+     "at": "B26:lunch",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/lunchbox.png480"
+    },
+    {
+     "t": "label",
+     "text": "午饭前就能交一份改动",
+     "x": 500,
+     "y": 900,
+     "at": "B26:lunch+0.6",
+     "size": 40,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/magnifier.png",
+     "x": 1400,
+     "y": 470,
+     "w": 220,
+     "at": "B26:scarce",
+     "rot": -10,
+     "mode": "slap",
+     "seed": "img/magnifier.png1400"
+    },
+    {
+     "t": "label",
+     "text": "最稀缺：审查 + 验证",
+     "x": 1400,
+     "y": 760,
+     "at": "B26:scarce+0.5",
+     "size": 46,
+     "rot": 2,
+     "cn": true
+    }
+   ]
+  },
+  {
+   "id": "S35",
+   "at": "B26:no",
+   "bg": "img/bg_dark.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/hand_stop.png",
+     "x": 600,
+     "y": 560,
+     "w": 380,
+     "at": "+0.0",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/hand_stop.png600"
+    },
+    {
+     "t": "stamp",
+     "text": "不",
+     "x": 1300,
+     "y": 520,
+     "at": "+0.9",
+     "size": 300,
+     "rot": -8,
+     "blend": "normal",
+     "color": "#E4574B"
+    }
+   ]
+  },
+  {
+   "id": "S36",
+   "at": "B27",
+   "bg": "img/bg_lab.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "这个比喻，也有不成立的地方",
+     "x": 960,
+     "y": 220,
+     "at": "B27:break",
+     "size": 52,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/robot.png",
+     "x": 620,
+     "y": 640,
+     "w": 360,
+     "at": "B27:junior",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/robot.png620"
+    },
+    {
+     "t": "piece",
+     "src": "img/badge.png",
+     "x": 1300,
+     "y": 590,
+     "w": 240,
+     "at": "B27:junior+0.3",
+     "rot": 5,
+     "mode": "slap",
+     "seed": "img/badge.png1300"
+    },
+    {
+     "t": "label",
+     "text": "初级工程师",
+     "x": 1300,
+     "y": 900,
+     "at": "B27:junior+0.5",
+     "size": 48,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "stamp",
+     "text": "不是",
+     "x": 1330,
+     "y": 620,
+     "at": "B27:junior+1.3",
+     "size": 120,
+     "rot": -8
+    }
+   ]
+  },
+  {
+   "id": "S37",
+   "at": "B28",
+   "bg": "img/bg_office.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "photo/card_puncher.png",
+     "x": 500,
+     "y": 620,
+     "w": 500,
+     "at": "B28:pushback",
+     "rot": -2,
+     "mode": "slap",
+     "seed": "photo/card_puncher.png500"
+    },
+    {
+     "t": "note",
+     "text": "「这样不对。」",
+     "x": 560,
+     "y": 200,
+     "at": "B28:pushback+1.6",
+     "size": 64,
+     "rot": -4
+    },
+    {
+     "t": "piece",
+     "src": "img/robot_paper.png",
+     "x": 1400,
+     "y": 640,
+     "w": 440,
+     "at": "B28:obey",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/robot_paper.png1400"
+    },
+    {
+     "t": "note",
+     "text": "「好的！」",
+     "x": 1420,
+     "y": 220,
+     "at": "B28:obey+0.4",
+     "size": 70,
+     "rot": 3
+    },
+    {
+     "t": "stamp",
+     "text": "很有把握",
+     "x": 1640,
+     "y": 420,
+     "at": "B28:sure+0.4",
+     "size": 84,
+     "rot": -8
+    }
+   ]
+  },
+  {
+   "id": "S38",
+   "at": "B29",
+   "bg": "img/bg_lab.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "label",
+     "text": "WHARTON · SHAW & NAVE · 2026",
+     "x": 960,
+     "y": 180,
+     "at": "B29:wharton",
+     "size": 40,
+     "rot": -2
+    },
+    {
+     "t": "piece",
+     "src": "img/brain.png",
+     "x": 440,
+     "y": 580,
+     "w": 420,
+     "at": "B29:wharton+0.3",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/brain.png440"
+    },
+    {
+     "t": "label",
+     "text": "3 组实验",
+     "x": 440,
+     "y": 900,
+     "at": "B29:wharton+1.0",
+     "size": 50,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "num",
+     "value": 1372,
+     "x": 1280,
+     "y": 470,
+     "at": "B29:n1372",
+     "unit": "人",
+     "prefix": "",
+     "size": 170,
+     "rot": -3
+    },
+    {
+     "t": "label",
+     "text": "参与者",
+     "x": 1280,
+     "y": 720,
+     "at": "B29:n1372+1.2",
+     "size": 46,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "note",
+     "text": "AI 一半的答案是故意给错的",
+     "x": 1280,
+     "y": 880,
+     "at": "B29:n1372+2.6",
+     "size": 44,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "id": "S39",
+   "at": "B29:p73",
+   "bg": "img/bg_dark.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "num",
+     "value": 73,
+     "x": 660,
+     "y": 440,
+     "at": "+0.0",
+     "unit": "%",
+     "prefix": "",
+     "size": 280,
+     "rot": -3
+    },
+    {
+     "t": "label",
+     "text": "AI 答错时，照单全收",
+     "x": 660,
+     "y": 740,
+     "at": "+1.0",
+     "size": 48,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "SOURCE: ADDY OSMANI, COGNITIVE SURRENDER (2026.05)",
+     "x": 700,
+     "y": 920,
+     "at": "+1.6",
+     "size": 22,
+     "rot": -2,
+     "type": false
+    },
+    {
+     "t": "stamp",
+     "text": "更自信了",
+     "x": 1420,
+     "y": 480,
+     "at": "B29:conf+0.5",
+     "size": 110,
+     "rot": -8,
+     "blend": "normal",
+     "color": "#E4574B"
+    }
+   ]
+  },
+  {
+   "id": "S40",
+   "at": "B30",
+   "bg": "img/bg_dark.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/flag.png",
+     "x": 520,
+     "y": 560,
+     "w": 290,
+     "at": "B30:surrender",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/flag.png520"
+    },
+    {
+     "t": "label",
+     "text": "COGNITIVE SURRENDER",
+     "x": 1260,
+     "y": 200,
+     "at": "B30:surrender+0.2",
+     "size": 40,
+     "rot": -2
+    },
+    {
+     "t": "label",
+     "text": "认知投降",
+     "x": 1260,
+     "y": 360,
+     "at": "B30:surrender+0.5",
+     "size": 72,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/robot.png",
+     "x": 1120,
+     "y": 680,
+     "w": 220,
+     "at": "B30:argue",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/robot.png1120"
+    },
+    {
+     "t": "piece",
+     "src": "img/robot_note.png",
+     "x": 1480,
+     "y": 680,
+     "w": 175,
+     "at": "B30:argue+0.4",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/robot_note.png1480"
+    },
+    {
+     "t": "label",
+     "text": "让它反驳自己的答案",
+     "x": 1300,
+     "y": 930,
+     "at": "B30:argue+1.2",
+     "size": 40,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "stamp",
+     "text": "对策",
+     "x": 1640,
+     "y": 420,
+     "at": "B30:argue+2.4",
+     "size": 80,
+     "rot": -8,
+     "blend": "normal",
+     "color": "#E4574B"
+    }
+   ]
+  },
+  {
+   "id": "S41",
+   "at": "B31",
+   "bg": "img/bg_memo.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/robot_note.png",
+     "x": 420,
+     "y": 540,
+     "w": 250,
+     "at": "B31:notebook",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/robot_note.png420"
+    },
+    {
+     "t": "label",
+     "text": "没有经验，只有笔记",
+     "x": 440,
+     "y": 890,
+     "at": "B31:notebook+0.5",
+     "size": 42,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "photo/typing_pool.png",
+     "x": 1340,
+     "y": 450,
+     "w": 620,
+     "at": "B31:people",
+     "rot": 2,
+     "mode": "slap",
+     "seed": "photo/typing_pool.png1340"
+    },
+    {
+     "t": "note",
+     "text": "管好 5 个 Agent ≠ 管好 5 个人",
+     "x": 1300,
+     "y": 790,
+     "at": "B31:people+1.4",
+     "size": 48,
+     "rot": -4
+    },
+    {
+     "t": "label",
+     "text": "激励",
+     "x": 1000,
+     "y": 900,
+     "at": "B31:none",
+     "size": 44,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "冲突",
+     "x": 1210,
+     "y": 915,
+     "at": "B31:none+0.7",
+     "size": 44,
+     "rot": 2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "成长",
+     "x": 1420,
+     "y": 900,
+     "at": "B31:none+1.4",
+     "size": 44,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "信任",
+     "x": 1630,
+     "y": 915,
+     "at": "B31:none+2.1",
+     "size": 44,
+     "rot": 2,
+     "cn": true
+    },
+    {
+     "t": "stamp",
+     "text": "练不到",
+     "x": 1320,
+     "y": 480,
+     "at": "B31:none+4.6",
+     "size": 120,
+     "rot": -8,
+     "blend": "normal",
+     "color": "#E4574B"
+    }
+   ]
+  },
+  {
+   "id": "S42",
+   "at": "B32",
+   "bg": "img/bg_office.png",
+   "trans": "push",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/nameplate.png",
+     "x": 560,
+     "y": 500,
+     "w": 620,
+     "at": "B32:title2",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/nameplate.png560"
+    },
+    {
+     "t": "label",
+     "text": "MANAGER",
+     "x": 560,
+     "y": 480,
+     "at": "B32:title2+0.3",
+     "size": 48,
+     "rot": 0
+    },
+    {
+     "t": "stamp",
+     "text": "不需要",
+     "x": 700,
+     "y": 690,
+     "at": "B32:title2+1.2",
+     "size": 120,
+     "rot": -8
+    },
+    {
+     "t": "label",
+     "text": "写清背景",
+     "x": 1420,
+     "y": 320,
+     "at": "B32:staff+2.6",
+     "size": 56,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "定义完成",
+     "x": 1440,
+     "y": 500,
+     "at": "B32:staff+3.5",
+     "size": 56,
+     "rot": 2,
+     "cn": true
+    },
+    {
+     "t": "label",
+     "text": "认真审查",
+     "x": 1420,
+     "y": 680,
+     "at": "B32:staff+4.4",
+     "size": 56,
+     "rot": -2,
+     "cn": true
+    }
+   ]
+  },
+  {
+   "id": "S43",
+   "at": "B33",
+   "bg": "img/bg_calendar.png",
+   "trans": "cut",
+   "push": [
+    1,
+    1.04
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/hourglass.png",
+     "x": 520,
+     "y": 540,
+     "w": 250,
+     "at": "B33:minutes",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/hourglass.png520"
+    },
+    {
+     "t": "label",
+     "text": "过去：几个季度",
+     "x": 520,
+     "y": 900,
+     "at": "B33:minutes+0.6",
+     "size": 46,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "piece",
+     "src": "img/stopwatch.png",
+     "x": 1200,
+     "y": 540,
+     "w": 260,
+     "at": "B33:minutes+2.6",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/stopwatch.png1200"
+    },
+    {
+     "t": "label",
+     "text": "现在：几分钟",
+     "x": 1200,
+     "y": 900,
+     "at": "B33:minutes+2.9",
+     "size": 46,
+     "rot": 2,
+     "cn": true
+    },
+    {
+     "t": "note",
+     "text": "错了，可以撤回",
+     "x": 1580,
+     "y": 520,
+     "at": "B33:undo",
+     "size": 54,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "id": "S44",
+   "at": "B34",
+   "bg": "img/bg_dark.png",
+   "trans": "cut",
+   "push": [
+    1.0,
+    1.05
+   ],
+   "flip": false,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "quote",
+     "text": "这份工作，正在从「写代码」，变成「让好代码被写出来的那个原因」。",
+     "who": "Addy Osmani",
+     "x": 960,
+     "y": 440,
+     "w": 1350,
+     "at": "+0.1",
+     "size": 52
+    },
+    {
+     "t": "piece",
+     "src": "img/typewriter.png",
+     "x": 430,
+     "y": 800,
+     "w": 230,
+     "at": "+1.6",
+     "rot": -5,
+     "mode": "slap",
+     "seed": "img/typewriter.png430"
+    },
+    {
+     "t": "arrow",
+     "a": [
+      600,
+      800
+     ],
+     "b": [
+      1250,
+      800
+     ],
+     "at": "+2.6"
+    },
+    {
+     "t": "piece",
+     "src": "img/robot_paper.png",
+     "x": 1450,
+     "y": 780,
+     "w": 230,
+     "at": "+3.4",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/robot_paper.png1450"
+    }
+   ]
+  },
+  {
+   "id": "S45",
+   "at": "B35",
+   "bg": "img/bg_office.png",
+   "trans": "cut",
+   "push": [
+    1.0,
+    1.06
+   ],
+   "flip": true,
+   "origin": "50% 50%",
+   "els": [
+    {
+     "t": "piece",
+     "src": "img/chair.png",
+     "x": 520,
+     "y": 590,
+     "w": 420,
+     "at": "B35:born",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/chair.png520"
+    },
+    {
+     "t": "piece",
+     "src": "img/robot.png",
+     "x": 860,
+     "y": 720,
+     "w": 220,
+     "at": "B35:born+0.7",
+     "rot": 0,
+     "mode": "slap",
+     "seed": "img/robot.png860"
+    },
+    {
+     "t": "label",
+     "text": "练习，变得很便宜",
+     "x": 1400,
+     "y": 450,
+     "at": "B35:cheap",
+     "size": 64,
+     "rot": -2,
+     "cn": true
+    },
+    {
+     "t": "underline",
+     "x": 1400,
+     "y": 530,
+     "w": 520,
+     "at": "B35:cheap+1.2"
+    },
+    {
+     "t": "label",
+     "text": "ORIGINAL: ADDY OSMANI · X · 2026.11.08",
+     "x": 1400,
+     "y": 900,
+     "at": "B35:cheap+2.2",
+     "size": 24,
+     "rot": -2,
+     "type": false
+    },
+    {
+     "t": "piece",
+     "src": "img/nameplate.png",
+     "x": 1400,
+     "y": 700,
+     "w": 360,
+     "at": "B35:cheap+3.0",
+     "rot": 0,
+     "mode": "drop",
+     "seed": "img/nameplate.png1400"
+    }
+   ]
+  }
+ ],
+ "pauses": {
+  "B06": 3.0
+ },
+ "tail": 3.0,
+ "score": [
+  {
+   "src": "music/hook.mp3",
+   "at": "0",
+   "to": "B06",
+   "start": 0.0
+  },
+  {
+   "src": "music/chA.mp3",
+   "at": "B06",
+   "to": "B14",
+   "start": 0.0
+  },
+  {
+   "src": "music/chB.mp3",
+   "at": "B14",
+   "to": "B20",
+   "start": 0.0
+  },
+  {
+   "src": "music/chC.mp3",
+   "at": "B20",
+   "to": "B27",
+   "start": 0.0
+  },
+  {
+   "src": "music/chD.mp3",
+   "at": "B27",
+   "to": "B32",
+   "start": 0.0
+  },
+  {
+   "src": "music/end.mp3",
+   "at": "B32",
+   "to": null,
+   "start": 0.0
+  }
+ ],
+ "musicHi": 0.26,
+ "musicLo": 0.11,
+ "teaserVol": 0.45,
+ "cover": "cover.jpg",
+ "coverFrames": 15,
+ "motif": "img/robot",
+ "subtitles": true,
+ "teaser": [
+  {
+   "at": "B08:quarter+1.3",
+   "len": 1.3
+  },
+  {
+   "at": "B26:no+1.0",
+   "len": 1.3
+  },
+  {
+   "at": "B29:p73+1.6",
+   "len": 1.4
+  },
+  {
+   "at": "B17:conflict+1.2",
+   "len": 1.3
+  },
+  {
+   "at": "B28:obey+0.6",
+   "len": 1.4
+  }
+ ],
+ "teaserMusic": "music/hook.mp3",
+ "teaserStart": 1140,
+ "cover_shot": {
+  "bg": "img/bg_dark.png",
+  "els": [
+   {
+    "t": "piece",
+    "src": "img/robot_type.png",
+    "x": 520,
+    "y": 560,
+    "w": 720,
+    "rot": -3
+   },
+   {
+    "t": "piece",
+    "src": "img/nameplate.png",
+    "x": 1380,
+    "y": 300,
+    "w": 640,
+    "rot": 3
+   },
+   {
+    "t": "label",
+    "text": "MANAGER",
+    "x": 1380,
+    "y": 280,
+    "size": 52,
+    "rot": 3
+   },
+   {
+    "t": "tape",
+    "x": 1100,
+    "y": 170,
+    "rot": -30,
+    "w": 180
+   },
+   {
+    "t": "title",
+    "text": "你的 Agent 把你变成了经理",
+    "x": 1260,
+    "y": 640,
+    "size": 78
+   },
+   {
+    "t": "label",
+    "text": "没升职，没加薪，但你已经在带团队了",
+    "x": 1260,
+    "y": 820,
+    "size": 40,
+    "rot": 1,
+    "cn": true
+   },
+   {
+    "t": "stamp",
+    "text": "十个习惯",
+    "x": 330,
+    "y": 140,
+    "size": 64,
+    "rot": -8,
+    "blend": "normal",
+    "color": "#E4574B"
+   }
+  ]
+ }
+}

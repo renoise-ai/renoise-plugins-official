@@ -12,6 +12,7 @@ AI video production skills by Renoise — creative direction, generation, analys
 | **Build Storyboard** (`storyboard-sheet`) | Portable script/novel adaptation into review sheets, shot lists, first frames, and video prompts |
 | `video-fission` | Portable controlled-variant experiments from one owner-authorized source video |
 | `video-remake` | Portable reference-video recreation with controlled character, product, brand, prop, or scene replacement |
+| `vox-collage` | Vox-style paper-collage explainer films (1–10 min): sourced script on a story skeleton, Renoise narration, halftone cut-outs, captions, rendered with Remotion; needs a shell (the Renoise sandbox or a local one) |
 | `renoise-cli` | Native CLI for your own terminal, scripts, and CI, plus local production helpers (not a generation path in conversations) |
 | **Setup / Account** (`renoise-setup`) | Connect the Renoise tools (browser sign-in), optional CLI install/update, and readiness checks |
 | **Renoise Annotation Board** (`canvas`) | Local image/frame annotation board for snapshots and structured revision handoff |
@@ -122,6 +123,10 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 | `RENOISE_WHITEBOARD_MAX_VIDEO_BYTES` | Optional whiteboard limit | Maximum imported MP4/WebM byte size. Defaults to 262144000 (250 MB); accepted range is 1 MB–2 GB. |
 
 ## Version & upgrading
+
+### 1.25.0
+
+- New `vox-collage`: Vox-style paper-collage explainer films of 1–10 minutes from a topic, an article or a life story. Every narration line is tied to a sourced fact; the script is built on one of four story skeletons (life, essay, mystery, mechanism) and linted for hook, scenes, re-hooks, midpoint twist and callback before any voice is made. Narration in English (Gemini TTS US voices, a Seed Audio UK narrator) or Chinese (a preset or the user's authorised cloned voice), split from long takes and aligned word by word; plates and props from GPT Image 2.6 keyed from green, archival public-domain photos turned into halftone cut-outs, optional GIF loops and video shots, one Lyria cue per chapter, captions burned in or as SRT. The film is built by its own Python scripts and a Remotion engine (`sandboxFiles`), so it needs a shell: the Renoise sandbox or a local one where `scripts/doctor.py` passes; without one it stops before any paid step. The scripts never spend: they write each paid batch as requests that the agent quotes and creates with the Renoise tools after the user agrees, then verify the downloads.
 
 ### 1.24.0
 

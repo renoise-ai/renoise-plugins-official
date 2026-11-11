@@ -1,0 +1,210 @@
+{
+ "style": {
+  "bg": "Vox-style editorial paper collage background plate, top-down flat lay on an aged cream-beige paper desk (#E8DCC4), subtle paper fibers, faint creases, risograph grain, muted palette of beige paper, ink black, a touch of signal red #C8312B, teal #2F6F6A and mustard #D9A441.",
+  "bg_tail": "Keep the CENTER and most of the frame calm, empty paper for later overlays; decorative elements only near the edges and corners. No readable text, no letters, no numbers, no people. 16:9 landscape. Save it as a PNG.",
+  "cut": "A single black-and-white halftone newspaper-print style cutout (photocopy contrast, visible halftone dots, slight risograph grain), cut out with a 8px uneven off-white paper border like a scissor-cut sticker,",
+  "cut_tail": "on a PURE FLAT SOLID GREEN #00FF00 background, no shadow on the background, centered with generous green margin, nothing else in the image, no readable text, no letters, no watermark. Save it as a PNG."
+ },
+ "jobs": [
+  {
+   "name": "bg_ny",
+   "kind": "bg",
+   "prompt": "a faded 1940s Manhattan street-grid map torn along the left edge, a corner of an old hotel letterhead sheet at the top right, a coffee ring, two masking-tape strips"
+  },
+  {
+   "name": "bg_atlantic",
+   "kind": "bg",
+   "prompt": "a large faded antique map of the North Atlantic spanning Europe on the right and New York on the left, sea area pale and empty, compass rose in a corner"
+  },
+  {
+   "name": "bg_patent",
+   "kind": "bg",
+   "prompt": "overlapping old patent-drawing sheets with faint engraved line drawings of electric machines (rings, coils, gears) at the edges, blueprint-blue tinted corner, pencil marks"
+  },
+  {
+   "name": "bg_niagara",
+   "kind": "bg",
+   "prompt": "a faded antique map of the Niagara River and Buffalo region along the bottom and left edges, river in pale teal, small engraved waterfall symbol in a corner"
+  },
+  {
+   "name": "bg_island",
+   "kind": "bg",
+   "prompt": "a faded antique map of Long Island coastline along the top edge, a strip of old telegraph ticker tape with dots and dashes curling across the bottom-right corner"
+  },
+  {
+   "name": "bg_modern",
+   "kind": "bg",
+   "prompt": "clean off-white engineering graph paper with a faint grey power-grid schematic (transmission lines, substations symbols) near the edges, a strip of modern masking tape"
+  },
+  {
+   "name": "bg_dark",
+   "kind": "bg",
+   "prompt": "a dark charcoal grey cardboard desk surface (#2A2622) instead of beige paper, with a torn piece of old wallpaper at one corner and faint scratches; moody, mostly empty dark board"
+  },
+  {
+   "name": "bg_money",
+   "kind": "bg",
+   "prompt": "faded engraved guilloche patterns of old banknotes and a few coin rubbings in pencil scattered at the edges, a torn stamp in a corner"
+  },
+  {
+   "name": "door3327",
+   "kind": "cut",
+   "prompt": "old 1940s hotel room door, slightly ajar, brass knob, with a blank cardboard door-hanger tag hanging on the knob (the tag is blank),"
+  },
+  {
+   "name": "pigeon",
+   "kind": "cut",
+   "prompt": "a white dove standing in side view,"
+  },
+  {
+   "name": "socket",
+   "kind": "cut",
+   "prompt": "a modern wall power outlet with a plug and a curling cable plugged in,"
+  },
+  {
+   "name": "motor",
+   "kind": "cut",
+   "prompt": "a cutaway view of an AC induction electric motor showing copper stator windings and a squirrel-cage rotor, engraving style,"
+  },
+  {
+   "name": "ev",
+   "kind": "cut",
+   "prompt": "a sleek modern electric sports sedan in side view, generic design with no logo and no badge,"
+  },
+  {
+   "name": "ship",
+   "kind": "cut",
+   "prompt": "an 1880s transatlantic ocean steamship with two funnels and masts, side view,"
+  },
+  {
+   "name": "nyc1884",
+   "kind": "cut",
+   "prompt": "an 1880s New York street scene with an elevated railway, horse carriages and gas lamps, as a rectangular photo print with torn edges,"
+  },
+  {
+   "name": "dynamo",
+   "kind": "cut",
+   "prompt": "an 1880s Edison-era direct-current dynamo machine with large field magnets, engraving style,"
+  },
+  {
+   "name": "copper",
+   "kind": "cut",
+   "prompt": "a heavy coiled bundle of very thick copper cables,"
+  },
+  {
+   "name": "cheque",
+   "kind": "cut",
+   "prompt": "an ornate 1880s bank cheque paper with engraved borders and blank lines, slightly crumpled, all writing illegible squiggles,"
+  },
+  {
+   "name": "book",
+   "kind": "cut",
+   "prompt": "an old closed clothbound book with a plain blank cover, slightly worn corners,"
+  },
+  {
+   "name": "patentdwg",
+   "kind": "cut",
+   "prompt": "an 1888 patent drawing sheet showing line-art diagrams of an alternating-current motor (rings with coils, wires), pen-and-ink engraving on aged paper, illegible handwriting,"
+  },
+  {
+   "name": "transformer",
+   "kind": "cut",
+   "prompt": "an 1890s electrical transformer with heavy iron core and coils next to a wooden utility pole with insulators and wires,"
+  },
+  {
+   "name": "elephant",
+   "kind": "cut",
+   "prompt": "an adult elephant standing in side view,"
+  },
+  {
+   "name": "dog",
+   "kind": "cut",
+   "prompt": "a small scruffy stray dog sitting and looking up,"
+  },
+  {
+   "name": "fair1893",
+   "kind": "cut",
+   "prompt": "the 1893 Chicago World's Fair White City at night with buildings outlined by thousands of glowing electric light bulbs reflecting in a lagoon, as a rectangular photo print with torn edges,"
+  },
+  {
+   "name": "falls",
+   "kind": "cut",
+   "prompt": "Niagara Falls with mist, horseshoe falls view, as a rectangular photo print with torn edges,"
+  },
+  {
+   "name": "contract",
+   "kind": "cut",
+   "prompt": "an old two-page legal contract document with illegible handwriting, signature lines and a red wax seal,"
+  },
+  {
+   "name": "boat",
+   "kind": "cut",
+   "prompt": "Tesla's 1898 radio-controlled model boat: a small metal boat hull with a tall thin antenna mast and tiny lamps, on a display stand,"
+  },
+  {
+   "name": "dynamite",
+   "kind": "cut",
+   "prompt": "a bundle of dynamite sticks tied with string with a lit sparking fuse,"
+  },
+  {
+   "name": "vestphone",
+   "kind": "cut",
+   "prompt": "the pocket of a 1920s tweed waistcoat with a modern smartphone sticking out of the pocket,"
+  },
+  {
+   "name": "court",
+   "kind": "cut",
+   "prompt": "the US Supreme Court building facade with columns,"
+  },
+  {
+   "name": "mri",
+   "kind": "cut",
+   "prompt": "a modern hospital MRI scanner machine with patient table,"
+  },
+  {
+   "name": "coins",
+   "kind": "cut",
+   "prompt": "a pile of coins and folded paper banknotes,"
+  },
+  {
+   "name": "boyreading",
+   "kind": "cut",
+   "prompt": "a 12-year-old boy seen from behind and slightly to the side, sitting and reading an old thick book, face not visible,"
+  },
+  {
+   "name": "banknote",
+   "kind": "cut",
+   "prompt": "an ornate engraved vintage-style banknote with a small engraved portrait of a mustached 1890s gentleman, guilloche patterns, all text illegible,"
+  },
+  {
+   "name": "coin",
+   "kind": "cut",
+   "prompt": "a single silver coin with an engraved profile portrait of a mustached 1890s gentleman, rim with illegible lettering,"
+  },
+  {
+   "name": "gpu",
+   "kind": "cut",
+   "prompt": "a modern graphics card (GPU) with two fans, generic design with no logo,"
+  },
+  {
+   "name": "airplane",
+   "kind": "cut",
+   "prompt": "a modern passenger airliner taking off, side view, generic livery with no logo,"
+  },
+  {
+   "name": "bulb",
+   "kind": "cut",
+   "prompt": "a vintage incandescent light bulb glowing with a carbon filament,"
+  },
+  {
+   "name": "horse",
+   "kind": "cut",
+   "prompt": "a strong work horse in side view, walking,"
+  },
+  {
+   "name": "tower_wire",
+   "kind": "cut",
+   "prompt": "a modern high-voltage electricity transmission pylon with cables,"
+  }
+ ]
+}
