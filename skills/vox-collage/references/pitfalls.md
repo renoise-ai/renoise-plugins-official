@@ -1,4 +1,4 @@
-# Pitfalls (hit while making the Tesla, agent-manager and cough films, 2026-11)
+# Pitfalls (hit while making the example films, 2026-11)
 
 ## Downloads and services
 - Downloads of generated media can arrive truncated (an mp3 decoding to 3 s, a GIF "image file is truncated", an mp4
