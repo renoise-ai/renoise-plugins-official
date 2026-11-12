@@ -124,7 +124,7 @@ Keep exactly: ...
 - Specify dense layout, multilingual copy, materials, local edit regions, and everything the edit preserves.
 - Seedream 5.5 holds unedited areas steady across many rounds of local edits and renders small, dense text more accurately than 5.0 Pro: for a series of edits, change one thing per round on the previous output and name what stays.
 - Describe realistic light, materials and skin plainly; avoid beauty-filter words that push toward a glossy, overexposed look.
-- Treat outputs as opaque: Renoise does not expose Seedream's transparent-background output, so plan a cut-out step instead of promising a transparent PNG.
+- For a transparent background (a logo, sticker, cut-out subject or overlay), ask for it in the prompt: Seedream 5.5 then returns a PNG with an alpha channel. End the prompt with `Output requirement: transparent background. Render only the subject on a fully transparent background (PNG with alpha channel), with no background scene, backdrop color or floor.` Without it the background is opaque.
 - Assign each reference a clear role and avoid vague pronouns in multi-reference edits.
 
 ### Midjourney — aesthetic visual phrase
