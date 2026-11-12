@@ -123,6 +123,10 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 
 ## Version & upgrading
 
+### 1.25.0
+
+- `model-routing`: Seedream 5.5 can return a transparent background. Ask for it in the prompt (the brief gives the sentence to end with) and the PNG comes back with an alpha channel, so logos, stickers, cut-out subjects and overlays no longer need a separate cut-out step. Without the ask the background stays opaque.
+
 ### 1.24.0
 
 - `model-routing` adds Seedream 5.5 to the Seedream prompting brief: one change per round for multi-round local edits, plain realistic lighting and skin, and no transparent-PNG promise (Renoise returns opaque images). General photorealistic and commercial images still go to the live image default, which Renoise now sets to Seedream 5.5.
