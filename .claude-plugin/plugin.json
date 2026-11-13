@@ -1,7 +1,7 @@
 {
   "name": "renoise",
   "description": "AI video production skills — creative direction, generation, editing, and e-commerce content",
-  "version": "1.25.0",
+  "version": "1.26.0",
   "author": {
     "name": "Renoise"
   },
@@ -17,8 +17,7 @@
     "renoise"
   ],
   "commands": [
-    "./commands/setup.md",
-    "./commands/add-credits.md"
+    "./commands/setup.md"
   ],
   "mcpServers": [
     "./mcp.json",

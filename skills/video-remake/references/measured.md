@@ -20,8 +20,7 @@ and the ones that fail are regenerated together. Text laid over the picture (tit
 pieces go back on the source's timeline as an rn edit (`edit.json`), rendered, checked and compared with the source by
 `rn` before delivery.
 
-The current host owns authorized media analysis, materials, live capabilities, costs, spending approvals and tasks.
-This skill owns the measurements, routes, slot matching, creative decisions and resumable plan state.
+Spending follows the Renoise tools' approval rule; this skill owns the measurements, routes, slot matching, creative decisions and resumable plan state.
 
 ## Where It Runs
 
@@ -35,8 +34,8 @@ This skill owns the measurements, routes, slot matching, creative decisions and 
   jobs back to you, go on with other work or end the turn and wait for that report. Otherwise wait with one bounded loop
   that returns as soon as the job ends (check its `.exit` file every 2 s, up to about 100 s) and then read the log tail;
   never sleep a fixed time.
-  `analyze.py --jobs N` caps the CPUs it uses. You
-  cannot watch or listen: look at the storyboard, contact sheets and stills as images.
+  `analyze.py --jobs N` caps the CPUs it uses. Check picture and sound yourself: the storyboard, contact sheets and
+  stills as images, and rn's measurements and transcription for sound.
 - **A local shell**: the same scripts; run `python3 <skill>/scripts/doctor.py` first and install what it marks ✗.
 - **No shell, or no sandbox for this account**: follow SKILL.md's single-generation route instead.
 
@@ -145,13 +144,11 @@ text reduces accidental copying but is not a security boundary; normal moderatio
      allowance of one regeneration per unit (Phase 3), and the balance;
    - that each unit carries its own source clip and opens on approved keyframes.
 
-   Ask only when a slot mapping is ambiguous. Otherwise hand each missing slot image and its complete parameters to the
-   host execution workflow, register each approved result as a material once, and record its material ID and full server
-   filename. Show the slot images; let the user replace or regenerate any slot.
+   Ask only when a slot mapping is ambiguous. Otherwise generate the missing slot images in one round, register each approved result as a material once, and record its material ID. Show the slot images; let the user replace or regenerate any slot.
 6. **Keyframes.** Every generated shot (each part of a split shot) and every still opens on a keyframe: its source frame
    (`plan.json` `keyframes[].source_frame`) with the slotted elements swapped in by the image model, everything else (framing,
    pose, camera, light, set) as in the source frame, and the overlay text (titles, subtitles, labels) removed, since it is
-   set again in code. Register each source frame once, hand every keyframe to the host execution workflow, save the results
+   set again in code. Register each source frame once, generate every keyframe in one round, save the results
    and list them in `keyframes.json` (`{"7": "kf/kf_7.png", "12.2": "kf/kf_12_2.png"}`). Mark a shot `"keyframe": false` in
    `review.json` when nothing in it changes. Then `python3 <skill>/scripts/keyframes.py an keyframes.json` draws source |
    keyframe pairs (`an/remake/keyframes/sheet*.jpg`); show them and let the user approve, replace a slot or redo any
@@ -186,7 +183,7 @@ verdict. Do not store API keys, signed URLs, credential contents or arbitrary ho
    result's last frame (`rn frame prev.mp4 --last -o last.png`) when no keyframe is approved for it.
 
 Submit every unit (and every part of a split unit) in one batch: the approved keyframes already settled the look, and one
-batch waits for its slowest unit once instead of once per unit. Request a live estimate with the full material set for the batch and hand the complete arguments to the host execution workflow; record every task ID
+batch waits for its slowest unit once instead of once per unit. Estimate the batch with its full material set and generate it in one `create_tasks` call; record every task ID
 immediately; `wait_tasks`, then `download_results` into `gen/` and add the file to `results.json` (`{"G1": "gen/G1.mp4",
 "G2": ["gen/G2_part1.mp4", "gen/G2_part2.mp4"]}`).
 

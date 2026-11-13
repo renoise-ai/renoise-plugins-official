@@ -26,6 +26,11 @@ const removed = [
   '.mcp.json',
   '.codex-plugin/plugin.json',
   'openai-plugin',
+  'skills/video-download',
+  'skills/renoise-cli/scripts',
+  'skills/director/commercial',
+  'skills/storyboard-sheet',
+  'skills/director/references/visual-dev.md',
 ];
 
 test('skill manifest separates portable creative methods from local execution', () => {
@@ -41,8 +46,6 @@ test('skill manifest separates portable creative methods from local execution', 
     'model-routing',
     'renoise-cli',
     'renoise-setup',
-    'storyboard-sheet',
-    'video-download',
     'video-fission',
     'video-remake',
   ]);
@@ -50,17 +53,15 @@ test('skill manifest separates portable creative methods from local execution', 
   assert.equal(byId.get('creative-direction').runtime, 'portable');
   assert.deepEqual(byId.get('creative-direction').requires, []);
   assert.equal(byId.get('model-routing').runtime, 'portable');
-  assert.equal(byId.get('storyboard-sheet').runtime, 'portable');
   assert.equal(byId.get('video-fission').runtime, 'portable');
   assert.equal(byId.get('video-remake').runtime, 'portable');
-  for (const id of ['renoise-cli', 'renoise-setup', 'video-download']) {
+  for (const id of ['renoise-cli', 'renoise-setup']) {
     assert.equal(byId.get(id).runtime, 'local-cli');
   }
   assert.equal(byId.get('canvas').runtime, 'local-mcp-app');
   assert.ok(byId.get('canvas').requires.includes('mcp-apps'));
   assert.ok(byId.get('director').requires.includes('tasks.create'));
   assert.ok(byId.get('director').optional.includes('media.analyze'));
-  assert.ok(byId.get('storyboard-sheet').optional.includes('tasks.create'));
   assert.ok(byId.get('video-fission').requires.includes('media.analyze'));
   assert.ok(byId.get('video-fission').requires.includes('tasks.create'));
   assert.ok(byId.get('video-remake').requires.includes('media.analyze'));
@@ -150,17 +151,7 @@ test('conversations use the Renoise MCP tools; renoise-cli is for terminals, scr
   assert.match(cli, /do not fall back to the CLI/i);
   assert.match(cli, /renoise-setup\/SKILL\.md/);
   assert.doesNotMatch(cli, /## Cost Gate|--prompt-file|Managed Agent Runtime|renoise_[a-z]/);
-  for (const helper of [
-    'analyze-beats.py',
-    'batch-generate.sh',
-    'generate-preview.mjs',
-    'match-materials.mjs',
-    'material-ingest.mjs',
-    'qc-preview.sh',
-    'split-grid.sh',
-  ]) {
-    assert.ok(existsSync(`skills/renoise-cli/scripts/${helper}`));
-  }
+  assert.match(cli, /uv tool install "renoise-kit\[all\]"/, 'local editing and checks use the rn kit');
 });
 
 test('annotation-board source-video edits keep the Seedance edit contract on the MCP tools', () => {
@@ -180,15 +171,11 @@ test('annotation-board source-video edits keep the Seedance edit contract on the
 
 test('annotation-board paid generation requires post-preview approval bound to the exact prompt and arguments', () => {
   const canvas = readFileSync('skills/canvas/SKILL.md', 'utf8');
-  const director = readFileSync('skills/director/SKILL.md', 'utf8');
-
+  
   assert.match(canvas, /Pressing \*\*Send annotation\*\* approves only the structured annotation intent/i);
   assert.match(canvas, /Do not call `create_tasks` in the same turn that first presents the proposal/i);
   assert.match(canvas, /Any prompt, model, parameter, material, or price change invalidates the approval/i);
   assert.match(canvas, /follow the Renoise tools' approval rule for paid work/i);
-
-  assert.match(director, /Approval and idempotency remain host-controlled/i);
-  assert.match(director, /active host decides its approval boundary/i);
   assert.match(canvas, /直接生成/);
 });
 
@@ -210,7 +197,7 @@ test('model routing keeps only useful specialists without replacing capabilities
   ]) assert.ok(!routing.includes(`\`${obsolete}\``), `${obsolete} should not be routed`);
   assert.match(routing, /Route only to the newest live generation/);
   assert.match(routing, /OmniHuman 2\.0 — the audio drives the performance/);
-  assert.match(readFileSync('skills/director/commercial/scenario-d-ugc.md', 'utf8'), /`omnihuman-2\.0`/);
+  assert.match(readFileSync('skills/director/references/commercial.md', 'utf8'), /`omnihuman-2\.0`/);
   assert.match(routing, /generic GPT Image request to GPT Image 2\.6 Sunburst/);
   assert.match(routing, /`gpt-image-2\.6-sunburst` with `outputFormat: "gif"`/);
   assert.match(routing, /use Flare when explicitly requested/i);
@@ -228,8 +215,7 @@ test('prompt examples use canonical material ID tokens', () => {
   const directorFiles = [
     promptCraft,
     readFileSync('skills/video-remake/SKILL.md', 'utf8'),
-    ...['INDEX.md', 'scenario-b-brand.md', 'scenario-c-tvc.md', 'scenario-d-ugc.md']
-      .map((file) => readFileSync(`skills/director/commercial/${file}`, 'utf8')),
+    readFileSync('skills/director/references/commercial.md', 'utf8'),
   ].join('\n');
   assert.match(promptCraft, /@material:101/);
   assert.doesNotMatch(directorFiles, /@(?:Image|Video)\s*\d/i);
@@ -281,7 +267,6 @@ test('package metadata is the manifest source of truth', () => {
 test('desktop metadata exposes portable entries plus setup', () => {
   const entries = {
     director: 'Create with Renoise',
-    'storyboard-sheet': 'Build Storyboard',
     'renoise-setup': 'Setup / Account',
   };
   for (const [skill, displayName] of Object.entries(entries)) {
@@ -367,72 +352,67 @@ test('setup keeps managed CLI current and still gates manual install', () => {
   assert.match(installer, /needsManagedUpdate/);
 });
 
-test('director stays a thin router with host-controlled approval boundaries', () => {
+test('director stays a thin router of craft', () => {
   const director = readFileSync('skills/director/SKILL.md', 'utf8');
   const narrative = readFileSync('skills/director/workflows/narrative.md', 'utf8');
-  const visualDev = readFileSync('skills/director/references/visual-dev.md', 'utf8');
   const promptCraft = readFileSync('skills/director/references/prompt-craft.md', 'utf8');
   const files = readJSON('skills/manifest.json').skills.find(({ id }) => id === 'director').files;
-  assert.ok(Buffer.byteLength(director) < 10_000, 'director entry point should stay under 10 KB');
-  assert.ok(files.includes('skills/director/workflows/narrative.md'));
-  assert.match(director, /commercial\/INDEX\.md/);
-  assert.match(director, /video-remake/);
-  assert.match(director, /workflows\/narrative\.md/);
-  assert.match(director, /references\/code-built-video\.md/);
+  assert.ok(Buffer.byteLength(director) < 8_000, 'director entry point should stay under 8 KB');
+  for (const path of files) assert.ok(Buffer.byteLength(readFileSync(path, 'utf8')) < 8_000, `${path} should stay under 8 KB`);
+  for (const file of ['workflows/narrative.md', 'references/commercial.md', 'references/prompt-craft.md', 'references/code-built-video.md']) {
+    assert.ok(files.includes(`skills/director/${file}`));
+    assert.ok(director.includes(file), `director routes to ${file}`);
+  }
   assert.match(director, /\*\*Generate or build\.\*\*[\s\S]*never ask a video model for exact text or numbers/);
-  assert.ok(files.includes('skills/director/references/code-built-video.md'));
-  assert.match(director, /storyboard-sheet/);
   assert.match(director, /multiple controlled variants from one supplied source/i);
-  assert.match(director, /planning stages, not implicit text-confirmation pauses/i);
-  assert.match(narrative, /do not create extra text-confirmation pauses/i);
-  assert.match(narrative, /paid anchor images.*active host workflow/is);
-  assert.match(visualDev, /without inventing a text-confirmation pause/i);
-  assert.match(promptCraft, /active host's review policy/i);
-  assert.doesNotMatch([director, narrative, visualDev, promptCraft].join('\n'), /wait for (?:explicit )?(?:approval|confirmation)/i);
+  assert.match(director, /storyboard or shot list on its own[\s\S]*workflows\/narrative\.md/, 'plans and storyboards are part of the narrative workflow');
+  assert.match(narrative, /Character design sheet for \[NAME\]/, 'the anchors live in the narrative workflow');
+  assert.match(narrative, /## Plan Only/);
+  assert.match(promptCraft, /model-routing[\s\S]*wins/, 'the selected model\'s brief overrides generic craft');
+  assert.doesNotMatch([director, narrative, promptCraft].join('\n'), /NEGATIVE line|wait for (?:explicit )?(?:approval|confirmation)/i);
 });
 
-test('video fission analyzes first and hands off one portable logical batch', () => {
+test('portable skills hold craft, not host plumbing or capability limits', () => {
+  // Approval, task tracking and delivery format belong to the agent's instructions and the Renoise tools; the agent
+  // checks picture and sound itself instead of handing checks to the user.
+  const manifest = readJSON('skills/manifest.json');
+  for (const skill of manifest.skills.filter((entry) => entry.runtime === 'portable')) {
+    for (const path of skill.files) {
+      const text = readFileSync(path, 'utf8');
+      assert.doesNotMatch(text, /active host|host execution workflow|host's (?:approval|review) policy|text-confirmation pause/i, `${path}: host plumbing`);
+      assert.doesNotMatch(text, /(?:cannot|can't|unable to) (?:watch|hear|listen)/i, `${path}: capability limit`);
+      assert.doesNotMatch(text, /ask the user to (?:review|watch|listen)/i, `${path}: check handed to the user`);
+      assert.doesNotMatch(text, /full server filename/i, `${path}: materials are named by @material tokens`);
+    }
+  }
+});
+
+test('video fission analyzes first and generates one batch of variants on the source', () => {
   const fission = readFileSync('skills/video-fission/SKILL.md', 'utf8');
   const director = readFileSync('skills/director/SKILL.md', 'utf8');
   assert.match(fission, /owner-authorized source video/i);
-  assert.match(fission, /Analyze before resolving the direction/i);
-  assert.match(fission, /initial request already names a usable, safe experimental axis[\s\S]*without restating it for text confirmation/i);
-  assert.match(fission, /Use \*\*4 outputs\*\* when no count is supplied[\s\S]*do not ask merely to confirm that default/i);
-  assert.match(fission, /Four is not a hard cap/i);
-  assert.match(fission, /one axis by default and never more than two/i);
-  assert.match(fission, /distinct, testable hypothesis/i);
-  assert.match(fission, /source analyzed in Step 1 as every variant's sole `reference_video` input/);
-  assert.match(fission, /source reference changes, analyze the replacement before continuing/);
-  assert.match(fission, /Refer to that source as `Video 1`/);
-  assert.match(fission, /Do not extract or upload a frame/);
-  assert.match(fission, /report its measured duration and the live limit/);
-  assert.match(fission, /shorten it below that limit with an editor available to them/);
-  assert.match(fission, /shortened source to be referenced and analyzed again/);
-  assert.doesNotMatch(fission, /Canvas|14\.8/i, 'portable guidance must not assume Renoise host UI or an arbitrary margin');
-  assert.match(fission, /one generation path/i);
-  assert.match(fission, /invent another mode/i);
-  assert.match(fission, /Hand Off One Logical Batch/i);
-  assert.match(fission, /native batch primitive when the host exposes one/i);
-  assert.match(fission, /actual parameters needed for per-variant and total estimation/i);
-  assert.match(fission, /submit the source video directly as every task's `reference_video`/i);
-  assert.match(fission, /host's approval, concurrency, idempotency, and task-tracking rules/i);
-  assert.match(fission, /spoken language; clarify it only when ambiguous/i);
-  assert.match(fission, /Do not invent tool names or execution interfaces/i);
+  assert.match(fission, /Analyze the source before deciding what varies/);
+  assert.match(fission, /request already names a usable axis[\s\S]*without asking/);
+  assert.match(fission, /Use \*\*4 outputs\*\*[\s\S]*do not ask to confirm the default/);
+  assert.match(fission, /one axis, or at most two/);
+  assert.match(fission, /genuinely distinct hypothesis/);
+  assert.match(fission, /model-routing[\s\S]*`reference_video`/, 'the model is routed, not hardcoded');
+  assert.match(fission, /sole `reference_video` and call it `Video 1`/);
+  assert.match(fission, /Do not replace it with an extracted frame/);
+  assert.match(fission, /one `create_tasks` call/);
   assert.match(director, /explicit video fission or multiple controlled variants/i);
   assert.match(director, /use (?:the )?video-fission/i);
 });
 
-test('reference-video remake delegates execution details to the active host', () => {
+test('reference-video remake keeps the source attached and fills slots first', () => {
   const director = readFileSync('skills/director/SKILL.md', 'utf8');
   const remake = readFileSync('skills/video-remake/SKILL.md', 'utf8');
   assert.match(director, /剪同款[\s\S]*video-remake/);
   assert.match(remake, /^name: video-remake$/m);
-  assert.match(remake, /media-analysis capability/i);
   assert.match(remake, /source video is always attached/i);
-  assert.match(remake, /Slot Plan and Cost/);
-  assert.match(remake, /Final Prompt, Assets, and Video Cost/);
-  assert.match(remake, /active host execution workflow/);
-  assert.match(remake, /do not assume a particular tool, command, card, or approval interface/i);
+  assert.match(remake, /`analyze_media` in template\/video mode/);
+  assert.match(remake, /review checkpoint/);
+  assert.match(remake, /No placeholder may remain/);
   assert.doesNotMatch(remake, /renoise analyze|prompt-file|remake-plan\.json/);
 });
 

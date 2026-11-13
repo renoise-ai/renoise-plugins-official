@@ -16,8 +16,6 @@
     "model-routing/",
     "renoise-cli/",
     "renoise-setup/",
-    "storyboard-sheet/",
-    "video-download/",
     "video-fission/",
     "video-remake/",
     "manifest.json"

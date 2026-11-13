@@ -1,104 +1,77 @@
-# Narrative / Short-Film Workflow
+# Narrative, Short Drama and Storyboards
 
-Use for drama, comedy, short film, montage, MV, and story adaptation. Read `references/prompt-craft.md` before drafting prompts. For recurring characters, props, wardrobe, or locations, also read `references/visual-dev.md`.
+Use for drama, comedy, short film, short drama, montage, MV and adaptation, and for a plan or storyboard on its own. Write prompts with `../references/prompt-craft.md`.
 
 ## Intake
 
-Decide what the brief leaves open (characters, action, mood, setting, duration, speech, references) from the brief and its references, and state your choices in the plan. Ask only for what cannot be inferred and blocks the work; spoken language follows the Director spoken-language gate.
+Decide what the brief leaves open (characters, action, mood, setting, duration, speech, references) and state your choices in the plan. Ask only for what cannot be inferred and blocks the work. Choose the video model before deciding whether this is one clip or several: when the duration fits one clip, write one prompt and generate it.
 
-Select and inspect the video model before deciding whether this is one clip or multiple segments.
-
-## Single Clip
-
-Use when the requested duration fits one advertised model duration.
-
-1. Write one model-appropriate, high-density prompt using `model-routing` and `prompt-craft.md`.
-2. Hand the complete prompt, references, and model parameters to the active host execution workflow.
-3. Record any task identifier returned by the host.
-
-## Multi-Clip: Two Gates
-
-Resolve both creative gates in order before handing video generation to the host. They structure the plan but do not create extra text-confirmation pauses: the active host owns every approval boundary. Paid anchor images may execute during Gate 2 through that workflow:
-
-```text
-brief → Gate 1 Story → Gate 2 anchor plan/cost → final manifest/prompts → host execution boundary → generate video → QC → assemble
-```
-
-### Gate 1 — Story
-
-Present:
+## Story
 
 - **Logline:** `When [INCITING INCIDENT], a [CHARACTER] must [GOAL], but [OBSTACLE] threatens [STAKES].`
-- **Treatment:** two or three sentences per scene describing what the viewer sees and feels, with dialogue embedded naturally.
+- **Treatment:** two or three sentences per scene, what the viewer sees and feels, dialogue embedded.
+- Connect scenes with consequence (**THEREFORE**) or complication (**BUT**), not **AND THEN**; at least a third of the transitions complicate.
+- Do not target the same emotion in adjacent scenes. Put the peak at about 70–80% of the running time.
+- **Short drama** (vertical, episodic): each episode runs hook → setup → conflict → escalation → reversal → cliffhanger, the first three seconds strong; prefer faces, reactions, hands, phones, doors, documents, money and wounds over narration; 8–12 shots per 60–90 second episode.
 
-Rules:
+## Anchors
 
-- Connect scenes with consequence (**THEREFORE**) or complication (**BUT**), not a sequence of **AND THEN** events. At least 30% of transitions should complicate the story.
-- Do not target the same viewer emotion in adjacent scenes.
-- For adaptations, keep visual, emotional, self-contained scenes; cut exposition-heavy material and externalize internal thought through action.
-- Hand the resolved story into Gate 2 under the active host's approval policy; do not invent a separate text confirmation.
+**Characters.** A character in two or more segments gets one design sheet, generated once and reused as the same material everywhere:
 
-### Gate 2 — Consistency Manifest
+```text
+Character design sheet for [NAME].
+[Full appearance: age, face, hair shade and length, skin tone, build,
+each garment as texture + cut + color, accessories, signature details]
+Layout: 2 rows × 3 columns on a clean background.
+Row 1: front, three-quarter, side profile. Row 2: two expressions, one full-body pose.
+[PROJECT STYLE LINE]
+Consistent appearance across every panel. No labels or background elements.
+```
 
-After the story is resolved:
+**Props and wardrobe.** One fixed description per recurring item, copied verbatim wherever it appears; a plot-driven change gets its own transformation shot:
 
-1. Hand every needed character/location anchor prompt and selected image model to the active host execution workflow.
-2. Surface generated anchors and follow the host's selection or replacement policy without inventing another confirmation step.
-3. Draft all segment prompts and present the final manifest below in one editable block, then hand it to the active host workflow; pause only when that host's policy requires it.
+```text
+Item                 Fixed description                         Type
+Engagement token     translucent green jade, one broken shard  Constant
+Hero robe, Act II    black silk, gold embroidery, high collar  Plot-driven from S4
+```
+
+**Locations.** A recurring location gets an environment-only image (layout, light, palette, key props) when words will not hold it.
+
+## Manifest
+
+Before generating video, set out:
 
 | Item | Lock |
 |---|---|
-| Characters | Approved reference for each recurring character, plus constant traits and plot-driven changes |
-| Props/wardrobe | Fixed material, color, and form; explicit state changes |
-| Scenes | Approved environment-only reference or one fixed recurring-location description |
-| Style Bible | One verbatim `art style + camera language + color grade + NEGATIVE line` string |
-| Transition Table | Every cut's previous OUT state, next IN state, and linking technique |
-| Spoken language | Confirmed language for each speaking segment |
-| Shot Mapping | Exact material and advertised role used by each segment |
-| Segment prompts | Full prompt for every segment, including live parameters and summed cost |
+| Characters | The design-sheet material, constant traits, plot-driven changes |
+| Style Bible | One verbatim `art style + camera language + color grade` line, prepended to every segment, plus an exclusion only for a style the model drifts into |
+| Transition Table | Every cut: the previous segment's last frame, the next one's first frame, and how they link |
+| Spoken language | The language of each speaking segment |
+| Shot mapping | The materials and reference roles each segment uses |
+| Segment prompts | The full prompt for every segment, with its parameters and the summed cost |
 
-Preparation:
-
-- Inventory host-authorized materials and match them to approved needs.
-- For an invented character appearing in two or more segments, generate one design sheet, show it for approval, register it as reusable material, and reuse it through an advertised video-model role.
-- For a recurring location, create an environment-only concept image when a written lock is insufficient.
-- Track plot-critical props and wardrobe as constant or plot-evolving. Stage each evolution as its own visible transformation.
-- Not every shot needs every anchor; record actual choices in Shot Mapping.
-
-Prompt construction:
-
-- Apply the selected model's prompting profile.
-- Prepend the Style Bible verbatim to every segment.
-- Copy full applicable character and prop blocks verbatim.
+- Link cuts by matching composition, continuing a motion, carrying the light and grade, or completing a gesture; a gaze that leads to the next reveal and a sound that bleeds across also work. A matched grade plus matched framing is the strongest join.
+- Intermediate segments end on a hook the next can catch; only the last may settle into `frame holds steady`, and only S1 needs an establishing open.
 - Start each segment after S1 with `Continuing from the previous shot: [position, pose, prop state, emotion, light, environment].`
-- Keep spoken lines in the confirmed language.
-- Give each intermediate segment an ending hook matching the Transition Table.
+- Carry identity, product and location through the same material in an image-reference role; motion through a previous result only where the next model takes reference video; an exact opening state through the previous clip's last frame as the first frame.
 
-## Generate
+## Plan Only
 
-Reinspect live model capabilities immediately before submission. Reuse stable materials through advertised roles; use a tail frame only through an advertised image/frame role, and reuse completed video only through a compatible video-reference capability.
+When the user wants the plan or storyboard rather than the video, deliver what the request implies:
 
-Run read-only preparation in parallel when independent. Hand generation to the active host workflow, which owns submission concurrency, approvals, idempotency, task identifiers, and interruption recovery.
+- **Storyboard sheet** (review, pitch): one image per episode, 6 panels in a 2 × 3 grid, small P1–P6 labels and no other text, characters matching their references. Not an input for video models.
+- **Shot list** (for generation): per shot, its id, duration, framing, one action, emotion, camera, a first-frame image prompt and a video prompt. First frames are generated one per shot, never cut from a sheet.
 
-## QC and Assembly
+Check each against the story (hook, order, no invented plot, reveals as adapted, inner thought made visible) and the anchors (faces, age, wardrobe, location, props), and redo only what fails.
 
-Before final assembly, compare every segment and cut against the confirmed manifest:
+## Generate, Check, Assemble
 
-- same identity, wardrobe, props, and recurring-location state;
-- same art style and color grade;
-- boundaries match the Transition Table;
-- spoken language is correct;
-- no failed physical action or unusable frame.
-
-Report the result and hand only failed segments back to the host for regeneration. Assemble only when the host exposes media editing; otherwise return ordered clips plus the transition plan.
-
-If soundtrack or enhancement is requested, choose a live model by task fit and guidance, then hand only advertised inputs and outputs to the active host workflow.
-
-## Creative Recovery
+Generate every segment that does not depend on another in one round. Check every segment and cut against the manifest: same identity, wardrobe, props and location state; same style and grade; joins matching the Transition Table; the right spoken language; no failed action or unusable frame. Regenerate only what fails, together, then cut the piece with the music added at the edit.
 
 | Problem | Adjustment |
 |---|---|
-| Character drifts | Verify the same approved material, advertised role, and verbatim character block |
-| Actions are ignored | Reduce to three or four actions per five-second window |
-| Clip is incoherent | Use one mood, at most two camera stages, and fewer actions |
-| Segments do not connect | Repair OUT/IN states and continuity routing; use a short cross-dissolve only when media editing is available |
+| Character drifts | Same design-sheet material and role, identifying details repeated in the shot |
+| Actions are ignored | One main action per shot, fewer shots per clip |
+| Clip is incoherent | One mood, one camera move per shot |
+| Segments do not connect | Repair the Transition Table and the opening-state bridge; a short dissolve at the edit |

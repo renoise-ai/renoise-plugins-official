@@ -30,8 +30,6 @@ function formatCredits(n: number): string {
 // ── Main Renderer ───────────────────────────────────────────────────────
 
 export interface RenderOptions {
-  /** Slash command name for add-credits. Default: /renoise:add-credits */
-  addCreditsCmd?: string
   /** Slash command name for setup. Default: /renoise:setup */
   setupCmd?: string
 }
@@ -44,7 +42,7 @@ export function renderCreditsLine(
   data: CreditsData | null,
   opts: RenderOptions = {},
 ): string {
-  const addCreditsCmd = opts.addCreditsCmd ?? '/renoise:add-credits'
+  const topUp = 'renoise.ai/pricing'
   const setupCmd = opts.setupCmd ?? '/renoise:setup'
 
   // No cache / not logged in
@@ -57,12 +55,12 @@ export function renderCreditsLine(
 
   // No credits
   if (credits <= 0) {
-    return colorize(`❌ Renoise Credits: 0 — type ${addCreditsCmd} to top up`, RED)
+    return colorize(`❌ Renoise Credits: 0 — top up at ${topUp}`, RED)
   }
 
-  // Critical: ≤100 — show add-credits command
+  // Critical: ≤100 — show where to top up
   if (credits <= THRESHOLD_CRITICAL) {
-    return colorize(`🔴 Renoise Credits: ${formatted} — type ${addCreditsCmd} to top up`, RED)
+    return colorize(`🔴 Renoise Credits: ${formatted} — top up at ${topUp}`, RED)
   }
 
   // Low: ≤500 — warning
