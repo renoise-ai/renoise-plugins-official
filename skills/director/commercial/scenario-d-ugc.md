@@ -8,16 +8,12 @@
 
 ---
 
-## Phase 1.5: Asset Registration (Scenario D Only)
+## Materials First
 
-Register all host-authorized assets **before writing the prompt** so material IDs are known during construction.
+Have every material ID before writing the prompt:
 
-1. Register the presenter once and reuse the **same material ID** through an image-reference role advertised by the selected model.
-2. If the user did not provide a presenter, clarify the desired person, inspect a live image model, and hand the portrait prompt to the active host execution workflow. Then show and register the accepted result once.
-3. Register each approved product image once and assign only a role advertised by the selected video model.
-4. Record every material ID and full server filename, then proceed to Phase 2.
-
-If the host cannot register a conversation attachment or generated result, explain the limitation; do not request host filesystem details or invent an upload fallback.
+1. The presenter: the user's portrait, or, when they gave none, one you generate from the person the brief implies. Reuse that same material in every segment.
+2. Each product image, as a reference role the selected video model takes.
 
 ---
 
@@ -62,7 +58,7 @@ The single biggest failure mode for Scenario D is writing prompts that sound lik
 
 ---
 
-> Physical Continuity Rule and Action Granularity Rule apply here — see `INDEX.md` Phase 2.
+> Physical Continuity Rule and Action Granularity Rule apply here — see `INDEX.md`.
 
 ---
 

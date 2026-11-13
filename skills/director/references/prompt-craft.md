@@ -1,6 +1,6 @@
 # Prompt Craft - Writing High-Density Video Prompts
 
-This is the main creative reference in the director Skill. Model capabilities and guidance come from the current host's live capability source; this document only covers model-independent prompt craft. The selected `model-routing` profile overrides this document when a model needs a different structure, density, or reference style.
+This is the main creative reference in the director Skill. It covers model-independent prompt craft; `list_models` gives each model's live limits. The selected `model-routing` profile overrides this document when a model needs a different structure, density, or reference style.
 
 ---
 
@@ -184,7 +184,7 @@ The Style Bible is a locked line item of the director skill's **Gate 2 Consisten
 
 ### Transition Table (design cuts before you generate)
 
-For a multi-shot piece, plan the **cut points** explicitly and resolve them as part of Gate 2 under the active host's review policy. For every boundary record three things:
+For a multi-shot piece, plan the **cut points** explicitly as part of the manifest. For every boundary record three things:
 
 | Cut | Prev segment OUT-frame | Next segment IN-frame | Linking technique |
 |-----|------------------------|-----------------------|-------------------|
@@ -230,12 +230,10 @@ Design the **ending of each segment** to set up the next:
 
 ### Serial continuity routing
 
-Inspect the selected model's live capabilities before choosing anchors. Never assume a role or role combination from an old recipe.
-
-- Reuse an approved character/product/scene material through an advertised image-reference role when appearance matters.
-- Reuse a completed result only when the selected model advertises a compatible video-reference capability and motion carryover matters.
-- For an exact opening state, use a dedicated media capability to extract the previous tail frame and attach it through an advertised frame role. If that capability is unavailable, use an existing approved image reference and describe the intended opening composition; do not guess a local command.
-- Reinforce every handoff with the verbatim opening-state bridge and a match cut in the Transition Table. Use a short cross-dissolve only when the host exposes media editing.
+- Identity, product and location carry through the same material in an image-reference role.
+- Motion carries through a previous result only when the next model takes reference video.
+- An exact opening state carries through the previous clip's last frame as a frame reference; without a way to extract it, use the approved image reference and describe the opening composition.
+- Reinforce every handoff with the verbatim opening-state bridge and a match cut in the Transition Table; a short cross-dissolve where you can edit.
 
 Design the end of each intermediate segment as a readable motion/composition hook the next segment can continue.
 
@@ -276,10 +274,10 @@ What to include: character position + pose, prop state, emotional expression, li
 What NOT to include: camera angles (new shot may differ), music cues, dialogue.
 
 ### Continuity tracking
-Track prop/wardrobe state changes across segments in the **Props & Wardrobe Continuity Table** (see visual-dev.md), and copy each key prop's fixed description (material + color + form) verbatim into every segment it appears in. A prop must not silently mutate — e.g. a jade token that is a "translucent green jade shard" stays that, it does not become white porcelain in one segment and raw green stone in another. Distinguish **constant traits** (locked every segment) from **plot-driven changes** (a costume/prop upgrade the plot requires): a plot change must be staged as its **own explicit transformation shot**, never an untransitioned jump between adjacent segments. Small continuity micro-details still help — if her vest pockets are full in S1 and half-empty in S3, say so; if his tape roll is smaller, say so.
+Track prop/wardrobe state changes across segments in the **Props & Wardrobe Continuity Table** (see `workflows/narrative.md`), and copy each key prop's fixed description (material + color + form) verbatim into every segment it appears in. A prop must not silently mutate — e.g. a jade token that is a "translucent green jade shard" stays that, it does not become white porcelain in one segment and raw green stone in another. Distinguish **constant traits** (locked every segment) from **plot-driven changes** (a costume/prop upgrade the plot requires): a plot change must be staged as its **own explicit transformation shot**, never an untransitioned jump between adjacent segments. Small continuity micro-details still help — if her vest pockets are full in S1 and half-empty in S3, say so; if his tape roll is smaller, say so.
 
 ### Smoothing residual variance (after you've locked the reference)
-**Consistency is engineered, not hoped for.** For any character in 2+ segments, first lock their look with a character-sheet `ref_image` reused in every segment (see `visual-dev.md`) — that is what holds the face, hair, and wardrobe steady. The verbatim character block above and the transition techniques below sit **on top of** that reference lock to smooth any residual frame-to-frame variance between independently generated clips; they are **not** a substitute for locking, and you should never present drift to the user as an expected outcome.
+**Consistency is engineered, not hoped for.** For any character in 2+ segments, first lock their look with a character-sheet `ref_image` reused in every segment (see `workflows/narrative.md`) — that is what holds the face, hair, and wardrobe steady. The verbatim character block above and the transition techniques below sit **on top of** that reference lock to smooth any residual frame-to-frame variance between independently generated clips; they are **not** a substitute for locking, and you should never present drift to the user as an expected outcome.
 
 Once the reference is locked, these editing choices absorb the small remaining differences:
 - **Whip pan / motion blur** at segment boundaries softens appearance jumps
@@ -325,13 +323,12 @@ When adapting existing material (novels, screenplays, manga):
 
 ## Referencing Materials in Prompts — The `@material:{id}` Syntax
 
-When the host attaches reference images, videos, or audio as materials, reference each one by its returned material ID using `@material:{id}`. IDs bind precisely even when files share a name. IDs such as 101/102 in examples are placeholders—substitute the IDs returned in the current workflow.
+Reference each one by its returned material ID using `@material:{id}`. IDs bind precisely even when files share a name. IDs such as 101/102 in examples are placeholders—substitute the IDs returned in the current workflow.
 
 ### Register → Write `@material:{id}` in prompt
 
-1. Register or select each user-authorized reference through the host's material capability.
-2. Record the returned material ID.
-3. Write `@material:` followed by that ID (`101` → `@material:101`) and attach the same ID through an advertised material role.
+1. Upload or select each reference and keep its material ID.
+2. Write `@material:` followed by that ID (`101` → `@material:101`) and attach the same ID through an advertised material role.
 
 ```
 [CHARACTERS]

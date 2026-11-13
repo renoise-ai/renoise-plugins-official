@@ -1,8 +1,8 @@
-# Scenario C — TVC / Brand Concept Film
+# Scenario C — Product Shot, Brand Film, TVC
 
-**Trigger**: Live-action brand film >5s, or any video that needs multiple shots — lifestyle, outdoor, fashion, sports, aspirational campaigns, or product films with narrative structure. Scenario C naturally contains Scenario B-style product close-ups as segments within a larger piece.
+**Trigger**: Any live-action product or brand video without a presenter: a single product shot, a lifestyle, outdoor, fashion or sports film, an aspirational campaign, a product film with a story.
 
-**Not Scenario C if**: the user wants a presenter speaking to camera → use Scenario D. The user has a reference video to replicate → use the standalone `video-remake` skill.
+**Not Scenario C if**: the user wants a presenter speaking to camera → Scenario D. The user has a reference video to replicate → `video-remake`.
 
 ---
 
@@ -55,40 +55,22 @@ Generate as **one single task**. Write all visual stages into one prompt plus a 
 
 ---
 
-### Mode B: Multi-clip — when duration exceeds the selected model's live maximum
+### Mode B: Multi-clip — when the duration exceeds one clip of the selected model
 
-Split into segments whose durations are advertised by the selected model's live capabilities; each segment follows the same Mode A format.
-
-After all segments are approved, assemble them when media editing is available (see director's Runtime Boundary). Otherwise return the ordered clips, cut plan, and unified audio direction.
-
-Before assembly, ask whether the user has an approved BGM asset. If a segment fails, regenerate only that segment and preserve the approved outputs.
+Split into segments the model can make; each follows the Mode A format. Cut them together with the unified audio direction where you have editing; otherwise deliver the ordered clips with the cut plan. If a segment fails, regenerate only that one.
 
 ---
 
-## Phase 3: Storyboard Preview Format (Scenario C)
+## Product-Only Shot
 
-Present all shots together so the user sees the complete video in one view:
+When the product is the sole subject (no person, no story), it is one clip:
 
-```
---- 分镜预览 (N shots / total Xs) ---
+- The product stays centered, stable and in frame; lock its look and proportions with its `@material:{id}`.
+- Every selling point becomes a visible micro-action, never an adjective: "hydrating" → droplets condensing and sliding down the bottle; "premium" → a named lighting setup (rim light angle, color temperature, shadow softness); "durable" → the material under stress, recovering.
+- Camera: steady, slow and refined, macro close-up with a slow orbit; never handheld.
+- Reserve the last 2 seconds for the logo or slogan when the brand wants one.
 
-[Shot 1 | Xs | label]
-[Full prompt for shot 1]
-
-[Shot 2 | Xs | label]
-[Full prompt for shot 2]
-
-[Shot N | Xs | label]
-[Full prompt for shot N]
-
---- Asset Mapping ---
-@material:101 → [filename] → <advertised image role> (all shots)
-
---- Generation Parameters ---
-Model: [live-capability selection] | Ratio: [advertised value] | Total estimated cost: request a live estimate per segment and sum
-Note: Each shot is a separate segment; assembly requires media editing.
----
-```
+> Display the men's serum glass bottle from @material:101 at the center of the frame, translucent, proportions strictly matching the original. Crystalline droplets condense on the surface and slowly slide down the bottle. @material:102's minimalist modern space, high-contrast cool blue; a sidelight sculpts a sharp rim. The camera starts on a macro close-up and orbits slowly while pushing in. In the final 2 seconds a soft chime marks the beat as a silver logo fades in at center. No flicker, the logo never distorts, the droplets move realistically.
 
 ---
 

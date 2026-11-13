@@ -6,7 +6,7 @@ description: >
   the Renoise CLI, or fix missing RENOISE_API_KEY, ffmpeg, jq, yt-dlp, ImageMagick, or agent-browser.
 metadata:
   author: renoise
-  version: 1.0.2
+  version: 1.0.3
   category: setup
   tags: [setup, install, authentication, dependencies, renoise]
 ---
@@ -51,7 +51,7 @@ Verify by calling the `get_account` tool. When it answers, generation is ready; 
 
 ## 2. Optional: the Native CLI
 
-The CLI is needed only for the annotation board, the local helpers in `renoise-cli`, and the user's own scripts. Skip this section otherwise.
+The CLI is needed only for the annotation board and the user's own scripts. Skip this section otherwise.
 
 ### Detect, Install, or Update
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pluginVersion": "1.25.0",
+  "pluginVersion": "1.26.0",
   "skills": [
     {
       "id": "director",
@@ -9,12 +9,10 @@
       "files": [
         "skills/director/SKILL.md",
         "skills/director/commercial/INDEX.md",
-        "skills/director/commercial/scenario-b-brand.md",
         "skills/director/commercial/scenario-c-tvc.md",
         "skills/director/commercial/scenario-d-ugc.md",
         "skills/director/workflows/narrative.md",
         "skills/director/references/prompt-craft.md",
-        "skills/director/references/visual-dev.md",
         "skills/director/references/code-built-video.md"
       ],
       "requires": [
@@ -135,16 +133,6 @@
       "requires": [
         "filesystem",
         "mcp-apps"
-      ]
-    },
-    {
-      "id": "video-download",
-      "runtime": "local-cli",
-      "entry": "skills/video-download/SKILL.md",
-      "requires": [
-        "bash",
-        "filesystem",
-        "network"
       ]
     }
   ]

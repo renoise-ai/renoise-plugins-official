@@ -12,10 +12,9 @@ AI video production skills by Renoise — creative direction, generation, analys
 | **Build Storyboard** (`storyboard-sheet`) | Portable script/novel adaptation into review sheets, shot lists, first frames, and video prompts |
 | `video-fission` | Portable controlled-variant experiments from one owner-authorized source video |
 | `video-remake` | Portable reference-video recreation with controlled character, product, brand, prop, or scene replacement |
-| `renoise-cli` | Native CLI for your own terminal, scripts, and CI, plus local production helpers (not a generation path in conversations) |
+| `renoise-cli` | Native CLI for your own terminal, scripts, and CI, and the rn kit for local editing and checks (not a generation path in conversations) |
 | **Setup / Account** (`renoise-setup`) | Connect the Renoise tools (browser sign-in), optional CLI install/update, and readiness checks |
 | **Renoise Annotation Board** (`canvas`) | Local image/frame annotation board for snapshots and structured revision handoff |
-| `video-download` | Local-only downloader utility (yt-dlp + Douyin/TikTok fallback) |
 
 ## Installation
 
@@ -122,6 +121,14 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 | `RENOISE_WHITEBOARD_MAX_VIDEO_BYTES` | Optional whiteboard limit | Maximum imported MP4/WebM byte size. Defaults to 262144000 (250 MB); accepted range is 1 MB–2 GB. |
 
 ## Version & upgrading
+
+### 1.26.0
+
+- The skills keep only craft: approval, task tracking, delivery format and the step-by-step host plumbing ("hand it to the active host workflow") now live in the Renoise tools' instructions and the agent's own, so `director`, `video-remake`, `video-fission` and `storyboard-sheet` are about a third shorter and no longer disagree with them.
+- The agent checks picture and sound itself (stills, contact sheets, measurements, transcription, `rn` checks); no skill tells it that it cannot watch or listen or hands the check to the user.
+- `director`: Scenario B (single product shot) is part of Scenario C; the character, prop and location anchors from `visual-dev.md` are part of the narrative workflow.
+- `video-fission` routes its model through `model-routing` among those that take a reference video, instead of requiring MiniMax H3 Max; `storyboard-sheet` infers the output instead of opening with a menu.
+- Removed `video-download` (yt-dlp is named where a link is used) and the `renoise-cli` helper scripts: local editing and checks use the rn kit (`uv tool install "renoise-kit[all]"`).
 
 ### 1.25.0
 

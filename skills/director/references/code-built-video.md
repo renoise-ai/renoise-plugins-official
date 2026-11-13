@@ -49,12 +49,12 @@ Read this when the frames show text, numbers, UI, diagrams, logos, geometric mot
 
 ## Verify Before Delivering
 
-You cannot watch or hear the result, so check it this way, fix, and re-render at most three times; then deliver and name what still looks off.
+Check the render yourself, picture and sound, fix, and re-render at most three times; then deliver and name what still looks off.
 
 1. The render exits cleanly; ffprobe shows the planned duration, resolution and frame rate.
-2. Export the first, middle and last frame of every scene and a contact sheet, and look at them: every word spelled right and fully inside the safe area, nothing clipped or overlapping, numbers matching the data, colors and logo correct.
-3. Measure loudness and confirm the audio covers the full duration.
-4. Ask the user to review motion and sound, which stills cannot show.
+2. Look at the first, middle and last frame of every scene and a contact sheet: every word spelled right and fully inside the safe area, nothing clipped or overlapping, numbers matching the data, colors and logo correct.
+3. Check motion where stills cannot show it: frames a few apart around every move and cut, so speed, easing and direction read as planned.
+4. Check sound: loudness, audio over the full duration, and every effect and cut landing on its event or beat (compare the measured onsets with the timeline).
 
 ## Examples
 

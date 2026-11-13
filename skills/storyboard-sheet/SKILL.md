@@ -6,7 +6,7 @@ description: >
   plans. Supports episode-level review sheets and shot-by-shot planning.
 metadata:
   author: renoise
-  version: 0.4.1
+  version: 0.5.0
   category: video-production
   tags: [storyboard, short-drama, adaptation, image-generation, video-generation, portable]
 ---
@@ -15,24 +15,15 @@ metadata:
 
 Turn source text into usable visual planning for short drama and AI video generation. Do not paste raw novel/script text into image prompts; first adapt it into visual beats.
 
-Use only capabilities exposed by the current host. Planning works without generation capability. If the user asks to generate outputs, query live capabilities and hand the complete plan to the active host execution workflow. If generation is unavailable, return the complete plan and prompts in the conversation; never guess commands or require host filesystem access.
+Planning needs no generation. When the user asks for images or video too, generate them with the Renoise tools; without them, return the complete plan and prompts in the conversation.
 
 ```text
 source → adaptation bible → episode beats → shot list/sheet plan → references → prompts → optional generation → QA → targeted rerun
 ```
 
-## 1. First Ask: What Output?
+## 1. Choose the Output
 
-If unclear, ask once:
-
-```text
-你要哪种输出？
-A. 每集一张 storyboard sheet，用于预览/审稿
-B. 每个 shot 单独一张图，用于后续视频生成
-C. 两者都要：先 sheet 审稿，再拆 shot 图和视频 prompt
-```
-
-Default for short-drama/video work: B or C, not only a sheet.
+Infer it from the request: a sheet per episode for review or a pitch (A), one image and one video prompt per shot for generation (B), or both, the sheet first (C). For short-drama or video work without a stated preference, use B or C, not only a sheet.
 
 ### A. Storyboard Sheet / 审稿预览
 
@@ -100,7 +91,7 @@ Rules:
 
 ## 3. Character and Scene References
 
-A character appearing more than once needs one approved visual anchor; do not rely on text description alone. Use a user-authorized image or create a reference through the host's generation flow, show it for approval, and reuse the same resulting material through a role advertised by the selected model.
+A character appearing more than once needs one visual anchor, not a text description alone: the user's image, or a reference you generate, reused as the same material in every shot.
 
 Character reference prompt:
 
@@ -114,13 +105,7 @@ Character reference prompt:
 
 For recurring locations, create a scene reference only when needed. Too many references can confuse layout and identity.
 
-Before optional generation, read `../model-routing/SKILL.md`, then:
-
-1. Query live image-model capabilities.
-2. Preserve a user-selected model; otherwise choose the best available specialist for the shot/sheet task and use the advertised default only as fallback.
-3. Apply that model's prompting profile and use only advertised ratio, resolution, duration, material roles, and limits.
-4. Hand the complete prompt, references, and parameters to the active host execution workflow.
-5. Record any task identifier returned by the host before waiting or polling.
+Before generating, read `../model-routing/SKILL.md` to choose the model and write its prompt; keep a model the user named.
 
 ## 4. Output Templates
 

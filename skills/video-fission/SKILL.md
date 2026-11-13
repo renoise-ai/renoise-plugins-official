@@ -7,85 +7,48 @@ description: >
   source first, then resolve what should vary before proposing any generation.
 metadata:
   author: renoise
-  version: 0.2.3
+  version: 0.3.0
   category: video-production
   tags: [video, fission, variants, experimentation, portable]
 ---
 
 # Video Fission
 
-Create a controlled batch of variants from one source video. This is an experiment, not a multi-shot production workflow: vary one axis, or at most two, and lock everything else.
+Create a controlled batch of variants from one source video. This is an experiment, not a multi-shot production: vary one axis, or at most two, and lock everything else.
 
-## Runtime Boundary
+## Source
 
-Use only capabilities exposed by the current host. The source must be one conversation attachment, material, task result, or other video that the host identifies as owner-authorized. A video the user links to counts: with a shell, download it (yt-dlp), save it as a material with the host's upload tools, and use that material; ask for the file only when the download fails or you have no shell. Never invent a source, request a host filesystem path, or use more than one source video.
+One owner-authorized source video: an attachment, a material, a task result, or a link (with a shell, download it with yt-dlp and save it as a material; ask for the file only when that fails or you have no shell). Never use more than one source video.
 
-Live model capabilities are authoritative for availability, roles, role combinations, limits, duration, ratio, resolution, and audio controls. Inspect them for every fission run; model names below are routing preferences, not permission to assume a capability.
+## 1. Analyze First
 
-## Hard Gates
+Analyze the source before deciding what varies, and report in the user's language: subject, setting, actions, camera, composition, lighting, style, pacing and edit structure, duration, aspect ratio, audio and dialogue; what looks fixed and what could plausibly vary; and what is uncertain. With a shell, measure duration and cuts yourself as well.
 
-1. **Analyze before resolving the direction.** Once the source is available, use the host's video-analysis capability before finalizing what to vary. If analysis is unavailable or fails, stop. Analysis creates no generation task.
-2. **Clarify only when blocked.** If the initial request already names a usable, safe experimental axis, use it after analysis without restating it for text confirmation. Ask one focused question only when the axis is absent, unsafe, or ambiguous; allow a second axis only when the user explicitly needs it.
-3. **Default the count.** Use **4 outputs** when no count is supplied; do not ask merely to confirm that default. Four is not a hard cap: accept another reasonable count of at least two, constrained only by live service limits, the total estimate, and the user's budget.
-4. **Use one logical batch.** Hand the complete disclosed experiment to the active host execution workflow. Use a native batch primitive when the host exposes one; otherwise follow its documented ordered execution path. Do not invent tool names or execution interfaces.
+If the request already names a usable axis, map the analysis to it and go on without asking. Ask one focused question only when the axis is missing or ambiguous, offering axes this clip supports (action, camera, pacing, atmosphere and light, performance, transformation) with your recommendation. Allow a second axis only when the user needs it.
 
-## 1. Analyze the Source
+Use **4 outputs** unless the user names another count of at least two; do not ask to confirm the default.
 
-Report the analysis in the user's language, including:
+## 2. One Model, the Source as Reference
 
-- subject, setting, actions, camera, composition, lighting, style, pacing/edit structure, duration, aspect ratio, and audio/dialogue;
-- dimensions that appear fixed and plausible dimensions to vary;
-- uncertain or inferred details as warnings.
+Choose the model with `../model-routing/SKILL.md` among those whose live capabilities take `reference_video` (MiniMax H3 Max suits variants of one source). Use the analyzed source as every variant's sole `reference_video` and call it `Video 1` in every prompt. Do not replace it with an extracted frame. If the source is longer than the model accepts, trim it to the limit where you have a shell, keeping the part that matters most, say which part you kept, and analyze the trimmed version; otherwise give its duration and the limit and ask the user for a shorter source.
 
-Do not resolve an unstated direction until this report exists. If the request already supplies a usable axis, disclose how the analysis maps to it and proceed. Otherwise ask one focused question:
+## 3. The Variant Matrix
 
-> Which direction should the variants explore? I recommend one axis from this clip's analysis; we can use at most two. The default is 4 outputs, or name another reasonable count.
-
-Offer only source-relevant directions, such as action/motion, camera treatment, pacing, atmosphere/lighting, performance, or transformation. Do not preselect an absent direction for the user.
-
-## 2. Use the Source Video Directly
-
-This workflow has one generation path:
-
-1. Select MiniMax H3 Max (`hailuo-h3-max`) only if the live capability advertises `reference_video`.
-2. Use the exact owner-authorized source analyzed in Step 1 as every variant's sole `reference_video` input. If the source reference changes, analyze the replacement before continuing.
-3. Refer to that source as `Video 1` in every generation prompt.
-
-Do not extract or upload a frame, and do not replace the source with a `first_frame`. Before handing off paid execution, compare the analyzed source with the live capability's reference-video duration and count limits. If the source exceeds a duration limit, report its measured duration and the live limit when available, ask the user to shorten it below that limit with an editor available to them, then require the shortened source to be referenced and analyzed again. If H3 Max reference-video generation is not live or another source limit is violated, stop and explain the incompatibility. Do not assume a particular host editor, invent another mode, or silently route to another model.
-
-## 3. Design the Experiment
-
-Before submission, show a compact variant matrix in the user's language:
+Show it before generating:
 
 | Variant | Axis value(s) | Distinct hypothesis | Locked dimensions |
 |---|---|---|---|
 | V1 | ... | If ..., then ... because ... | ... |
 
-Rules:
-
-- Use one axis by default and never more than two.
-- Give every variant a genuinely distinct, testable hypothesis; do not use cosmetic synonyms.
-- Lock all unselected dimensions across every variant, including model, source video, subject identity, composition, duration, ratio, resolution, audio mode, dialogue, and output controls unless one is the selected axis.
-- Keep the same prompt skeleton and change only the clauses that implement the selected axis values.
-- If two axes are used, choose intentional combinations; do not create an unrequested Cartesian product.
-- Derive every parameter and material role from the selected model's live capability.
+- Every variant tests a genuinely distinct hypothesis; no cosmetic synonyms.
+- Lock everything outside the axis across all variants: model, source, subject identity, composition, duration, ratio, resolution, audio mode, dialogue and output settings.
+- Keep one prompt skeleton and change only the clauses that carry the axis values.
+- With two axes, choose intentional combinations, not the full product.
 
 ## Dialogue and Language
 
-Use the user's language for analysis, questions, matrices, plan text, and results. Prompts are English by default only when they contain no speech.
+Write analysis, questions, the matrix and results in the user's language. Prompts without speech may be English. Speech keeps the requested or safely inferable spoken language, verbatim, with the whole prompt in that language when it is dialogue-dense; unless dialogue is the axis, lock its text, speaker, delivery and language across variants.
 
-If any variant contains dialogue, voiceover, or narration, use the explicitly requested or safely inferable spoken language; clarify it only when ambiguous. Keep every spoken line verbatim in that language; never translate it. For dialogue-dense variants, keep the whole prompt in the spoken language. Unless dialogue is the selected axis, lock its text, speaker, delivery, and spoken language across all variants.
+## 4. Generate as One Batch
 
-## 4. Hand Off One Logical Batch
-
-After the direction, count, hypotheses, prompts, and any spoken language are resolved, hand the complete variant plan to the active host execution workflow. Pass the source aspect ratio, or the closest ratio supported by H3 Max. Preserve any source provenance handle exposed by the host so outputs remain linked to their source where supported.
-
-The execution handoff must:
-
-- keep the whole experiment reviewable as one disclosed plan;
-- provide the actual parameters needed for per-variant and total estimation;
-- submit the source video directly as every task's `reference_video`;
-- follow the host's approval, concurrency, idempotency, and task-tracking rules;
-- preserve variant order and never repeat paid execution after interruption.
-
-For revisions, ask which axis value or failed variant to change only when the request is ambiguous, preserve accepted outputs, and hand only the revised experiment back to the host.
+Generate all variants in one `create_tasks` call with the source aspect ratio (or the closest the model takes), in matrix order. For revisions, change only the named axis value or failed variant and keep the rest.
