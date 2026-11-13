@@ -7,9 +7,8 @@ description: >
   motion graphics, kinetic typography, explainers, data, map or UI videos, logo
   reveals and slideshows of the user's media, such as "make a video", "generate video",
   "TikTok product video", "做个视频", "短剧", "广告片", "带货视频", or
-  "口播视频". Also use when a script or shot plan is requested as part of
-  producing the actual video. For planning-only
-  storyboards, shot lists, or script adaptation, use storyboard-sheet instead.
+  "口播视频", and for a script, storyboard, shot list or short-drama board,
+  with or without the video.
   Do NOT use for explicit video fission or multiple controlled variants from one
   supplied source video; use video-fission. Do NOT use for recreating, remixing,
   复刻, or 剪同款 from one supplied reference video; use video-remake. Source-free
@@ -17,9 +16,9 @@ description: >
   of existing footage.
 metadata:
   author: renoise
-  version: 0.11.0
+  version: 0.12.0
   category: video-production
-  tags: [director, creative, video, product, ecommerce, short-film, narrative, story, portable]
+  tags: [director, creative, video, product, ecommerce, short-film, narrative, story, storyboard, portable]
 ---
 
 # Video Director
@@ -28,19 +27,15 @@ You are the user's creative director for video made by generation, by code, or b
 
 ## Load Only the Active Workflow
 
-Choose the first matching route before reading more files:
-
 | Request | Route |
 |---|---|
 | Multiple controlled variants from one supplied source / video fission | Stop and use `video-fission` |
 | Reference-video remake / 复刻 / 剪同款 | Stop and use `video-remake` |
-| Presenter / 口播 / 带货 / 测评 | Read `commercial/INDEX.md`, then Scenario D |
-| Live-action product shot, product ad, brand film, TVC | Read `commercial/INDEX.md`, then Scenario C |
+| Product shot, product ad, brand film, TVC, UGC, presenter / 口播 / 带货 / 测评 | Read `references/commercial.md` |
 | Text, numbers, charts, maps, UI or app demo, diagrams, logo reveal, slideshow of the user's media, explainer; an ad or brand film for software, an app or a service, or for a brand whose own look is UI, type or illustration | Read `references/code-built-video.md`; generate only the footage or images it needs |
-| Narrative, drama, comedy, short film, montage, MV, adaptation | Read `workflows/narrative.md` |
-| Planning-only storyboard or shot list | Stop and use `storyboard-sheet`; return here only for generated media |
+| Narrative, drama, comedy, short film, short drama, montage, MV, adaptation; a storyboard or shot list on its own | Read `workflows/narrative.md` |
 
-Do not load every workflow "just in case." Commercial and narrative work also reads `references/code-built-video.md` when you build titles, captions, data or an end card in code. Before choosing a model or writing its prompt, read `../model-routing/SKILL.md`; keep a model the user named.
+Before writing any generation prompt, read `references/prompt-craft.md` and `../model-routing/SKILL.md`, which picks the model and gives its prompt format; keep a model the user named. Commercial and narrative work also reads `references/code-built-video.md` when you build titles, captions, data or an end card in code.
 
 ## Plan, Then Make
 
@@ -60,7 +55,7 @@ For multi-shot work:
 
 - A character in two or more segments reuses one design-sheet material (the user's, or one you generate). A text description plus a drift warning is not enough.
 - Lock recurring props, wardrobe and locations; a plot-driven change gets its own transformation shot.
-- Freeze one Style Bible (`art style + camera language + color grade + NEGATIVE line`) and prepend it verbatim to every segment.
+- Freeze one Style Bible (`art style + camera language + color grade`) and prepend it verbatim to every segment.
 - Plan the cuts before generating (the Transition Table in `workflows/narrative.md`): intermediate segments end on a motion or composition hook; only the last one may settle on `frame holds steady`.
 - One mood per segment; never combine contradictory tone or color instructions.
 

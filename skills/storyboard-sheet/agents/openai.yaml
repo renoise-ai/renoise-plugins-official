@@ -1,4 +1,0 @@
-interface:
-  display_name: "Build Storyboard"
-  short_description: "Turn scripts into review sheets and shot plans"
-  default_prompt: "Use $storyboard-sheet to turn my script into a storyboard."

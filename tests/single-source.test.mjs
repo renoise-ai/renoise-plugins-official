@@ -28,7 +28,8 @@ const removed = [
   'openai-plugin',
   'skills/video-download',
   'skills/renoise-cli/scripts',
-  'skills/director/commercial/scenario-b-brand.md',
+  'skills/director/commercial',
+  'skills/storyboard-sheet',
   'skills/director/references/visual-dev.md',
 ];
 
@@ -45,7 +46,6 @@ test('skill manifest separates portable creative methods from local execution', 
     'model-routing',
     'renoise-cli',
     'renoise-setup',
-    'storyboard-sheet',
     'video-fission',
     'video-remake',
   ]);
@@ -53,7 +53,6 @@ test('skill manifest separates portable creative methods from local execution', 
   assert.equal(byId.get('creative-direction').runtime, 'portable');
   assert.deepEqual(byId.get('creative-direction').requires, []);
   assert.equal(byId.get('model-routing').runtime, 'portable');
-  assert.equal(byId.get('storyboard-sheet').runtime, 'portable');
   assert.equal(byId.get('video-fission').runtime, 'portable');
   assert.equal(byId.get('video-remake').runtime, 'portable');
   for (const id of ['renoise-cli', 'renoise-setup']) {
@@ -63,7 +62,6 @@ test('skill manifest separates portable creative methods from local execution', 
   assert.ok(byId.get('canvas').requires.includes('mcp-apps'));
   assert.ok(byId.get('director').requires.includes('tasks.create'));
   assert.ok(byId.get('director').optional.includes('media.analyze'));
-  assert.ok(byId.get('storyboard-sheet').optional.includes('tasks.create'));
   assert.ok(byId.get('video-fission').requires.includes('media.analyze'));
   assert.ok(byId.get('video-fission').requires.includes('tasks.create'));
   assert.ok(byId.get('video-remake').requires.includes('media.analyze'));
@@ -199,7 +197,7 @@ test('model routing keeps only useful specialists without replacing capabilities
   ]) assert.ok(!routing.includes(`\`${obsolete}\``), `${obsolete} should not be routed`);
   assert.match(routing, /Route only to the newest live generation/);
   assert.match(routing, /OmniHuman 2\.0 — the audio drives the performance/);
-  assert.match(readFileSync('skills/director/commercial/scenario-d-ugc.md', 'utf8'), /`omnihuman-2\.0`/);
+  assert.match(readFileSync('skills/director/references/commercial.md', 'utf8'), /`omnihuman-2\.0`/);
   assert.match(routing, /generic GPT Image request to GPT Image 2\.6 Sunburst/);
   assert.match(routing, /`gpt-image-2\.6-sunburst` with `outputFormat: "gif"`/);
   assert.match(routing, /use Flare when explicitly requested/i);
@@ -217,8 +215,7 @@ test('prompt examples use canonical material ID tokens', () => {
   const directorFiles = [
     promptCraft,
     readFileSync('skills/video-remake/SKILL.md', 'utf8'),
-    ...['INDEX.md', 'scenario-c-tvc.md', 'scenario-d-ugc.md']
-      .map((file) => readFileSync(`skills/director/commercial/${file}`, 'utf8')),
+    readFileSync('skills/director/references/commercial.md', 'utf8'),
   ].join('\n');
   assert.match(promptCraft, /@material:101/);
   assert.doesNotMatch(directorFiles, /@(?:Image|Video)\s*\d/i);
@@ -270,7 +267,6 @@ test('package metadata is the manifest source of truth', () => {
 test('desktop metadata exposes portable entries plus setup', () => {
   const entries = {
     director: 'Create with Renoise',
-    'storyboard-sheet': 'Build Storyboard',
     'renoise-setup': 'Setup / Account',
   };
   for (const [skill, displayName] of Object.entries(entries)) {
@@ -359,20 +355,21 @@ test('setup keeps managed CLI current and still gates manual install', () => {
 test('director stays a thin router of craft', () => {
   const director = readFileSync('skills/director/SKILL.md', 'utf8');
   const narrative = readFileSync('skills/director/workflows/narrative.md', 'utf8');
-  const index = readFileSync('skills/director/commercial/INDEX.md', 'utf8');
+  const promptCraft = readFileSync('skills/director/references/prompt-craft.md', 'utf8');
   const files = readJSON('skills/manifest.json').skills.find(({ id }) => id === 'director').files;
   assert.ok(Buffer.byteLength(director) < 8_000, 'director entry point should stay under 8 KB');
-  assert.ok(files.includes('skills/director/workflows/narrative.md'));
-  assert.ok(files.includes('skills/director/references/code-built-video.md'));
-  assert.match(director, /commercial\/INDEX\.md/);
-  assert.match(director, /workflows\/narrative\.md/);
-  assert.match(director, /references\/code-built-video\.md/);
-  assert.match(director, /storyboard-sheet/);
+  for (const path of files) assert.ok(Buffer.byteLength(readFileSync(path, 'utf8')) < 8_000, `${path} should stay under 8 KB`);
+  for (const file of ['workflows/narrative.md', 'references/commercial.md', 'references/prompt-craft.md', 'references/code-built-video.md']) {
+    assert.ok(files.includes(`skills/director/${file}`));
+    assert.ok(director.includes(file), `director routes to ${file}`);
+  }
   assert.match(director, /\*\*Generate or build\.\*\*[\s\S]*never ask a video model for exact text or numbers/);
   assert.match(director, /multiple controlled variants from one supplied source/i);
-  assert.match(index, /scenario-d-ugc\.md[\s\S]*scenario-c-tvc\.md/);
+  assert.match(director, /storyboard or shot list on its own[\s\S]*workflows\/narrative\.md/, 'plans and storyboards are part of the narrative workflow');
   assert.match(narrative, /Character design sheet for \[NAME\]/, 'the anchors live in the narrative workflow');
-  assert.doesNotMatch([director, narrative].join('\n'), /wait for (?:explicit )?(?:approval|confirmation)/i);
+  assert.match(narrative, /## Plan Only/);
+  assert.match(promptCraft, /model-routing[\s\S]*wins/, 'the selected model\'s brief overrides generic craft');
+  assert.doesNotMatch([director, narrative, promptCraft].join('\n'), /NEGATIVE line|wait for (?:explicit )?(?:approval|confirmation)/i);
 });
 
 test('portable skills hold craft, not host plumbing or capability limits', () => {

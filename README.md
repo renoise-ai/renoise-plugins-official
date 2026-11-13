@@ -9,7 +9,6 @@ AI video production skills by Renoise — creative direction, generation, analys
 | **Create with Renoise** (`director`) | Portable creative direction for product ads, short films, e-commerce, drama, and comedy |
 | `model-routing` | Internal task-to-model router and model-specific prompting guide |
 | `creative-direction` | Internal guide the director reads before planning an original piece: find the idea in the subject, avoid the default AI-video version, check the plan before spending |
-| **Build Storyboard** (`storyboard-sheet`) | Portable script/novel adaptation into review sheets, shot lists, first frames, and video prompts |
 | `video-fission` | Portable controlled-variant experiments from one owner-authorized source video |
 | `video-remake` | Portable reference-video recreation with controlled character, product, brand, prop, or scene replacement |
 | `renoise-cli` | Native CLI for your own terminal, scripts, and CI, and the rn kit for local editing and checks (not a generation path in conversations) |
@@ -124,11 +123,13 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 
 ### 1.26.0
 
-- The skills keep only craft: approval, task tracking, delivery format and the step-by-step host plumbing ("hand it to the active host workflow") now live in the Renoise tools' instructions and the agent's own, so `director`, `video-remake`, `video-fission` and `storyboard-sheet` are about a third shorter and no longer disagree with them.
+- The skills keep only craft: approval, task tracking, delivery format and the step-by-step host plumbing ("hand it to the active host workflow") now live in the Renoise tools' instructions and the agent's own, so `director`, `video-remake` and `video-fission` no longer disagree with them.
 - The agent checks picture and sound itself (stills, contact sheets, measurements, transcription, `rn` checks); no skill tells it that it cannot watch or listen or hands the check to the user.
-- `director`: Scenario B (single product shot) is part of Scenario C; the character, prop and location anchors from `visual-dev.md` are part of the narrative workflow.
-- `video-fission` routes its model through `model-routing` among those that take a reference video, instead of requiring MiniMax H3 Max; `storyboard-sheet` infers the output instead of opening with a menu.
-- Removed `video-download` (yt-dlp is named where a link is used) and the `renoise-cli` helper scripts: local editing and checks use the rn kit (`uv tool install "renoise-kit[all]"`).
+- `director` is a router over four short files. `references/prompt-craft.md` is rewritten from the current official guides (Wan 3.0, Kling 4.0, Gemini Omni) and tested Seedance 2.5 practice: start short and add control where it fails, one action and one named camera move per shot, one job per reference with what not to take, music added at the edit, positive constraints instead of negative lists. Structure, length and timestamps belong to the selected model's brief in `model-routing`. The six-dimension formula, the per-scenario prompt templates and the 15-second mega-prompt timeline are gone.
+- `references/commercial.md` replaces `commercial/` (INDEX and Scenarios B, C, D): selling points as actions, product shots and brand films, and the UGC hooks, demos and authenticity rules.
+- `storyboard-sheet` is part of `director`'s narrative workflow (short-drama structure, storyboard sheets and shot lists), together with the character, prop and location anchors that were in `visual-dev.md`.
+- `video-fission` routes its model through `model-routing` among those that take a reference video, instead of requiring MiniMax H3 Max.
+- Removed `storyboard-sheet` (now in `director`), `video-download` (yt-dlp is named where a link is used) and the `renoise-cli` helper scripts: local editing and checks use the rn kit (`uv tool install "renoise-kit[all]"`).
 
 ### 1.25.0
 

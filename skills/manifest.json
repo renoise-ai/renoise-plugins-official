@@ -8,10 +8,8 @@
       "entry": "skills/director/SKILL.md",
       "files": [
         "skills/director/SKILL.md",
-        "skills/director/commercial/INDEX.md",
-        "skills/director/commercial/scenario-c-tvc.md",
-        "skills/director/commercial/scenario-d-ugc.md",
         "skills/director/workflows/narrative.md",
+        "skills/director/references/commercial.md",
         "skills/director/references/prompt-craft.md",
         "skills/director/references/code-built-video.md"
       ],
@@ -91,20 +89,6 @@
       ],
       "requires": [
         "models.read"
-      ]
-    },
-    {
-      "id": "storyboard-sheet",
-      "runtime": "portable",
-      "entry": "skills/storyboard-sheet/SKILL.md",
-      "files": [
-        "skills/storyboard-sheet/SKILL.md"
-      ],
-      "requires": [],
-      "optional": [
-        "models.read",
-        "tasks.estimate",
-        "tasks.create"
       ]
     },
     {
