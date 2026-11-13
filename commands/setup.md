@@ -73,6 +73,4 @@ Tell the user the existing statusLine is preserved and merged.
 
 Return the universal readiness summary, then add:
 
-> ✅ Claude Code statusLine configured. Restart Claude Code to activate it.
->
-> Use `/renoise:add-credits` anytime to top up.
+> ✅ Claude Code statusLine configured. Restart Claude Code to activate it. Top up credits at https://www.renoise.ai/pricing.

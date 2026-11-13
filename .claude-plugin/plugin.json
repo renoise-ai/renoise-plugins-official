@@ -17,8 +17,7 @@
     "renoise"
   ],
   "commands": [
-    "./commands/setup.md",
-    "./commands/add-credits.md"
+    "./commands/setup.md"
   ],
   "mcpServers": [
     "./mcp.json",

@@ -119,6 +119,31 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 | `RENOISE_TASK_RESULTS_DIR` | Whiteboard tests only | Explicit local test adapter for `<taskId>.json` fixtures. The production server bundle compiles this adapter away; it is honored only by the unminified test build. Production insertion calls `renoise task result <id> --json`. |
 | `RENOISE_WHITEBOARD_MAX_VIDEO_BYTES` | Optional whiteboard limit | Maximum imported MP4/WebM byte size. Defaults to 262144000 (250 MB); accepted range is 1 MB–2 GB. |
 
+## Model routing sources
+
+What `skills/model-routing` is based on; kept here for maintainers, so the agent does not load it with every routing decision.
+
+Reviewed 2026-10-13 against live Renoise model contracts. Rankings are directional and decay quickly; live capabilities and task-specific tests override them.
+
+Primary guidance:
+
+- OpenAI GPT Image: https://openai.com/index/introducing-chatgpt-images-2-5/, https://developers.openai.com/api/docs/models/gpt-image-2.5-flare, https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst, https://developers.openai.com/api/docs/guides/image-generation, and https://developers.openai.com/cookbook/examples/multimodal/image-gen-models-prompting-guide
+- Google Gemini image: https://ai.google.dev/gemini-api/docs/image-generation and https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-nano-banana
+- Midjourney prompting/version docs: https://docs.midjourney.com/hc/en-us/articles/32023408776205-Prompt-Basics, https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version, and https://updates.midjourney.com/version-8-2/
+- ByteDance Seedream: https://seed.bytedance.com/en/blog/deeper-thinking-more-accurate-generation-introducing-seedream-5-0-lite and https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro and https://seed.bytedance.com/en/blog/more-realistic-images-more-stable-editing-across-100-rounds-introducing-seedream-5-5
+- xAI Imagine image/video: https://docs.x.ai/developers/model-capabilities/imagine and https://docs.x.ai/developers/model-capabilities/video/generation
+- Wan 3.0 / Wan 3.0 Prime: live Renoise model guidance and per-second credit pricing (2026-10-13).
+- BytePlus Seedance 2.5 and 2.0 prompt guides: https://docs.byteplus.com/en/docs/ModelArk/2607689 and https://docs.byteplus.com/en/docs/ModelArk/2222480
+- MiniMax H3 family: https://www.minimax.io/blog/minimax-h3, https://platform.minimax.io/docs/guides/video-generation, https://huggingface.co/MiniMaxAI/MiniMax-H3/tree/main/docs, and https://blog.fal.ai/introducing-h3-max-by-fal/
+- Topaz Starlight Precise 2.5: https://developer.topazlabs.com/video-models/starlight/starlight-precise-2.5
+- FLUX 3 Video / Max: https://docs.bfl.ml/flux_3/flux3_overview and live Renoise model guidance and per-second credit pricing (2026-10-23)
+- OmniHuman 2.0: live Renoise model guidance and the BytePlus OmniHuman 2.0 contract behind it (2026-10-23).
+- Gemini Omni: https://ai.google.dev/gemini-api/docs/omni
+- Lyria: https://ai.google.dev/gemini-api/docs/music-generation, https://deepmind.google/models/lyria/prompt-guide/, and https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-lyria-3-pro
+- Seed Audio: https://seed.bytedance.com/en/blog/from-speech-to-audio-creation-introducing-the-seed-audio-1-0-audio-creation-model and https://docs.byteplus.com/en/docs/byteplusvoice/seedaudio-01
+- Mureka Song 9 and ElevenLabs Sound Effects: live Renoise model guidance (2026-10-23), https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html, and https://elevenlabs.io/docs/capabilities/sound-effects
+- Independent preference evidence: https://artificialanalysis.ai/image/leaderboard/text-to-image, https://artificialanalysis.ai/image/leaderboard/editing, https://artificialanalysis.ai/video/leaderboard/text-to-video, https://artificialanalysis.ai/video/leaderboard/image-to-video, and https://artificialanalysis.ai/video/leaderboard/video-editing
+
 ## Version & upgrading
 
 ### 1.26.0
@@ -129,6 +154,7 @@ Plugin maintainers can run `npm run validate:plugin` to execute the official plu
 - `references/commercial.md` replaces `commercial/` (INDEX and Scenarios B, C, D): selling points as actions, product shots and brand films, and the UGC hooks, demos and authenticity rules.
 - `storyboard-sheet` is part of `director`'s narrative workflow (short-drama structure, storyboard sheets and shot lists), together with the character, prop and location anchors that were in `visual-dev.md`.
 - `video-fission` routes its model through `model-routing` among those that take a reference video, instead of requiring MiniMax H3 Max.
+- `model-routing`'s research sources move to this README ("Model routing sources"), out of what the agent loads. The `/renoise:add-credits` command is removed; the statusLine and setup point to https://www.renoise.ai/pricing.
 - Removed `storyboard-sheet` (now in `director`), `video-download` (yt-dlp is named where a link is used) and the `renoise-cli` helper scripts: local editing and checks use the rn kit (`uv tool install "renoise-kit[all]"`).
 
 ### 1.25.0
