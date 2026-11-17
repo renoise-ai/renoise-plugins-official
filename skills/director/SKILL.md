@@ -61,7 +61,7 @@ For multi-shot work:
 
 ## Moderation
 
-Do not pre-screen prompts or media, and never infer a moderation decision from politics, religion, copyright, public figures or analysis warnings. Continue normally unless a tool returns an explicit content-review error (`INPUT_*` / `OUTPUT_*`); then report that error and stop, without retrying the paid operation or suggesting a bypass. Choosing a video model under the remake routing rule is not a pre-screen.
+Do not pre-screen prompts or media, and never infer a moderation decision from politics, religion, copyright, public figures or analysis warnings. Continue normally unless a tool returns an explicit content-review error (`INPUT_*` / `OUTPUT_*`); then report that error and stop, without retrying the paid operation or suggesting a bypass. Choosing a video model under the remake routing rule is not a pre-screen, and neither is keeping a released song out of generated audio when the analysis warns about one; an `OUTPUT_AUDIO_SENSITIVE` failure is a soundtrack copyright match, handled as `video-remake` describes, not a stop.
 
 ## Check
 
