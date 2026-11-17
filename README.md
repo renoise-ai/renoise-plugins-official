@@ -146,6 +146,10 @@ Primary guidance:
 
 ## Version & upgrading
 
+### 1.27.1
+
+- `video-remake` works around failures itself before involving the user: an `OUTPUT_AUDIO_SENSITIVE` failure is redone right away without the song, keeping the song out of the audio is the agent's call, the source's own track goes back in the edit by default, and a source too long for one generation without a shell is remade in the part that fits. What it settled on its own is named in one line at delivery.
+
 ### 1.27.0
 
 - `video-remake` keeps a released song out of generated audio. When `analyze_media` warns that the source's music sounds like a commercial song, the remake mutes a copy of the source for the reference (or turns generated audio off) and puts the sound back in the edit: the source's own track when the user wants it, otherwise a music bed. Seedance models fail such tasks with `OUTPUT_AUDIO_SENSITIVE` after minutes of waiting. Other models do not check, but a result that imitates the song can still be claimed when posted.
