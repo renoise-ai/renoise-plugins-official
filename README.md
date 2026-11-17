@@ -146,6 +146,11 @@ Primary guidance:
 
 ## Version & upgrading
 
+### 1.27.0
+
+- `video-remake` keeps a released song out of generated audio. When `analyze_media` warns that the source's music sounds like a commercial song, the remake mutes a copy of the source for the reference (or turns generated audio off) and puts the sound back in the edit: the source's own track when the user wants it, otherwise a music bed. Seedance models fail such tasks with `OUTPUT_AUDIO_SENSITIVE` after minutes of waiting. Other models do not check, but a result that imitates the song can still be claimed when posted.
+- `OUTPUT_AUDIO_SENSITIVE` is no longer a stop: the remake explains it is the soundtrack, not the picture, and redoes it once without the song. `director` says the same, and that acting on the music warning is not a pre-screen.
+
 ### 1.26.0
 
 - The skills keep only craft: approval, task tracking, delivery format and the step-by-step host plumbing ("hand it to the active host workflow") now live in the Renoise tools' instructions and the agent's own, so `director`, `video-remake` and `video-fission` no longer disagree with them.

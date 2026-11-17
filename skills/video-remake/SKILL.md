@@ -7,7 +7,7 @@ description: >
   video with controlled replacements. The source video must remain attached.
 metadata:
   author: renoise
-  version: 0.3.0
+  version: 0.4.0
   category: video-production
   tags: [video, remake, replication, replacement, portable, measured]
 ---
@@ -82,7 +82,16 @@ Show the plan with the source summary, each slot and where it comes from, the ch
 
 ## Phase 3 — Final Generation
 
-Replace every `{{slot_id}}` with its slot's `@material:{id}` token, attach the source as reference video and every slot as an image reference, check the combined counts and roles against the model's live limits, and add the source lock above. Keep the source's dialogue only when the user wants it. No placeholder may remain. Show the final prompt, the source and slot mapping, the parameters and the estimate, then generate.
+Replace every `{{slot_id}}` with its slot's `@material:{id}` token, attach the source as reference video and every slot as an image reference, check the combined counts and roles against the model's live limits, and add the source lock above. Keep the source's dialogue only when the user wants it. Plan the sound as below. No placeholder may remain. Show the final prompt, the source and slot mapping, the parameters and the estimate, then generate.
+
+**A released song in the source.** When the analysis warns that the source's music sounds like a released commercial song, keep that song out of the generation, and say so to the user in one line:
+
+- Seedance models check generated audio against released recordings and fail the task when it matches (`OUTPUT_AUDIO_SENSITIVE`, after minutes of waiting; the credits come back). With a Seedance model, never let the song into the generated audio.
+- Without a shell, set `audioGeneration` false; the result is silent, so say the music goes on in an edit.
+- With a shell, when the piece needs dialogue or sound: mute a copy of the source (`ffmpeg -i source.mp4 -an -c:v copy muted.mp4`), save it as a material and attach that as the reference video in place of the source, and ask for dialogue and ambient sound only, no music. When it does not, set `audioGeneration` false.
+- With a shell, put the sound back in the edit: the source's own track cut to the result's length when the user wants the original sound (it is their source), otherwise a music bed from `model-routing`'s music route, mixed under the generated speech.
+- Never name the song or quote its lyrics in a prompt.
+- Other models do not check, but a result that imitates the song can still be claimed or muted when it is posted; take the same route unless the user wants the generated sound.
 
 Deliver the result with the source and slot mapping and any warning. For revisions, keep the approved slot materials and change only the named dimension unless the user replaces an asset.
 
@@ -96,5 +105,6 @@ Do not pre-screen the source, replacement materials or prompts. Continue normall
 | No model takes the source video with the slot images | Stop; never omit the source or invent roles. |
 | Source exceeds the model's limits | Take the measured route where you have a shell; otherwise ask for a shorter source. Never clamp it silently. |
 | A slot image fails | Keep the others and redo only that slot. |
-| `INPUT_*` / `OUTPUT_*` content-review error | Report the actual error and stop; do not retry the paid create or suggest bypasses. |
+| `OUTPUT_AUDIO_SENSITIVE` | The generated soundtrack matched a released recording; it is not about the picture. Say so in one line and redo it once without the song, as above (muted reference or `audioGeneration` false, sound added in the edit), with a new estimate. |
+| Other `INPUT_*` / `OUTPUT_*` content-review error | Report the actual error and stop; do not retry the paid create or suggest bypasses. |
 | Output copies the source identity | Strengthen the source lock or replace the conflicting source; never claim text guarantees isolation. |
