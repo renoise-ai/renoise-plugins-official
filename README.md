@@ -142,9 +142,14 @@ Primary guidance:
 - Lyria: https://ai.google.dev/gemini-api/docs/music-generation, https://deepmind.google/models/lyria/prompt-guide/, and https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-lyria-3-pro
 - Seed Audio: https://seed.bytedance.com/en/blog/from-speech-to-audio-creation-introducing-the-seed-audio-1-0-audio-creation-model and https://docs.byteplus.com/en/docs/byteplusvoice/seedaudio-01
 - Mureka Song 9 and ElevenLabs Sound Effects: live Renoise model guidance (2026-10-23), https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html, and https://elevenlabs.io/docs/capabilities/sound-effects
+- ElevenLabs TTS (voice cloning) and Dubbing: live Renoise model guidance (2026-11-18), https://elevenlabs.io/docs/capabilities/text-to-speech, https://elevenlabs.io/docs/capabilities/voices, and https://elevenlabs.io/docs/capabilities/dubbing
 - Independent preference evidence: https://artificialanalysis.ai/image/leaderboard/text-to-image, https://artificialanalysis.ai/image/leaderboard/editing, https://artificialanalysis.ai/video/leaderboard/text-to-video, https://artificialanalysis.ai/video/leaderboard/image-to-video, and https://artificialanalysis.ai/video/leaderboard/video-editing
 
 ## Version & upgrading
+
+### 1.28.0
+
+- `model-routing` routes two new ElevenLabs models. `eleven-dubbing-v1` dubs a video into another language: the prompt is only the target language code, one language per task, billed per second of the source; it does not re-time lips, so an on-camera presenter whose mouth must match goes through text-to-speech plus `omnihuman-2.0`. `eleven-tts-v4` takes acted single-speaker lines with inline audio tags, or speaks given lines in a voice cloned from 1–5 authorized clips (passed as reference audio instead of `voice`). OmniHuman's voice track now points to it for cloned voices; Seed Audio keeps complete scenes and more than two speakers.
 
 ### 1.27.1
 

@@ -188,7 +188,7 @@ test('model routing keeps only useful specialists without replacing capabilities
     'lyria-pro', 'seed-audio-1.0', 'grok-image', 'grok-image-quality',
     'grok-video-1.5', 'gemini-omni-flash', 'hailuo-h3', 'hailuo-h3-max', 'h3-max-turbo',
     'upscale-video-topaz-starlight-2.5', 'omnihuman-2.0', 'mureka-song-9', 'eleven-sfx-v2', 'gemini-3.8-flash-tts',
-    'flux-3-video', 'flux-3-max', 'kling-4.0', 'kling-4.0-omni', 'vidu-q4',
+    'flux-3-video', 'flux-3-max', 'kling-4.0', 'kling-4.0-omni', 'vidu-q4', 'eleven-tts-v4', 'eleven-dubbing-v1',
   ]) assert.ok(routing.includes(`\`${model}\``), `${model} routing missing`);
   for (const obsolete of [
     'seedance-2.0-byteplus', 'seedance-2.0-fast-byteplus', 'seedance-2.0-mini-byteplus',
@@ -197,6 +197,10 @@ test('model routing keeps only useful specialists without replacing capabilities
   ]) assert.ok(!routing.includes(`\`${obsolete}\``), `${obsolete} should not be routed`);
   assert.match(routing, /Route only to the newest live generation/);
   assert.match(routing, /OmniHuman 2\.0 — the audio drives the performance/);
+  // Dubbing takes only the target language; cloning is limited to authorized voices
+  assert.match(routing, /only the target language code as the prompt/);
+  assert.match(routing, /does not re-time lips[\s\S]*`omnihuman-2\.0`/);
+  assert.match(routing, /Clone only the user's own voice or a voice they are authorized to use/);
   assert.match(readFileSync('skills/director/references/commercial.md', 'utf8'), /`omnihuman-2\.0`/);
   assert.match(routing, /generic GPT Image request to GPT Image 2\.6 Sunburst/);
   assert.match(routing, /`gpt-image-2\.6-sunburst` with `outputFormat: "gif"`/);
