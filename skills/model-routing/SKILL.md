@@ -168,8 +168,8 @@ Use the most specific row that fits; a general row is the fallback when no speci
 | Kling-family work, 3–30 second shots at up to 4K with up to 10 reference images and 5 reference videos | `kling-4.0-omni` for any reference; `kling-4.0` for text-to-video or first(/last) frames only | The current Kling generation, at about Seedance 2.5's per-second price; native audio is always on, and frames and references do not mix. |
 | Image-driven video at 2K/4K, or 1–15 reference images with optional reference audio | `vidu-q4` | Needs a first frame or reference images (no text-to-video), up to 16 seconds; slow, especially at 2K/4K. |
 | xAI one-image animation with native sound | `grok-video-1.5` | Newest Grok video generation; the current Renoise contract requires exactly one input image. |
-| Digital human: one person image talking or singing to a given voice track (talking head, presenter monologue, dubbed avatar, lip-synced song) | `omnihuman-2.0` | Lip-syncs one portrait to one driving audio and runs as long as the audio (up to 300 seconds), so the exact voice and long monologues are controllable; it does not stage product handling or camera action the way generative video does. |
-| Translate a video's speech into another language: the same picture, music, and effects, with each speaker re-voiced in the target language in a voice like their own | `eleven-dubbing-v1` | Dubs one source video of 1–300 seconds into a same-length mp4, billed per second of the source; it does not re-time lips, so for an on-camera presenter whose mouth must match, generate the translated lines with text-to-speech and lip-sync them with `omnihuman-2.0`. |
+| Digital human: a person talking or singing to camera (talking head, presenter monologue, dubbed avatar, lip-synced song), in the model's own voice or to a given voice track | `wan3.0-video`, through the `ai-avatar` skill | Takes of up to 30 seconds joined in order, so any length works; for a given voice, each take carries one piece of the track (at most 15 seconds) as reference audio, is lip-synced to it and plays it as its soundtrack, while hands, products and camera still follow the prompt. `omnihuman-2.0` only when the user names it. |
+| Translate a video's speech into another language: the same picture, music, and effects, with each speaker re-voiced in the target language in a voice like their own | `eleven-dubbing-v1` | Dubs one source video of 1–300 seconds into a same-length mp4, billed per second of the source; it does not re-time lips, so for an on-camera presenter whose mouth must match, generate the translated lines with text-to-speech and lip-sync them take by take with `wan3.0-video` as in the digital-human row. |
 | Upscale an existing video without changing its content | `upscale-video-topaz-starlight-2.5` | Dedicated restoration/upscaling model; use a generation or editing model when objects, motion, timing, or style should change. |
 
 ### Tier and version notes
@@ -217,6 +217,7 @@ Audio: dialogue, effects, or ambience — or no audio.
 - Write `@material:<ID>` mentions; the live contract rewrites them into Wan's numbered image/video/audio labels.
 - Choose frame mode (first frame, optionally with a last frame) or reference mode, never both; a last frame alone is rejected.
 - Never ask Wan to edit, extend, continue, remove, or replace content in an existing video.
+- To lip-sync to a given voice, pass one piece of at most 15 seconds as reference audio and say the person lip-syncs to it word for word; the piece plays as the take's soundtrack. Cut a longer track at pauses into pieces, one take each.
 
 ### Gemini Omni Flash — conversational generation/editing
 
@@ -266,6 +267,8 @@ Sound: specific dialogue/SFX/ambience; no music if unwanted.
 - Request dialogue, effects, ambience, or music explicitly when native audio matters.
 
 ### OmniHuman 2.0 — the audio drives the performance
+
+Only when the user asks for OmniHuman by name; digital humans otherwise go to Wan 3.0.
 
 The voice track is the script: write and generate the audio first (usually `gemini-3.8-flash-tts` from the exact lines, `eleven-tts-v4` when the voice must be cloned from an authorized recording, or the user's authorized recording itself), check it is speech or vocals of 4–300 seconds, then pass it with one portrait.
 

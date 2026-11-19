@@ -199,9 +199,12 @@ test('model routing keeps only useful specialists without replacing capabilities
   assert.match(routing, /OmniHuman 2\.0 — the audio drives the performance/);
   // Dubbing takes only the target language; cloning is limited to authorized voices
   assert.match(routing, /only the target language code as the prompt/);
-  assert.match(routing, /does not re-time lips[\s\S]*`omnihuman-2\.0`/);
+  assert.match(routing, /does not re-time lips[\s\S]*`wan3\.0-video`/);
+  // Digital humans go to Wan 3.0; OmniHuman only when the user names it
+  assert.match(routing, /Digital human:[^\n]*`wan3\.0-video`, through the `ai-avatar` skill/);
+  assert.match(routing, /Only when the user asks for OmniHuman by name/);
   assert.match(routing, /Clone only the user's own voice or a voice they are authorized to use/);
-  assert.match(readFileSync('skills/director/references/commercial.md', 'utf8'), /`omnihuman-2\.0`/);
+  assert.match(readFileSync('skills/director/references/commercial.md', 'utf8'), /Talking-head segments:[^\n]*`wan3\.0-video`/);
   assert.match(routing, /generic GPT Image request to GPT Image 2\.6 Sunburst/);
   assert.match(routing, /`gpt-image-2\.6-sunburst` with `outputFormat: "gif"`/);
   assert.match(routing, /use Flare when explicitly requested/i);
