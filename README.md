@@ -132,7 +132,7 @@ Primary guidance:
 - Midjourney prompting/version docs: https://docs.midjourney.com/hc/en-us/articles/32023408776205-Prompt-Basics, https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version, and https://updates.midjourney.com/version-8-2/
 - ByteDance Seedream: https://seed.bytedance.com/en/blog/deeper-thinking-more-accurate-generation-introducing-seedream-5-0-lite and https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro and https://seed.bytedance.com/en/blog/more-realistic-images-more-stable-editing-across-100-rounds-introducing-seedream-5-5
 - xAI Imagine image/video: https://docs.x.ai/developers/model-capabilities/imagine and https://docs.x.ai/developers/model-capabilities/video/generation
-- Wan 3.0 / Wan 3.0 Prime: live Renoise model guidance and per-second credit pricing (2026-10-13).
+- Wan 3.0 / Wan 3.0 Prime: live Renoise model guidance and per-second credit pricing (2026-10-13). Reference audio as a lip-sync track: https://runware.ai/docs/models/alibaba-wan3-0/guides/video-and-audio-references.md
 - BytePlus Seedance 2.5 and 2.0 prompt guides: https://docs.byteplus.com/en/docs/ModelArk/2607689 and https://docs.byteplus.com/en/docs/ModelArk/2222480
 - MiniMax H3 family: https://www.minimax.io/blog/minimax-h3, https://platform.minimax.io/docs/guides/video-generation, https://huggingface.co/MiniMaxAI/MiniMax-H3/tree/main/docs, and https://blog.fal.ai/introducing-h3-max-by-fal/
 - Topaz Starlight Precise 2.5: https://developer.topazlabs.com/video-models/starlight/starlight-precise-2.5
@@ -146,6 +146,10 @@ Primary guidance:
 - Independent preference evidence: https://artificialanalysis.ai/image/leaderboard/text-to-image, https://artificialanalysis.ai/image/leaderboard/editing, https://artificialanalysis.ai/video/leaderboard/text-to-video, https://artificialanalysis.ai/video/leaderboard/image-to-video, and https://artificialanalysis.ai/video/leaderboard/video-editing
 
 ## Version & upgrading
+
+### 1.29.0
+
+- Digital humans route to `wan3.0-video` through the `ai-avatar` skill: takes of up to 30 seconds joined in order, and a given voice track (the user's recording, a cloned voiceover, a song) cut into pieces of at most 15 seconds that each take lip-syncs to as reference audio. `omnihuman-2.0` stays routable only when the user names it. Dubbing an on-camera presenter and the `director` talking-head segments follow the same chain.
 
 ### 1.28.0
 

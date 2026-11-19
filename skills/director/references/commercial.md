@@ -41,4 +41,4 @@ It must feel like a real person sharing a find, not an actor reading a script.
 
 Keep unscripted micro-reactions ("等等，这个…"), third-party proof (a watch, a scale, a tape measure), one or two non-promoted items in frame, and a casual presenter and home setting. Dialogue lines read as noticing, not announcing: if a line could appear in a brand ad, rewrite it.
 
-**Talking-head segments:** when a segment is mostly the presenter talking, needs one exact or cloned voice, or runs longer than a clip, make the voice track first and animate the portrait with the digital-human model (`omnihuman-2.0` in model-routing). Keep generated video for the segments where hands, products and camera move.
+**Talking-head segments:** generate them with `wan3.0-video` the way the `ai-avatar` skill does: takes of up to 30 seconds joined in order. When the segment needs one exact or cloned voice, make the voice track first and give each take its piece (at most 15 seconds) as reference audio to lip-sync to; hands, products and camera can still move in the same takes.
