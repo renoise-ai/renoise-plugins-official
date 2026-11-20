@@ -141,11 +141,16 @@ Primary guidance:
 - Gemini Omni: https://ai.google.dev/gemini-api/docs/omni
 - Lyria: https://ai.google.dev/gemini-api/docs/music-generation, https://deepmind.google/models/lyria/prompt-guide/, and https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-lyria-3-pro
 - Seed Audio: https://seed.bytedance.com/en/blog/from-speech-to-audio-creation-introducing-the-seed-audio-1-0-audio-creation-model and https://docs.byteplus.com/en/docs/byteplusvoice/seedaudio-01
+- Suno V6 (generate, cover, extend, accompaniment): live Renoise model guidance (2026-11-20)
 - Mureka Song 9 and ElevenLabs Sound Effects: live Renoise model guidance (2026-10-23), https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html, and https://elevenlabs.io/docs/capabilities/sound-effects
 - ElevenLabs TTS (voice cloning) and Dubbing: live Renoise model guidance (2026-11-18), https://elevenlabs.io/docs/capabilities/text-to-speech, https://elevenlabs.io/docs/capabilities/voices, and https://elevenlabs.io/docs/capabilities/dubbing
 - Independent preference evidence: https://artificialanalysis.ai/image/leaderboard/text-to-image, https://artificialanalysis.ai/image/leaderboard/editing, https://artificialanalysis.ai/video/leaderboard/text-to-video, https://artificialanalysis.ai/video/leaderboard/image-to-video, and https://artificialanalysis.ai/video/leaderboard/video-editing
 
 ## Version & upgrading
+
+### 1.31.0
+
+- `model-routing` routes Suno V6. Vocal songs, from a theme or from exact lyrics, go to `suno-v6`, which returns two takes per task for the user to pick; `mureka-song-9` stays for a sung-lyrics song in another voice, and `lyria-pro` keeps instrumentals, cues, and beds. A track the user supplies can be covered in a new style (`suno-v6-cover`), continued from a given second (`suno-v6-extend`), or given a backing arrangement (`suno-v6-accompaniment`); the source must be the user's own or authorized, never a released song.
 
 ### 1.30.0
 

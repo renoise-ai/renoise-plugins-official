@@ -189,6 +189,7 @@ test('model routing keeps only useful specialists without replacing capabilities
     'grok-video-1.5', 'gemini-omni-flash', 'hailuo-h3', 'hailuo-h3-max', 'h3-max-turbo',
     'upscale-video-topaz-starlight-2.5', 'omnihuman-2.0', 'mureka-song-9', 'eleven-sfx-v2', 'gemini-3.8-flash-tts',
     'flux-3-video', 'flux-3-max', 'kling-4.0', 'kling-4.0-omni', 'vidu-q4', 'eleven-tts-v4', 'eleven-dubbing-v1',
+    'suno-v6', 'suno-v6-cover', 'suno-v6-extend', 'suno-v6-accompaniment',
   ]) assert.ok(routing.includes(`\`${model}\``), `${model} routing missing`);
   for (const obsolete of [
     'seedance-2.0-byteplus', 'seedance-2.0-fast-byteplus', 'seedance-2.0-mini-byteplus',
@@ -203,6 +204,9 @@ test('model routing keeps only useful specialists without replacing capabilities
   // Digital humans go to Wan 3.0; OmniHuman only when the user names it
   assert.match(routing, /Digital human:[^\n]*`wan3\.0-video`, through the `ai-avatar` skill/);
   assert.match(routing, /Only when the user asks for OmniHuman by name/);
+  // Suno returns two takes per task; source tracks must be the user's own
+  assert.match(routing, /two different songs \(output 0 and output 1\)/);
+  assert.match(routing, /never a released commercial song/);
   assert.match(routing, /Clone only the user's own voice or a voice they are authorized to use/);
   assert.match(readFileSync('skills/director/references/commercial.md', 'utf8'), /Talking-head segments:[^\n]*`wan3\.0-video`/);
   assert.match(routing, /generic GPT Image request to GPT Image 2\.6 Sunburst/);
