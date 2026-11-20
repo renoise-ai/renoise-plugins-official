@@ -147,6 +147,10 @@ Primary guidance:
 
 ## Version & upgrading
 
+### 1.30.0
+
+- `model-routing` names `seedream-5-5` in the image decision table: general photorealistic and commercial images, a series of local edits on one image, and transparent-background assets. It is mid-pack on blind text-to-image preference (Artificial Analysis, November 2026), so peak-quality work still goes to `gpt-image-2.6-sunburst`.
+
 ### 1.29.0
 
 - Digital humans route to `wan3.0-video` through the `ai-avatar` skill: takes of up to 30 seconds joined in order, and a given voice track (the user's recording, a cloned voiceover, a song) cut into pieces of at most 15 seconds that each take lip-syncs to as reference audio. `omnihuman-2.0` stays routable only when the user names it. Dubbing an on-camera presenter and the `director` talking-head segments follow the same chain.
