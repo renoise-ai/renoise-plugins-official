@@ -141,12 +141,16 @@ Primary guidance:
 - Gemini Omni: https://ai.google.dev/gemini-api/docs/omni
 - Lyria: https://ai.google.dev/gemini-api/docs/music-generation, https://deepmind.google/models/lyria/prompt-guide/, and https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-lyria-3-pro
 - Seed Audio: https://seed.bytedance.com/en/blog/from-speech-to-audio-creation-introducing-the-seed-audio-1-0-audio-creation-model and https://docs.byteplus.com/en/docs/byteplusvoice/seedaudio-01
-- Suno V6 (generate, cover, extend, accompaniment): live Renoise model guidance (2026-11-20)
+- Suno V6 (generate, cover, extend, accompaniment): live Renoise model guidance (2026-11-20) and https://artificialanalysis.ai/music/arena?tab=leaderboard
 - Mureka Song 9 and ElevenLabs Sound Effects: live Renoise model guidance (2026-10-23), https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html, and https://elevenlabs.io/docs/capabilities/sound-effects
 - ElevenLabs TTS (voice cloning) and Dubbing: live Renoise model guidance (2026-11-18), https://elevenlabs.io/docs/capabilities/text-to-speech, https://elevenlabs.io/docs/capabilities/voices, and https://elevenlabs.io/docs/capabilities/dubbing
 - Independent preference evidence: https://artificialanalysis.ai/image/leaderboard/text-to-image, https://artificialanalysis.ai/image/leaderboard/editing, https://artificialanalysis.ai/video/leaderboard/text-to-video, https://artificialanalysis.ai/video/leaderboard/image-to-video, and https://artificialanalysis.ai/video/leaderboard/video-editing
 
 ## Version & upgrading
+
+### 1.31.1
+
+- `model-routing` sends all music to `suno-v6`, instrumentals, score cues, jingles and beds included: it ranks first on both the vocal and the instrumental boards of the Artificial Analysis Music Arena (October 2026), where Lyria 3 Pro sits level with Mureka behind it. Beds use custom mode with `song.instrumental` and an approximate `song.durationSec`. `lyria-pro` stays for music guided by an image, or when the user names it.
 
 ### 1.31.0
 

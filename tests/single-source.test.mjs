@@ -207,6 +207,9 @@ test('model routing keeps only useful specialists without replacing capabilities
   // Suno returns two takes per task; source tracks must be the user's own
   assert.match(routing, /two different songs \(output 0 and output 1\)/);
   assert.match(routing, /never a released commercial song/);
+  // All music goes to Suno V6; Lyria only for an image-guided piece or by name
+  assert.match(routing, /\| Any music:[^\n]*`suno-v6`/);
+  assert.match(routing, /Music guided by an image[^\n]*`lyria-pro`/);
   assert.match(routing, /Clone only the user's own voice or a voice they are authorized to use/);
   assert.match(readFileSync('skills/director/references/commercial.md', 'utf8'), /Talking-head segments:[^\n]*`wan3\.0-video`/);
   assert.match(routing, /generic GPT Image request to GPT Image 2\.6 Sunburst/);

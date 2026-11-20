@@ -9,7 +9,7 @@ description: >
 user-invocable: false
 metadata:
   author: renoise
-  version: 0.8.0
+  version: 0.9.0
   category: media-generation
   tags: [model-routing, prompting, image, video, audio, portable]
 ---
@@ -289,8 +289,8 @@ Pass the source video as its one `reference_video` and only the target language 
 
 | Task | Prefer | Why |
 |---|---|---|
-| Song, instrumental, score cue, jingle, or music bed — anything where music is the deliverable | `lyria-pro` | Composes a complete structured song (verses, chorus, bridge, optional vocals and lyrics) up to about 3 minutes; replaces Lyria 3 Clip. |
-| A song with vocals: from a theme alone (the model writes the words) or sung from exact lyrics, optionally with a female or male lead | `suno-v6` | Complete songs of about 2–4 minutes, two different takes per task to choose from; custom mode takes exact lyrics and an approximate length. |
+| Any music: a song with vocals (from a theme alone, or sung from exact lyrics, optionally with a female or male lead), an instrumental, a score cue, a jingle, or a music bed | `suno-v6` | Ranked first on blind vocal and instrumental music preference (Artificial Analysis, October 2026); two different takes per task to choose from. Custom mode takes exact lyrics and an approximate length (10–360 seconds); `song.instrumental` drops the vocals. |
+| Music guided by an image (the mood or look of a picture or frame), or when the user names Lyria | `lyria-pro` | Composes a complete structured piece up to about 3 minutes and can take a guide image; otherwise level with the other models behind Suno V6 on instrumentals. |
 | A sung-lyrics song when Suno's two takes both miss and another voice is wanted | `mureka-song-9` | Dedicated sung-lyrics model: lyrics go in their own field with section tags and the style stays in the prompt; one complete song of about 2.5–3 minutes. |
 | Re-sing and re-arrange a track the user supplies in a new style, keeping its melody | `suno-v6-cover` | Takes the track as its one reference audio; two takes per task. |
 | Continue a track the user supplies from a given second | `suno-v6-extend` | Delivers the whole song (the source up to that second, then the new part); two takes per task. |
@@ -300,7 +300,7 @@ Pass the source video as its one `reference_video` and only the target language 
 | A complete sound scene (speech with effects, ambience, or music), a cloned voice inside such a scene, or more than two speakers | `seed-audio-1.0` | Unified speech, dialogue, effects, and ambience generation with voice references; live default audio model. |
 | One standalone sound effect: foley, impact, whoosh, UI sound, ambience loop, or stinger | `eleven-sfx-v2` | Exact length from 1 to 30 seconds and billed per second; use Seed Audio when the effects belong to a scene with speech. |
 
-Lyria composes music and stays the choice for instrumentals, cues, and beds; Suno V6 makes vocal songs and covers, extends, or accompanies a track the user supplies; Mureka sings given lyrics when another voice is wanted; Gemini TTS reads exact lines as clean speech; ElevenLabs TTS acts one speaker's lines or speaks them in a cloned voice; Seed Audio handles complete sound scenes, cloned voices within them, and more than two speakers; ElevenLabs SFX makes single effects to length.
+Suno V6 makes music of every kind, vocal or instrumental, and covers, extends, or accompanies a track the user supplies; Lyria composes from a guide image; Mureka sings given lyrics when another voice is wanted; Gemini TTS reads exact lines as clean speech; ElevenLabs TTS acts one speaker's lines or speaks them in a cloned voice; Seed Audio handles complete sound scenes, cloned voices within them, and more than two speakers; ElevenLabs SFX makes single effects to length.
 
 ## Lyria 3 Pro — composer brief
 
@@ -342,6 +342,7 @@ prompt: genre, mood, tempo, instruments, vocal character
 - Set `song.mode` every time (Extend has none). `inspiration`: the prompt describes the song and the model writes the words; lyrics, title, and length are refused. `custom`: the full lyrics go in `lyrics` with section tags and the prompt holds only the style; the words are required unless `song.instrumental` is true.
 - Each task returns two different songs (output 0 and output 1) for the price of one: show both and let the user pick instead of running a second task for choice.
 - Length is approximate and settable only in custom mode and Extend (`song.durationSec`); inspiration songs run about 2–4 minutes.
+- For an instrumental, cue, or bed under a video, use custom mode with `song.instrumental: true`, the style in the prompt, and `song.durationSec` near the edit's length; fit it exactly in the edit.
 - Cover, Extend, and Accompaniment take exactly one source track as reference audio, shorter than 8 minutes, that the user owns or is authorized to use, never a released commercial song. Extend needs `song.continueAtSec` before the end of the source; its prompt is the style of the continuation (usually the source's) and its lyrics are the new words only.
 - Set `gender` only when the user asks for a male or female lead, and keep `song.version` at `v6` unless they name another.
 - Describe genre, era, instruments, and vocal character, never "in the style of" a named artist.
