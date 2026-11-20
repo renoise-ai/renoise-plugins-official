@@ -184,7 +184,7 @@ test('model routing keeps only useful specialists without replacing capabilities
   for (const model of [
     'seedance-2.5-byteplus',
     'nano-banana-2.1', 'wan3.0-video', 'wan3.0-video-prime',
-    'mj-v8.2', 'gpt-image-2.6-sunburst', 'gpt-image-2.6-flare',
+    'mj-v8.2', 'gpt-image-2.6-sunburst', 'gpt-image-2.6-flare', 'seedream-5-5',
     'lyria-pro', 'seed-audio-1.0', 'grok-image', 'grok-image-quality',
     'grok-video-1.5', 'gemini-omni-flash', 'hailuo-h3', 'hailuo-h3-max', 'h3-max-turbo',
     'upscale-video-topaz-starlight-2.5', 'omnihuman-2.0', 'mureka-song-9', 'eleven-sfx-v2', 'gemini-3.8-flash-tts',
