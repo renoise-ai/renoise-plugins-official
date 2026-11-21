@@ -148,6 +148,10 @@ Primary guidance:
 
 ## Version & upgrading
 
+### 1.31.2
+
+- `director` no longer claims requests to edit existing talking-head footage (剪口播): its description drops "口播视频" and says that cutting, captioning and packaging talking-head clips belong elsewhere, so those requests reach the editing skill.
+
 ### 1.31.1
 
 - `model-routing` sends all music to `suno-v6`, instrumentals, score cues, jingles and beds included: it ranks first on both the vocal and the instrumental boards of the Artificial Analysis Music Arena (October 2026), where Lyria 3 Pro sits level with Mureka behind it. Beds use custom mode with `song.instrumental` and an approximate `song.durationSec`. `lyria-pro` stays for music guided by an image, or when the user names it.
