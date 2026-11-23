@@ -129,7 +129,7 @@ Primary guidance:
 
 - OpenAI GPT Image: https://openai.com/index/introducing-chatgpt-images-2-5/, https://developers.openai.com/api/docs/models/gpt-image-2.5-flare, https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst, https://developers.openai.com/api/docs/guides/image-generation, and https://developers.openai.com/cookbook/examples/multimodal/image-gen-models-prompting-guide
 - Google Gemini image: https://ai.google.dev/gemini-api/docs/image-generation and https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-nano-banana
-- Midjourney prompting/version docs: https://docs.midjourney.com/hc/en-us/articles/32023408776205-Prompt-Basics, https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version, and https://updates.midjourney.com/version-8-2/
+- Midjourney prompting/version docs: https://docs.midjourney.com/hc/en-us/articles/32023408776205-Prompt-Basics, https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version, and https://updates.midjourney.com/version-8-2/; style reference and 2K: live Renoise model guidance (2026-11-23)
 - ByteDance Seedream: https://seed.bytedance.com/en/blog/deeper-thinking-more-accurate-generation-introducing-seedream-5-0-lite and https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro and https://seed.bytedance.com/en/blog/more-realistic-images-more-stable-editing-across-100-rounds-introducing-seedream-5-5
 - xAI Imagine image/video: https://docs.x.ai/developers/model-capabilities/imagine and https://docs.x.ai/developers/model-capabilities/video/generation
 - Wan 3.0 / Wan 3.0 Prime: live Renoise model guidance and per-second credit pricing (2026-10-13). Reference audio as a lip-sync track: https://runware.ai/docs/models/alibaba-wan3-0/guides/video-and-audio-references.md
@@ -147,6 +147,10 @@ Primary guidance:
 - Independent preference evidence: https://artificialanalysis.ai/image/leaderboard/text-to-image, https://artificialanalysis.ai/image/leaderboard/editing, https://artificialanalysis.ai/video/leaderboard/text-to-video, https://artificialanalysis.ai/video/leaderboard/image-to-video, and https://artificialanalysis.ai/video/leaderboard/video-editing
 
 ## Version & upgrading
+
+### 1.33.0
+
+- `model-routing` routes "new content in the exact style of a supplied image" to `mj-v8.2` with that image as a `style_reference` (Midjourney `--sref`), and the Midjourney prompting notes say to keep style words out of the prompt when a style reference carries the look, to reuse one style reference across a series, and to choose `2k` (native high resolution on V8.1 / V8.2) for HD, print, or large output. Needs the Renoise backend that accepts `style_reference` and MJ `2k` (youmeng #2180).
 
 ### 1.32.0
 

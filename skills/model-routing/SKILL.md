@@ -65,6 +65,7 @@ Use the most specific row that fits; a general row is the fallback when no speci
 | Fast, inexpensive drafts and simple variants | `grok-image` | Lowest-cost live image tier for quick iteration; move the chosen direction to a specialist for the final. |
 | Extreme aspect ratios (1:4 to 8:1), Google-family work, several references, multilingual localization, or conversational iteration | `nano-banana-2.1` | The current Google-family model, balancing quality, latency, text, reference reasoning, and broad formats. |
 | Aesthetic exploration, stylized art direction, editorial mood, or concept art | `mj-v8.2` | Current Midjourney generation and strong aesthetic prior. |
+| New content in the exact visual style of a supplied image (brushwork, palette, texture, rendering), kept the same across many images | `mj-v8.2` with that image as a `style_reference` | Midjourney's style reference copies a look far more faithfully than any written style description; other models only approximate it from words. |
 | xAI image request | `grok-image` for lower-cost iteration; `grok-image-quality` when higher quality justifies the added cost | Both support direct natural-language generation and editing through the live Renoise contract. |
 
 ## Image Prompting Styles
@@ -138,6 +139,9 @@ Use a concise visual description, not a requirements document:
 - Prefer concrete visual nouns and adjectives over keyword spam.
 - Name the lighting and composition that matter instead of relying on “cinematic.”
 - Use Midjourney for look development rather than text-heavy layouts or surgical edits.
+- To match a supplied image's style, pass it as `style_reference` and let the prompt describe only the new subject, scene and composition; words describing the style compete with the reference. Use `reference_image` only when the image's content or composition should carry over; the two can be combined.
+- For one look across a series, give every image the same `style_reference` instead of re-describing the style each time.
+- Midjourney's default 1K size is enough for screens; choose `2k` (V8.1 / V8.2, native high resolution, costs more) when the user asks for HD, print, or large output.
 
 ### Grok Imagine Image — concise scene direction
 
