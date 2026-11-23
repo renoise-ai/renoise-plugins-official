@@ -6,14 +6,14 @@ description: >
   comedy, short films, adaptations, montages, MV concepts, AI remakes, and for
   motion graphics, kinetic typography, explainers, data, map or UI videos, logo
   reveals and slideshows of the user's media, such as "make a video", "generate video",
-  "TikTok product video", "做个视频", "短剧", "广告片", "带货视频", or
-  "口播视频", and for a script, storyboard, shot list or short-drama board,
+  "TikTok product video", "做个视频", "短剧", "广告片" or "带货视频", and for
+  a script, storyboard, shot list or short-drama board,
   with or without the video.
   Do NOT use for explicit video fission or multiple controlled variants from one
   supplied source video; use video-fission. Do NOT use for recreating, remixing,
   复刻, or 剪同款 from one supplied reference video; use video-remake. Source-free
-  variant ideation stays here. Do NOT use for downloading or traditional editing
-  of existing footage.
+  variant ideation stays here. Do NOT use for downloading or editing existing
+  footage, including cutting, captioning and packaging talking-head clips (剪口播).
 metadata:
   author: renoise
   version: 0.12.0
