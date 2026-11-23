@@ -189,7 +189,7 @@ test('model routing keeps only useful specialists without replacing capabilities
     'grok-video-1.5', 'gemini-omni-flash', 'hailuo-h3', 'hailuo-h3-max', 'h3-max-turbo',
     'upscale-video-topaz-starlight-2.5', 'omnihuman-2.0', 'mureka-song-9', 'eleven-sfx-v2', 'gemini-3.8-flash-tts',
     'flux-3-video', 'flux-3-max', 'kling-4.0', 'kling-4.0-omni', 'vidu-q4', 'eleven-tts-v4', 'eleven-dubbing-v1',
-    'suno-v6', 'suno-v6-cover', 'suno-v6-extend', 'suno-v6-accompaniment',
+    'suno-v6', 'suno-v6-cover', 'suno-v6-extend', 'suno-v6-accompaniment', 'suno-v6-replace-section',
   ]) assert.ok(routing.includes(`\`${model}\``), `${model} routing missing`);
   for (const obsolete of [
     'seedance-2.0-byteplus', 'seedance-2.0-fast-byteplus', 'seedance-2.0-mini-byteplus',
