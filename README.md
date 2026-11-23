@@ -141,12 +141,16 @@ Primary guidance:
 - Gemini Omni: https://ai.google.dev/gemini-api/docs/omni
 - Lyria: https://ai.google.dev/gemini-api/docs/music-generation, https://deepmind.google/models/lyria/prompt-guide/, and https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-lyria-3-pro
 - Seed Audio: https://seed.bytedance.com/en/blog/from-speech-to-audio-creation-introducing-the-seed-audio-1-0-audio-creation-model and https://docs.byteplus.com/en/docs/byteplusvoice/seedaudio-01
-- Suno V6 (generate, cover, extend, accompaniment): live Renoise model guidance (2026-11-20) and https://artificialanalysis.ai/music/arena?tab=leaderboard
+- Suno V6 (generate, cover, extend, accompaniment, replace section): live Renoise model guidance (2026-11-20, replace section 2026-11-23) and https://artificialanalysis.ai/music/arena?tab=leaderboard
 - Mureka Song 9 and ElevenLabs Sound Effects: live Renoise model guidance (2026-10-23), https://platform.mureka.ai/docs/api/operations/post-v1-song-generate.html, and https://elevenlabs.io/docs/capabilities/sound-effects
 - ElevenLabs TTS (voice cloning) and Dubbing: live Renoise model guidance (2026-11-18), https://elevenlabs.io/docs/capabilities/text-to-speech, https://elevenlabs.io/docs/capabilities/voices, and https://elevenlabs.io/docs/capabilities/dubbing
 - Independent preference evidence: https://artificialanalysis.ai/image/leaderboard/text-to-image, https://artificialanalysis.ai/image/leaderboard/editing, https://artificialanalysis.ai/video/leaderboard/text-to-video, https://artificialanalysis.ai/video/leaderboard/image-to-video, and https://artificialanalysis.ai/video/leaderboard/video-editing
 
 ## Version & upgrading
+
+### 1.32.0
+
+- `model-routing` routes `suno-v6-replace-section`: rewrite the part of a user's track between two timestamps (`song.startSec` / `song.endSec`) with new words or music. It returns only the regenerated section (around the range, usually somewhat longer), in two takes; the agent tells the user before submitting.
 
 ### 1.31.2
 

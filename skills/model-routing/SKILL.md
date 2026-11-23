@@ -9,7 +9,7 @@ description: >
 user-invocable: false
 metadata:
   author: renoise
-  version: 0.9.0
+  version: 0.10.0
   category: media-generation
   tags: [model-routing, prompting, image, video, audio, portable]
 ---
@@ -295,6 +295,7 @@ Pass the source video as its one `reference_video` and only the target language 
 | Re-sing and re-arrange a track the user supplies in a new style, keeping its melody | `suno-v6-cover` | Takes the track as its one reference audio; two takes per task. |
 | Continue a track the user supplies from a given second | `suno-v6-extend` | Delivers the whole song (the source up to that second, then the new part); two takes per task. |
 | Add a backing arrangement to a vocal or instrument recording the user supplies (an a cappella take, a solo guitar) | `suno-v6-accompaniment` | Keeps the recording and builds the band around it; two takes per task. |
+| Rewrite one part of a track the user supplies (new words or a new melody between two timestamps) | `suno-v6-replace-section` | Regenerates only `song.startSec`–`song.endSec`; returns just the new section (around the range, usually somewhat longer), not the whole song, two takes per task. Say so before submitting. |
 | Voice-over, narration, a read script, or a two-person dialogue — speech only, from exact lines | `gemini-3.8-flash-tts` | Reads the text exactly in one of 30 preset voices, or as two speakers with a voice each; length and price follow the text. |
 | Acted single-speaker delivery (whispering, laughing, crying, shouting), or exact lines spoken in one person's voice cloned from 1–5 authorized clips | `eleven-tts-v4` | Expressive one-speaker reading steered by inline audio tags; with reference audio it clones the voice for that task only, priced like plain reading. Use Gemini TTS for two speakers in one clip. |
 | A complete sound scene (speech with effects, ambience, or music), a cloned voice inside such a scene, or more than two speakers | `seed-audio-1.0` | Unified speech, dialogue, effects, and ambience generation with voice references; live default audio model. |
@@ -343,7 +344,8 @@ prompt: genre, mood, tempo, instruments, vocal character
 - Each task returns two different songs (output 0 and output 1) for the price of one: show both and let the user pick instead of running a second task for choice.
 - Length is approximate and settable only in custom mode and Extend (`song.durationSec`); inspiration songs run about 2–4 minutes.
 - For an instrumental, cue, or bed under a video, use custom mode with `song.instrumental: true`, the style in the prompt, and `song.durationSec` near the edit's length; fit it exactly in the edit.
-- Cover, Extend, and Accompaniment take exactly one source track as reference audio, shorter than 8 minutes, that the user owns or is authorized to use, never a released commercial song. Extend needs `song.continueAtSec` before the end of the source; its prompt is the style of the continuation (usually the source's) and its lyrics are the new words only.
+- Cover, Extend, Accompaniment, and Replace Section take exactly one source track as reference audio, shorter than 8 minutes, that the user owns or is authorized to use, never a released commercial song. Extend needs `song.continueAtSec` before the end of the source; its prompt is the style of the continuation (usually the source's) and its lyrics are the new words only.
+- Replace Section needs `song.startSec` and `song.endSec` within the source (convert "0:30–0:45" to 30 and 45); its prompt is the style of the new part (usually the source's), its lyrics are only the words sung there, and it takes no `song.mode` and no `gender`. The output is the new section alone, so tell the user they get a clip to swap in, not a finished song.
 - Set `gender` only when the user asks for a male or female lead, and keep `song.version` at `v6` unless they name another.
 - Describe genre, era, instruments, and vocal character, never "in the style of" a named artist.
 
