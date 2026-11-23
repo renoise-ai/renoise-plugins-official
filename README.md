@@ -150,7 +150,7 @@ Primary guidance:
 
 ### 1.32.0
 
-- `model-routing` routes `suno-v6-replace-section`: rewrite the part of a user's track between two timestamps (`song.startSec` / `song.endSec`) with new words or music. It returns only the regenerated section, a few seconds longer than the range, in two takes; the agent tells the user before submitting.
+- `model-routing` routes `suno-v6-replace-section`: rewrite the part of a user's track between two timestamps (`song.startSec` / `song.endSec`) with new words or music. It returns only the regenerated section (around the range, usually somewhat longer), in two takes; the agent tells the user before submitting.
 
 ### 1.31.2
 
