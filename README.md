@@ -151,6 +151,7 @@ Primary guidance:
 ### 1.33.0
 
 - `model-routing` routes "new content in the exact style of a supplied image" to `mj-v8.2` with that image as a `style_reference` (Midjourney `--sref`), and the Midjourney prompting notes say to keep style words out of the prompt when a style reference carries the look, to reuse one style reference across a series, and to choose `2k` (native high resolution on V8.1 / V8.2) for HD, print, or large output. Needs the Renoise backend that accepts `style_reference` and MJ `2k` (youmeng #2180).
+- Midjourney prompts are written in plain English without CLI flags (`--ar`, `--v`, `--hd`, `--stylize`, `--sref`; ratio, resolution and reference roles go in task fields). Isolated concept assets (characters, weapons, props, vehicles) get `solid grey background, concept art design` unless a setting is asked for, while scenes and interiors describe depth and lighting instead; carrying one world across subject types translates its physical materials into the new object alongside the shared `style_reference`.
 
 ### 1.32.0
 

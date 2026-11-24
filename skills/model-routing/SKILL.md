@@ -143,6 +143,9 @@ Use a concise visual description, not a requirements document:
 - For one look across a series, give every image the same `style_reference` instead of re-describing the style each time.
 - Midjourney copies everything in a `style_reference`, frames included. If the image is a screenshot or has UI chrome, borders, letterboxing, watermarks or text overlays, crop it to the artwork and upload the crop before using it. If results still come out with borders, fix the reference and regenerate; do not crop and re-deliver the generated candidates.
 - Midjourney's default 1K size is enough for screens; choose `2k` (V8.1 / V8.2, native high resolution, costs more) when the user asks for HD, print, or large output.
+- Write Midjourney prompts in pure English (non-English prompts often produce garbled text watermarks) and omit CLI flags such as `--ar`, `--v`, `--hd`, `--stylize`, or `--sref`—pass ratio, resolution, and reference roles through task fields.
+- For isolated concept assets (characters, weapons, props, vehicles), add `solid grey background, concept art design` unless a setting is requested so silhouettes stay clean for reuse; for scenes, architecture, or interiors, never use a plain grey background—describe spatial depth and environmental lighting instead.
+- When carrying one world across different subject types (such as armor to a weapon, vehicle, or building), translate the defining physical materials into the new object's structure alongside the shared `style_reference`.
 
 ### Grok Imagine Image — concise scene direction
 
