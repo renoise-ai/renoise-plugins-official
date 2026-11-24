@@ -151,6 +151,7 @@ Primary guidance:
 ### 1.33.1
 
 - `model-routing`: Midjourney V8.1 / V8.2 default to `2k`, and `1k` is for quick or cheaper drafts. One Midjourney task returns four candidates, so four images are one task, not four. Needs youmeng #2205.
+- Matching a supplied image's style on Midjourney now pairs the `style_reference` with a written 60–90 word style paragraph (rendering, shapes and edges, palette, lighting, framing and mood) at the start of the prompt, reused word for word across a series. A reference with only "match this style" drifts toward generic realism. Text and watermarks are excluded by default (rePlaylet #413), so prompts carry no `--no`.
 
 ### 1.33.0
 
