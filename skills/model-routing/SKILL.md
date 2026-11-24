@@ -141,6 +141,7 @@ Use a concise visual description, not a requirements document:
 - Use Midjourney for look development rather than text-heavy layouts or surgical edits.
 - To match a supplied image's style, pass it as `style_reference` and let the prompt describe only the new subject, scene and composition; words describing the style compete with the reference. Use `reference_image` only when the image's content or composition should carry over; the two can be combined.
 - For one look across a series, give every image the same `style_reference` instead of re-describing the style each time.
+- Midjourney copies everything in a `style_reference`, frames included. If the image is a screenshot or has UI chrome, borders, letterboxing, watermarks or text overlays, crop it to the artwork and upload the crop before using it. If results still come out with borders, fix the reference and regenerate; do not crop and re-deliver the generated candidates.
 - Midjourney's default 1K size is enough for screens; choose `2k` (V8.1 / V8.2, native high resolution, costs more) when the user asks for HD, print, or large output.
 
 ### Grok Imagine Image — concise scene direction
