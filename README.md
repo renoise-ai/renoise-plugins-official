@@ -148,6 +148,10 @@ Primary guidance:
 
 ## Version & upgrading
 
+### 1.33.3
+
+- `model-routing`: MAGI-2 (`magi-2`) gets a video row and a prompting section, used when the user names it (1080p only, native audio always on, references described in words). A model the user names that this guide does not list is checked with `list_models` or `estimate_cost` before the agent says it is unavailable.
+
 ### 1.33.2
 
 - A user's image is looked at before it becomes a reference, since its flaws come back in the result. One that carries the user's product, face or character is kept but cleaned up first (cropped, or remade cleanly with an image model and shown); one that only suggests a look is described in the prompt instead of attached. The agent says so in one sentence and puts the fixing step in the plan and the estimate. `video-remake` makes a clean slot image from a poor replacement photo.

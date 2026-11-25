@@ -9,7 +9,7 @@ description: >
 user-invocable: false
 metadata:
   author: renoise
-  version: 0.10.0
+  version: 0.11.0
   category: media-generation
   tags: [model-routing, prompting, image, video, audio, portable]
 ---
@@ -22,7 +22,7 @@ Select by task, not by habit. Then prompt for the selected model instead of send
 
 Live model capabilities are authoritative for availability, defaults, input roles, combinations, limits, duration, ratio, resolution, and audio controls. This Skill contains only researched routing preferences and prompting styles.
 
-1. Preserve a model explicitly named by the user, or one you presented as selected in the plan or estimate. If it cannot do the job, explain why and the replacement you propose, and switch only after the user agrees.
+1. Preserve a model explicitly named by the user, or one you presented as selected in the plan or estimate. If it cannot do the job, explain why and the replacement you propose, and switch only after the user agrees. A named model this guide does not list may still be live: check `list_models`, or run `estimate_cost` with that model, before you tell the user it is unavailable. Never say a model does not exist or cannot be used without that check.
 2. Filter candidates by the live capabilities required by the task.
 3. Route only to the newest live generation of a model family; older generations remain available only when the user explicitly names one.
 4. Choose the best specialist below.
@@ -176,6 +176,7 @@ Use the most specific row that fits; a general row is the fallback when no speci
 | A single shot delivered at 2K or 4K from text or first(/last) frames, with native sound and no other references | `flux-3-video` | The cheapest 2K/4K single shot (upscaled from the same generation), 5–20 seconds, and cheaper per second than Seedance 2.5 at 1080p; it takes no reference images, video, or audio. |
 | Kling-family work, 3–30 second shots at up to 4K with up to 10 reference images and 5 reference videos | `kling-4.0-omni` for any reference; `kling-4.0` for text-to-video or first(/last) frames only | The current Kling generation, at about Seedance 2.5's per-second price; native audio is always on, and frames and references do not mix. |
 | Image-driven video at 2K/4K, or 1–15 reference images with optional reference audio | `vidu-q4` | Needs a first frame or reference images (no text-to-video), up to 16 seconds; slow, especially at 2K/4K. |
+| MAGI-2, when the user names it | `magi-2` | 1080p only, 4–30 seconds, native audio always on; text, or up to 10 reference images, 5 reference videos and 5 reference audio clips in any mix (reference audio needs an image or video beside it); no first/last frames. With no lower resolution it costs more than models run at their lowest tier, and it is slow (queued minutes), so do not pick it unprompted. |
 | xAI one-image animation with native sound | `grok-video-1.5` | Newest Grok video generation; the current Renoise contract requires exactly one input image. |
 | Digital human: a person talking or singing to camera (talking head, presenter monologue, dubbed avatar, lip-synced song), in the model's own voice or to a given voice track | `wan3.0-video`, through the `ai-avatar` skill | Takes of up to 30 seconds joined in order, so any length works; for a given voice, each take carries one piece of the track (at most 15 seconds) as reference audio, is lip-synced to it and plays it as its soundtrack, while hands, products and camera still follow the prompt. `omnihuman-2.0` only when the user names it. |
 | Translate a video's speech into another language: the same picture, music, and effects, with each speaker re-voiced in the target language in a voice like their own | `eleven-dubbing-v1` | Dubs one source video of 1–300 seconds into a same-length mp4, billed per second of the source; it does not re-time lips, so for an on-camera presenter whose mouth must match, generate the translated lines with text-to-speech and lip-sync them take by take with `wan3.0-video` as in the digital-human row. |
@@ -260,6 +261,20 @@ Non-diegetic music: instrumentation, tempo, dynamics — or none.
 ```
 
 Specify camera **type + amplitude + speed** only when they matter. Keep dialogue exact, label speakers consistently, and separate in-scene sound from background score.
+
+### MAGI-2 — describe each reference in words
+
+```text
+[subject and action], [setting], [camera], [lighting/style].
+References: the woman in @material:<ID>, the dance in @material:<ID>, the beat of @material:<ID>.
+Sound: dialogue, effects, ambience, or music it should make.
+```
+
+- The system strips the `@` from each material mention and keeps only the name, so say in words what each material is and what it is for; never write `Image1` or `Video1` yourself.
+- Leave `audioGeneration` out: sound is always generated, so describe the sound you want in the prompt.
+- No first or last frame: to start from a still, pass it as a reference image and say it is the opening shot.
+- Reference videos and audio clips are 2–30 seconds each and at most 30 seconds together; trim longer sources with code first.
+- The prompt may be empty when references carry the brief, and can be up to 15,000 characters.
 
 ### Grok Imagine Video — animate the change
 
