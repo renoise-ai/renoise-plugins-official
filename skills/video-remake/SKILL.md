@@ -76,7 +76,7 @@ The plan holds the factual analysis (summary, timeline, composition, style, subj
 
 ## Phase 2 — Fill the Slots
 
-Fill each slot, in this order: the user's material that clearly matches it; a library material the user confirms; an image generated from the slot prompt. Never let a filename alone choose a character or product. Ask only when a mapping is truly ambiguous.
+Fill each slot, in this order: the user's material that clearly matches it; a library material the user confirms; an image generated from the slot prompt. Never let a filename alone choose a character or product. Ask only when a mapping is truly ambiguous. A user photo that is blurry, dark, compressed, watermarked, a screenshot, or shows the subject small or covered gets copied into the remake with its flaws: keep the photo for who or what it shows, generate a clean slot image from it (crop to the subject, even light, plain background), and say in one sentence why. This is about image quality, not a content pre-screen.
 
 Show the plan with the source summary, each slot and where it comes from, the chosen models and the cost of the slot images, then generate the missing slots in one round. Show the slot images: this is the remake's review checkpoint, where the user can replace or regenerate any slot before the video is made.
 
