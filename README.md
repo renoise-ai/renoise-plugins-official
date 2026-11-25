@@ -148,6 +148,10 @@ Primary guidance:
 
 ## Version & upgrading
 
+### 1.33.2
+
+- A user's image is looked at before it becomes a reference, since its flaws come back in the result. One that carries the user's product, face or character is kept but cleaned up first (cropped, or remade cleanly with an image model and shown); one that only suggests a look is described in the prompt instead of attached. The agent says so in one sentence and puts the fixing step in the plan and the estimate. `video-remake` makes a clean slot image from a poor replacement photo.
+
 ### 1.33.1
 
 - `model-routing`: Midjourney V8.1 / V8.2 default to `2k`, and `1k` is for quick or cheaper drafts. One Midjourney task returns four candidates, so four images are one task, not four. Needs youmeng #2205.

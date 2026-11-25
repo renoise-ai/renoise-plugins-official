@@ -17,6 +17,7 @@ Several models cut on their own by default. For one take, open with "single cont
 
 ## References
 
+- Look at a user's image before attaching it: whatever is wrong in a reference comes back in the result (blur, heavy compression, a colour cast or bad light, watermarks, UI chrome or text overlays, a subject that is small, cut off or covered). When it carries something the user wants kept (their product, face or character), keep it but fix it first: crop to the subject, or make a clean version with an image model, show it, and attach that. When it only suggests a look or a mood, write that into the prompt instead of attaching it. Never drop or swap a user's image silently: say in one sentence what you saw and what you are doing instead, and put the fixing step in the plan and the estimate.
 - Give each reference one job and say what not to take from it: "the woman's face from @material:101 only; do not copy its framing, background or light". A whole-scene image gets copied, flaws included: prefer tight face crops and clean product shots, and state proportions in words.
 - Put each `@material:{id}` beside what it controls and repeat it every time that subject appears; separate tokens with a space or punctuation. The server maps tokens to each model's own syntax and drops a token whose material is not attached.
 - To change a video rather than make a new one from it, say edit, name the one change, and add "keep everything else unchanged".
